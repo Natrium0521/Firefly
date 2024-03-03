@@ -1,7 +1,10 @@
 document.addEventListener('keydown', (e) => {
     switch (e.key) {
         case "Escape":
-            window.fireflyAPI.sendMainWindow('esc')
+            if (layer.classList.contains('show'))
+                layer.click()
+            else
+                window.fireflyAPI.sendMainWindow('esc')
             break
         case "F5":
             window.fireflyAPI.sendMainWindow('reload')

@@ -1,6 +1,9 @@
 module.exports = {
   packagerConfig: {
     asar: true,
+    appVersion: '0.1.1',
+    name: 'Firefly',
+    productName: 'Firefly',
   },
   rebuildConfig: {},
   makers: [

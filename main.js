@@ -1,5 +1,7 @@
 const { app, BrowserWindow, Tray, Menu, ipcMain, dialog } = require('electron/main')
 
+if (require('electron-squirrel-startup')) return app.quit();
+
 const path = require('path')
 const fs = require('fs')
 

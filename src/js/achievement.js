@@ -584,9 +584,6 @@ layer.querySelectorAll('.layerbox .input_area').forEach(el => {
                 inputs[(target_index + 1) % inputs.length].focus()
         } else if (e.key == 'Enter') {
             e.target.closest('.layerbox').querySelector('.submit').click()
-        } else if (e.key == 'Escape') {
-            e.target.closest('.layerbox').querySelector('.close').click()
-            e.stopPropagation()
         }
     })
 })
