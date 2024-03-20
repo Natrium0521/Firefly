@@ -5,11 +5,14 @@
     <title>流萤工具箱</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/gacha.css">
+    <link rel="stylesheet" href="./css/settings.css">
 </head>
 
 <body>
     <div class="bg"> </div>
     <div class="banner dragable">
+        <div class="icon"><img src="./img/favicon.ico"></div>
         <span class="title">流萤工具箱</span>
         <img class="close undragable" src="./img/svg/close.svg">
         <svg class="maxize undragable" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +33,7 @@
                 </div>
                 <span class="tabtext">成就管理</span>
             </div>
-            <!-- <div class="tablabel" id="tab_gacha">
+            <div class="tablabel" id="tab_gacha">
                 <div class="tabico">
                     <img src="./img/hsr/DrawcardIcon.png" />
                 </div>
@@ -41,7 +44,7 @@
                     <img src="./img/hsr/SettingsIcon.png" />
                 </div>
                 <span class="tabtext">设置</span>
-            </div> -->
+            </div>
         </div>
         <div class="page">
             <div class="pagebox show" id="page_achievement">
@@ -106,33 +109,308 @@
                 </div>
             </div>
             <div class="pagebox" id="page_gacha">
-                <div class="box yq" id="test">
-                    跃迁
-                    <div class="button">
-                        <span>TEST测试</span>
+                <div class="box gacha_head">
+                    <div class="uid_wrap">
+                        <div class="uid_show">
+                            <div class="nickname"></div>
+                            <div class="uid"></div>
+                            <img class="dropdown_ico" src="./img/svg/drop_down.svg">
+                        </div>
+                        <div class="uid_dropdown"> </div>
                     </div>
-                    <div class="button theme">
-                        <span>TEST测试</span>
+                    <div class="refresh_wrap btn">
+                        <div class="ico">
+                            <img src="./img/svg/refresh.svg">
+                        </div>
+                        <div class="label">刷新</div>
+                    </div>
+                    <div class="rename_wrap btn">
+                        <div class="ico">
+                            <img src="./img/svg/rename.svg">
+                        </div>
+                        <div class="label">重命名</div>
+                    </div>
+                    <div class="import_wrap btn">
+                        <div class="ico">
+                            <img src="./img/svg/import.svg">
+                        </div>
+                        <div class="label">导入</div>
+                        <div class="dropdown_wrap">
+                            <div class="dropdown">
+                                <div class="method file">
+                                    <div class="img">
+                                        <img src="./img/svg/file-code.svg">
+                                    </div>
+                                    <div class="label">从文件导入</div>
+                                </div>
+                                <div class="method url">
+                                    <div class="img">
+                                        <img src="./img/svg/link.svg">
+                                    </div>
+                                    <div class="label">从链接导入</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="export_wrap btn">
+                        <div class="ico">
+                            <img src="./img/svg/export.svg">
+                        </div>
+                        <div class="label">导出</div>
+                    </div>
+                    <div class="delete_wrap btn">
+                        <div class="ico">
+                            <img src="./img/svg/delete.svg">
+                        </div>
+                        <div class="label">删除</div>
                     </div>
                 </div>
-                <div class="box" id="test"></div>
-                <div class="box" id="test"></div>
+                <div class="gacha_body">
+                    <div class="box gacha_pool avatar">
+                        <div class="title">
+                            <div class="text">限定角色</div>
+                            <div class="btns">
+                                <div class="slider"></div>
+                                <div class="btn cardview on">
+                                    <img src="./img/svg/view-grid-card.svg">
+                                </div>
+                                <div class="btn listview">
+                                    <img src="./img/svg/view-grid-list.svg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="count">
+                            <div class="total">
+                                <div class="number"></div>
+                                <div class="unit">抽</div>
+                            </div>
+                            <div class="guarantee">
+                                <div class="star5">
+                                    <div class="bar"></div>
+                                    <div class="text">距上个五星</div>
+                                    <div class="text number"></div>
+                                </div>
+                                <div class="star4">
+                                    <div class="bar"></div>
+                                    <div class="text">距上个四星</div>
+                                    <div class="text number"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="analyze">
+                            <div class="time">~</div>
+                            <div class="blocks">
+                                <div class="block">
+                                    <div class="value">
+                                        <div class="number"></div>
+                                        <div class="unit">金</div>
+                                    </div>
+                                    <div class="label">五星数</div>
+                                </div>
+                                <div class="block">
+                                    <div class="value">
+                                        <div class="number"></div>
+                                        <div class="unit">%</div>
+                                    </div>
+                                    <div class="label">不歪概率</div>
+                                </div>
+                                <div class="block">
+                                    <div class="value">
+                                        <div class="number"></div>
+                                        <div class="unit">抽</div>
+                                    </div>
+                                    <div class="label">五星平均</div>
+                                </div>
+                                <div class="block">
+                                    <div class="value">
+                                        <div class="number"></div>
+                                        <div class="unit">抽</div>
+                                    </div>
+                                    <div class="label">UP平均</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show_box">
+                            <div class="card_view show"> </div>
+                            <div class="list_view"> </div>
+                        </div>
+                    </div>
+                    <div class="box gacha_pool lightcone">
+                        <div class="title">
+                            <div class="text">限定光锥</div>
+                            <div class="btns">
+                                <div class="slider"></div>
+                                <div class="btn cardview on">
+                                    <img src="./img/svg/view-grid-card.svg">
+                                </div>
+                                <div class="btn listview">
+                                    <img src="./img/svg/view-grid-list.svg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="count">
+                            <div class="total">
+                                <div class="number"></div>
+                                <div class="unit">抽</div>
+                            </div>
+                            <div class="guarantee">
+                                <div class="star5">
+                                    <div class="bar"></div>
+                                    <div class="text">距上个五星</div>
+                                    <div class="text number"></div>
+                                </div>
+                                <div class="star4">
+                                    <div class="bar"></div>
+                                    <div class="text">距上个四星</div>
+                                    <div class="text number"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="analyze">
+                            <div class="time">~</div>
+                            <div class="blocks">
+                                <div class="block">
+                                    <div class="value">
+                                        <div class="number"></div>
+                                        <div class="unit">金</div>
+                                    </div>
+                                    <div class="label">五星数</div>
+                                </div>
+                                <div class="block">
+                                    <div class="value">
+                                        <div class="number"></div>
+                                        <div class="unit">%</div>
+                                    </div>
+                                    <div class="label">不歪概率</div>
+                                </div>
+                                <div class="block">
+                                    <div class="value">
+                                        <div class="number"></div>
+                                        <div class="unit">抽</div>
+                                    </div>
+                                    <div class="label">五星平均</div>
+                                </div>
+                                <div class="block">
+                                    <div class="value">
+                                        <div class="number"></div>
+                                        <div class="unit">抽</div>
+                                    </div>
+                                    <div class="label">UP平均</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show_box">
+                            <div class="card_view show"> </div>
+                            <div class="list_view"> </div>
+                        </div>
+                    </div>
+                    <div class="box gacha_pool normal">
+                        <div class="title">
+                            <div class="text">常驻</div>
+                            <div class="btns">
+                                <div class="slider"></div>
+                                <div class="btn cardview on">
+                                    <img src="./img/svg/view-grid-card.svg">
+                                </div>
+                                <div class="btn listview">
+                                    <img src="./img/svg/view-grid-list.svg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="count">
+                            <div class="total">
+                                <div class="number"></div>
+                                <div class="unit">抽</div>
+                            </div>
+                            <div class="guarantee">
+                                <div class="star5">
+                                    <div class="bar"></div>
+                                    <div class="text">距上个五星</div>
+                                    <div class="text number"></div>
+                                </div>
+                                <div class="star4">
+                                    <div class="bar"></div>
+                                    <div class="text">距上个四星</div>
+                                    <div class="text number"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="analyze">
+                            <div class="time">~</div>
+                            <div class="blocks">
+                                <div class="block">
+                                    <div class="value">
+                                        <div class="number"></div>
+                                        <div class="unit">金</div>
+                                    </div>
+                                    <div class="label">常驻池</div>
+                                </div>
+                                <div class="block">
+                                    <div class="value">
+                                        <div class="number"></div>
+                                        <div class="unit">抽</div>
+                                    </div>
+                                    <div class="label">常驻平均</div>
+                                </div>
+                                <div class="block">
+                                    <div class="value">
+                                        <div class="number"></div>
+                                        <div class="unit">金</div>
+                                    </div>
+                                    <div class="label">新手池</div>
+                                </div>
+                                <div class="block">
+                                    <div class="value">
+                                        <div class="number"></div>
+                                        <div class="unit">抽</div>
+                                    </div>
+                                    <div class="label">新手平均</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show_box">
+                            <div class="card_view show"> </div>
+                            <div class="list_view"> </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="pagebox" id="page_settings">
-                <div class="box sz" id="test">
-                    设置
-                    <div class="switch">
-                        <input type="checkbox" />
+                <div class="box about">
+                    <div class="area">
+                        <div class="icon"><img src="./img/icon.png"></div>
+                        <div class="version"></div>
+                        <div class="links">
+                            <div class="link">
+                                项目链接 <a href="https://github.com/Natrium0521/Firefly">Github</a>
+                            </div>
+                            <div class="link">
+                                游戏数据来自 <a href="https://github.com/Dimbreath/StarRailData">StarRailData</a>
+                            </div>
+                            <div class="link">
+                                跃迁记录导出标准 <a href="https://uigf.org/">SRGF</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="switch">
-                        <input type="checkbox" />
-                    </div>
-                    <input>
                 </div>
-                <div class="box" id="test"></div>
-                <div class="box" id="test"></div>
+                <div class="box settings firefly">
+                    <div class="title">流萤工具箱</div>
+                    <div class="area">
+                        <div class="switchitem">
+                            <div class="icon"><img src="./img/svg/close-circle.svg"></div>
+                            <div class="title">关闭时直接退出</div>
+                            <div class="desc">不保留托盘图标</div>
+                            <div class="switch"><input type="checkbox" id="switch_close_directly"></div>
+                        </div>
+                        <div class="switchitem">
+                            <div class="icon"><img src="./img/svg/bug.svg"></div>
+                            <div class="title">Debug模式（重启生效）</div>
+                            <div class="desc">不建议非开发人员开启</div>
+                            <div class="switch"><input type="checkbox" id="switch_debug"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
         <div class="layer" id="layer">
             <div class="layerbox achievement_newuser">
@@ -148,7 +426,7 @@
                     </div>
                 </div>
                 <div class="btnarea">
-                    <div class="btn close">关闭</div>
+                    <div class="btn close">取消</div>
                     <div class="btn theme submit">新建</div>
                 </div>
                 <div class="msgbox"></div>
@@ -162,7 +440,7 @@
                     </div>
                 </div>
                 <div class="btnarea">
-                    <div class="btn close">关闭</div>
+                    <div class="btn close">取消</div>
                     <div class="btn theme submit">重命名</div>
                 </div>
                 <div class="msgbox"></div>
@@ -176,7 +454,7 @@
                     </div>
                 </div>
                 <div class="btnarea">
-                    <div class="btn close">关闭</div>
+                    <div class="btn close">取消</div>
                     <div class="btn theme submit">删除</div>
                 </div>
                 <div class="msgbox"></div>
@@ -192,7 +470,7 @@
                     </div>
                 </div>
                 <div class="btnarea">
-                    <div class="btn close">关闭</div>
+                    <div class="btn close">取消</div>
                     <div class="btn theme submit">导入</div>
                 </div>
                 <div class="msgbox"></div>
@@ -208,8 +486,84 @@
                     </div>
                 </div>
                 <div class="btnarea">
-                    <div class="btn close">关闭</div>
+                    <div class="btn close">取消</div>
                     <div class="btn theme submit">导出</div>
+                </div>
+                <div class="msgbox"></div>
+            </div>
+            <div class="layerbox gacha_rename">
+                <div class="title">修改当前记录名称</div>
+                <div class="input_area">
+                    <div class="input_item">
+                        <div class="label">名称:</div>
+                        <input class="input" spellcheck="false" placeholder="">
+                    </div>
+                </div>
+                <div class="btnarea">
+                    <div class="btn close">取消</div>
+                    <div class="btn theme submit">重命名</div>
+                </div>
+                <div class="msgbox"></div>
+            </div>
+            <div class="layerbox gacha_delete">
+                <div class="title">删除当前记录</div>
+                <div class="input_area">
+                    <div class="input_item">
+                        <div class="label">确认:</div>
+                        <input class="input" spellcheck="false" placeholder="请输入 删除">
+                    </div>
+                </div>
+                <div class="btnarea">
+                    <div class="btn close">取消</div>
+                    <div class="btn theme submit">删除</div>
+                </div>
+                <div class="msgbox"></div>
+            </div>
+            <div class="layerbox gacha_import">
+                <div class="title">导入记录</div>
+                <div class="input_area">
+                    <div class="input_item">
+                        <div class="label">导入格式:</div>
+                        <select>
+                            <option value="srgf_v1.0">SRGF v1.0</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="btnarea">
+                    <div class="btn close">取消</div>
+                    <div class="btn theme submit">导入</div>
+                </div>
+                <div class="msgbox"></div>
+            </div>
+            <div class="layerbox gacha_export">
+                <div class="title">导出记录</div>
+                <div class="input_area">
+                    <div class="input_item">
+                        <div class="label">导出格式:</div>
+                        <select>
+                            <option value="srgf_v1.0">SRGF v1.0</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="btnarea">
+                    <div class="btn close">取消</div>
+                    <div class="btn theme submit">导出</div>
+                </div>
+                <div class="msgbox"></div>
+            </div>
+            <div class="layerbox gacha_refresh">
+                <div class="title">刷新记录</div>
+                <div class="url_area">
+                    <div class="label">URL:</div>
+                    <div class="btn">自动获取</div>
+                    <textarea spellcheck="false"
+                        placeholder="https://api-takumi.mihoyo.com/common/gacha_record/api/getGachaLog?"
+                        wrap="hard"></textarea>
+                </div>
+                <div class="card_area"> </div>
+                <div class="btnarea">
+                    <div class="btn close">取消</div>
+                    <div class="btn theme submit">刷新</div>
                 </div>
                 <div class="msgbox"></div>
             </div>
@@ -219,6 +573,8 @@
 
 <script src="./js/flip.js"></script>
 <script src="./js/achievement.js"></script>
+<script src="./js/gacha.js"></script>
+<script src="./js/settings.js"></script>
 <script src="./js/index.js"></script>
 
 </html>

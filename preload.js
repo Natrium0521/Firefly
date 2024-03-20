@@ -8,6 +8,8 @@ contextBridge.exposeInMainWorld('versions', {
 
 contextBridge.exposeInMainWorld('fireflyAPI', {
     getAppSettings: () => ipcRenderer.invoke('getAppSettings'),
+    setAppSettings: (setting_name, setting_value) => ipcRenderer.invoke('setAppSettings', setting_name, setting_value),
+    getAppVersion: () => ipcRenderer.invoke('getAppVersion'),
 
     getJson: (name) => ipcRenderer.invoke('getJson', name),
 
@@ -19,5 +21,14 @@ contextBridge.exposeInMainWorld('fireflyAPI', {
     importAchi: (uid, type) => ipcRenderer.invoke('importAchi', uid, type),
     setAchiStatus: (uid, achi_id, achi_status) => ipcRenderer.invoke('setAchiStatus', uid, achi_id, achi_status),
 
+    getGachaUids: () => ipcRenderer.invoke('getGachaUids'),
+    getGachaData: (uid, changeLastGachaUid) => ipcRenderer.invoke('getGachaData', uid, changeLastGachaUid),
+    newGacha: (uid, nick) => ipcRenderer.invoke('newGacha', uid, nick),
+    delGacha: (uid) => ipcRenderer.invoke('delGacha', uid),
+    exportGacha: (uid, type) => ipcRenderer.invoke('exportGacha', uid, type),
+    importGacha: (type, data) => ipcRenderer.invoke('importGacha', type, data),
+    getGachaUrl: (server) => ipcRenderer.invoke('getGachaUrl', server),
+
     sendMainWindow: (msg) => ipcRenderer.send('mainWindowMsg', msg),
+    openURL: (url) => ipcRenderer.send('openURL', url),
 })

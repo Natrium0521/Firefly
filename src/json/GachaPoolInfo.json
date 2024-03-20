@@ -1,0 +1,674 @@
+{
+    "2001": {
+        "GachaID": 2001,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1102
+        ],
+        "UpItems4": [
+            1105,
+            1106,
+            1109
+        ]
+    },
+    "3001": {
+        "GachaID": 3001,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23001
+        ],
+        "UpItems4": [
+            21001,
+            21005,
+            21000
+        ]
+    },
+    "2002": {
+        "GachaID": 2002,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1204
+        ],
+        "UpItems4": [
+            1206,
+            1001,
+            1103
+        ]
+    },
+    "3002": {
+        "GachaID": 3002,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23010
+        ],
+        "UpItems4": [
+            21003,
+            21002,
+            21013
+        ]
+    },
+    "2003": {
+        "GachaID": 2003,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1102
+        ],
+        "UpItems4": [
+            1105,
+            1106,
+            1109
+        ]
+    },
+    "3003": {
+        "GachaID": 3003,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23001
+        ],
+        "UpItems4": [
+            21001,
+            21005,
+            21000
+        ]
+    },
+    "2004": {
+        "GachaID": 2004,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1204
+        ],
+        "UpItems4": [
+            1206,
+            1001,
+            1103
+        ]
+    },
+    "3004": {
+        "GachaID": 3004,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23010
+        ],
+        "UpItems4": [
+            21003,
+            21002,
+            21013
+        ]
+    },
+    "2005": {
+        "GachaID": 2005,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1006
+        ],
+        "UpItems4": [
+            1002,
+            1009,
+            1103
+        ]
+    },
+    "3005": {
+        "GachaID": 3005,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23007
+        ],
+        "UpItems4": [
+            21017,
+            21004,
+            21013
+        ]
+    },
+    "2006": {
+        "GachaID": 2006,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1203
+        ],
+        "UpItems4": [
+            1106,
+            1201,
+            1207
+        ]
+    },
+    "3006": {
+        "GachaID": 3006,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23008
+        ],
+        "UpItems4": [
+            21001,
+            21018,
+            21020
+        ]
+    },
+    "2007": {
+        "GachaID": 2007,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1205
+        ],
+        "UpItems4": [
+            1008,
+            1206,
+            1105
+        ]
+    },
+    "3007": {
+        "GachaID": 3007,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23009
+        ],
+        "UpItems4": [
+            21012,
+            21010,
+            21007
+        ]
+    },
+    "2008": {
+        "GachaID": 2008,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1005
+        ],
+        "UpItems4": [
+            1111,
+            1108,
+            1103
+        ]
+    },
+    "3008": {
+        "GachaID": 3008,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23006
+        ],
+        "UpItems4": [
+            21015,
+            21008,
+            21006
+        ]
+    },
+    "2009": {
+        "GachaID": 2009,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1213
+        ],
+        "UpItems4": [
+            1207,
+            1009,
+            1001
+        ]
+    },
+    "3009": {
+        "GachaID": 3009,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23015
+        ],
+        "UpItems4": [
+            21011,
+            21018,
+            21009
+        ]
+    },
+    "2010": {
+        "GachaID": 2010,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1208
+        ],
+        "UpItems4": [
+            1110,
+            1109,
+            1106
+        ]
+    },
+    "3010": {
+        "GachaID": 3010,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23011
+        ],
+        "UpItems4": [
+            21016,
+            21014,
+            21019
+        ]
+    },
+    "2011": {
+        "GachaID": 2011,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1212
+        ],
+        "UpItems4": [
+            1202,
+            1201,
+            1108
+        ]
+    },
+    "3011": {
+        "GachaID": 3011,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23014
+        ],
+        "UpItems4": [
+            21008,
+            21004,
+            21013
+        ]
+    },
+    "2012": {
+        "GachaID": 2012,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1112
+        ],
+        "UpItems4": [
+            1210,
+            1111,
+            1206
+        ]
+    },
+    "3012": {
+        "GachaID": 3012,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23016
+        ],
+        "UpItems4": [
+            21003,
+            21018,
+            21015
+        ]
+    },
+    "2013": {
+        "GachaID": 2013,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1102
+        ],
+        "UpItems4": [
+            1210,
+            1111,
+            1206
+        ]
+    },
+    "3013": {
+        "GachaID": 3013,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23001
+        ],
+        "UpItems4": [
+            21003,
+            21018,
+            21015
+        ]
+    },
+    "2014": {
+        "GachaID": 2014,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1217
+        ],
+        "UpItems4": [
+            1002,
+            1008,
+            1103
+        ]
+    },
+    "3014": {
+        "GachaID": 3014,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23017
+        ],
+        "UpItems4": [
+            21007,
+            21017,
+            21016
+        ]
+    },
+    "2015": {
+        "GachaID": 2015,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1302
+        ],
+        "UpItems4": [
+            1215,
+            1110,
+            1009
+        ]
+    },
+    "3015": {
+        "GachaID": 3015,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23018
+        ],
+        "UpItems4": [
+            21019,
+            21000,
+            21006
+        ]
+    },
+    "2016": {
+        "GachaID": 2016,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1006
+        ],
+        "UpItems4": [
+            1215,
+            1110,
+            1009
+        ]
+    },
+    "3016": {
+        "GachaID": 3016,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23007
+        ],
+        "UpItems4": [
+            21019,
+            21000,
+            21006
+        ]
+    },
+    "2017": {
+        "GachaID": 2017,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1303
+        ],
+        "UpItems4": [
+            1001,
+            1202,
+            1214
+        ]
+    },
+    "3017": {
+        "GachaID": 3017,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23019
+        ],
+        "UpItems4": [
+            21002,
+            21011,
+            21012
+        ]
+    },
+    "2018": {
+        "GachaID": 2018,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1205
+        ],
+        "UpItems4": [
+            1001,
+            1202,
+            1214
+        ]
+    },
+    "3018": {
+        "GachaID": 3018,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23009
+        ],
+        "UpItems4": [
+            21002,
+            21011,
+            21012
+        ]
+    },
+    "2019": {
+        "GachaID": 2019,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1305
+        ],
+        "UpItems4": [
+            1105,
+            1109,
+            1206
+        ]
+    },
+    "3019": {
+        "GachaID": 3019,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23020
+        ],
+        "UpItems4": [
+            21003,
+            21009,
+            21014
+        ]
+    },
+    "2020": {
+        "GachaID": 2020,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1005
+        ],
+        "UpItems4": [
+            1105,
+            1109,
+            1206
+        ]
+    },
+    "3020": {
+        "GachaID": 3020,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23006
+        ],
+        "UpItems4": [
+            21003,
+            21009,
+            21014
+        ]
+    },
+    "2021": {
+        "GachaID": 2021,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1307
+        ],
+        "UpItems4": [
+            1202,
+            1210,
+            1312
+        ]
+    },
+    "3021": {
+        "GachaID": 3021,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23022
+        ],
+        "UpItems4": [
+            21015,
+            21018,
+            21042
+        ]
+    },
+    "2022": {
+        "GachaID": 2022,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1213
+        ],
+        "UpItems4": [
+            1202,
+            1210,
+            1312
+        ]
+    },
+    "3022": {
+        "GachaID": 3022,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23015
+        ],
+        "UpItems4": [
+            21015,
+            21018,
+            21042
+        ]
+    },
+    "2023": {
+        "GachaID": 2023,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1306
+        ],
+        "UpItems4": [
+            1108,
+            1201,
+            1215
+        ]
+    },
+    "3023": {
+        "GachaID": 3023,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23021
+        ],
+        "UpItems4": [
+            21011,
+            21019,
+            21020
+        ]
+    },
+    "2024": {
+        "GachaID": 2024,
+        "GachaType": "AvatarUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            1204
+        ],
+        "UpItems4": [
+            1108,
+            1201,
+            1215
+        ]
+    },
+    "3024": {
+        "GachaID": 3024,
+        "GachaType": "WeaponUp",
+        "StartTime": "",
+        "EndTime": "",
+        "UpItems5": [
+            23010
+        ],
+        "UpItems4": [
+            21011,
+            21019,
+            21020
+        ]
+    }
+}

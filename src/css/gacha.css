@@ -1,0 +1,840 @@
+#page_gacha {
+    position: relative;
+    overflow: hidden;
+
+    .gacha_head {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 5px;
+        height: 50px;
+        padding: 5px;
+        z-index: 1;
+
+        &>div {
+            position: absolute;
+            top: 10px;
+            bottom: 10px;
+            filter: drop-shadow(2px 4px 4px #0004);
+        }
+
+        .uid_wrap {
+            width: 150px;
+            left: 10px;
+            top: 5px;
+
+            .nickname {
+                position: absolute;
+                left: 4px;
+                top: 2px;
+                right: 35px;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .uid {
+                position: absolute;
+                bottom: 2px;
+                left: 8px;
+                color: var(--theme-background);
+                filter: grayscale(0.5);
+                font-size: 0.85em;
+            }
+
+            .dropdown_ico {
+                position: absolute;
+                right: 5px;
+                top: 50%;
+                line-height: 24px;
+                margin-top: -12px;
+                transition: transform 300ms ease;
+
+                &.show {
+                    transform: rotate(180deg);
+                }
+
+                &:hover {
+                    scale: 1.1;
+                }
+
+                &:active {
+                    scale: 1.05;
+                }
+            }
+
+            .uid_show {
+                background: #fffa;
+                margin-top: 5px;
+                height: 40px;
+                border-radius: 5px;
+                position: relative;
+
+                &.show {
+                    background: #fffe;
+                    transform: none;
+
+                    &:hover {
+                        background: #fffe;
+                    }
+                }
+
+                &:hover {
+                    background: #fffc;
+                }
+            }
+
+            .uid_dropdown {
+                background: #fffd;
+                border-radius: 3px;
+                margin-top: 5px;
+                overflow-y: scroll;
+                max-height: 200px;
+                visibility: hidden;
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: all 300ms ease;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+
+
+                &.show {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+
+                .user {
+                    position: relative;
+                    background: #fffa;
+                    margin: 4px 4px 0px 4px;
+                    border-radius: 5px;
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    flex-basis: 40px;
+
+                    &:hover {
+                        scale: 1.02;
+                    }
+
+                    &:active {
+                        scale: 1.01;
+                        filter: brightness(0.95);
+                    }
+
+                    .nickname {
+                        right: 10px;
+                    }
+                }
+            }
+        }
+
+        .btn {
+            background: #fff9;
+            width: 85px;
+            border-radius: 5px;
+
+            .ico>img {
+                position: absolute;
+                height: 20px;
+                top: 50%;
+                margin-top: -10px;
+                left: 10px;
+            }
+
+            &>.label {
+                position: absolute;
+                line-height: 40px;
+                left: 40px;
+            }
+
+            &:hover {
+                background: #fffd;
+            }
+
+            &:active {
+                background: #fffc;
+            }
+        }
+
+        .refresh_wrap {
+            left: 170px;
+        }
+
+        .rename_wrap {
+            left: 265px;
+            width: 100px;
+        }
+
+        .import_wrap {
+            right: 200px;
+
+            &:hover {
+                .dropdown_wrap {
+                    transform: translateY(0);
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            &:active {
+                background: #fffd;
+            }
+
+            .dropdown_wrap {
+                position: absolute;
+                top: 40px;
+                padding-top: 5px;
+                transition: all 300ms ease;
+                transform: translateY(-10px);
+                opacity: 0;
+                visibility: hidden;
+
+                .dropdown {
+                    background: #fffc;
+                    width: 145px;
+                    border-radius: 3px;
+                    padding: 1px;
+
+                    .method {
+                        background: #fffc;
+                        height: 40px;
+                        margin: 4px;
+                        border-radius: 3px;
+                        position: relative;
+
+                        img {
+                            position: absolute;
+                            height: 24px;
+                            top: 50%;
+                            margin-top: -12px;
+                            left: 8px;
+                        }
+
+                        .label {
+                            position: absolute;
+                            line-height: 40px;
+                            left: 40px;
+                        }
+
+                        &:hover {
+                            scale: 1.02;
+                        }
+
+                        &:active {
+                            scale: 1.01;
+                        }
+                    }
+                }
+            }
+        }
+
+        .export_wrap {
+            right: 105px;
+        }
+
+        .delete_wrap {
+            right: 10px;
+            background: var(--theme-background);
+            background: #c009;
+
+            img {
+                filter: invert(var(--theme-svg-invert));
+            }
+
+            .label {
+                color: var(--theme-text);
+            }
+
+            &:hover {
+                background: #c00d;
+            }
+
+            &:active {
+                background: #c00a;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            margin-top: 1px;
+            margin-bottom: 1px;
+        }
+
+    }
+
+    .gacha_body {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 5px;
+        bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .gacha_pool {
+        height: 100%;
+        flex-basis: 33%;
+        min-width: 250px;
+        position: relative;
+
+        &>div {
+            position: absolute;
+            left: 5px;
+            right: 5px;
+        }
+
+        &>.title {
+            background: #fffa;
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+            top: 5px;
+            height: 40px;
+
+            .text {
+                line-height: 40px;
+                font-size: 1.25em;
+                width: 120px;
+                position: absolute;
+                left: 6px;
+                color: var(--theme-background);
+                filter: brightness(0.9);
+            }
+
+            .btns {
+                background: #eeea;
+                width: 70px;
+                height: 36px;
+                position: absolute;
+                right: 6px;
+                top: 2px;
+                border-radius: 5px;
+                box-shadow: 1px 1px 1px #0003 inset;
+
+                &>div {
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 4px;
+                    top: 3px;
+
+                    &:hover {
+                        background: #0001;
+                    }
+
+                    &.on:hover {
+                        background: none;
+                    }
+                }
+
+                .cardview {
+                    left: 3px;
+                }
+
+                .listview {
+                    right: 3px;
+                }
+
+                .slider {
+                    width: 30px;
+                    height: 30px;
+                    box-shadow: 1px 1px 1px #0003;
+                    top: 3px;
+                    left: 3px;
+                    background: #fff;
+                    transition: all 300ms ease;
+
+                    &.toggle {
+                        transform: translateX(34px);
+                    }
+                }
+            }
+        }
+
+        &>.count {
+            background: #fff6;
+            top: 45px;
+            height: 90px;
+
+            .total {
+                height: 45px;
+                margin-top: 5px;
+                margin-left: 5px;
+                color: var(--theme-background);
+                filter: brightness(0.4);
+
+                .number {
+                    float: left;
+                    font-size: 2.25em;
+                    margin-left: 5px;
+                    line-height: 45px;
+                }
+
+                .unit {
+                    float: left;
+                    margin-left: 10px;
+                    margin-top: 20px;
+                }
+            }
+
+            .guarantee {
+                height: 35px;
+                margin: 0 5px;
+                position: relative;
+
+                &>div {
+                    position: absolute;
+                    height: 100%;
+                    border-radius: 4px;
+                    overflow: hidden;
+                }
+
+                .star5 {
+                    border: solid 1px #ec9a1d77;
+                    left: 0;
+                    right: calc(50% + 2px);
+
+                    .bar {
+                        transition: all 100ms ease;
+                        background: #ec9a1d44;
+                        width: 0%;
+                    }
+
+                    .text {
+                        color: #ec9a1d;
+                    }
+                }
+
+                .star4 {
+                    border: solid 1px #a01dec77;
+                    left: calc(50% + 2px);
+                    right: 0;
+
+                    .bar {
+                        transition: all 100ms ease;
+                        background: #a01dec44;
+                        width: 0%;
+                    }
+
+                    .text {
+                        color: #a01dec;
+                    }
+                }
+
+                .bar {
+                    position: absolute;
+                    height: 100%;
+                }
+
+                .text {
+                    font-size: 0.8em;
+                    filter: brightness(0.8);
+                    line-height: 35px;
+                    position: absolute;
+                    left: 10px;
+                    right: 10px;
+                }
+
+                .number {
+                    text-align: right;
+                }
+            }
+        }
+
+        &>.analyze {
+            background: #fff6;
+            top: 135px;
+            height: 65px;
+
+            .time {
+                color: #0007;
+                font-size: 0.75em;
+                text-align: center;
+                line-height: 20px;
+            }
+
+            .blocks {
+                padding: 0 5px;
+                display: flex;
+                justify-content: space-between;
+
+                .block {
+                    border-radius: 4px;
+                    flex-basis: 24%;
+                    position: relative;
+                    height: 40px;
+
+                    .value {
+                        color: var(--theme-background);
+                        filter: brightness(0.9);
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+
+                        .number {
+                            font-size: 1.33em;
+                        }
+
+                        .unit {
+                            font-size: 0.75em;
+                            margin-left: 3px;
+                            margin-top: 10px;
+                        }
+                    }
+
+                    .label {
+                        color: #000d;
+                        font-size: 0.8em;
+                        position: absolute;
+                        width: 100%;
+                        text-align: center;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &>.show_box {
+            background: #fff6;
+            top: 200px;
+            bottom: 5px;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            overflow: hidden;
+
+            .card_view,
+            .list_view {
+                background: #fff7;
+                border-radius: 4px;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                right: 5px;
+                bottom: 5px;
+                overflow-y: scroll;
+                box-shadow: 1px 1px 2px #0003 inset;
+                visibility: hidden;
+                opacity: 0;
+                transition: all 300ms ease;
+
+                &.show {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateX(0px);
+                }
+            }
+
+            .card_view {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                gap: 5px;
+                padding: 5px;
+                transform: translateX(10px);
+
+                .card {
+                    width: 46px;
+                    height: 60px;
+                    background: #fff;
+                    border-radius: 5px;
+                    position: relative;
+                    box-shadow: 1px 1px 2px #0003;
+
+                    &.noup {
+                        background: #faa;
+                    }
+
+                    &.newbie {
+                        background: #afa;
+                    }
+
+                    .img {
+                        position: absolute;
+                        width: 100%;
+                        background: linear-gradient(135deg, #5f4011, #ec9a1d);
+                        top: 0;
+                        bottom: 15px;
+                        display: flex;
+                        justify-content: center;
+                        border-radius: 5px;
+                        overflow: hidden;
+
+                        img {
+                            position: absolute;
+                            width: 100%;
+                        }
+                    }
+
+                    .txt {
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        text-align: center;
+                        font-size: 0.8em;
+                    }
+                }
+            }
+
+            .list_view {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                gap: 5px;
+                padding: 5px;
+                transform: translateX(-10px);
+
+                .bar {
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 5px;
+                    background: #fff;
+                    position: relative;
+                    box-shadow: 1px 1px 2px #0003;
+                    flex-shrink: 0;
+                    overflow: hidden;
+
+                    &>div {
+                        position: absolute;
+                    }
+
+                    .bgbar {
+                        height: 100%;
+                        border-radius: 5px;
+                        animation: bar_anim 1s linear forwards paused;
+                        animation-delay: -0s;
+                    }
+
+                    .img {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 40px;
+                        overflow: hidden;
+
+                        img {
+                            height: 40px;
+                        }
+                    }
+
+                    .name {
+                        line-height: 40px;
+                        left: 45px;
+                        right: 80px;
+                        overflow: hidden;
+                    }
+
+                    .tag {
+                        line-height: 40px;
+                        right: 40px;
+                        width: 30px;
+                        text-align: center;
+                        color: var(--theme-background);
+                    }
+
+                    .txt {
+                        line-height: 40px;
+                        right: 10px;
+                    }
+                }
+            }
+
+            ::-webkit-scrollbar {
+                width: 3px;
+            }
+        }
+    }
+}
+
+.layer {
+    .gacha_rename {
+        width: 300px;
+        height: 180px;
+        margin-top: -90px;
+        margin-left: -150px;
+    }
+
+    .gacha_delete {
+        width: 300px;
+        height: 180px;
+        margin-top: -90px;
+        margin-left: -150px;
+    }
+
+    .gacha_import,
+    .gacha_export {
+        width: 300px;
+        height: 180px;
+        margin-top: -90px;
+        margin-left: -150px;
+
+        .input_area {
+
+            .input_item {
+                width: 180px;
+                height: 25px;
+                position: relative;
+
+                .label {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100px;
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+
+    .gacha_refresh {
+        width: 400px;
+        height: 300px;
+        margin-top: -150px;
+        margin-left: -250px;
+
+        &.expand {
+            height: 400px;
+            margin-top: -200px;
+
+            .url_area {
+                height: 80px;
+            }
+
+            .card_area {
+                height: 160px;
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        .url_area {
+            width: 310px;
+            height: 150px;
+            margin-left: 45px;
+            margin-top: 10px;
+            position: relative;
+            transition: all 500ms ease;
+
+            &>* {
+                position: absolute;
+            }
+
+            .label {
+                left: 10px;
+                line-height: 30px;
+            }
+
+            .btn {
+                right: 10px;
+                line-height: 20px;
+                background: var(--theme-background);
+                color: var(--theme-text);
+                font-size: 0.95em;
+                padding: 5px;
+                border-radius: 4px;
+
+                &:hover {
+                    scale: 1.02;
+                    filter: brightness(0.95);
+                }
+
+                &:active {
+                    scale: 1.01;
+                    filter: brightness(0.9);
+                }
+            }
+
+            textarea {
+                left: 10px;
+                right: 10px;
+                bottom: 0;
+                top: 35px;
+                resize: none;
+                border: solid 1px var(--theme-background);
+                border-radius: 5px;
+                padding: 3px;
+                word-break: break-all;
+            }
+        }
+
+        .card_area {
+            background: #fff;
+            width: 280px;
+            height: 20px;
+            margin-left: 55px;
+            margin-top: 5px;
+            transition: all 500ms ease;
+            visibility: hidden;
+            opacity: 0;
+            border-radius: 5px;
+            box-shadow: 1px 1px 2px #0003 inset;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            gap: 5px;
+            padding: 5px;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+
+            .card {
+                flex-shrink: 0;
+                width: 50px;
+                height: 60px;
+                border-radius: 5px 15px 5px 5px;
+                box-shadow: 1px 1px 2px #0004;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &.star3 {
+                    background: linear-gradient(135deg, #0b638f, #0b96db);
+                }
+
+                &.star4 {
+                    background: linear-gradient(135deg, #4c0b7a, #9012eb);
+                }
+
+                &.star5 {
+                    background: linear-gradient(135deg, #5f4011, #ec9a1d);
+                }
+
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@keyframes bar_anim {
+    0% {
+        width: 0%;
+        background: #0f07;
+    }
+
+    50% {
+        background: #0f07;
+    }
+
+    70% {
+        background: #fa07;
+    }
+
+    85% {
+        background: #f007;
+    }
+
+    100% {
+        width: 100%;
+        background: #f007;
+    }
+}

@@ -1,0 +1,130 @@
+#page_settings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: scroll;
+
+    .about {
+        height: 200px;
+
+        .area {
+            top: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+
+            .icon {
+                height: 150px;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .version {
+                text-align: center;
+            }
+        }
+    }
+
+    .settings {
+        overflow: hidden;
+
+        &>.title {
+            position: absolute;
+            line-height: 40px;
+            left: 10px;
+        }
+
+        .area {
+            top: 40px;
+            overflow: hidden;
+            padding: 5px;
+
+            .switchitem {
+                position: relative;
+                width: calc(100%);
+                height: 60px;
+                border-radius: 4px;
+
+                &:hover {
+                    background: #fff9;
+                }
+
+                &>div {
+                    position: absolute;
+                }
+
+                .icon {
+                    left: 10px;
+                    top: 50%;
+                    height: 30px;
+                    margin-top: -15px;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+
+                .switch {
+                    right: 10px;
+                    top: 50%;
+                    height: 36px;
+                    margin-top: -18px;
+                }
+
+                .title {
+                    left: 50px;
+                    line-height: 40px;
+                    top: 5px;
+                }
+
+                .desc {
+                    left: 50px;
+                    line-height: 20px;
+                    bottom: 7px;
+                    color: gray;
+                    font-size: 0.75em;
+                }
+            }
+        }
+    }
+
+    .settings.firefly {
+        height: 175px;
+    }
+
+    .box {
+        position: relative;
+        flex-shrink: 0;
+        width: calc(100% - 3px);
+        margin-bottom: 5px;
+
+        &>.area {
+            position: absolute;
+            left: 5px;
+            right: 5px;
+            background: #fff9;
+            border-radius: 4px;
+            bottom: 5px;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        margin-bottom: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #fff5;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #fff9;
+    }
+}

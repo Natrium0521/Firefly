@@ -2,6 +2,7 @@
     --theme-background: #fff0;
     --theme-text: #fff0;
     --theme-svg-invert: 0;
+    --noise: url("../img/svg/_noise.svg");
 }
 
 @font-face {
@@ -45,7 +46,7 @@ img {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
-    // filter: blur(2px);
+    filter: blur(2px);
     float: left;
 }
 
@@ -58,9 +59,19 @@ img {
     backdrop-filter: blur(6px);
     box-shadow: 3px 3px 2px #0005;
 
+    .icon{
+        float: left;
+        height: 100%;
+
+        img{
+            height: 100%;
+            margin-left: 10px;
+        }
+    }
+
     .title {
         float: left;
-        left: 20px;
+        left: 10px;
         height: 100%;
         line-height: 50px;
         font-size: 1.25em;
@@ -113,9 +124,11 @@ img {
     background: #0005;
     visibility: hidden;
     opacity: 0;
-    transition: all 500ms ease;
+    transition: all 300ms ease;
+    z-index: -65535;
 
     &.show {
+        z-index: 65535;
         visibility: visible;
         opacity: 1;
     }
@@ -129,13 +142,14 @@ img {
         top: 50%;
         visibility: hidden;
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(20px);
         transition: all 500ms ease;
 
         &.show {
             visibility: visible;
             opacity: 1;
             transform: translateY(0px);
+            z-index: 1;
         }
 
         .title {
@@ -216,7 +230,7 @@ img {
                 border-radius: 5px;
                 border: solid var(--theme-background) 1px;
 
-                &+.theme {
+                &.theme {
                     background: var(--theme-background);
                     color: var(--theme-text);
                 }
@@ -266,30 +280,7 @@ img {
         margin-left: -150px;
     }
 
-    .achievement_import {
-        width: 300px;
-        height: 180px;
-        margin-top: -90px;
-        margin-left: -150px;
-
-        .input_area {
-
-            .input_item {
-                width: 180px;
-                height: 25px;
-                position: relative;
-
-                .label {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100px;
-                    line-height: 25px;
-                }
-            }
-        }
-    }
-
+    .achievement_import,
     .achievement_export {
         width: 300px;
         height: 180px;
@@ -319,7 +310,7 @@ img {
     border-radius: 4px;
     box-shadow: 3px 3px 2px #0005;
     background: #fff7;
-    backdrop-filter: blur(2px);
+    // backdrop-filter: blur(2px);
 }
 
 .box:hover {
@@ -330,7 +321,7 @@ img {
 .tab {
     margin: 5px;
     width: 30%;
-    max-width: 250px;
+    max-width: 200px;
     min-width: 150px;
     overflow-y: scroll;
 }
@@ -401,13 +392,14 @@ img {
     scroll-behavior: smooth;
     visibility: hidden;
     opacity: 0;
-    transition: transform 200ms ease-in, opacity 200ms ease-in, visibility 200ms;
+    transition: transform 100ms ease-in, opacity 100ms ease-in, visibility 100ms;
 
     &.show {
         opacity: 1;
         transform: translateY(-10px);
-        transition: transform 500ms ease-out, opacity 500ms ease;
+        transition: transform 300ms ease-out, opacity 300ms ease;
         visibility: visible;
+        z-index: 1;
     }
 }
 
@@ -478,7 +470,7 @@ img {
             right: 8px;
             top: 50%;
             margin-top: -18px;
-            transition: all 100ms ease;
+            transition: all 70ms ease;
 
             &:hover {
                 scale: 1.1;
@@ -499,7 +491,7 @@ img {
             right: 40px;
             top: 50%;
             margin-top: -18px;
-            transition: all 100ms ease;
+            transition: all 70ms ease;
 
             &:hover {
                 scale: 1.1;
@@ -557,7 +549,7 @@ img {
             }
 
             .dropdown_ico {
-                transition: transform 500ms ease;
+                transition: transform 300ms ease;
 
                 &.show {
                     transform: rotate(180deg);
@@ -602,7 +594,7 @@ img {
                 visibility: hidden;
                 opacity: 0;
                 transform: translateY(-10px);
-                transition: all 500ms ease;
+                transition: all 300ms ease;
                 display: flex;
                 flex-direction: column;
                 flex-wrap: nowrap;
@@ -664,7 +656,7 @@ img {
                     left: 50%;
                     margin-top: -12px;
                     margin-left: -12px;
-                    transition: transform 500ms ease;
+                    transition: transform 300ms ease;
                     filter: invert(var(--theme-svg-invert));
                 }
 
@@ -690,7 +682,7 @@ img {
                 visibility: hidden;
                 opacity: 0;
                 transform: translateY(-10px);
-                transition: all 500ms ease;
+                transition: all 300ms ease;
 
                 &.show {
                     visibility: visible;
@@ -766,6 +758,7 @@ img {
         width: 220px;
         border-radius: 5px 0px 0px 5px;
         overflow-y: scroll;
+        scroll-behavior: smooth;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -843,7 +836,7 @@ img {
                     background: var(--theme-background);
                     width: 0%;
                     height: 100%;
-                    transition: all 500ms ease;
+                    transition: all 300ms ease;
                 }
             }
 
@@ -1090,7 +1083,7 @@ img {
         background: #dddd;
         border-radius: 25px;
         position: relative;
-        transition: all 100ms ease;
+        transition: all 70ms ease;
     }
 
     input::before {
@@ -1102,7 +1095,7 @@ img {
         left: 2px;
         background: #fff;
         border-radius: 50%;
-        transition: all 200ms ease;
+        transition: all 150ms ease;
     }
 
     input:checked {

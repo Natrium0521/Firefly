@@ -7,6 +7,7 @@ achiFlip = new flip()
 achiUids = {}
 achiCurrUid = ''
 achiCurrData = {}
+achiSearchMap = {}
 
 const isMEAchievement = (aid) => {
     flag = false
@@ -91,7 +92,7 @@ const loadAchiData = (data) => {
         pct = (fin / tot * 100).toFixed(2)
         el.querySelector('.info').innerText = `${fin}/${tot} - ${pct}%`
         if (sid == 0) {
-            document.querySelector('.achievement_head .achi_info').innerText = el.querySelector('.info').innerText
+            document.querySelector('.achievement_head .achi_info').innerText = `${fin}/${tot} - ${pct}%`
             pct0 = pct
         }
         el.querySelector('.progress .bar').style.width = `${pct}%`
@@ -193,6 +194,7 @@ const initAchievement = async () => {
                 <div class="txt">${rew}</div>
             </div>`
         document.querySelector('.achi_box').appendChild(itemDiv)
+        achiSearchMap[achievement['AchievementID']] = `${tit}\n${main_desc}\n${sub_desc}`
     })
     document.querySelectorAll('.achi_box .item').forEach((e) => achiFlip.append(e))
 
@@ -204,7 +206,7 @@ const initAchievement = async () => {
             mearr.forEach(i => [
                 title += `  ${textMap[achievementData[i]['AchievementTitle']['Hash']]}\n`
             ])
-            e.querySelector('.checkbox').setAttribute('title', title)
+            e.setAttribute('title', title)
         }
     })
 
@@ -270,7 +272,7 @@ const initAchievement = async () => {
     })
 }
 
-// 防抖函数
+// 防抖函数（好像没用到？懒得删了）
 var timeoutId
 const debounce = (fun, delay) => {
     return () => {
@@ -298,14 +300,19 @@ const selectSeries = (series, clearSearchbox = false) => {
 }
 
 const doSearch = (str) => {
+    document.querySelector('.achi_series').scrollTop = 0
     achiFlip.refresh()
     selectSeries(allAchiSeries)
-    document.querySelectorAll('.achi_box .item').forEach(ele => {
-        if (str == '' || ele.querySelector('.title').innerText.includes(str) || ele.querySelector('.desc').innerText.includes(str))
-            ele.style.display = 'block'
-        else
-            ele.style.display = 'none'
-    })
+    if (str == '') {
+        document.querySelectorAll('.achi_box .item').forEach(ele => ele.style.display = 'block')
+    } else {
+        document.querySelectorAll('.achi_box .item').forEach(ele => {
+            if (achiSearchMap[ele.getAttribute('achievement_id')].includes(str))
+                ele.style.display = 'block'
+            else
+                ele.style.display = 'none'
+        })
+    }
     achiFlip.play(500)
 }
 
@@ -344,10 +351,10 @@ document.querySelector('.achi_search>.search_ico').addEventListener('click', (e)
     doSearch(document.querySelector('.achi_search>.search_box').value)
 })
 
-const toggleUid = (forceHidden) => {
-    show = document.querySelector('.uid_show')
-    box = document.querySelector('.uid_dropdown')
-    ico = document.querySelector('.dropdown_ico')
+const toggleAchiUid = (forceHidden) => {
+    show = document.querySelector('.achievement_head .uid_show')
+    box = document.querySelector('.achievement_head .uid_dropdown')
+    ico = document.querySelector('.achievement_head .dropdown_ico')
     isShow = ico.classList.contains('show')
     if (isShow || forceHidden) {
         show.classList.remove('show')
@@ -359,9 +366,9 @@ const toggleUid = (forceHidden) => {
         ico.classList.add('show')
     }
 }
-const toggleOp = (forceHidden) => {
-    btn = document.querySelector('.op_btn')
-    box = document.querySelector('.op_dropdown')
+const toggleAchiOp = (forceHidden) => {
+    btn = document.querySelector('.achievement_head .op_btn')
+    box = document.querySelector('.achievement_head .op_dropdown')
     isShow = btn.classList.contains('show')
     if (isShow || forceHidden) {
         btn.classList.remove('show')
@@ -371,19 +378,19 @@ const toggleOp = (forceHidden) => {
         box.classList.add('show')
     }
 }
-document.querySelector('.uid_show').addEventListener('click', (e) => {
-    toggleUid(false)
-    toggleOp(true)
+document.querySelector('.achievement_head .uid_show').addEventListener('click', (e) => {
+    toggleAchiUid(false)
+    toggleAchiOp(true)
 })
-document.querySelector('.op_btn').addEventListener('click', (e) => {
-    toggleOp(false)
-    toggleUid(true)
+document.querySelector('.achievement_head .op_btn').addEventListener('click', (e) => {
+    toggleAchiOp(false)
+    toggleAchiUid(true)
 })
 // 点其他地方关闭下拉框
 document.addEventListener('click', (e) => {
     if (e.target.closest('.achi_account') == null) {
-        toggleOp(true)
-        toggleUid(true)
+        toggleAchiOp(true)
+        toggleAchiUid(true)
     }
 })
 
@@ -430,23 +437,9 @@ document.querySelector('.achievement_head .op_wrap .op_dropdown').addEventListen
     }
     layer.querySelector(`.${qs.class} .msgbox`).innerText = (qs.msg === undefined ? '' : qs.msg)
     layer.querySelectorAll(`.${qs.class} input`).forEach(el => el.value = '')
-    toggleOp(true)
+    toggleAchiOp(true)
     layer.classList.add('show')
     layer.querySelector(`.${qs.class}`).classList.add('show')
-})
-
-// 隐藏layer
-layer.querySelectorAll('.layer .close').forEach(el => {
-    el.addEventListener('click', (e) => {
-        e.target.closest('.layerbox').classList.remove('show')
-        layer.classList.remove('show')
-    })
-})
-layer.addEventListener('click', (e) => {
-    if (e.target == layer) {
-        layer.querySelectorAll('.layerbox').forEach(el => { el.classList.remove('show') })
-        layer.classList.remove('show')
-    }
 })
 
 // 新建存档

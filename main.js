@@ -1,37 +1,63 @@
-const { app, BrowserWindow, Tray, Menu, ipcMain, dialog } = require('electron/main')
+const { app, BrowserWindow, Tray, Menu, ipcMain, dialog, shell } = require('electron/main')
 
 if (require('electron-squirrel-startup')) return app.quit();
+app.disableHardwareAcceleration()
 
 const path = require('path')
 const fs = require('fs')
 
-const iconPath = path.join(__dirname, './src/img/icon.jpg')
+// const iconPath = path.join(__dirname, './src/img/icon.jpg')
+const iconPath = path.join(__dirname, './src/img/icon.png')
+const iconPathBlur = path.join(__dirname, './src/img/icon_blur.png')
 const userDataPath = app.getPath('userData');
 
 // 软件的设置信息等
+const saveAppSettings = () => {
+    fs.writeFileSync(appSettingsPath, JSON.stringify(appSettings, null, 4))
+}
 const appDataPath = path.join(userDataPath, './data/')
 if (!fs.existsSync(appDataPath)) {
     fs.mkdirSync(appDataPath)
 }
 const appSettingsPath = path.join(appDataPath, './settings.json')
+const initSettings = {
+    Debug: false,
+    CloseDirectly: true,
+    ThemeColor: [115, 93, 141],
+    LastAchievementUid: '000000000',
+    LastGachaUid: '000000000',
+}
 if (!fs.existsSync(appSettingsPath)) {
-    const initSettings = {
-        Debug: false,
-        CloseDirectly: true,
-        ThemeColor: [115, 93, 141],
-        LastAchievementUid: '000000000'
-    }
     fs.writeFileSync(appSettingsPath, JSON.stringify(initSettings, null, 4))
 }
 var appSettings = JSON.parse(fs.readFileSync(appSettingsPath, 'utf-8'))
+// 更新后新增的设置项
+Object.keys(initSettings).forEach(k => {
+    if (appSettings[k] === undefined) {
+        appSettings[k] = initSettings[k]
+    }
+})
+saveAppSettings()
 ipcMain.handle('getAppSettings', async () => { return appSettings })
-const saveAppSettings = () => {
-    fs.writeFileSync(appSettingsPath, JSON.stringify(appSettings, null, 4))
-}
+ipcMain.handle('setAppSettings', async (e, setting_name, setting_value) => {
+    if (appSettings[setting_name] !== undefined && typeof (appSettings[setting_name]) === typeof (setting_value)) {
+        appSettings[setting_name] = setting_value
+        saveAppSettings()
+    }
+    return appSettings
+})
+ipcMain.handle('getAppVersion', async () => { return app.getVersion() })
 
 // 读取src/json资源
-ipcMain.handle('getJson', async (e, name) => {
+json_cache = {}
+const getJson = (name) => {
     return JSON.parse(fs.readFileSync(path.join(__dirname, `./src/json/${name}.json`), 'utf-8'))
+    if (json_cache[name] === undefined)
+        json_cache[name] = JSON.parse(fs.readFileSync(path.join(__dirname, `./src/json/${name}.json`), 'utf-8'))
+    return json_cache[name]
+}
+ipcMain.handle('getJson', async (e, name) => {
+    return getJson(name)
 })
 
 // 成就
@@ -44,42 +70,42 @@ if (!fs.existsSync(path.join(achiDataPath, './uids.json'))) {
     fs.writeFileSync(path.join(achiDataPath, './uids.json'), JSON.stringify(initUids, null, 4))
     fs.writeFileSync(path.join(achiDataPath, './000000000.json'), JSON.stringify({}, null, 4))
 }
-var uids = JSON.parse(fs.readFileSync(path.join(achiDataPath, './uids.json'), 'utf-8'))
+var achiUids = JSON.parse(fs.readFileSync(path.join(achiDataPath, './uids.json'), 'utf-8'))
 ipcMain.handle('getAchiUids', async () => {
-    return { 'msg': 'OK', 'data': uids }
+    return { 'msg': 'OK', 'data': achiUids }
 })
 ipcMain.handle('getAchiData', async (e, uid, changeLastAchievementUid = false) => {
-    if (uid.match(/\d{9}/)[0] != uid) return { 'msg': 'Invalid UID' }
-    if (uids[uid] === undefined) return { 'msg': 'UID not found' }
+    if (!/^\d{9}$/.test(uid)) return { 'msg': 'Invalid UID' }
+    if (achiUids[uid] === undefined) return { 'msg': 'UID not found' }
     if (changeLastAchievementUid) appSettings['LastAchievementUid'] = uid
     saveAppSettings()
     return { 'msg': 'OK', 'data': JSON.parse(fs.readFileSync(path.join(achiDataPath, `./${uid}.json`), 'utf-8')) }
 })
 ipcMain.handle('newAchi', async (e, uid, nick) => {// uid存在就是重命名，不存在就是创建  前端判断一下
-    if (uid.match(/\d{9}/)[0] != uid) return { 'msg': 'Invalid UID' }
-    if (uids[uid] === undefined) {
+    if (!/^\d{9}$/.test(uid)) return { 'msg': 'Invalid UID' }
+    if (achiUids[uid] === undefined) {
         fs.writeFileSync(path.join(achiDataPath, `./${uid}.json`), JSON.stringify({}, null, 4))
     }
-    uids[uid] = nick
-    fs.writeFileSync(path.join(achiDataPath, './uids.json'), JSON.stringify(uids, null, 4))
+    achiUids[uid] = nick
+    fs.writeFileSync(path.join(achiDataPath, './uids.json'), JSON.stringify(achiUids, null, 4))
     return { 'msg': 'OK' }
 })
 ipcMain.handle('delAchi', async (e, uid) => {
-    if (uid.match(/\d{9}/)[0] != uid) return { 'msg': 'Invalid UID' }
-    if (uids[uid] === undefined) return { 'msg': 'UID not found' }
-    if (Object.keys(uids).length == 1) return { 'msg': 'The last UID cant be deleted' }
-    delete uids[uid]
-    fs.writeFileSync(path.join(achiDataPath, './uids.json'), JSON.stringify(uids, null, 4))
+    if (!/^\d{9}$/.test(uid)) return { 'msg': 'Invalid UID' }
+    if (achiUids[uid] === undefined) return { 'msg': 'UID not found' }
+    if (Object.keys(achiUids).length == 1) return { 'msg': 'The last UID cant be deleted' }
+    delete achiUids[uid]
+    fs.writeFileSync(path.join(achiDataPath, './uids.json'), JSON.stringify(achiUids, null, 4))
     return { 'msg': 'OK' }
 })
 ipcMain.handle('exportAchi', async (e, uid, type) => {
-    if (uid.match(/\d{9}/)[0] != uid) return { 'msg': 'Invalid UID' }
-    if (uids[uid] === undefined) return { 'msg': 'UID not found' }
+    if (!/^\d{9}$/.test(uid)) return { 'msg': 'Invalid UID' }
+    if (achiUids[uid] === undefined) return { 'msg': 'UID not found' }
     if (type == 'firefly') {
         exportData = {
             'info': {
                 'export_app': 'Firefly',
-                'export_app_version': '0.1.0',
+                'export_app_version': app.getVersion(),
                 'export_timestamp': Math.floor(new Date().getTime() / 1000)
             },
             'list': Object.values(JSON.parse(fs.readFileSync(path.join(achiDataPath, `./${uid}.json`), 'utf-8')))
@@ -87,9 +113,9 @@ ipcMain.handle('exportAchi', async (e, uid, type) => {
         let msg = 'OK'
         try {
             await dialog.showSaveDialog(BrowserWindow.getAllWindows()[0], {
-                title: '导出存档',
+                title: '导出成就存档',
                 buttonLabel: '导出',
-                defaultPath: `%USERPROFILE%/Desktop/Firefly_v0.1.0_${uids[uid]}_${uid}.json`,
+                defaultPath: `%USERPROFILE%/Desktop/Firefly_AchievementExport_v${app.getVersion()}_${achiUids[uid]}_${uid}.json`,
                 filters: [{ name: 'json', extensions: ['json'] }]
             }).then(result => {
                 if (result.canceled) {
@@ -109,8 +135,8 @@ ipcMain.handle('exportAchi', async (e, uid, type) => {
     }
 })
 ipcMain.handle('importAchi', async (e, uid, type) => {
+    if (!/^\d{9}$/.test(uid)) return { 'msg': 'Invalid UID' }
     if (type == 'firefly') {
-        if (uid.match(/\d{9}/)[0] != uid) return { 'msg': 'Invalid UID' }
         let msg = 'OK'
         try {
             let importData = {}
@@ -158,27 +184,227 @@ ipcMain.handle('setAchiStatus', async (e, uid, achi_id, achi_status) => {
     //      <1 - Invalid
     //      =1 - Unfinished
     //      >1 - Finished
-    if (uid.match(/\d{9}/)[0] != uid) return { 'msg': 'Invalid UID' }
-    if (uids[uid] === undefined) return { 'msg': 'UID not found' }
+    if (!/^\d{9}$/.test(uid)) return { 'msg': 'Invalid UID' }
+    if (achiUids[uid] === undefined) return { 'msg': 'UID not found' }
     data = JSON.parse(fs.readFileSync(path.join(achiDataPath, `./${uid}.json`), 'utf-8'))
     if (achi_status == 1) {
         delete data[achi_id]
     } else {
         ts = Math.floor(new Date().getTime() / 1000)
         data[achi_id] = {
-            "id": achi_id,
-            "timestamp": ts,
-            "current": 0,
-            "status": achi_status
+            'id': achi_id,
+            'timestamp': ts,
+            'current': 0,
+            'status': achi_status
         }
     }
     fs.writeFileSync(path.join(achiDataPath, `./${uid}.json`), JSON.stringify(data, null, 4))
     return { 'msg': 'OK', 'data': achi_status != 1 ? data[achi_id] : null }
 })
 
+// 跃迁
+const gachaDataPath = path.join(appDataPath, './gacha/')
+if (!fs.existsSync(gachaDataPath)) {
+    fs.mkdirSync(gachaDataPath)
+}
+if (!fs.existsSync(path.join(gachaDataPath, './uids.json'))) {
+    const initUids = { '000000000': 'Trailblazer' }
+    fs.writeFileSync(path.join(gachaDataPath, './uids.json'), JSON.stringify(initUids, null, 4))
+    fs.writeFileSync(path.join(gachaDataPath, './000000000.json'), JSON.stringify({}, null, 4))
+}
+var gachaUids = JSON.parse(fs.readFileSync(path.join(gachaDataPath, './uids.json'), 'utf-8'))
+ipcMain.handle('getGachaUids', async () => {
+    return { 'msg': 'OK', 'data': gachaUids }
+})
+ipcMain.handle('getGachaData', async (e, uid, changeLastGachaUid = false) => {
+    if (!/^\d{9}$/.test(uid)) return { 'msg': 'Invalid UID' }
+    if (gachaUids[uid] === undefined) return { 'msg': 'UID not found' }
+    if (changeLastGachaUid) appSettings['LastGachaUid'] = uid
+    saveAppSettings()
+    return { 'msg': 'OK', 'data': JSON.parse(fs.readFileSync(path.join(gachaDataPath, `./${uid}.json`), 'utf-8')) }
+})
+ipcMain.handle('newGacha', async (e, uid, nick) => {
+    if (!/^\d{9}$/.test(uid)) return { 'msg': 'Invalid UID' }
+    if (gachaUids[uid] === undefined) {
+        fs.writeFileSync(path.join(gachaDataPath, `./${uid}.json`), JSON.stringify({}, null, 4))
+    }
+    gachaUids[uid] = nick
+    fs.writeFileSync(path.join(gachaDataPath, './uids.json'), JSON.stringify(gachaUids, null, 4))
+    return { 'msg': 'OK' }
+})
+ipcMain.handle('delGacha', async (e, uid) => {
+    if (!/^\d{9}$/.test(uid)) return { 'msg': 'Invalid UID' }
+    if (gachaUids[uid] === undefined) return { 'msg': 'UID not found' }
+    if (Object.keys(gachaUids).length == 1) return { 'msg': 'The last UID cant be deleted' }
+    delete gachaUids[uid]
+    fs.writeFileSync(path.join(gachaDataPath, './uids.json'), JSON.stringify(gachaUids, null, 4))
+    return { 'msg': 'OK' }
+})
+ipcMain.handle('exportGacha', async (e, uid, type = 'srgf_v1.0') => {
+    if (!/^\d{9}$/.test(uid)) return { 'msg': 'Invalid UID' }
+    if (gachaUids[uid] === undefined) return { 'msg': 'UID not found' }
+    if (type == 'srgf_v1.0') {
+        let exportData = {
+            'info': {
+                'srgf_version': 'v1.0',
+                'uid': `${uid}`,
+                'lang': 'zh-cn',
+                'region_time_zone': 8,
+                "export_app": "Firefly",
+                "export_app_version": app.getVersion(),
+                "export_timestamp": Math.floor(new Date().getTime() / 1000)
+            },
+            'list': []
+        }
+        const AvatarConfig = getJson('AvatarConfig')
+        const EquipmentConfig = getJson('EquipmentConfig')
+        const TextMapCHS = getJson('TextMapCHS')
+        Object.values(JSON.parse(fs.readFileSync(path.join(gachaDataPath, `./${uid}.json`), 'utf-8'))).forEach(item => {
+            let node = item
+            node['count'] = '1'
+            if (node['item_id'].length == 4) {
+                node['item_type'] = '角色'
+                node['name'] = TextMapCHS[AvatarConfig[node['item_id']]['AvatarName']['Hash']]
+                node['rank_type'] = AvatarConfig[node['item_id']]['Rarity'].at(-1)
+            } else {
+                node['item_type'] = '光锥'
+                node['name'] = TextMapCHS[EquipmentConfig[node['item_id']]['EquipmentName']['Hash']]
+                node['rank_type'] = EquipmentConfig[node['item_id']]['Rarity'].at(-1)
+            }
+            exportData['list'].push(node)
+        })
+        let msg = 'OK'
+        try {
+            await dialog.showSaveDialog(BrowserWindow.getAllWindows()[0], {
+                title: '导出跃迁记录为SRGF',
+                buttonLabel: '导出',
+                defaultPath: `%USERPROFILE%/Desktop/Firefly_GachaExport_v${app.getVersion()}_${gachaUids[uid]}_${uid}.json`,
+                filters: [{ name: 'SRGF json', extensions: ['json'] }]
+            }).then(result => {
+                if (result.canceled) {
+                    msg = 'Canceled'
+                } else {
+                    fs.writeFileSync(result.filePath, JSON.stringify(exportData, null, 4))
+                }
+            }).catch(err => {
+                msg = err.message
+            })
+        } catch (error) {
+            return { 'msg': error.message }
+        }
+        return { 'msg': msg }
+    } else {
+        return { 'msg': 'Unknown type' }
+    }
+})
+ipcMain.handle('importGacha', async (e, type = 'srgf_v1.0', data = {}) => {
+    // 已存在的uid就是更新记录 不存在的uid就新建并导入 nick默认Trailblazer
+    if (Object.keys(data).length == 0) {
+        if (type == 'srgf_v1.0') {
+            let msg = 'OK'
+            try {
+                await dialog.showOpenDialog(BrowserWindow.getAllWindows()[0], {
+                    title: '导入SRGF格式跃迁记录',
+                    buttonLabel: '导入',
+                    defaultPath: '%USERPROFILE%/Desktop/',
+                    filters: [{ name: 'SRGF json', extensions: ['json'] }]
+                }).then(result => {
+                    if (result.canceled) {
+                        msg = 'Canceled'
+                    } else {
+                        data = JSON.parse(fs.readFileSync(result.filePaths[0], 'utf-8'))
+                    }
+                }).catch(err => {
+                    msg = err.message
+                })
+                if (msg != 'OK') return { 'msg': msg }
+                if (data.info.srgf_version != 'v1.0') return { 'msg': 'Unsupport SRGF version' }
+                if (data.list === undefined) return { 'msg': 'No data' }
+            } catch (error) {
+                console.log(error)
+                return { 'msg': error.message }
+            }
+        }
+    }
+    let uid = data.info.uid
+    if (!/^\d{9}$/.test(uid)) return { 'msg': 'Invalid UID' }
+    if (gachaUids[uid] === undefined) {
+        fs.writeFileSync(path.join(gachaDataPath, `./${uid}.json`), JSON.stringify({}, null, 4))
+        gachaUids[uid] = 'Trailblazer'
+        fs.writeFileSync(path.join(gachaDataPath, './uids.json'), JSON.stringify(gachaUids, null, 4))
+    }
+    // 确保存下的数据都是北京时间
+    if (data.info.region_time_zone != 8) {
+        data.list.forEach(item => {
+            let tmp = new Date(item.time)
+            tmp.setHours(tmp.getHours() - data.info.region_time_zone + 8)
+            item.time = `${tmp.getFullYear()}-` + `0${tmp.getMonth() + 1}-`.slice(-3) + `0${tmp.getDate()} `.slice(-3) +
+                `0${tmp.getHours()}:`.slice(-3) + `0${tmp.getMinutes()}:`.slice(-3) + `0${tmp.getSeconds()}`.slice(-2)
+        })
+    }
+    let list = JSON.parse(fs.readFileSync(path.join(gachaDataPath, `./${uid}.json`), 'utf-8'))
+    let isInvalid = false
+    const item_keys = ['gacha_id', 'gacha_type', 'item_id', 'time', 'id']
+    data.list.forEach(item => {
+        if (list[item.id] === undefined) {
+            let tmp = {}
+            item_keys.forEach(key => {
+                if (item[key] === undefined) isInvalid = true
+                else tmp[key] = item[key]
+            })
+            list[item.id] = tmp
+        }
+    })
+    if (isInvalid) return { 'msg': 'Invalid data' }
+    list = Object.fromEntries(Object.entries(list).sort())
+    fs.writeFileSync(path.join(gachaDataPath, `./${uid}.json`), JSON.stringify(list, null, 4))
+    appSettings['LastGachaUid'] = uid
+    saveAppSettings()
+    return { 'msg': 'OK', 'data': { 'uid': uid } }
+})
+ipcMain.handle('getGachaUrl', async (e, server = 'cn') => {
+    let url = ''
+    if (server == 'cn') {
+        let playerLogPath = path.join(appDataPath, '../../../LocalLow/miHoYo/崩坏：星穹铁道/Player.log')
+        let gameDataPath = fs.readFileSync(playerLogPath, 'utf-8').match(/Loading player data from (.*)data\.unity3d/)[1]
+        let webCachePath = path.join(gameDataPath, './webCaches/')
+        let maxVersion = '0.0.0.0'
+        fs.readdirSync(webCachePath).forEach(fname => {
+            if (fs.statSync(path.join(webCachePath, fname)).isDirectory() && /\d+.\d+.\d+.\d/.test(fname)) {
+                let max = maxVersion.split('.')
+                let now = fname.split('.')
+                for (let i = 0; i < 4; ++i) {
+                    if (parseInt(now[i]) > parseInt(max[i])) {
+                        maxVersion = fname
+                    }
+                }
+            }
+        })
+        let urlWebCachePath = path.join(gameDataPath, `./webCaches/${maxVersion}/Cache/Cache_Data/data_2`)
+        let urlLines = fs.readFileSync(urlWebCachePath, 'utf-8').split('1/0/')
+        urlLines.forEach(line => {
+            if (line.startsWith('https://api-takumi.mihoyo.com/common/gacha_record/api/getGachaLog?')) {
+                url = line.match(/^.*?\x00/)[0].slice(0, -1)
+            }
+        })
+    }
+    if (url == '') return { 'msg': 'URL not found' }
+    let params = {}
+    for ([k, v] of new URL(url).searchParams) {
+        params[k] = encodeURIComponent(v)
+    }
+    url = `https://api-takumi.mihoyo.com/common/gacha_record/api/getGachaLog?authkey_ver=${params['authkey_ver']}&authkey=${params['authkey']}&game_biz=${params['game_biz']}&lang=${params['lang']}`
+    return { 'msg': 'OK', 'data': { 'url': url } }
+})
+
+
+
+
+ipcMain.on('openURL', (e, url) => { shell.openExternal(url) })
+
 // Debug?
-if (!appSettings.Debug)
-    Menu.setApplicationMenu(null)
+if (!appSettings.Debug) Menu.setApplicationMenu(null)
+// Menu.setApplicationMenu(null)
 
 const createWindow = () => {
     // 主界面
@@ -225,7 +451,7 @@ const createWindow = () => {
     })
 
     // 托盘
-    var tray = new Tray(iconPath)
+    var tray = new Tray(iconPathBlur)
     tray.setToolTip('流萤工具箱')
     tray.on('click', () => { mainWindow.isVisible() ? mainWindow.focus() : switchVisibility(mainWindow) })
     tray.on('right-click', () => {

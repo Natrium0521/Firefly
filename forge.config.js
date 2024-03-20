@@ -1,9 +1,14 @@
 module.exports = {
   packagerConfig: {
     asar: true,
-    appVersion: '0.1.1',
+    appVersion: '0.2.0',
+    icon: './src/img/favicon.ico',
     name: 'Firefly',
-    productName: 'Firefly',
+    win32metadata: {
+      ProductName: '流萤工具箱',
+      CompanyName: 'Firefly',
+      FileDescription: '适配《崩坏：星穹铁道》2.0版本'
+    }
   },
   rebuildConfig: {},
   makers: [
