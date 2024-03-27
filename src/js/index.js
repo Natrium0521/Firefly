@@ -80,7 +80,7 @@ layer.addEventListener('mouseup', (e) => {
 
 window.onload = async () => {
     appSettings = await window.fireflyAPI.getAppSettings()
-    page_settings.querySelector('.about .area .version').innerHTML = `工具箱版本 v${await (window.fireflyAPI.getAppVersion())}<br>适配游戏版本 v2.0`
+    page_settings.querySelector('.about .area .version').innerHTML = `工具箱版本 v${await (window.fireflyAPI.getAppVersion())}<br>适配游戏版本 v2.1`
     const [r, g, b] = appSettings.ThemeColor
     t = (r + g + b) / 3 <= 128 ? '#fff' : '#000'
     document.documentElement.style.setProperty('--theme-background', `rgb(${r} ${g} ${b})`)

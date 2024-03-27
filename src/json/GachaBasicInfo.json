@@ -6,9 +6,6 @@
     "StartTime": "",
     "EndTime": "",
     "PrefabPath": "UI/Drawcard/GachaPanel/StandardGacha_1001.prefab",
-    "ItemCosume": 101,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 2040134860
     },
@@ -17,11 +14,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Standard.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Standard_Selected.png",
-    "GachaBar": "StandardGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000001
-    },
     "TypeTitle": {
       "Hash": 684974156
     }
@@ -33,9 +25,6 @@
     "StartTime": "",
     "EndTime": "",
     "PrefabPath": "UI/Drawcard/GachaPanel/NoviceGacha_4001.prefab",
-    "ItemCosume": 101,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 2040134697
     },
@@ -44,11 +33,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Novice.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Novice_Selected.png",
-    "GachaBar": "StandardGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000001
-    },
     "TypeTitle": {
       "Hash": 1027493017
     }
@@ -59,11 +43,7 @@
     "SortID": 2,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
     "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2001.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 2040134763
     },
@@ -72,11 +52,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Seele_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Seele_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -87,11 +62,7 @@
     "SortID": 4,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
     "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3001.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 2040134794
     },
@@ -100,11 +71,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23001.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23001_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -115,11 +81,7 @@
     "SortID": 3,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
     "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2002.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 474050822
     },
@@ -128,11 +90,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_JingYuan_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_JingYuan_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -143,11 +100,7 @@
     "SortID": 5,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
     "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3002.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 474050853
     },
@@ -156,11 +109,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23010.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23010_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -171,11 +119,7 @@
     "SortID": 2,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
     "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2001.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 2040134763
     },
@@ -184,11 +128,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Seele_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Seele_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -199,11 +138,7 @@
     "SortID": 4,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
     "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3001.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 2040134794
     },
@@ -212,11 +147,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23001.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23001_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -227,11 +157,7 @@
     "SortID": 3,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
     "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2002_90beta.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 474050822
     },
@@ -240,11 +166,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_JingYuan_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_JingYuan_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -255,11 +176,7 @@
     "SortID": 5,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
     "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3002_90beta.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 474050853
     },
@@ -268,11 +185,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23010.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23010_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -283,11 +195,7 @@
     "SortID": 2,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
     "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_1006.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": -1092033119
     },
@@ -296,11 +204,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Silwolf_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Silwolf_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -311,11 +214,7 @@
     "SortID": 4,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
     "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_23007.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 2040134794
     },
@@ -324,11 +223,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23007.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23007_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -339,11 +233,7 @@
     "SortID": 3,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
     "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_1203.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 1636850236
     },
@@ -352,11 +242,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Luocha_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Luocha_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -367,11 +252,7 @@
     "SortID": 5,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
     "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_23008.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 474050853
     },
@@ -380,11 +261,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23008.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23008_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -395,11 +271,7 @@
     "SortID": 2,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
     "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2007.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 1233565709
     },
@@ -408,11 +280,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Ren_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Ren_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -423,11 +290,7 @@
     "SortID": 4,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
     "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3007.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 474050853
     },
@@ -436,11 +299,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23009.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23009_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -451,11 +309,7 @@
     "SortID": 3,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
     "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2008.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": -332518232
     },
@@ -464,11 +318,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Kafka_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Kafka_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -479,11 +328,7 @@
     "SortID": 5,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
     "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3008.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 474050853
     },
@@ -492,11 +337,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23006.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23006_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -507,11 +347,7 @@
     "SortID": 3,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
     "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2009.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": -1898602173
     },
@@ -520,11 +356,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_DanHentIL_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_DanHentIL_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -535,11 +366,7 @@
     "SortID": 5,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
     "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3009.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 474050853
     },
@@ -548,11 +375,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23015.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23015_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -563,11 +385,7 @@
     "SortID": 3,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
     "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2010.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": -688748593
     },
@@ -576,11 +394,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_FuXuan_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_FuXuan_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -591,11 +404,7 @@
     "SortID": 5,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
     "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3010.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 474050853
     },
@@ -604,11 +413,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23011.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23011_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -619,11 +423,7 @@
     "SortID": 2,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
     "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2011.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 2040134762
     },
@@ -632,11 +432,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Jingliu_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Jingliu_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -647,11 +442,7 @@
     "SortID": 5,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
     "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3011.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 474050853
     },
@@ -660,11 +451,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23014.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23014_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -675,11 +461,7 @@
     "SortID": 3,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
     "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2012.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 474050821
     },
@@ -688,11 +470,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Topaz_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Topaz_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -703,11 +480,7 @@
     "SortID": 6,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
     "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3012.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 474050853
     },
@@ -716,11 +489,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23016.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23016_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -731,11 +499,7 @@
     "SortID": 4,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
     "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2013.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 2040134763
     },
@@ -744,11 +508,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Seele_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Seele_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -759,11 +518,7 @@
     "SortID": 7,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
     "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3013.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": -1092033088
     },
@@ -772,11 +527,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23001.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23001_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -787,11 +537,7 @@
     "SortID": 2,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
     "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2014.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": -1092033120
     },
@@ -800,11 +546,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Huohuo_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Huohuo_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -815,11 +556,7 @@
     "SortID": 5,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
     "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3014.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 474050853
     },
@@ -828,11 +565,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23017.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23017_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -843,11 +575,7 @@
     "SortID": 3,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
     "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2015.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 1636850235
     },
@@ -856,11 +584,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Argenti_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Argenti_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -871,11 +594,7 @@
     "SortID": 6,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
     "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3015.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": 474050853
     },
@@ -884,11 +603,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23018.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23018_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -899,11 +613,7 @@
     "SortID": 4,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
     "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2016.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": -1092033119
     },
@@ -912,11 +622,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Silwolf_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Silwolf_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -927,11 +632,7 @@
     "SortID": 7,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
     "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3016.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
     "PoolName": {
       "Hash": -1092033088
     },
@@ -940,11 +641,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23007.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23007_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -955,11 +651,7 @@
     "SortID": 2,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
-    "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2017.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/AvatarGacha_RuanMei.prefab",
     "PoolName": {
       "Hash": 70766294
     },
@@ -968,11 +660,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_RuanMei_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_RuanMei_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -983,11 +670,7 @@
     "SortID": 6,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
-    "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3017.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/LightConeGacha_23019.prefab",
     "PoolName": {
       "Hash": 474050853
     },
@@ -996,11 +679,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23019.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23019_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -1011,11 +689,7 @@
     "SortID": 3,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
-    "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2018.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/AvatarGacha_Ren.prefab",
     "PoolName": {
       "Hash": 1233565709
     },
@@ -1024,11 +698,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Ren_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Ren_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -1039,11 +708,7 @@
     "SortID": 7,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
-    "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3018.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/LightConeGacha_23009.prefab",
     "PoolName": {
       "Hash": -1092033088
     },
@@ -1052,11 +717,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23009.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23009_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -1067,11 +727,7 @@
     "SortID": 4,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
-    "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2019.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/AvatarGacha_Dr_Ratio.prefab",
     "PoolName": {
       "Hash": -1495317647
     },
@@ -1080,11 +736,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Dr_Ratio_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Dr_Ratio_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -1095,11 +746,7 @@
     "SortID": 8,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
-    "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3019.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/LightConeGacha_23020.prefab",
     "PoolName": {
       "Hash": 474050853
     },
@@ -1108,11 +755,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23020.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23020_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -1123,11 +765,7 @@
     "SortID": 5,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
-    "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2020.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/AvatarGacha_Kafka.prefab",
     "PoolName": {
       "Hash": -332518232
     },
@@ -1136,11 +774,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Kafka_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Kafka_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -1151,11 +784,7 @@
     "SortID": 9,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
-    "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3020.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/LightConeGacha_23006.prefab",
     "PoolName": {
       "Hash": -1092033088
     },
@@ -1164,11 +793,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23006.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23006_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -1179,11 +803,7 @@
     "SortID": 2,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
-    "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2021.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/AvatarGacha_BlackSwan.prefab",
     "PoolName": {
       "Hash": 1233565708
     },
@@ -1192,11 +812,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_BlackSwan_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_BlackSwan_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -1207,11 +822,7 @@
     "SortID": 6,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
-    "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3021.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/LightConeGacha_23022.prefab",
     "PoolName": {
       "Hash": 474050853
     },
@@ -1220,11 +831,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23022.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23022_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -1235,11 +841,7 @@
     "SortID": 3,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
-    "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2022.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/AvatarGacha_DanHengIL.prefab",
     "PoolName": {
       "Hash": -1898602173
     },
@@ -1248,11 +850,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_DanHentIL_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_DanHentIL_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -1263,11 +860,7 @@
     "SortID": 7,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
-    "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3022.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/LightConeGacha_23015.prefab",
     "PoolName": {
       "Hash": -1092033088
     },
@@ -1276,11 +869,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23015.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23015_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -1291,11 +879,7 @@
     "SortID": 4,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
-    "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2023.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/AvatarGacha_Sparkle.prefab",
     "PoolName": {
       "Hash": -332518233
     },
@@ -1304,11 +888,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Sparkle_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Sparkle_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -1319,11 +898,7 @@
     "SortID": 8,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
-    "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3023.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/LightConeGacha_23021.prefab",
     "PoolName": {
       "Hash": 474050853
     },
@@ -1332,11 +907,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23021.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23021_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": -641761534
     }
@@ -1347,11 +917,7 @@
     "SortID": 5,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 50,
-    "PrefabPath": "UI/Drawcard/GachaPanel/AvatarGacha_2024.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/AvatarGacha_JingYuan.prefab",
     "PoolName": {
       "Hash": 474050822
     },
@@ -1360,11 +926,6 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_JingYuan_00.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_JingYuan_00_Selected.png",
-    "GachaBar": "CharacterGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
-    },
     "TypeTitle": {
       "Hash": 910428004
     }
@@ -1375,11 +936,7 @@
     "SortID": 9,
     "StartTime": "",
     "EndTime": "",
-    "UpPropability": 75,
-    "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3024.prefab",
-    "ItemCosume": 102,
-    "ItemPrice": 160,
-    "DiamondID": 1,
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/LightConeGacha_23010.prefab",
     "PoolName": {
       "Hash": -1092033088
     },
@@ -1388,11 +945,158 @@
     },
     "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23010.png",
     "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23010_Selected.png",
-    "GachaBar": "LightconeGachaPage",
-    "BuyPos": {
-      "ShopID": 1000,
-      "ShopGoodID": 1000002
+    "TypeTitle": {
+      "Hash": -641761534
+    }
+  },
+  "2025": {
+    "GachaID": 2025,
+    "GachaType": "AvatarUp",
+    "SortID": 2,
+    "StartTime": "",
+    "EndTime": "",
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/AvatarGacha_Acheron.prefab",
+    "PoolName": {
+      "Hash": -1898602174
     },
+    "PoolDesc": {
+      "Hash": -2126297669
+    },
+    "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Acheron_00.png",
+    "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Acheron_00_Selected.png",
+    "TypeTitle": {
+      "Hash": 910428004
+    }
+  },
+  "3025": {
+    "GachaID": 3025,
+    "GachaType": "WeaponUp",
+    "SortID": 6,
+    "StartTime": "",
+    "EndTime": "",
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/LightConeGacha_23024.prefab",
+    "PoolName": {
+      "Hash": 474050853
+    },
+    "PoolDesc": {
+      "Hash": -1037410444
+    },
+    "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23024.png",
+    "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23024_Selected.png",
+    "TypeTitle": {
+      "Hash": -641761534
+    }
+  },
+  "2026": {
+    "GachaID": 2026,
+    "GachaType": "AvatarUp",
+    "SortID": 3,
+    "StartTime": "",
+    "EndTime": "",
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/AvatarGacha_Luocha.prefab",
+    "PoolName": {
+      "Hash": 1636850236
+    },
+    "PoolDesc": {
+      "Hash": -2126297669
+    },
+    "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Luocha_00.png",
+    "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Luocha_00_Selected.png",
+    "TypeTitle": {
+      "Hash": 910428004
+    }
+  },
+  "3026": {
+    "GachaID": 3026,
+    "GachaType": "WeaponUp",
+    "SortID": 7,
+    "StartTime": "",
+    "EndTime": "",
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/LightConeGacha_23008.prefab",
+    "PoolName": {
+      "Hash": -1092033088
+    },
+    "PoolDesc": {
+      "Hash": -1037410444
+    },
+    "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23008.png",
+    "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23008_Selected.png",
+    "TypeTitle": {
+      "Hash": -641761534
+    }
+  },
+  "2027": {
+    "GachaID": 2027,
+    "GachaType": "AvatarUp",
+    "SortID": 4,
+    "StartTime": "",
+    "EndTime": "",
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/AvatarGacha_Aventurine.prefab",
+    "PoolName": {
+      "Hash": -688748590
+    },
+    "PoolDesc": {
+      "Hash": -2126297669
+    },
+    "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Aventurine_00.png",
+    "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Aventurine_00_Selected.png",
+    "TypeTitle": {
+      "Hash": 910428004
+    }
+  },
+  "3027": {
+    "GachaID": 3027,
+    "GachaType": "WeaponUp",
+    "SortID": 8,
+    "StartTime": "",
+    "EndTime": "",
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/LightConeGacha_23023.prefab",
+    "PoolName": {
+      "Hash": 474050853
+    },
+    "PoolDesc": {
+      "Hash": -1037410444
+    },
+    "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23023.png",
+    "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23023_Selected.png",
+    "TypeTitle": {
+      "Hash": -641761534
+    }
+  },
+  "2028": {
+    "GachaID": 2028,
+    "GachaType": "AvatarUp",
+    "SortID": 5,
+    "StartTime": "",
+    "EndTime": "",
+    "PrefabPath": "UI/Drawcard/GachaPanelTemplate/AvatarGacha_Jingliu.prefab",
+    "PoolName": {
+      "Hash": 2040134762
+    },
+    "PoolDesc": {
+      "Hash": -2126297669
+    },
+    "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Jingliu_00.png",
+    "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_Jingliu_00_Selected.png",
+    "TypeTitle": {
+      "Hash": 910428004
+    }
+  },
+  "3028": {
+    "GachaID": 3028,
+    "GachaType": "WeaponUp",
+    "SortID": 9,
+    "StartTime": "",
+    "EndTime": "",
+    "PrefabPath": "UI/Drawcard/GachaPanel/LightConeGacha_3011.prefab",
+    "PoolName": {
+      "Hash": -1092033088
+    },
+    "PoolDesc": {
+      "Hash": -1037410444
+    },
+    "PoolLabelIcon": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23014.png",
+    "PoolLabelIconSelected": "SpriteOutput/DrawCardPic/GachaTabIcon/TabIcon_LightCone_23014_Selected.png",
     "TypeTitle": {
       "Hash": -641761534
     }

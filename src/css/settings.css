@@ -57,10 +57,10 @@
                 }
 
                 .icon {
-                    left: 10px;
+                    left: 13px;
                     top: 50%;
-                    height: 30px;
-                    margin-top: -15px;
+                    height: 24px;
+                    margin-top: -12px;
 
                     img {
                         height: 100%;
@@ -72,16 +72,18 @@
                     top: 50%;
                     height: 36px;
                     margin-top: -18px;
+                    display: flex;
+                    align-items: center;
                 }
 
                 .title {
-                    left: 50px;
+                    left: 55px;
                     line-height: 40px;
                     top: 5px;
                 }
 
                 .desc {
-                    left: 50px;
+                    left: 55px;
                     line-height: 20px;
                     bottom: 7px;
                     color: gray;

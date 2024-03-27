@@ -4147,6 +4147,106 @@
     "AssistBgOffset": [],
     "AvatarSelfShowOffset": []
   },
+  "1301": {
+    "AvatarID": 1301,
+    "AvatarName": {
+      "Hash": 1934967678
+    },
+    "AvatarFullName": {
+      "Hash": -1686189145
+    },
+    "AdventurePlayerID": 1301,
+    "AvatarVOTag": "gallagher",
+    "Rarity": "CombatPowerAvatarRarityType4",
+    "AvatarInitialSkinName": {
+      "Hash": 371857150
+    },
+    "AvatarInitialSkinDesc": {
+      "Hash": 371857150
+    },
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Gallagher_00_Config.json",
+    "DamageType": "Fire",
+    "SPNeed": {
+      "Value": 110
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      130101,
+      130102,
+      130103,
+      130104,
+      130105,
+      130106
+    ],
+    "RewardList": [
+      {
+        "ItemID": 11301,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 8
+      }
+    ],
+    "RewardListMax": [
+      {
+        "ItemID": 252,
+        "ItemNum": 20
+      }
+    ],
+    "SkillList": [
+      130101,
+      130102,
+      130103,
+      130104,
+      130106,
+      130107,
+      130108
+    ],
+    "AvatarBaseType": "Priest",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Gallagher_00/Avatar_Gallagher_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/1301.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/1301.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1301.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1301.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1301B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/UltraSkillCutIn_1301.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Gallagher_00/Manikin_Avatar_Male_Gallagher_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Gallagher_00_Config.json",
+    "AvatarDesc": {
+      "Hash": 371857150
+    },
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/PriestSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1301.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1301.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1301.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1301.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1301.png",
+    "AvatarCutinIntroText": {
+      "Hash": 371857150
+    },
+    "AvatarDropOffset": [
+      -38,
+      -6,
+      0.455,
+      -38,
+      -6,
+      0.455,
+      -38,
+      -6,
+      0.455
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
   "1302": {
     "AvatarID": 1302,
     "AvatarName": {
@@ -4351,6 +4451,105 @@
       -165,
       1.1
     ],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
+  "1304": {
+    "AvatarID": 1304,
+    "AvatarName": {
+      "Hash": 1531683151
+    },
+    "AvatarFullName": {
+      "Hash": -107934339
+    },
+    "AdventurePlayerID": 1304,
+    "AvatarVOTag": "aventurine",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "AvatarInitialSkinName": {
+      "Hash": 371857150
+    },
+    "AvatarInitialSkinDesc": {
+      "Hash": 371857150
+    },
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Aventurine_00_Config.json",
+    "DamageType": "Imaginary",
+    "SPNeed": {
+      "Value": 110
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      130401,
+      130402,
+      130403,
+      130404,
+      130405,
+      130406
+    ],
+    "RewardList": [
+      {
+        "ItemID": 11304,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 40
+      }
+    ],
+    "RewardListMax": [
+      {
+        "ItemID": 252,
+        "ItemNum": 100
+      }
+    ],
+    "SkillList": [
+      130401,
+      130402,
+      130403,
+      130404,
+      130406,
+      130407
+    ],
+    "AvatarBaseType": "Knight",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Aventurine_00/Avatar_Aventurine_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/1304.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/1304.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1304.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1304.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1304B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/UltraSkillCutIn_1304.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Aventurine_00/Manikin_Avatar_Lad_Aventurine_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Aventurine_00_Config.json",
+    "AvatarDesc": {
+      "Hash": 371857150
+    },
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/KnightSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1304.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1304.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1304.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1304.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1304.png",
+    "AvatarCutinIntroText": {
+      "Hash": 371857150
+    },
+    "AvatarDropOffset": [
+      -32.1,
+      38,
+      0.61,
+      -32.1,
+      38,
+      0.61,
+      -32.1,
+      38,
+      0.61
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
     "AssistBgOffset": [],
     "AvatarSelfShowOffset": []
   },
@@ -4660,6 +4859,109 @@
       -4,
       -55,
       0.69
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
+  "1308": {
+    "AvatarID": 1308,
+    "AvatarName": {
+      "Hash": -1150146037
+    },
+    "AvatarFullName": {
+      "Hash": 1372569644
+    },
+    "AdventurePlayerID": 1308,
+    "AvatarVOTag": "acheron",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "AvatarInitialSkinName": {
+      "Hash": 371857150
+    },
+    "AvatarInitialSkinDesc": {
+      "Hash": 371857150
+    },
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Acheron_00_Config.json",
+    "DamageType": "Thunder",
+    "SPNeed": {
+      "Value": 9
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      130801,
+      130802,
+      130803,
+      130804,
+      130805,
+      130806
+    ],
+    "RewardList": [
+      {
+        "ItemID": 11308,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 40
+      }
+    ],
+    "RewardListMax": [
+      {
+        "ItemID": 252,
+        "ItemNum": 100
+      }
+    ],
+    "SkillList": [
+      130801,
+      130802,
+      130803,
+      130804,
+      130806,
+      130807,
+      130814,
+      130815,
+      130816,
+      130817
+    ],
+    "AvatarBaseType": "Warlock",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Acheron_00/Avatar_Acheron_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/1308.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/1308.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1308.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1308.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1308B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/UltraSkillCutIn_1308.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Acheron_00/Manikin_Avatar_Lady_Acheron_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Acheron_00_Config.json",
+    "AvatarDesc": {
+      "Hash": 371857150
+    },
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/WarlockSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1308.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1308.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1308.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1308.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1308.png",
+    "AvatarCutinIntroText": {
+      "Hash": -1553257904
+    },
+    "AvatarDropOffset": [
+      9,
+      -24,
+      0.56,
+      9,
+      -24,
+      0.56,
+      9,
+      -24,
+      0.56
     ],
     "AvatarTrialOffset": [],
     "PlayerCardOffset": [],
