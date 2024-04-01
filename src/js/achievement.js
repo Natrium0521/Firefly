@@ -3,24 +3,39 @@ meAchievement = []// 互斥成就
 achievementSeries = {}
 achievementData = {}
 achievementCount = {}
+achievementVersion = {}
 achiFlip = new flip()
 achiUids = {}
 achiCurrUid = ''
 achiCurrData = {}
 achiSearchMap = {}
+const achiFilterDefault = {
+    Version: [],
+    IncompFirst: true,
+    ShowComp: false,
+    ShowIncomp: false,
+    ShowHidden: false,
+    ShowVisible: false,
+    ShowMEOnly: false
+}
+achiFilter = JSON.parse(JSON.stringify(achiFilterDefault))
 
 const isMEAchievement = (aid) => {
-    flag = false
+    const iaid = parseInt(aid)
+    let flag = false
     meAchievement.forEach((mearr) => {
-        if (mearr.indexOf(aid) != -1) flag = true
+        if (mearr.indexOf(iaid) != -1) flag = true
     })
     return flag
 }
 
 const getMEAchievement = (aid) => {
-    arr = []
+    const iaid = parseInt(aid)
+    let arr = []
     meAchievement.forEach((mearr) => {
-        if (mearr.indexOf(aid) != -1) arr = mearr
+        if (mearr.indexOf(iaid) != -1) {
+            mearr.forEach(i => arr.push(i + ''))
+        }
     })
     return arr
 }
@@ -29,11 +44,22 @@ const toggleAchievementStatus = async (achi_id) => {
     stat = 1
     if (achiCurrData[achi_id] === undefined || achiCurrData[achi_id].status == 1)
         stat = 2
-    ret = await window.fireflyAPI.setAchiStatus(achiCurrUid, achi_id, stat)
+    ret = await window.fireflyAPI.setAchiStatus(achiCurrUid, [achi_id], stat)
     if (ret.data === null) {
         delete achiCurrData[achi_id]
     } else {
-        achiCurrData[achi_id] = ret.data
+        achiCurrData[achi_id] = ret.data[0]
+    }
+}
+
+const setAchievementsStatus = async (achi_ids, stat) => {
+    ret = await window.fireflyAPI.setAchiStatus(achiCurrUid, achi_ids, stat)
+    if (ret.data === null) {
+        achi_ids.forEach(achi_id => delete achiCurrData[achi_id])
+    } else {
+        ret.data.forEach(achi => {
+            achiCurrData[achi['id']] = achi
+        })
     }
 }
 
@@ -60,7 +86,7 @@ const loadAchiData = (data) => {
             effected_div.forEach(ele => {
                 ele.querySelector('.time').innerHTML = time_string
                 ele.querySelector('.checkbox').classList.add('disabled')
-                ele.style.order = -(ele.getAttribute('achievement_priority') * 1 + ele.getAttribute('series_priority') * 10000) + 100000
+                ele.style.order = -(ele.getAttribute('achievement_priority') * 1 + ele.getAttribute('series_priority') * 10000) + (achiFilter.IncompFirst ? 100000 : 0)
             })
             el.querySelector('.checkbox').classList.replace('disabled', 'checked')
         } else {
@@ -103,6 +129,8 @@ const loadAchiData = (data) => {
             el.closest('.user').querySelector('.percentage').innerText = `${Number(pct0).toFixed(0)}%`
         }
     })
+    // filter refresh
+    achiFilterRefresh()
 }
 
 // 初始化成就页面
@@ -142,6 +170,111 @@ const initAchievement = async () => {
         })
     })
 
+    // 向成就数据中添加版本信息
+    for (let [ver, achis] of Object.entries(achievementVersion)) {
+        achis.forEach(aid => achievementData[aid]['Version'] = ver)
+    }
+
+    // 筛选框添加版本
+    let version_rows = {}
+    Object.keys(achievementVersion).forEach(k => {
+        let r = k.split('.')[0]
+        if (version_rows[r] === undefined) version_rows[r] = ''
+        version_rows[r] += `<div class="item">${k}</div>`
+    })
+    let tmp = ''
+    Object.values(version_rows).forEach(v => tmp += `<div class="row">${v}</div>`)
+    page_achievement.querySelector('.achi_filter .dropdown .version').innerHTML = tmp
+    // 筛选选项添加点击事件
+    page_achievement.querySelectorAll('.achi_filter .dropdown .item').forEach(ele => {
+        ele.addEventListener('click', e => {
+            e.target.classList.toggle('on')
+            let v = e.target.innerText
+            let reload = false
+            switch (v) {
+                case '重置所有选项':
+                    e.target.classList.toggle('on')
+                    achiFilter = JSON.parse(JSON.stringify(achiFilterDefault))
+                    page_achievement.querySelectorAll('.achi_filter .dropdown .item').forEach(e => {
+                        e.classList.remove('on')
+                    })
+                    page_achievement.querySelector('.achi_filter .dropdown .order .item').classList.add('on')
+                    reload = true
+                    break
+                case '未完成优先':
+                    achiFilter.IncompFirst = !achiFilter.IncompFirst
+                    reload = true
+                    break
+                case '已完成成就':
+                    achiFilter.ShowComp = !achiFilter.ShowComp
+                    break
+                case '未完成成就':
+                    achiFilter.ShowIncomp = !achiFilter.ShowIncomp
+                    break
+                case '隐藏成就':
+                    achiFilter.ShowHidden = !achiFilter.ShowHidden
+                    break
+                case '非隐藏成就':
+                    achiFilter.ShowVisible = !achiFilter.ShowVisible
+                    break
+                case '只显示互斥成就':
+                    achiFilter.ShowMEOnly = !achiFilter.ShowMEOnly
+                    break
+                default:
+                    let i = achiFilter.Version.indexOf(v)
+                    if (i != -1)
+                        achiFilter.Version.splice(i, 1)
+                    else
+                        achiFilter.Version.push(v)
+            }
+            let eq = true
+            Object.keys(achiFilter).forEach(k => {
+                if (k == 'Version') {
+                    if (achiFilter['Version'].length != 0) {
+                        eq = false
+                    }
+                } else if (achiFilter[k] != achiFilterDefault[k]) {
+                    eq = false
+                }
+            })
+            page_achievement.querySelector('.achi_filter .btn').classList.add('filtered')
+            if (eq) page_achievement.querySelector('.achi_filter .btn').classList.remove('filtered')
+            achiFlip.refresh()
+            achiFilterRefresh(reload)
+            achiFlip.play(200)
+        })
+    })
+
+    // 批量操作选项添加点击事件
+    page_achievement.querySelectorAll('.achi_batch_op .dropdown .batch .item').forEach(ele => {
+        ele.addEventListener('click', async (e) => {
+            if (e.target.innerText.slice(0, 2) != '确认') {
+                e.target.innerText = '确认' + e.target.innerText
+                return
+            }
+            let achiIDs = []
+            let selectAll = e.target.innerText == '确认全选'
+            page_achievement.querySelectorAll('.achi_box .item').forEach(i => {
+                if (i.style.display == 'none') return
+                let aid = i.getAttribute('achievement_id')
+                if (isMEAchievement(aid)) return
+                if (selectAll && (achiCurrData[aid] === undefined || achiCurrData[aid].status <= 1)) achiIDs.push(aid)
+                if (!selectAll && (achiCurrData[aid] !== undefined && achiCurrData[aid].status > 1)) achiIDs.push(aid)
+            })
+            achiFlip.refresh()
+            await setAchievementsStatus(achiIDs, e.target.innerText == '确认全选' ? 2 : 1)
+            loadAchiData(achiCurrData)
+            achiFlip.play(300)
+            e.target.innerText = e.target.innerText.slice(2)
+        })
+        ele.addEventListener('mouseout', e => {
+            if (e.target.innerText.slice(0, 2) == '确认') {
+                e.target.innerText = e.target.innerText.slice(2)
+                return
+            }
+        })
+    })
+
     // 成就列表初始化
     Object.values(achievementData).forEach((achievement) => {
         itemDiv = document.createElement('div')
@@ -151,7 +284,7 @@ const initAchievement = async () => {
         itemDiv.setAttribute('series_priority', achievementSeries[achievement['SeriesID']]['Priority'])
         itemDiv.setAttribute('achievement_priority', achievement['Priority'])
         itemDiv.style.order = -(achievement['Priority'] + achievementSeries[achievement['SeriesID']]['Priority'] * 10000)
-        rarity_map = {
+        const rarity_map = {
             'High': {
                 'ico': 1,
                 'rew': 20
@@ -165,9 +298,11 @@ const initAchievement = async () => {
                 'rew': 5
             }
         }
-        ico = achievementSeries[achievement['SeriesID']]['MainIconPath'].split('/').reverse()[0].replace(/.{4}$/, `${rarity_map[achievement['Rarity']]['ico']}.png`)
-        tit = textMap[achievement['AchievementTitle']['Hash']]
-        desc = textMap[achievement['AchievementDesc']['Hash']].replaceAll('\\n', '').replaceAll('<unbreak>', '').replaceAll('</unbreak>', '').replaceAll('</color>', '').replaceAll(/<color=.*?>/g, '').replaceAll('<u>', '').replaceAll('</u>', '')
+        let ico = achievementSeries[achievement['SeriesID']]['MainIconPath'].split('/').reverse()[0].replace(/.{4}$/, `${rarity_map[achievement['Rarity']]['ico']}.png`)
+        let tit = textMap[achievement['AchievementTitle']['Hash']]
+        let ver = achievement['Version']
+        let showtype = achievement['ShowType'] == 'ShowAfterFinish' ? '隐藏' : ''
+        let desc = textMap[achievement['AchievementDesc']['Hash']].replaceAll('\\n', '').replaceAll('<unbreak>', '').replaceAll('</unbreak>', '').replaceAll('</color>', '').replaceAll(/<color=.*?>/g, '').replaceAll('<u>', '').replaceAll('</u>', '')
         achievement['ParamList'].forEach((p, i) => {
             i += 1
             desc = desc.replaceAll(`#${i}[i]%`, `${p['Value'] * 100}%`)
@@ -183,7 +318,13 @@ const initAchievement = async () => {
         itemDiv.innerHTML =
             `<div class="checkbox"> </div>
             <div class="ico"><img src="./img/hsr/achievement/${ico}"></div>
-            <div class="title">${tit}</div>
+            <div class="title">
+            <div class="content">${tit}</div>
+                <div class="tags">
+                    <div class="tag version">${ver}</div>
+                    <div class="tag showtype">${showtype}</div>
+                </div>
+            </div>
             <div class="desc">
                 <div class="main" title="${main_desc}">${main_desc}</div>
                 <div class="sub" title="${sub_desc}">${sub_desc}</div>
@@ -281,39 +422,131 @@ const debounce = (fun, delay) => {
     }
 }
 
-const selectSeries = (series, clearSearchbox = false) => {
-    if (clearSearchbox) {
-        document.querySelector('.achi_search>.search_box').value = ''
-        document.querySelector('.achi_search>.search_clr').style.display = 'none'
-        clearTimeout(timeoutId)
-    }
-    document.querySelectorAll('.achi_series .series').forEach(el => el.classList.remove('select'))
-    series.classList.add('select')
-    sid = series.getAttribute('series_id')
-    document.querySelectorAll('.achi_box .item').forEach((el) => {
-        if (sid == 0 || sid == el.getAttribute('series_id'))
-            el.style.display = 'block'
+const achiDispalyRefresh = (blockAchiIDs) => {
+    page_achievement.querySelectorAll('.achi_box .item').forEach(e => {
+        if (blockAchiIDs.indexOf(e.getAttribute('achievement_id')) != -1)
+            e.style.display = 'block'
         else
-            el.style.display = 'none'
+            e.style.display = 'none'
     })
-    document.querySelector('.achi_box').scrollTop = 0
 }
 
-const doSearch = (str) => {
-    document.querySelector('.achi_series').scrollTop = 0
-    achiFlip.refresh()
-    selectSeries(allAchiSeries)
-    if (str == '') {
-        document.querySelectorAll('.achi_box .item').forEach(ele => ele.style.display = 'block')
+const doFilter = (aids) => {
+    if (achiFilter.ShowMEOnly) {
+        let tmp = []
+        aids.forEach(aid => {
+            if (isMEAchievement(aid)) {
+                tmp.push(aid)
+            }
+        })
+        aids = tmp
+    }
+    if (achiFilter.ShowHidden || achiFilter.ShowVisible) {
+        let tmp = []
+        aids.forEach(aid => {
+            if (achiFilter.ShowHidden && achievementData[aid]['ShowType'] == 'ShowAfterFinish') {
+                tmp.push(aid)
+            }
+            if (achiFilter.ShowVisible && achievementData[aid]['ShowType'] != 'ShowAfterFinish') {
+                tmp.push(aid)
+            }
+        })
+        aids = tmp
+    }
+    if (achiFilter.ShowComp || achiFilter.ShowIncomp) {
+        let tmp = []
+        let comp_meachis = []
+        Object.values(achiCurrData).forEach(achi => {
+            if (achi['status'] > 1 && isMEAchievement(achi['id'])) {
+                getMEAchievement(achi['id']).forEach(i => comp_meachis.push(i))
+            }
+        })
+        aids.forEach(aid => {
+            if (isMEAchievement(aid)) {
+                if (achiFilter.ShowComp && comp_meachis.indexOf(aid) != -1) {
+                    tmp.push(aid)
+                }
+                if (achiFilter.ShowIncomp && comp_meachis.indexOf(aid) == -1) {
+                    tmp.push(aid)
+                }
+                return
+            }
+            if (achiFilter.ShowComp && (achiCurrData[aid] !== undefined && achiCurrData[aid]['status'] > 1)) {
+                tmp.push(aid)
+            }
+            if (achiFilter.ShowIncomp && (achiCurrData[aid] === undefined || achiCurrData[aid]['status'] <= 1)) {
+                tmp.push(aid)
+            }
+        })
+        aids = tmp
+    }
+    if (achiFilter.Version.length != 0) {
+        let tmp = []
+        aids.forEach(aid => {
+            if (achiFilter.Version.indexOf(achievementData[aid]['Version']) != -1) {
+                tmp.push(aid)
+            }
+        })
+        aids = tmp
+    }
+
+    return aids
+}
+
+const achiFilterRefresh = (reload = false) => {
+    if (reload) loadAchiData(achiCurrData) // `未完成优先`切换后重排顺序
+    let flag = true
+    page_achievement.querySelectorAll('.achi_series .series').forEach(ele => {
+        if (ele.classList.contains('select') && ele != allAchiSeries) {
+            selectSeries(ele, false, false)
+            flag = false
+        }
+    })
+    if (flag) {
+        doSearch(page_achievement.querySelector('.achi_search>.search_box').value, false)
+    }
+}
+
+const selectSeries = (series, clearSearchbox = false, scrollTop = true) => {
+    if (clearSearchbox) {
+        page_achievement.querySelector('.achi_search>.search_box').value = ''
+        page_achievement.querySelector('.achi_search>.search_clr').style.display = 'none'
+        clearTimeout(timeoutId)
+    }
+    page_achievement.querySelectorAll('.achi_series .series').forEach(el => el.classList.remove('select'))
+    series.classList.add('select')
+    let sid = series.getAttribute('series_id')
+    let blockIDs = []
+    if (sid == 0) {
+        blockIDs = Object.keys(achievementData)
     } else {
-        document.querySelectorAll('.achi_box .item').forEach(ele => {
-            if (achiSearchMap[ele.getAttribute('achievement_id')].includes(str))
-                ele.style.display = 'block'
-            else
-                ele.style.display = 'none'
+        Object.values(achievementData).forEach(achievement => {
+            if (sid == achievement['SeriesID']) {
+                blockIDs.push(achievement['AchievementID'] + '')
+            }
         })
     }
-    achiFlip.play(500)
+    achiDispalyRefresh(doFilter(blockIDs))
+    if (scrollTop) page_achievement.querySelector('.achi_box').scrollTop = 0
+}
+
+const doSearch = (str, playAnim = true) => {
+    page_achievement.querySelector('.achi_series').scrollTop = 0
+    if (playAnim) achiFlip.refresh()
+    page_achievement.querySelectorAll('.achi_series .series').forEach(el => el.classList.remove('select'))
+    allAchiSeries.classList.add('select')
+    let blockIDs = []
+    if (str == '') {
+        blockIDs = Object.keys(achievementData)
+    } else {
+        for (let [aid, achistr] of Object.entries(achiSearchMap)) {
+            if (aid == str || achistr.includes(str)) {
+                blockIDs.push(aid)
+            }
+        }
+    }
+    achiDispalyRefresh(doFilter(blockIDs))
+    if (playAnim) achiFlip.play(400)
 }
 
 const doDebounceSearch = (str) => debounce(() => doSearch(str), 500)()
@@ -352,10 +585,10 @@ document.querySelector('.achi_search>.search_ico').addEventListener('click', (e)
 })
 
 const toggleAchiUid = (forceHidden) => {
-    show = document.querySelector('.achievement_head .uid_show')
-    box = document.querySelector('.achievement_head .uid_dropdown')
-    ico = document.querySelector('.achievement_head .dropdown_ico')
-    isShow = ico.classList.contains('show')
+    let show = page_achievement.querySelector('.achievement_head .uid_show')
+    let box = page_achievement.querySelector('.achievement_head .uid_dropdown')
+    let ico = page_achievement.querySelector('.achievement_head .dropdown_ico')
+    let isShow = ico.classList.contains('show')
     if (isShow || forceHidden) {
         show.classList.remove('show')
         box.classList.remove('show')
@@ -367,9 +600,9 @@ const toggleAchiUid = (forceHidden) => {
     }
 }
 const toggleAchiOp = (forceHidden) => {
-    btn = document.querySelector('.achievement_head .op_btn')
-    box = document.querySelector('.achievement_head .op_dropdown')
-    isShow = btn.classList.contains('show')
+    let btn = page_achievement.querySelector('.achievement_head .op_btn')
+    let box = page_achievement.querySelector('.achievement_head .op_dropdown')
+    let isShow = btn.classList.contains('show')
     if (isShow || forceHidden) {
         btn.classList.remove('show')
         box.classList.remove('show')
@@ -378,20 +611,46 @@ const toggleAchiOp = (forceHidden) => {
         box.classList.add('show')
     }
 }
-document.querySelector('.achievement_head .uid_show').addEventListener('click', (e) => {
+const toggleAchiFilterDropdown = (forceHidden) => {
+    let wrap = page_achievement.querySelector('.achievement_head .achi_filter')
+    let isShow = wrap.classList.contains('show')
+    if (isShow || forceHidden) {
+        wrap.classList.remove('show')
+    } else {
+        wrap.classList.add('show')
+    }
+}
+const toggleAchiBatchDropdown = (forceHidden) => {
+    let wrap = page_achievement.querySelector('.achievement_head .achi_batch_op')
+    let isShow = wrap.classList.contains('show')
+    if (isShow || forceHidden) {
+        wrap.classList.remove('show')
+    } else {
+        wrap.classList.add('show')
+    }
+}
+page_achievement.querySelector('.achievement_head .uid_show').addEventListener('click', (e) => {
     toggleAchiUid(false)
     toggleAchiOp(true)
 })
-document.querySelector('.achievement_head .op_btn').addEventListener('click', (e) => {
+page_achievement.querySelector('.achievement_head .op_btn').addEventListener('click', (e) => {
     toggleAchiOp(false)
     toggleAchiUid(true)
 })
+page_achievement.querySelector('.achievement_head .achi_filter .btn').addEventListener('click', (e) => {
+    toggleAchiFilterDropdown(false)
+})
+page_achievement.querySelector('.achievement_head .achi_batch_op .btn').addEventListener('click', (e) => {
+    toggleAchiBatchDropdown(false)
+})
 // 点其他地方关闭下拉框
-document.addEventListener('click', (e) => {
+document.addEventListener('mousedown', (e) => {
     if (e.target.closest('.achi_account') == null) {
         toggleAchiOp(true)
         toggleAchiUid(true)
     }
+    if (e.target.closest('.achi_filter') == null) toggleAchiFilterDropdown(true)
+    if (e.target.closest('.achi_batch_op') == null) toggleAchiBatchDropdown(true)
 })
 
 // 存档切换事件
@@ -405,7 +664,7 @@ document.querySelector('.achievement_head .uid_wrap .uid_dropdown').addEventList
     document.querySelector('.achievement_head .uid_show .nickname').innerText = achiUids[achiCurrUid]
 })
 
-// 选择存档操作事件
+// 存档操作事件
 const op_map = {
     '新建': {
         'class': 'achievement_newuser',

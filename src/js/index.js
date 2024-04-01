@@ -90,6 +90,7 @@ window.onload = async () => {
     meAchievement = await window.fireflyAPI.getJson('MutualExclusiveAchievement')
     achievementSeries = await window.fireflyAPI.getJson('AchievementSeries')
     achievementData = await window.fireflyAPI.getJson('AchievementData')
+    achievementVersion = await window.fireflyAPI.getJson('AchievementVersion')
     initAchievement()
     avatarConfig = await window.fireflyAPI.getJson('AvatarConfig')
     equipmentConfig = await window.fireflyAPI.getJson('EquipmentConfig')

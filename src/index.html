@@ -51,9 +51,58 @@
                 <div class="box achievement_head">
                     <div class="achi_info">loading</div>
                     <div class="achi_search">
-                        <input class="search_box" spellcheck="false" placeholder="搜索成就名称、描述">
+                        <input class="search_box" spellcheck="false" placeholder="搜索成就名称、描述、编号">
                         <img class="search_clr" src="./img/svg/close.svg">
                         <img class="search_ico" src="./img/svg/search.svg">
+                    </div>
+                    <div class="achi_filter click_dropdown_btn">
+                        <div class="btn">
+                            <img src="./img/svg/filter.svg">
+                        </div>
+                        <div class="dropdown">
+                            <div class="version"> </div>
+                            <div class="order">
+                                <div class="row">
+                                    <div class="item on">未完成优先</div>
+                                </div>
+                            </div>
+                            <div class="state">
+                                <div class="row">
+                                    <div class="item">已完成成就</div>
+                                    <div class="item">未完成成就</div>
+                                </div>
+                            </div>
+                            <div class="showtype">
+                                <div class="row">
+                                    <div class="item">隐藏成就</div>
+                                    <div class="item">非隐藏成就</div>
+                                </div>
+                            </div>
+                            <div class="meachi">
+                                <div class="row">
+                                    <div class="item">只显示互斥成就</div>
+                                </div>
+                            </div>
+                            <div class="clear_filter">
+                                <div class="row">
+                                    <div class="item">重置所有选项</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achi_batch_op click_dropdown_btn">
+                        <div class="btn">
+                            <img src="./img/svg/done-all.svg">
+                        </div>
+                        <div class="dropdown">
+                            <div class="info">批量操作当前展示的所有成就<br>（互斥成就除外）<br><span style="color: red; font-size: 0.95em;">注意：该操作无法撤销！</span></div>
+                            <div class="batch">
+                                <div class="row">
+                                    <div class="item">全选</div>
+                                    <div class="item">全不选</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="achi_account">
                         <div class="uid_wrap">

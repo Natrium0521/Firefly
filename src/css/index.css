@@ -59,11 +59,11 @@ img {
     backdrop-filter: blur(6px);
     box-shadow: 3px 3px 2px #0005;
 
-    .icon{
+    .icon {
         float: left;
         height: 100%;
 
-        img{
+        img {
             height: 100%;
             margin-left: 10px;
         }
@@ -310,7 +310,7 @@ img {
     border-radius: 4px;
     box-shadow: 3px 3px 2px #0005;
     background: #fff7;
-    // backdrop-filter: blur(2px);
+    transition: all 200ms ease;
 }
 
 .box:hover {
@@ -366,7 +366,7 @@ img {
 
 .tabico>img {
     height: 28px;
-    filter: drop-shadow(2px 4px 8px #000a);
+    filter: drop-shadow(2px 2px 2px #000a);
 }
 
 .tabtext {
@@ -429,6 +429,151 @@ img {
     .achi_info {
         line-height: 50px;
         font-size: 1.33em;
+    }
+
+    .click_dropdown_btn {
+        width: 32px;
+        position: relative;
+
+        .btn {
+            width: 32px;
+            height: 32px;
+            margin-top: 9px;
+            background: #fffa;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background: #fffc;
+                scale: 1.02;
+            }
+
+            &:active{
+                scale: 1.01;
+            }
+        }
+
+        &.show {
+            .btn {
+                background: #fffd;
+            }
+
+            .dropdown {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        .dropdown {
+            background: #fffd;
+            border-radius: 5px;
+            width: max-content;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            margin-top: 9px;
+            transition: all 300ms ease;
+            transform: translateY(-10px);
+            opacity: 0;
+            visibility: hidden;
+
+            &>div {
+                background: #fffe;
+                border-radius: 5px;
+
+                .row {
+                    display: flex;
+                    margin: 5px;
+                    gap: 5px;
+
+                    .item {
+                        padding: 5px;
+                        background: #ddd1;
+                        border-radius: 3px;
+                        transition: all 50ms ease;
+
+                        &:hover {
+                            background: #7772;
+                            scale: 1.02;
+                        }
+
+                        &:active {
+                            background: #7774;
+                            scale: 1.01;
+                        }
+
+                        &.on {
+                            background: var(--theme-background);
+                            color: var(--theme-text);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .achi_filter {
+        margin: 2px;
+
+        .btn{
+            transition: all 100ms ease;
+
+            &.filtered{
+                background: var(--theme-background);
+
+                img{
+                    filter: invert(var(--theme-svg-invert));
+                }
+            }
+        }
+
+        .dropdown {
+            position: absolute;
+            left: -60px;
+
+            .clear_filter {
+                .item {
+                    width: 100%;
+                    text-align: center;
+                    color: var(--theme-background);
+                }
+            }
+        }
+    }
+
+    .achi_batch_op {
+        margin: 2px;
+        margin-right: -3px;
+
+        .dropdown {
+            position: absolute;
+            left: -50px;
+
+            &>div {
+                background: none;
+                text-align: center;
+            }
+
+            .info {
+                font-size: 0.9em;
+                padding: 0 10px;
+            }
+
+            .batch .row {
+                justify-content: space-between;
+
+                .item {
+                    flex: 1;
+                    color: var(--theme-background);
+                    white-space: nowrap;
+                }
+            }
+        }
     }
 
     .achi_search {
@@ -797,7 +942,7 @@ img {
 
                 img {
                     height: 40px;
-                    filter: drop-shadow(2px 2px 4px #0007);
+                    filter: drop-shadow(2px 2px 2px #0007);
                 }
             }
 
@@ -851,6 +996,10 @@ img {
             background: #fffc;
         }
 
+        &>.select:active {
+            scale: 1.02;
+        }
+
         &::-webkit-scrollbar {
             width: 3px;
         }
@@ -902,7 +1051,6 @@ img {
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
-                // filter: drop-shadow(2px 2px 4px #0007);
 
                 img {
                     height: 36px;
@@ -911,7 +1059,30 @@ img {
 
             .title {
                 left: 100px;
+                right: 150px;
                 top: 5px;
+                display: flex;
+                gap: 10px;
+                white-space: nowrap;
+
+                .content {
+                    overflow: hidden;
+                }
+
+                .tags {
+                    display: flex;
+                    gap: 5px;
+
+                    .tag {
+                        font-size: 0.8em;
+                        color: var(--theme-background);
+                    }
+
+                    .showtype {
+                        filter: brightness(0.8);
+                        font-style: italic;
+                    }
+                }
             }
 
             .desc {

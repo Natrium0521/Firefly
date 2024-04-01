@@ -131,3 +131,6 @@ dist
 
 # .vscode
 .vscode/
+
+# notes
+_*.md

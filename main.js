@@ -1,12 +1,26 @@
 const { app, BrowserWindow, Tray, Menu, ipcMain, dialog, shell } = require('electron/main')
 
+// 安装包不运行
 if (require('electron-squirrel-startup')) return app.quit();
 app.disableHardwareAcceleration()
+
+// 单例运行
+const gotTheLock = app.requestSingleInstanceLock();
+if (!gotTheLock) {
+    app.quit();
+} else {
+    app.on("second-instance", (event, commandLine, workingDirectory) => {
+        if (mainWindow) {
+            if (!mainWindow.isVisible()) mainWindow.show()
+            if (mainWindow.isMinimized()) mainWindow.restore();
+            mainWindow.focus();
+        }
+    });
+}
 
 const path = require('path')
 const fs = require('fs')
 
-// const iconPath = path.join(__dirname, './src/img/icon.jpg')
 const iconPath = path.join(__dirname, './src/img/icon.png')
 const iconPathBlur = path.join(__dirname, './src/img/icon_blur.png')
 const userDataPath = app.getPath('userData');
@@ -179,27 +193,32 @@ ipcMain.handle('importAchi', async (e, uid, type) => {
         return { 'msg': 'Unknown type' }
     }
 })
-ipcMain.handle('setAchiStatus', async (e, uid, achi_id, achi_status) => {
+ipcMain.handle('setAchiStatus', async (e, uid, achi_ids, achi_status) => {
     // status:
     //      <1 - Invalid
     //      =1 - Unfinished
     //      >1 - Finished
     if (!/^\d{9}$/.test(uid)) return { 'msg': 'Invalid UID' }
     if (achiUids[uid] === undefined) return { 'msg': 'UID not found' }
-    data = JSON.parse(fs.readFileSync(path.join(achiDataPath, `./${uid}.json`), 'utf-8'))
+    let data = JSON.parse(fs.readFileSync(path.join(achiDataPath, `./${uid}.json`), 'utf-8'))
+    let ret = []
     if (achi_status == 1) {
-        delete data[achi_id]
+        achi_ids.forEach(achi_id => delete data[achi_id])
+        ret = null
     } else {
-        ts = Math.floor(new Date().getTime() / 1000)
-        data[achi_id] = {
-            'id': achi_id,
-            'timestamp': ts,
-            'current': 0,
-            'status': achi_status
-        }
+        let ts = Math.floor(new Date().getTime() / 1000)
+        achi_ids.forEach(achi_id => {
+            data[achi_id] = {
+                'id': achi_id,
+                'timestamp': ts,
+                'current': 0,
+                'status': achi_status
+            }
+            ret.push(data[achi_id])
+        })
     }
     fs.writeFileSync(path.join(achiDataPath, `./${uid}.json`), JSON.stringify(data, null, 4))
-    return { 'msg': 'OK', 'data': achi_status != 1 ? data[achi_id] : null }
+    return { 'msg': 'OK', 'data': ret }
 })
 
 // 跃迁
@@ -404,11 +423,12 @@ ipcMain.on('openURL', (e, url) => { shell.openExternal(url) })
 
 // Debug?
 if (!appSettings.Debug) Menu.setApplicationMenu(null)
-// Menu.setApplicationMenu(null)
 
+var mainWindow = null
+var tray = null
 const createWindow = () => {
     // 主界面
-    const mainWindow = new BrowserWindow({
+    mainWindow = new BrowserWindow({
         width: 1080,
         height: 720,
         frame: false,
@@ -423,35 +443,9 @@ const createWindow = () => {
         }
     })
     mainWindow.loadFile('./src/index.html')
-    const switchVisibility = (win) => {
-        if (win.isVisible()) {
-            win.hide()
-        } else {
-            win.show()
-        }
-    }
-    ipcMain.on('mainWindowMsg', (event, msg) => {
-        switch (msg) {
-            case 'close':
-                appSettings.CloseDirectly ? app.quit() : switchVisibility(mainWindow)
-                break
-            case 'esc':
-                switchVisibility(mainWindow)
-                break
-            case 'maxize':
-                mainWindow.isMaximized() ? mainWindow.unmaximize() : mainWindow.maximize()
-                break
-            case 'minize':
-                mainWindow.minimize()
-                break
-            case 'reload':
-                mainWindow.loadFile('./src/index.html')
-                break
-        }
-    })
 
     // 托盘
-    var tray = new Tray(iconPathBlur)
+    tray = new Tray(iconPathBlur)
     tray.setToolTip('流萤工具箱')
     tray.on('click', () => { mainWindow.isVisible() ? mainWindow.focus() : switchVisibility(mainWindow) })
     tray.on('right-click', () => {
@@ -468,6 +462,32 @@ const createWindow = () => {
         tray.popUpContextMenu(menuConfig)
     })
 }
+const switchVisibility = (win) => {
+    if (win.isVisible()) {
+        win.hide()
+    } else {
+        win.show()
+    }
+}
+ipcMain.on('mainWindowMsg', (event, msg) => {
+    switch (msg) {
+        case 'close':
+            appSettings.CloseDirectly ? app.quit() : switchVisibility(mainWindow)
+            break
+        case 'esc':
+            switchVisibility(mainWindow)
+            break
+        case 'maxize':
+            mainWindow.isMaximized() ? mainWindow.unmaximize() : mainWindow.maximize()
+            break
+        case 'minize':
+            mainWindow.minimize()
+            break
+        case 'reload':
+            mainWindow.loadFile('./src/index.html')
+            break
+    }
+})
 
 app.whenReady().then(() => {
     createWindow()

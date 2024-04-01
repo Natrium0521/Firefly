@@ -19,7 +19,7 @@ contextBridge.exposeInMainWorld('fireflyAPI', {
     delAchi: (uid) => ipcRenderer.invoke('delAchi', uid),
     exportAchi: (uid, type) => ipcRenderer.invoke('exportAchi', uid, type),
     importAchi: (uid, type) => ipcRenderer.invoke('importAchi', uid, type),
-    setAchiStatus: (uid, achi_id, achi_status) => ipcRenderer.invoke('setAchiStatus', uid, achi_id, achi_status),
+    setAchiStatus: (uid, achi_ids, achi_status) => ipcRenderer.invoke('setAchiStatus', uid, achi_ids, achi_status),
 
     getGachaUids: () => ipcRenderer.invoke('getGachaUids'),
     getGachaData: (uid, changeLastGachaUid) => ipcRenderer.invoke('getGachaData', uid, changeLastGachaUid),
