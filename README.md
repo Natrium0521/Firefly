@@ -50,6 +50,8 @@ npm run main
 
 - [UIGF organization](https://uigf.org)
 
+- [IconPark](http://iconpark.oceanengine.com/official)
+
 ## License
 
 [MIT](./LICENSE)

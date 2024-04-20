@@ -1,8 +1,10 @@
 const { app, BrowserWindow, Tray, Menu, ipcMain, dialog, shell } = require('electron/main')
 
+// 禁用硬件加速
+app.disableHardwareAcceleration()
+
 // 安装包不运行
 if (require('electron-squirrel-startup')) return app.quit();
-app.disableHardwareAcceleration()
 
 // 单例运行
 const gotTheLock = app.requestSingleInstanceLock();
@@ -185,7 +187,6 @@ ipcMain.handle('importAchi', async (e, uid, type) => {
             })
             fs.writeFileSync(path.join(achiDataPath, `./${uid}.json`), JSON.stringify(list, null, 4))
         } catch (error) {
-            console.log(error)
             return { 'msg': error.message }
         }
         return { 'msg': msg }
@@ -340,7 +341,6 @@ ipcMain.handle('importGacha', async (e, type = 'srgf_v1.0', data = {}) => {
                 if (data.info.srgf_version != 'v1.0') return { 'msg': 'Unsupport SRGF version' }
                 if (data.list === undefined) return { 'msg': 'No data' }
             } catch (error) {
-                console.log(error)
                 return { 'msg': error.message }
             }
         }
@@ -443,6 +443,12 @@ const createWindow = () => {
         }
     })
     mainWindow.loadFile('./src/index.html')
+    mainWindow.on('close', (e) => {
+        if (!appSettings.CloseDirectly) {
+            e.preventDefault()
+            mainWindow.hide()
+        }
+    })
 
     // 托盘
     tray = new Tray(iconPathBlur)
@@ -456,7 +462,7 @@ const createWindow = () => {
             },
             {
                 label: '退出',
-                click: () => app.quit()
+                click: () => app.exit(0)
             },
         ])
         tray.popUpContextMenu(menuConfig)
@@ -472,7 +478,7 @@ const switchVisibility = (win) => {
 ipcMain.on('mainWindowMsg', (event, msg) => {
     switch (msg) {
         case 'close':
-            appSettings.CloseDirectly ? app.quit() : switchVisibility(mainWindow)
+            appSettings.CloseDirectly ? app.exit(0) : switchVisibility(mainWindow)
             break
         case 'esc':
             switchVisibility(mainWindow)
