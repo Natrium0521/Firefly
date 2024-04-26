@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/gacha.css">
     <link rel="stylesheet" href="./css/settings.css">
+    <link rel="stylesheet" href="./css/alert.css">
 </head>
 
 <body>
@@ -14,7 +15,10 @@
     <div class="banner dragable">
         <div class="icon"><img src="./img/favicon.ico"></div>
         <span class="title">流萤工具箱</span>
-        <img class="close undragable" src="./img/svg/close.svg">
+        <svg class="close undragable" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 16L32 32" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M16 32L32 16" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
         <svg class="maxize undragable" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 16L34 16" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M14 32L34 32" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -95,7 +99,8 @@
                             <img src="./img/svg/done-all.svg">
                         </div>
                         <div class="dropdown">
-                            <div class="info">批量操作当前展示的所有成就<br>（互斥成就除外）<br><span style="color: red; font-size: 0.95em;">注意：该操作无法撤销！</span></div>
+                            <div class="info">批量操作当前展示的所有成就<br>（互斥成就除外）<br><span
+                                    style="color: red; font-size: 0.95em;">注意：该操作无法撤销！</span></div>
                             <div class="batch">
                                 <div class="row">
                                     <div class="item">全选</div>
@@ -617,10 +622,12 @@
                 <div class="msgbox"></div>
             </div>
         </div>
+        <div class="alert" id="alert_layer"> </div>
     </div>
 </body>
 
 <script src="./js/flip.js"></script>
+<script src="./js/alert.js"></script>
 <script src="./js/achievement.js"></script>
 <script src="./js/gacha.js"></script>
 <script src="./js/settings.js"></script>

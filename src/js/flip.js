@@ -1,31 +1,33 @@
 class flip {
-    element = undefined
-    rect = undefined
+    elements = undefined
+    rects = undefined
 
     constructor() {
-        this.element = new Array()
-        this.rect = new Array()
+        this.elements = new Array()
+        this.rects = new Array()
     }
 
     append(ele) {
-        this.element.push(ele)
-        this.rect.push(ele.getBoundingClientRect())
+        this.elements.push(ele)
+        this.rects.push(ele.getBoundingClientRect())
     }
 
     refresh() {
-        this.element.forEach((e, i) => {
-            this.rect[i] = e.getBoundingClientRect()
+        this.elements.forEach((e, i) => {
+            if (!e.isConnected) return
+            this.rects[i] = e.getBoundingClientRect()
         })
     }
 
     play(duration = 1000, easing = 'ease') {
         var window_rect = document.querySelector('body').getBoundingClientRect()
-        this.element.forEach((ele, i) => {
+        this.elements.forEach((ele, i) => {
+            if (!ele.isConnected) return
             var new_rect = ele.getBoundingClientRect()
             var inv = {
-                y: this.rect[i].y - new_rect.y
+                y: this.rects[i].y - new_rect.y
             }
-            if ((this.rect[i].top < window_rect.bottom && this.rect[i].bottom > window_rect.top) ||
+            if ((this.rects[i].top < window_rect.bottom && this.rects[i].bottom > window_rect.top) ||
                 (new_rect.top < window_rect.bottom && new_rect.bottom > window_rect.top)) {
                 const keyframes = [{
                     transform: `translate(0px, ${inv.y}px)`
@@ -34,7 +36,7 @@ class flip {
                 }]
                 ele.animate(keyframes, { duration: duration, easing: easing })
             }
-            this.rect[i] = new_rect
+            this.rects[i] = new_rect
         })
     }
 }

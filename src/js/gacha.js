@@ -412,6 +412,9 @@ layer.querySelector('.gacha_refresh .btnarea .submit').addEventListener('click',
             setTimeout(res, time)
         })
     }
+    const isIncrementallyRefresh = layer.querySelector('.gacha_refresh .btnarea .submit').innerText == '刷新'
+    let fetchingGachaUid = undefined
+    let fetchingGachaData = {}
     const GachaTypes = { '1': '常驻', '2': '新手', '11': '限定角色', '12': '限定光锥' }
     for (let [gacha_type, gacha_name] of Object.entries(GachaTypes)) {
         let cnt = 0
@@ -433,6 +436,21 @@ layer.querySelector('.gacha_refresh .btnarea .submit').addEventListener('click',
             if (exitFlag) {
                 layerCanBeHidden = true
                 return
+            }
+            let containsRepeat = false
+            if (isIncrementallyRefresh && items.length != 0) {
+                if (fetchingGachaUid === undefined) {
+                    fetchingGachaUid = items[0].uid
+                    if (gachaUids[fetchingGachaUid] !== undefined) {
+                        fetchingGachaData = (await window.fireflyAPI.getGachaData(fetchingGachaUid)).data
+                    }
+                }
+                let tmp = items
+                items = []
+                tmp.forEach(item => {
+                    if (fetchingGachaData[item.id] === undefined) items.push(item)
+                })
+                if (tmp.length != items.length) containsRepeat = true
             }
             if (items.length == 0) break
             end_id = items.at(-1).id
@@ -461,6 +479,7 @@ layer.querySelector('.gacha_refresh .btnarea .submit').addEventListener('click',
                 await sleep(100)
                 showing = items.splice(0, 5)
             }
+            if (isIncrementallyRefresh && containsRepeat) break
         }
         await sleep(500)
     }
@@ -469,12 +488,14 @@ layer.querySelector('.gacha_refresh .btnarea .submit').addEventListener('click',
     layerCanBeHidden = true
     if (data.list.length == 0) {
         msgbox.innerHTML = '未从链接中获取跃迁数据'
+        if (isIncrementallyRefresh) msgbox.innerHTML = '增量刷新失败：无新跃迁记录<br>可尝试从链接导入以进行全量刷新'
     } else {
         let ret = await window.fireflyAPI.importGacha('srgf_v1.0', data)
         if (ret.msg == 'OK') {
             appSettings.LastGachaUid = ret.data.uid
             await initGacha()
             msgbox.innerHTML = `UID: ${ret.data.uid} 跃迁记录${layer.querySelector('.gacha_refresh .btnarea .submit').innerText}成功`
+            Alert.success('操作成功', '记录已保存', 5)
         } else {
             msgbox.innerHTML = ret.msg
         }
