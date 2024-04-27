@@ -18,14 +18,14 @@ const initSettings = async () => {
         Alert.info(`正在尝试${switch_unlock_fps.checked ? '' : '取消'}解锁帧率`, '请耐心等待', 7)
         ret = await window.fireflyAPI.unlockFPS()
         if (ret.msg == 'OK') {
-            Alert.success(`${switch_unlock_fps.checked ? '' : '取消'}解锁成功`, switch_unlock_fps.checked ? '游戏中图像设置界面显示异常为正常现象' : '请启动游戏查看', 7)
+            Alert.success(`${switch_unlock_fps.checked ? '' : '取消'}解锁成功`, switch_unlock_fps.checked ? '游戏中图像设置界面可能显示异常，是正常现象<br>改变图像设置后，需退出游戏重新解锁' : '已将帧率设为60', 15)
         } else if (ret.msg == 'reg not found') {
-            switch_unlock_fps.checked = !switch_unlock_fps.checked
             Alert.error(`${switch_unlock_fps.checked ? '' : '取消'}解锁失败`, '请先在游戏中修改任意图像设置（使图像质量显示为自定义）并退出游戏重试')
+            switch_unlock_fps.checked = !switch_unlock_fps.checked
         }
         else {
-            switch_unlock_fps.checked = !switch_unlock_fps.checked
             Alert.error(`${switch_unlock_fps.checked ? '' : '取消'}解锁失败`, ret.msg)
+            switch_unlock_fps.checked = !switch_unlock_fps.checked
         }
         switch_unlock_fps.disabled = false
     })

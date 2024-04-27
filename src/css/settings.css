@@ -76,7 +76,6 @@
                     }
 
                     .desc {
-                        user-select: text;
                         margin-bottom: 10px;
                         color: gray;
                         font-size: 0.75em;
