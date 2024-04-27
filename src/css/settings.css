@@ -8,7 +8,12 @@
         height: 200px;
 
         .area {
+            position: absolute;
             top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 4px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -29,73 +34,63 @@
     }
 
     .settings {
-        overflow: hidden;
-
         &>.title {
-            position: absolute;
             line-height: 40px;
-            left: 10px;
+            margin-left: 10px;
         }
 
         .area {
-            top: 40px;
-            overflow: hidden;
-            padding: 5px;
+            border-radius: 4px;
+            margin: 5px;
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+
+            &>div:hover {
+                background: #fffc;
+            }
 
             .switchitem {
-                position: relative;
-                width: calc(100%);
-                height: 60px;
                 border-radius: 4px;
-
-                &:hover {
-                    background: #fff9;
-                }
-
-                &>div {
-                    position: absolute;
-                }
+                display: flex;
+                min-height: 60px;
+                gap: 15px;
+                background: #fff5;
 
                 .icon {
-                    left: 13px;
-                    top: 50%;
+                    margin-left: 15px;
                     height: 24px;
-                    margin-top: -12px;
+                    margin-top: 18px;
 
                     img {
                         height: 100%;
                     }
                 }
 
+                .text {
+                    flex-grow: 1;
+
+                    .title {
+                        margin-top: 13px;
+                    }
+
+                    .desc {
+                        user-select: text;
+                        margin-bottom: 10px;
+                        color: gray;
+                        font-size: 0.75em;
+                    }
+                }
+
                 .switch {
-                    right: 10px;
-                    top: 50%;
-                    height: 36px;
-                    margin-top: -18px;
-                    display: flex;
-                    align-items: center;
-                }
-
-                .title {
-                    left: 55px;
-                    line-height: 40px;
-                    top: 5px;
-                }
-
-                .desc {
-                    left: 55px;
-                    line-height: 20px;
-                    bottom: 7px;
-                    color: gray;
-                    font-size: 0.75em;
+                    margin-right: 20px;
+                    margin-top: 18px;
                 }
             }
         }
     }
 
-    .settings.firefly {
-        height: 175px;
-    }
 
     .box {
         position: relative;
@@ -104,12 +99,7 @@
         margin-bottom: 5px;
 
         &>.area {
-            position: absolute;
-            left: 5px;
-            right: 5px;
             background: #fff9;
-            border-radius: 4px;
-            bottom: 5px;
         }
     }
 

@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="page">
-            <div class="pagebox show" id="page_achievement">
+            <div class="pagebox" id="page_achievement">
                 <div class="box achievement_head">
                     <div class="achi_info">loading</div>
                     <div class="achi_search">
@@ -429,7 +429,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pagebox" id="page_settings">
+            <div class="pagebox show" id="page_settings">
                 <div class="box about">
                     <div class="area">
                         <div class="icon"><img src="./img/icon.png"></div>
@@ -447,20 +447,37 @@
                         </div>
                     </div>
                 </div>
-                <div class="box settings firefly">
+                <div class="box settings">
                     <div class="title">流萤工具箱</div>
                     <div class="area">
                         <div class="switchitem">
                             <div class="icon"><img src="./img/svg/close-circle.svg"></div>
-                            <div class="title">关闭时直接退出</div>
-                            <div class="desc">不保留托盘图标</div>
+                            <div class="text">
+                                <div class="title">关闭时直接退出</div>
+                                <div class="desc">不保留托盘图标</div>
+                            </div>
                             <div class="switch"><input type="checkbox" id="switch_close_directly"></div>
                         </div>
                         <div class="switchitem">
                             <div class="icon"><img src="./img/svg/bug.svg"></div>
-                            <div class="title">Debug模式（重启生效）</div>
-                            <div class="desc">不建议非开发人员开启</div>
+                            <div class="text">
+                                <div class="title">Debug模式（重启生效）</div>
+                                <div class="desc">不建议非开发人员开启</div>
+                            </div>
                             <div class="switch"><input type="checkbox" id="switch_debug"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box settings">
+                    <div class="title">游戏</div>
+                    <div class="area">
+                        <div class="switchitem">
+                            <div class="icon"><img src="./img/svg/unlock.svg"></div>
+                            <div class="text">
+                                <div class="title">是否解锁120帧</div>
+                                <div class="desc">解锁前请先在游戏中修改任意图形设置（使图像质量显示为自定义）并退出游戏</div>
+                            </div>
+                            <div class="switch"><input type="checkbox" id="switch_unlock_fps"></div>
                         </div>
                     </div>
                 </div>
