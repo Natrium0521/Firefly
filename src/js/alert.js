@@ -5,7 +5,7 @@ class alert {
         this.alert_flip = new flip()
     }
 
-    _alert(ele, type, title, desc, duration) {
+    _alert(ele, type, title, desc = '', duration = -1) {
         ele.innerHTML =
             `<div class="icon"><img src="./img/svg/${type}.svg"></div>
             <div class="text"><div class="title">${title}</div><div class="desc">${desc}</div></div>
@@ -32,27 +32,27 @@ class alert {
         }
     }
 
-    info(title, desc, duration = -1) {
+    info(title, desc, duration) {
         var ele = document.createElement('div')
         ele.classList.add('alert-box')
         this._alert(ele, 'info', title, desc, duration)
     }
 
-    success(title, desc, duration = -1) {
+    success(title, desc, duration) {
         var ele = document.createElement('div')
         ele.classList.add('alert-box')
         ele.classList.add('alert-success')
         this._alert(ele, 'success', title, desc, duration)
     }
 
-    warning(title, desc, duration = -1) {
+    warning(title, desc, duration) {
         var ele = document.createElement('div')
         ele.classList.add('alert-box')
         ele.classList.add('alert-warning')
         this._alert(ele, 'warning', title, desc, duration)
     }
 
-    error(title, desc, duration = -1) {
+    error(title, desc, duration) {
         var ele = document.createElement('div')
         ele.classList.add('alert-box')
         ele.classList.add('alert-error')
