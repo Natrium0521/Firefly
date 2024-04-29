@@ -6,6 +6,54 @@ gachaUids = {}
 gachaCurrUid = ''
 gachaCurrData = {}
 
+let needUpdate = false
+
+let cached_ret = {}
+const getItemInfo = (item_id) => {
+    item_id = item_id + ''
+    if (cached_ret[item_id] !== undefined) return cached_ret[item_id]
+    const lightcone_default = {
+        icon_path: 'itemfigures/lightcone/Icon_TestLightcone01.png',
+        name: item_id,
+        rank_type: 5,
+        is_lightcone: true,
+        is_avatar: false,
+    }
+    const avatar_default = {
+        icon_path: 'avataricon/999.png',
+        name: item_id,
+        rank_type: 5,
+        is_lightcone: false,
+        is_avatar: true,
+    }
+    let ret = {}
+    if (item_id.length == 5) {
+        if (equipmentConfig[item_id] === undefined) {
+            needUpdate = true
+            cached_ret[item_id] = lightcone_default
+            return lightcone_default
+        }
+        ret.icon_path = `itemfigures/lightcone/${item_id}.png`
+        ret.name = textMap[equipmentConfig[item_id].EquipmentName.Hash]
+        ret.rank_type = equipmentConfig[item_id].Rarity.at(-1)
+        ret.is_lightcone = true
+        ret.is_avatar = false
+    } else {
+        if (avatarConfig[item_id] === undefined) {
+            needUpdate = true
+            cached_ret[item_id] = avatar_default
+            return avatar_default
+        }
+        ret.icon_path = `avataricon/${item_id}.png`
+        ret.name = textMap[avatarConfig[item_id].AvatarName.Hash]
+        ret.rank_type = avatarConfig[item_id].Rarity.at(-1)
+        ret.is_lightcone = false
+        ret.is_avatar = true
+    }
+    cached_ret[item_id] = ret
+    return ret
+}
+
 
 const loadGachaData = (data) => {
     data = Object.fromEntries(Object.entries(data).sort())
@@ -35,7 +83,6 @@ const loadGachaData = (data) => {
         }
     })
 
-
     // 限定角色
     let avatarBox = page_gacha.querySelector('.gacha_body .gacha_pool.avatar')
     avatarBox.querySelector('.show_box .card_view').innerHTML = ''
@@ -43,14 +90,14 @@ const loadGachaData = (data) => {
     avatarBox.querySelector('.count .total .number').innerText = avatarPool.length
     let guarantee5 = 0
     for (let i = avatarPool.length - 1; i >= 0; --i) {
-        if (avatarPool[i]['item_id'].length == 4 && avatarConfig[avatarPool[i]['item_id']]['Rarity'].at(-1) == '5') {
+        if (getItemInfo(avatarPool[i]['item_id']).rank_type == '5') {
             break
         }
         ++guarantee5
     }
     let guarantee4 = 0
     for (let i = avatarPool.length - 1; i >= 0; --i) {
-        if (avatarPool[i]['item_id'].length == 4 && avatarConfig[avatarPool[i]['item_id']]['Rarity'].at(-1) == '4') {
+        if (getItemInfo(avatarPool[i]['item_id']).rank_type == '4') {
             break
         }
         ++guarantee4
@@ -72,16 +119,18 @@ const loadGachaData = (data) => {
     let cnt = 0
     avatarPool.forEach(item => {
         ++cnt
-        if (item['item_id'].length == 4 && avatarConfig[item['item_id']]['Rarity'].at(-1) == '5') {
+        let itemInfo = getItemInfo(item['item_id'])
+        if (itemInfo.rank_type == '5') {
             ++star5AllCount
             let tmp = {
                 'item_id': item['item_id'],
                 'count': cnt,
                 'time': item['time'],
                 'is_up': false,
-                'name': textMap[avatarConfig[item['item_id']]['AvatarName']['Hash']]
+                'name': itemInfo.name,
+                'icon_path': itemInfo.icon_path
             }
-            if (gachaPoolInfo[item['gacha_id']]['UpItems5'].indexOf(Number(item['item_id'])) != -1) {
+            if (gachaPoolInfo[item['gacha_id']] !== undefined && gachaPoolInfo[item['gacha_id']]['UpItems5'].indexOf(Number(item['item_id'])) != -1) {
                 ++star5UpCount
                 tmp['is_up'] = true
             }
@@ -99,14 +148,14 @@ const loadGachaData = (data) => {
         card.classList.add('card')
         if (!item['is_up']) card.classList.add('noup')
         card.setAttribute('title', `${item['name']}\n${item['time']}`)
-        card.innerHTML = `<div class="img"><img src="./img/hsr/avataricon/${item['item_id']}.png"></div><div class="txt">${item['count']}</div>`
+        card.innerHTML = `<div class="img"><img src="./img/hsr/${item['icon_path']}"></div><div class="txt">${item['count']}</div>`
         avatarBox.querySelector('.show_box .card_view').appendChild(card)
         let bar = document.createElement('div')
         bar.classList.add('bar')
         bar.setAttribute('title', item['time'])
         bar.innerHTML =
             `<div class="bgbar" style="animation-delay: -${(item['count'] / 90).toFixed(2)}s;"></div>
-            <div class="img"><img src="./img/hsr/avataricon/${item['item_id']}.png"></div>
+            <div class="img"><img src="./img/hsr/${item['icon_path']}"></div>
             <div class="name">${item['name']}</div>
             <div class="tag">${item['is_up'] ? 'UP' : '歪'}</div>
             <div class="txt">${item['count']}</div>`
@@ -120,14 +169,14 @@ const loadGachaData = (data) => {
     equipmentBox.querySelector('.count .total .number').innerText = equipmentPool.length
     guarantee5 = 0
     for (let i = equipmentPool.length - 1; i >= 0; --i) {
-        if (equipmentPool[i]['item_id'].length == 5 && equipmentConfig[equipmentPool[i]['item_id']]['Rarity'].at(-1) == '5') {
+        if (getItemInfo(equipmentPool[i]['item_id']).rank_type == '5') {
             break
         }
         ++guarantee5
     }
     guarantee4 = 0
     for (let i = equipmentPool.length - 1; i >= 0; --i) {
-        if (equipmentPool[i]['item_id'].length == 5 && equipmentConfig[equipmentPool[i]['item_id']]['Rarity'].at(-1) == '4') {
+        if (getItemInfo(equipmentPool[i]['item_id']).rank_type == '4') {
             break
         }
         ++guarantee4
@@ -149,16 +198,18 @@ const loadGachaData = (data) => {
     cnt = 0
     equipmentPool.forEach(item => {
         ++cnt
-        if (item['item_id'].length == 5 && equipmentConfig[item['item_id']]['Rarity'].at(-1) == '5') {
+        let itemInfo = getItemInfo(item['item_id'])
+        if (itemInfo.rank_type == '5') {
             ++star5AllCount
             let tmp = {
                 'item_id': item['item_id'],
                 'count': cnt,
                 'time': item['time'],
                 'is_up': false,
-                'name': textMap[equipmentConfig[item['item_id']]['EquipmentName']['Hash']]
+                'name': itemInfo.name,
+                'icon_path': itemInfo.icon_path
             }
-            if (gachaPoolInfo[item['gacha_id']]['UpItems5'].indexOf(Number(item['item_id'])) != -1) {
+            if (gachaPoolInfo[item['gacha_id']] !== undefined && gachaPoolInfo[item['gacha_id']]['UpItems5'].indexOf(Number(item['item_id'])) != -1) {
                 ++star5UpCount
                 tmp['is_up'] = true
             }
@@ -176,14 +227,14 @@ const loadGachaData = (data) => {
         card.classList.add('card')
         if (!item['is_up']) card.classList.add('noup')
         card.setAttribute('title', `${item['name']}\n${item['time']}`)
-        card.innerHTML = `<div class="img"><img src="./img/hsr/itemfigures/lightcone/${item['item_id']}.png"></div><div class="txt">${item['count']}</div>`
+        card.innerHTML = `<div class="img"><img src="./img/hsr/${item['icon_path']}"></div><div class="txt">${item['count']}</div>`
         equipmentBox.querySelector('.show_box .card_view').appendChild(card)
         let bar = document.createElement('div')
         bar.classList.add('bar')
         bar.setAttribute('title', item['time'])
         bar.innerHTML =
             `<div class="bgbar" style="animation-delay: -${(item['count'] / 80).toFixed(2)}s;"></div>
-            <div class="img"><img src="./img/hsr/itemfigures/lightcone/${item['item_id']}.png"></div>
+            <div class="img"><img src="./img/hsr/${item['icon_path']}"></div>
             <div class="name">${item['name']}</div>
             <div class="tag">${item['is_up'] ? 'UP' : '歪'}</div>
             <div class="txt">${item['count']}</div>`
@@ -197,18 +248,14 @@ const loadGachaData = (data) => {
     normalBox.querySelector('.count .total .number').innerText = normalPool.length
     guarantee5 = 0
     for (let i = normalPool.length - 1; i >= 0; --i) {
-        if (normalPool[i]['item_id'].length == 4 && avatarConfig[normalPool[i]['item_id']]['Rarity'].at(-1) == '5') {
-            break
-        } else if (normalPool[i]['item_id'].length == 5 && equipmentConfig[normalPool[i]['item_id']]['Rarity'].at(-1) == '5') {
+        if (getItemInfo(normalPool[i]['item_id']).rank_type == '5') {
             break
         }
         ++guarantee5
     }
     guarantee4 = 0
     for (let i = normalPool.length - 1; i >= 0; --i) {
-        if (normalPool[i]['item_id'].length == 4 && avatarConfig[normalPool[i]['item_id']]['Rarity'].at(-1) == '4') {
-            break
-        } else if (normalPool[i]['item_id'].length == 5 && equipmentConfig[normalPool[i]['item_id']]['Rarity'].at(-1) == '4') {
+        if (getItemInfo(normalPool[i]['item_id']).rank_type == '4') {
             break
         }
         ++guarantee4
@@ -229,13 +276,10 @@ const loadGachaData = (data) => {
     cnt = 0
     normalPool.forEach(item => {
         ++cnt
-        if ((item['item_id'].length == 4 && avatarConfig[item['item_id']]['Rarity'].at(-1) == '5') ||
-            (item['item_id'].length == 5 && equipmentConfig[item['item_id']]['Rarity'].at(-1) == '5')) {
+        let itemInfo = getItemInfo(item['item_id'])
+        if (itemInfo.rank_type == '5') {
             ++star5AllCount
-            iname = item['item_id'].length == 4 ?
-                textMap[avatarConfig[item['item_id']]['AvatarName']['Hash']] :
-                textMap[equipmentConfig[item['item_id']]['EquipmentName']['Hash']]
-            star5History.push({ 'item_id': item['item_id'], 'count': cnt, 'time': item['time'], 'name': iname })
+            star5History.push({ 'item_id': item['item_id'], 'count': cnt, 'time': item['time'], 'name': itemInfo.name, 'icon_path': itemInfo.icon_path })
             cnt = 0
         }
     })
@@ -246,14 +290,14 @@ const loadGachaData = (data) => {
         let card = document.createElement('div')
         card.classList.add('card')
         card.setAttribute('title', `${item['name']}\n${item['time']}`)
-        card.innerHTML = `<div class="img"><img src="./img/hsr/${item['item_id'].length == 4 ? 'avataricon' : 'itemfigures/lightcone'}/${item['item_id']}.png"></div><div class="txt">${item['count']}</div>`
+        card.innerHTML = `<div class="img"><img src="./img/hsr/${item['icon_path']}"></div><div class="txt">${item['count']}</div>`
         normalBox.querySelector('.show_box .card_view').appendChild(card)
         let bar = document.createElement('div')
         bar.classList.add('bar')
         bar.setAttribute('title', item['time'])
         bar.innerHTML =
             `<div class="bgbar" style="animation-delay: -${(item['count'] / 90).toFixed(2)}s;"></div>
-            <div class="img"><img src="./img/hsr/${item['item_id'].length == 4 ? 'avataricon' : 'itemfigures/lightcone'}/${item['item_id']}.png"></div>
+            <div class="img"><img src="./img/hsr/${item['icon_path']}"></div>
             <div class="name">${item['name']}</div>
             <div class="txt">${item['count']}</div>`
         normalBox.querySelector('.show_box .list_view').appendChild(bar)
@@ -265,10 +309,10 @@ const loadGachaData = (data) => {
     cnt = 0
     newbiePool.forEach(item => {
         ++cnt
-        if (item['item_id'].length == 4 && avatarConfig[item['item_id']]['Rarity'].at(-1) == '5') {
+        itemInfo = getItemInfo(item['item_id'])
+        if (itemInfo.rank_type == '5') {
             ++star5AllCount
-            iname = textMap[avatarConfig[item['item_id']]['AvatarName']['Hash']]
-            star5History.push({ 'item_id': item['item_id'], 'count': cnt, 'time': item['time'], 'name': iname })
+            star5History.push({ 'item_id': item['item_id'], 'count': cnt, 'time': item['time'], 'name': itemInfo.name, 'icon_path': itemInfo.icon_path })
             cnt = 0
         }
     })
@@ -280,20 +324,21 @@ const loadGachaData = (data) => {
         card.classList.add('card')
         card.classList.add('newbie')
         card.setAttribute('title', `${item['name']}\n${item['time']}`)
-        card.innerHTML = `<div class="img"><img src="./img/hsr/avataricon/${item['item_id']}.png"></div><div class="txt">${item['count']}</div>`
+        card.innerHTML = `<div class="img"><img src="./img/hsr/${item['icon_path']}"></div><div class="txt">${item['count']}</div>`
         normalBox.querySelector('.show_box .card_view').appendChild(card)
         let bar = document.createElement('div')
         bar.classList.add('bar')
         bar.setAttribute('title', item['time'])
         bar.innerHTML =
             `<div class="bgbar" style="animation-delay: -${(item['count'] / 90).toFixed(2)}s;"></div>
-            <div class="img"><img src="./img/hsr/avataricon/${item['item_id']}.png"></div>
+            <div class="img"><img src="./img/hsr/${item['icon_path']}"></div>
             <div class="name">${item['name']}</div>
             <div class="tag">新</div>
             <div class="txt">${item['count']}</div>`
         normalBox.querySelector('.show_box .list_view').appendChild(bar)
     })
 
+    if (needUpdate) Alert.warning('工具箱需要更新', '当前工具箱已不适配新游戏版本<br>这将导致图片资源等显示异常（不会影响数据的正确性，更新后可恢复正常）<br>建议尽早前往设置中的GitHub链接下载更新')
 }
 
 const initGacha = async () => {
@@ -470,7 +515,8 @@ layer.querySelector('.gacha_refresh .btnarea .submit').addEventListener('click',
                     let tmp = document.createElement('div')
                     tmp.classList.add('card')
                     tmp.classList.add(`star${item.rank_type}`)
-                    tmp.innerHTML = `<img src="./img/hsr/${item.item_id.length == 5 ? 'itemfigures/lightcone' : 'avataricon'}/${item.item_id}.png">`
+                    tmp.innerHTML = `<img src="./img/hsr/${getItemInfo(item.item_id).icon_path}">`
+                    // tmp.innerHTML = `<img src="./img/hsr/${item.item_id.length == 5 ? 'itemfigures/lightcone' : 'avataricon'}/${item.item_id}.png">`
                     tmp.setAttribute('title', `${item.name}\n${item.time}`)
                     showbox.appendChild(tmp)
                 })
@@ -523,7 +569,6 @@ layer.querySelector('.gacha_rename .submit').addEventListener('click', async (e)
             gachaUids[gachaCurrUid] = new_nickname
             document.querySelector('.gacha_head .uid_show .nickname').innerText = new_nickname
             document.querySelectorAll('.gacha_head .uid_wrap .uid_dropdown .user').forEach(ele => {
-
                 if (ele.querySelector('.uid').innerHTML == gachaCurrUid) {
                     ele.querySelector('.nickname').innerText = new_nickname
                 }
@@ -566,6 +611,10 @@ document.querySelector('.gacha_head .import_wrap .dropdown .url').addEventListen
 
 // export
 document.querySelector('.gacha_head .export_wrap').addEventListener('click', (e) => {
+    if (needUpdate) {
+        Alert.warning('工具箱需要更新', '为防止导出数据有误，请前往设置中的GitHub链接下载更新后再尝试导出')
+        return
+    }
     layer.querySelector('.gacha_export .msgbox').innerText = ''
     layer.classList.add('show')
     layer.querySelector('.gacha_export').classList.add('show')
@@ -648,12 +697,4 @@ document.querySelectorAll('.gacha_pool .title .btns .btn').forEach(ele => {
         btn.closest('.btns').querySelector('.slider').classList.toggle('toggle')
     })
 })
-
-
-
-
-
-
-
-
 

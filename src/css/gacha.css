@@ -699,7 +699,7 @@
         width: 400px;
         height: 300px;
         margin-top: -150px;
-        margin-left: -250px;
+        margin-left: -200px;
 
         &.expand {
             height: 400px;
