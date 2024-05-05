@@ -32,6 +32,12 @@ npm run main
 
 + 或者：下载安装包进行安装
 
+## 关于跃迁记录
+
+如果你在 [非小酋](https://feixiaoqiu.com/) 上有早期的抽卡记录想要导入到流萤工具箱或其他可以使用 [SRGF](https://uigf.org/zh/partnership.html#%E4%BD%BF%E7%94%A8-srgf-%E6%A0%87%E5%87%86%E7%9A%84%E9%A1%B9%E7%9B%AE) 的工具
+
+可以使用 [feixiaoqiu2srgf](https://github.com/Natrium0521/feixiaoqiu2srgf) 将非小酋记录导出为SRGF
+
 ## 开发计划
 
 ~~只是计划（~~
