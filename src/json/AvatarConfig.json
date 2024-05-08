@@ -4969,6 +4969,121 @@
     "AssistBgOffset": [],
     "AvatarSelfShowOffset": []
   },
+  "1309": {
+    "AvatarID": 1309,
+    "AvatarName": {
+      "Hash": 1578737318
+    },
+    "AvatarFullName": {
+      "Hash": -11289014
+    },
+    "AdventurePlayerID": 1309,
+    "AvatarVOTag": "robin",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "AvatarInitialSkinName": {
+      "Hash": 371857150
+    },
+    "AvatarInitialSkinDesc": {
+      "Hash": 371857150
+    },
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Robin_00_Config.json",
+    "DamageType": "Physical",
+    "SPNeed": {
+      "Value": 160
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      130901,
+      130902,
+      130903,
+      130904,
+      130905,
+      130906
+    ],
+    "RewardList": [
+      {
+        "ItemID": 11309,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 40
+      }
+    ],
+    "RewardListMax": [
+      {
+        "ItemID": 252,
+        "ItemNum": 100
+      }
+    ],
+    "SkillList": [
+      130901,
+      130902,
+      130903,
+      130904,
+      130906,
+      130907
+    ],
+    "AvatarBaseType": "Shaman",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Robin_00/Avatar_Robin_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/1309.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/1309.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1309.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1309.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1309B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/UltraSkillCutIn_1309.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Robin_00/Manikin_Avatar_Maid_Robin_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Robin_00_Config.json",
+    "AvatarDesc": {
+      "Hash": 371857150
+    },
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/ShamanSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1309.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1309.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1309.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1309.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1309.png",
+    "AvatarCutinIntroText": {
+      "Hash": -1553257905
+    },
+    "AvatarDropOffset": [
+      -4,
+      -64,
+      0.62,
+      -4,
+      -64,
+      0.62,
+      -4,
+      -64,
+      0.62
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [
+      82,
+      -84,
+      0.77
+    ],
+    "AssistOffset": [
+      70,
+      -72,
+      1.1
+    ],
+    "AssistBgOffset": [
+      108,
+      -300,
+      1
+    ],
+    "AvatarSelfShowOffset": [
+      0,
+      -100,
+      5
+    ]
+  },
   "1312": {
     "AvatarID": 1312,
     "AvatarName": {
@@ -5067,6 +5182,122 @@
     "AssistOffset": [],
     "AssistBgOffset": [],
     "AvatarSelfShowOffset": []
+  },
+  "1315": {
+    "AvatarID": 1315,
+    "AvatarName": {
+      "Hash": -34400789
+    },
+    "AvatarFullName": {
+      "Hash": -844857709
+    },
+    "AdventurePlayerID": 1315,
+    "AvatarVOTag": "boothill",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "AvatarInitialSkinName": {
+      "Hash": 371857150
+    },
+    "AvatarInitialSkinDesc": {
+      "Hash": 371857150
+    },
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Boothill_00_Config.json",
+    "DamageType": "Physical",
+    "SPNeed": {
+      "Value": 115
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      131501,
+      131502,
+      131503,
+      131504,
+      131505,
+      131506
+    ],
+    "RewardList": [
+      {
+        "ItemID": 11315,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 40
+      }
+    ],
+    "RewardListMax": [
+      {
+        "ItemID": 252,
+        "ItemNum": 100
+      }
+    ],
+    "SkillList": [
+      131501,
+      131502,
+      131503,
+      131504,
+      131506,
+      131507,
+      131508
+    ],
+    "AvatarBaseType": "Rogue",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Boothill_00/Avatar_Boothill_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/1315.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/1315.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1315.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1315.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1315B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/UltraSkillCutIn_1315.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Boothill_00/Manikin_Avatar_Male_Boothill_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Boothill_00_Config.json",
+    "AvatarDesc": {
+      "Hash": 371857150
+    },
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/RogueSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1315.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1315.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1315.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1315.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1315.png",
+    "AvatarCutinIntroText": {
+      "Hash": 1175625446
+    },
+    "AvatarDropOffset": [
+      10,
+      -39,
+      0.65,
+      10,
+      -39,
+      0.65,
+      10,
+      -39,
+      0.65
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [
+      98,
+      -157,
+      0.8
+    ],
+    "AssistOffset": [
+      70,
+      -102,
+      1.1
+    ],
+    "AssistBgOffset": [
+      308,
+      -260,
+      1
+    ],
+    "AvatarSelfShowOffset": [
+      4,
+      -90,
+      4
+    ]
   },
   "8001": {
     "AvatarID": 8001,
@@ -5499,6 +5730,184 @@
       -7,
       1.4
     ],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
+  "8005": {
+    "AvatarID": 8005,
+    "AvatarName": {
+      "Hash": 1793805010
+    },
+    "AvatarFullName": {
+      "Hash": -1461075445
+    },
+    "AdventurePlayerID": 8005,
+    "AvatarVOTag": "playerboy3",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "AvatarInitialSkinName": {
+      "Hash": 371857150
+    },
+    "AvatarInitialSkinDesc": {
+      "Hash": 371857150
+    },
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_PlayerBoy_20_Config.json",
+    "DamageType": "Imaginary",
+    "SPNeed": {
+      "Value": 140
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      800501,
+      800502,
+      800503,
+      800504,
+      800505,
+      800506
+    ],
+    "RewardList": [
+      {
+        "ItemID": 18005,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 8
+      }
+    ],
+    "RewardListMax": [
+      {
+        "ItemID": 252,
+        "ItemNum": 20
+      }
+    ],
+    "SkillList": [
+      800501,
+      800502,
+      800503,
+      800504,
+      800506,
+      800507
+    ],
+    "AvatarBaseType": "Shaman",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/PlayerBoy_20/Avatar_PlayerBoy_20.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/8005.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/8005.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/8005.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/8005.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/8005B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/UltraSkillCutIn_8005.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/PlayerBoy_20/Manikin_Avatar_Lad_PlayerBoy_20.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_PlayerBoy_20_Config.json",
+    "AvatarDesc": {
+      "Hash": 371857150
+    },
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/ShamanSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/8005.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/8005.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/8005.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/8005.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/8005.png",
+    "AvatarCutinIntroText": {
+      "Hash": 371857150
+    },
+    "AvatarDropOffset": [],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
+  "8006": {
+    "AvatarID": 8006,
+    "AvatarName": {
+      "Hash": 1390520483
+    },
+    "AvatarFullName": {
+      "Hash": 802741703
+    },
+    "AdventurePlayerID": 8006,
+    "AvatarVOTag": "playergirl3",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "AvatarInitialSkinName": {
+      "Hash": 371857150
+    },
+    "AvatarInitialSkinDesc": {
+      "Hash": 371857150
+    },
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_PlayerGirl_20_Config.json",
+    "DamageType": "Imaginary",
+    "SPNeed": {
+      "Value": 140
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      800601,
+      800602,
+      800603,
+      800604,
+      800605,
+      800606
+    ],
+    "RewardList": [
+      {
+        "ItemID": 18005,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 8
+      }
+    ],
+    "RewardListMax": [
+      {
+        "ItemID": 252,
+        "ItemNum": 20
+      }
+    ],
+    "SkillList": [
+      800601,
+      800602,
+      800603,
+      800604,
+      800606,
+      800607
+    ],
+    "AvatarBaseType": "Shaman",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/PlayerGirl_20/Avatar_PlayerGirl_20.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/8006.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/8006.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/8006.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/8006.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/8006B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/UltraSkillCutIn_8006.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/PlayerGirl_20/Manikin_Avatar_Miss_PlayerGirl_20.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_PlayerGirl_20_Config.json",
+    "AvatarDesc": {
+      "Hash": 371857150
+    },
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/ShamanSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/8006.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/8006.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/8006.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/8006.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/8006.png",
+    "AvatarCutinIntroText": {
+      "Hash": 371857150
+    },
+    "AvatarDropOffset": [],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
     "AssistBgOffset": [],
     "AvatarSelfShowOffset": []
   }

@@ -619,6 +619,7 @@
                         align-items: center;
                         width: 40px;
                         overflow: hidden;
+                        left: 2px;
 
                         img {
                             height: 40px;
@@ -627,7 +628,7 @@
 
                     .name {
                         line-height: 40px;
-                        left: 45px;
+                        left: 47px;
                         right: 80px;
                         overflow: hidden;
                     }
@@ -698,7 +699,7 @@
         width: 400px;
         height: 300px;
         margin-top: -150px;
-        margin-left: -250px;
+        margin-left: -200px;
 
         &.expand {
             height: 400px;

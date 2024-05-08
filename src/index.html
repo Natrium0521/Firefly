@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/gacha.css">
     <link rel="stylesheet" href="./css/settings.css">
+    <link rel="stylesheet" href="./css/alert.css">
 </head>
 
 <body>
@@ -14,7 +15,10 @@
     <div class="banner dragable">
         <div class="icon"><img src="./img/favicon.ico"></div>
         <span class="title">流萤工具箱</span>
-        <img class="close undragable" src="./img/svg/close.svg">
+        <svg class="close undragable" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 16L32 32" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M16 32L32 16" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
         <svg class="maxize undragable" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 16L34 16" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M14 32L34 32" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -95,7 +99,8 @@
                             <img src="./img/svg/done-all.svg">
                         </div>
                         <div class="dropdown">
-                            <div class="info">批量操作当前展示的所有成就<br>（互斥成就除外）<br><span style="color: red; font-size: 0.95em;">注意：该操作无法撤销！</span></div>
+                            <div class="info">批量操作当前展示的所有成就<br>（互斥成就除外）<br><span
+                                    style="color: red; font-size: 0.95em;">注意：该操作无法撤销！</span></div>
                             <div class="batch">
                                 <div class="row">
                                     <div class="item">全选</div>
@@ -431,7 +436,7 @@
                         <div class="version"></div>
                         <div class="links">
                             <div class="link">
-                                项目链接 <a href="https://github.com/Natrium0521/Firefly">Github</a>
+                                项目链接 <a href="https://github.com/Natrium0521/Firefly">GitHub</a>
                             </div>
                             <div class="link">
                                 游戏数据来自 <a href="https://github.com/Dimbreath/StarRailData">StarRailData</a>
@@ -442,20 +447,37 @@
                         </div>
                     </div>
                 </div>
-                <div class="box settings firefly">
+                <div class="box settings">
                     <div class="title">流萤工具箱</div>
                     <div class="area">
                         <div class="switchitem">
                             <div class="icon"><img src="./img/svg/close-circle.svg"></div>
-                            <div class="title">关闭时直接退出</div>
-                            <div class="desc">不保留托盘图标</div>
+                            <div class="text">
+                                <div class="title">关闭时直接退出</div>
+                                <div class="desc">不保留托盘图标</div>
+                            </div>
                             <div class="switch"><input type="checkbox" id="switch_close_directly"></div>
                         </div>
                         <div class="switchitem">
                             <div class="icon"><img src="./img/svg/bug.svg"></div>
-                            <div class="title">Debug模式（重启生效）</div>
-                            <div class="desc">不建议非开发人员开启</div>
+                            <div class="text">
+                                <div class="title">Debug模式（重启生效）</div>
+                                <div class="desc">不建议非开发人员开启</div>
+                            </div>
                             <div class="switch"><input type="checkbox" id="switch_debug"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box settings">
+                    <div class="title">游戏</div>
+                    <div class="area">
+                        <div class="switchitem">
+                            <div class="icon"><img src="./img/svg/unlock.svg"></div>
+                            <div class="text">
+                                <div class="title">是否解锁120帧</div>
+                                <div class="desc">解锁前请先在游戏中修改任意图像设置（使图像质量显示为自定义）并退出游戏</div>
+                            </div>
+                            <div class="switch"><input type="checkbox" id="switch_unlock_fps"></div>
                         </div>
                     </div>
                 </div>
@@ -617,10 +639,12 @@
                 <div class="msgbox"></div>
             </div>
         </div>
+        <div class="alert" id="alert_layer"> </div>
     </div>
 </body>
 
 <script src="./js/flip.js"></script>
+<script src="./js/alert.js"></script>
 <script src="./js/achievement.js"></script>
 <script src="./js/gacha.js"></script>
 <script src="./js/settings.js"></script>

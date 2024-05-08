@@ -1,6 +1,6 @@
 {
   "name": "firefly",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "流萤工具箱",
   "main": "main.js",
   "scripts": {
@@ -22,6 +22,7 @@
     "electron": "^29.0.0"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "winreg": "^1.2.5"
   }
 }

@@ -31,4 +31,7 @@ contextBridge.exposeInMainWorld('fireflyAPI', {
 
     sendMainWindow: (msg) => ipcRenderer.send('mainWindowMsg', msg),
     openURL: (url) => ipcRenderer.send('openURL', url),
+
+    isFPSUnlocked: (server) => ipcRenderer.invoke('isFPSUnlocked', server),
+    unlockFPS: (server) => ipcRenderer.invoke('unlockFPS', server),
 })

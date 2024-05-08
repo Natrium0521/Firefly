@@ -41,7 +41,9 @@ img {
 .bg {
     width: 100%;
     height: 100%;
-    background-image: url("../img/background.png");
+    --bg-white: rgba(255, 255, 255, 0.25);
+    --bg-filter: linear-gradient(var(--bg-white), var(--bg-white));
+    background-image: var(--bg-filter), url("../img/background.png");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -125,10 +127,10 @@ img {
     visibility: hidden;
     opacity: 0;
     transition: all 300ms ease;
-    z-index: -65535;
+    z-index: -1;
 
     &.show {
-        z-index: 65535;
+        z-index: 10;
         visibility: visible;
         opacity: 1;
     }
@@ -450,7 +452,7 @@ img {
                 scale: 1.02;
             }
 
-            &:active{
+            &:active {
                 scale: 1.01;
             }
         }
@@ -520,13 +522,13 @@ img {
     .achi_filter {
         margin: 2px;
 
-        .btn{
+        .btn {
             transition: all 100ms ease;
 
-            &.filtered{
+            &.filtered {
                 background: var(--theme-background);
 
-                img{
+                img {
                     filter: invert(var(--theme-svg-invert));
                 }
             }
@@ -584,7 +586,6 @@ img {
 
         .search_box {
             background: #fffa;
-            width: calc(100%-10px);
             min-width: 100px;
             top: 5px;
             left: 5px;
@@ -593,7 +594,7 @@ img {
             font-size: 1em;
             border: none;
             border-radius: 5px;
-            padding: 0px 72px 0px 10px;
+            padding: 0px 65px 0px 10px;
             position: absolute;
             overflow: hidden;
             box-shadow: 2px 4px 4px #0004;
@@ -631,11 +632,11 @@ img {
         .search_clr {
             display: none;
             position: absolute;
-            height: 36px;
-            width: 36px;
-            right: 40px;
+            height: 18px;
+            width: 18px;
+            right: 45px;
             top: 50%;
-            margin-top: -18px;
+            transform: translateY(-50%);
             transition: all 70ms ease;
 
             &:hover {

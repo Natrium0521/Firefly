@@ -1,0 +1,149 @@
+.alert {
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+    overflow: hidden;
+
+    .alert-box {
+        min-width: 300px;
+        max-width: calc(100% - 400px);
+        height: fit-content;
+        min-height: 60px;
+        flex-shrink: 0;
+        pointer-events: auto;
+        border-radius: 5px;
+        box-shadow: 0px 0px 2px #0003;
+        background: #fffe;
+        border: solid 1px #eee;
+        display: flex;
+        gap: 10px;
+        padding: 0 10px;
+
+
+        .icon {
+            height: 60px;
+            opacity: 0.8;
+
+            img {
+                margin-top: 18px;
+            }
+        }
+
+        .text {
+            flex-grow: 1;
+
+            .title {
+                user-select: text;
+                margin-top: 13px;
+            }
+
+            .desc {
+                user-select: text;
+                margin-bottom: 10px;
+                color: #0008;
+                font-size: 0.8em;
+            }
+        }
+
+        .close-btn {
+            height: 60px;
+            opacity: 0.8;
+
+            &:hover {
+                scale: 1.05;
+            }
+
+            &:active {
+                scale: 1.03;
+            }
+
+            .progress {
+                margin-top: 18px;
+                background: transparent;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                border: 2px solid gray;
+                rotate: 45deg;
+                animation: close-btn-progress-anim 1s linear forwards;
+                animation-delay: -0s;
+            }
+
+            img {
+                transform: translateY(calc(-100% - 0px));
+            }
+        }
+    }
+
+    .alert-warning {
+        background: #ffae;
+        border: solid 1px #dd0;
+    }
+
+    .alert-error {
+        background: #faae;
+        border: solid 1px #f77;
+    }
+
+    .alert-success {
+        background: #afae;
+        border: solid 1px #7f7;
+    }
+}
+
+@keyframes close-btn-progress-anim {
+    0% {
+        clip-path: polygon(0% 0%,
+                0% 0%,
+                0% 0%,
+                0% 0%,
+                0% 0%,
+                50% 50%);
+    }
+
+    25% {
+        clip-path: polygon(0% 0%,
+                100% 0%,
+                100% 0%,
+                100% 0%,
+                100% 0%,
+                50% 50%);
+    }
+
+    50% {
+        clip-path: polygon(0% 0%,
+                100% 0%,
+                100% 100%,
+                100% 100%,
+                100% 100%,
+                50% 50%);
+    }
+
+    75% {
+        clip-path: polygon(0% 0%,
+                100% 0%,
+                100% 100%,
+                0% 100%,
+                0% 100%,
+                50% 50%);
+    }
+
+    100% {
+        clip-path: polygon(0% 0%,
+                100% 0%,
+                100% 100%,
+                0% 100%,
+                0% 0%,
+                50% 50%);
+    }
+}

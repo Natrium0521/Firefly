@@ -1,8 +1,10 @@
 const { app, BrowserWindow, Tray, Menu, ipcMain, dialog, shell } = require('electron/main')
 
+// 禁用硬件加速
+app.disableHardwareAcceleration()
+
 // 安装包不运行
 if (require('electron-squirrel-startup')) return app.quit();
-app.disableHardwareAcceleration()
 
 // 单例运行
 const gotTheLock = app.requestSingleInstanceLock();
@@ -185,7 +187,6 @@ ipcMain.handle('importAchi', async (e, uid, type) => {
             })
             fs.writeFileSync(path.join(achiDataPath, `./${uid}.json`), JSON.stringify(list, null, 4))
         } catch (error) {
-            console.log(error)
             return { 'msg': error.message }
         }
         return { 'msg': msg }
@@ -340,7 +341,6 @@ ipcMain.handle('importGacha', async (e, type = 'srgf_v1.0', data = {}) => {
                 if (data.info.srgf_version != 'v1.0') return { 'msg': 'Unsupport SRGF version' }
                 if (data.list === undefined) return { 'msg': 'No data' }
             } catch (error) {
-                console.log(error)
                 return { 'msg': error.message }
             }
         }
@@ -416,7 +416,79 @@ ipcMain.handle('getGachaUrl', async (e, server = 'cn') => {
     return { 'msg': 'OK', 'data': { 'url': url } }
 })
 
-
+// 解锁FPS
+const { promisify } = require('util')
+const Registry = require('winreg')
+ipcMain.handle('isFPSUnlocked', async (e, server = 'cn') => {
+    try {
+        let gameReg = undefined
+        if (server == 'cn') {
+            gameReg = new Registry({ hive: Registry.HKCU, key: '\\SOFTWARE\\miHoYo\\崩坏：星穹铁道' })
+        }
+        gameReg.asyncValues = promisify(gameReg.values)
+        const gameRegItems = await gameReg.asyncValues()
+        let targetRegItem = undefined
+        gameRegItems.forEach(i => {
+            if (i.name.startsWith('GraphicsSettings_Model'))
+                targetRegItem = i
+        })
+        if (targetRegItem === undefined) return { 'msg': 'reg not found' }
+        const hexPairs = targetRegItem.value.slice(0, -2).match(/.{2}/g)
+        let buffer = Buffer.alloc(hexPairs.length)
+        hexPairs.forEach((hexPair, index) => {
+            buffer.writeUInt8(parseInt(hexPair, 16), index)
+        })
+        let json = JSON.parse(buffer.toString())
+        if (json['FPS'] === undefined) {
+            return { 'msg': 'no fps setting' }
+        }
+        if (json['FPS'] == 120) {
+            return { 'msg': 'unlocked' }
+        }
+        return { 'msg': 'locked' }
+    } catch (error) {
+        return { 'msg': error.message }
+    }
+})
+ipcMain.handle('unlockFPS', async (e, server = 'cn') => {
+    try {
+        let gameReg = undefined
+        if (server == 'cn') {
+            gameReg = new Registry({ hive: Registry.HKCU, key: '\\SOFTWARE\\miHoYo\\崩坏：星穹铁道' })
+        }
+        gameReg.asyncValues = promisify(gameReg.values)
+        const gameRegItems = await gameReg.asyncValues()
+        let targetRegItem = undefined
+        gameRegItems.forEach(i => {
+            if (i.name.startsWith('GraphicsSettings_Model'))
+                targetRegItem = i
+        })
+        if (targetRegItem === undefined) return { 'msg': 'reg not found' }
+        const hexPairs = targetRegItem.value.slice(0, -2).match(/.{2}/g)
+        let buffer = Buffer.alloc(hexPairs.length)
+        hexPairs.forEach((hexPair, index) => {
+            buffer.writeUInt8(parseInt(hexPair, 16), index)
+        })
+        let json = JSON.parse(buffer.toString())
+        if (json['FPS'] === undefined) {
+            return { 'msg': 'no fps setting' }
+        }
+        if (json['FPS'] == 120) {
+            json['FPS'] = 60
+        } else {
+            json['FPS'] = 120
+        }
+        buffer = Buffer.from(JSON.stringify(json))
+        let newValue = ''
+        buffer.forEach(v => newValue += `00${v.toString(16)}`.slice(-2).toUpperCase())
+        newValue += '00'
+        gameReg.asyncSet = promisify(gameReg.set)
+        await gameReg.asyncSet(targetRegItem.name, Registry.REG_BINARY, newValue)
+        return { 'msg': 'OK' }
+    } catch (error) {
+        return { 'msg': error.message }
+    }
+})
 
 
 ipcMain.on('openURL', (e, url) => { shell.openExternal(url) })
@@ -443,6 +515,12 @@ const createWindow = () => {
         }
     })
     mainWindow.loadFile('./src/index.html')
+    mainWindow.on('close', (e) => {
+        if (!appSettings.CloseDirectly) {
+            e.preventDefault()
+            mainWindow.hide()
+        }
+    })
 
     // 托盘
     tray = new Tray(iconPathBlur)
@@ -456,7 +534,7 @@ const createWindow = () => {
             },
             {
                 label: '退出',
-                click: () => app.quit()
+                click: () => app.exit(0)
             },
         ])
         tray.popUpContextMenu(menuConfig)
@@ -472,7 +550,7 @@ const switchVisibility = (win) => {
 ipcMain.on('mainWindowMsg', (event, msg) => {
     switch (msg) {
         case 'close':
-            appSettings.CloseDirectly ? app.quit() : switchVisibility(mainWindow)
+            appSettings.CloseDirectly ? app.exit(0) : switchVisibility(mainWindow)
             break
         case 'esc':
             switchVisibility(mainWindow)
