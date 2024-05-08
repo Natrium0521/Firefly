@@ -534,7 +534,10 @@ layer.querySelector('.gacha_refresh .btnarea .submit').addEventListener('click',
     layerCanBeHidden = true
     if (data.list.length == 0) {
         msgbox.innerHTML = '未从链接中获取跃迁数据'
-        if (isIncrementallyRefresh) msgbox.innerHTML = '增量刷新失败：无新跃迁记录<br>可尝试从链接导入以进行全量刷新'
+        if (isIncrementallyRefresh) {
+            msgbox.innerHTML = '增量刷新失败：无新跃迁记录<br>可尝试从链接导入以进行全量刷新'
+            Alert.warning('增量刷新失败', '无跃迁记录', 5)
+        }
     } else {
         let ret = await window.fireflyAPI.importGacha('srgf_v1.0', data)
         if (ret.msg == 'OK') {
