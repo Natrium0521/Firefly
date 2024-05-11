@@ -38,6 +38,12 @@ npm run main
 
 可以使用 [feixiaoqiu2srgf](https://github.com/Natrium0521/feixiaoqiu2srgf) 将非小酋记录导出为SRGF
 
+## 关于版本更新
+
+版本更新后会尽快在 [main branch](https://github.com/Natrium0521/Firefly/tree/main) 更新
+
+但由于互斥成就没有直接的数据，所以 [Release](https://github.com/Natrium0521/Firefly/releases) 版可能会延迟发布或频繁更新
+
 ## 开发计划
 
 ~~只是计划（~~
