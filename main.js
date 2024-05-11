@@ -175,10 +175,10 @@ module.exports={
 }
 
 // 成就
-require('./main/achievement.js').init()
+require('./main/achievement.js')
 
 // 跃迁
-require('./main/gacha.js').init()
+require('./main/gacha.js')
 
 // 解锁FPS
-require('./main/unlockfps.js').init()
+require('./main/unlockfps.js')
