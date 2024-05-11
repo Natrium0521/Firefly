@@ -533,10 +533,12 @@ layer.querySelector('.gacha_refresh .btnarea .submit').addEventListener('click',
     // switch to new gacha record
     layerCanBeHidden = true
     if (data.list.length == 0) {
-        msgbox.innerHTML = '未从链接中获取跃迁数据'
         if (isIncrementallyRefresh) {
             msgbox.innerHTML = '增量刷新失败：无新跃迁记录<br>可尝试从链接导入以进行全量刷新'
-            Alert.warning('增量刷新失败', '无跃迁记录', 5)
+            Alert.warning('增量刷新失败', '未获取到新跃迁记录', 5)
+        } else {
+            msgbox.innerHTML = '未从链接中获取跃迁数据'
+            Alert.warning('刷新失败', '未获取到跃迁记录', 5)
         }
     } else {
         let ret = await window.fireflyAPI.importGacha('srgf_v1.0', data)
@@ -544,7 +546,7 @@ layer.querySelector('.gacha_refresh .btnarea .submit').addEventListener('click',
             appSettings.LastGachaUid = ret.data.uid
             await initGacha()
             msgbox.innerHTML = `UID: ${ret.data.uid} 跃迁记录${layer.querySelector('.gacha_refresh .btnarea .submit').innerText}成功`
-            Alert.success('操作成功', '记录已保存', 5)
+            Alert.success('操作成功', '跃迁记录已保存', 5)
         } else {
             msgbox.innerHTML = ret.msg
         }
@@ -597,6 +599,7 @@ layer.querySelector('.gacha_import .submit').addEventListener('click', async () 
         layer.classList.remove('show')
         appSettings.LastGachaUid = ret.data.uid
         await initGacha()
+        Alert.success('操作成功', '跃迁记录已保存', 5)
     } else {
         msgbox.innerText = ret.msg
     }
@@ -629,6 +632,7 @@ layer.querySelector('.gacha_export .submit').addEventListener('click', async () 
     if (ret.msg == 'OK') {
         layer.querySelector('.gacha_export').classList.remove('show')
         layer.classList.remove('show')
+        Alert.success('操作成功', '跃迁记录已导出', 5)
     } else {
         msgbox.innerText = ret.msg
     }
@@ -663,6 +667,7 @@ layer.querySelector('.gacha_delete .submit').addEventListener('click', async (e)
             loadGachaData(gachaCurrData)
             document.querySelector('.gacha_head .uid_show .uid').innerText = gachaCurrUid
             document.querySelector('.gacha_head .uid_show .nickname').innerText = gachaUids[gachaCurrUid]
+            Alert.success('操作成功', '跃迁记录已删除', 5)
         } else {
             msgbox.innerText = ret.msg
         }

@@ -787,6 +787,7 @@ layer.querySelector('.achievement_deluser .btnarea .submit').addEventListener('c
             loadAchiData(achiCurrData)
             document.querySelector('.achievement_head .uid_show .uid').innerText = achiCurrUid
             document.querySelector('.achievement_head .uid_show .nickname').innerText = achiUids[achiCurrUid]
+            Alert.success('操作成功', '成就存档已删除', 5)
         } else {
             msgbox.innerText = ret.msg
         }
@@ -803,6 +804,7 @@ layer.querySelector('.achievement_import .btnarea .submit').addEventListener('cl
         layer.classList.remove('show')
         achiCurrData = (await window.fireflyAPI.getAchiData(achiCurrUid, true)).data
         loadAchiData(achiCurrData)
+        Alert.success('操作成功', '成就存档已保存', 5)
     } else {
         msgbox.innerText = ret.msg
     }
@@ -816,6 +818,7 @@ layer.querySelector('.achievement_export .btnarea .submit').addEventListener('cl
     if (ret.msg == 'OK') {
         layer.querySelector('.achievement_export').classList.remove('show')
         layer.classList.remove('show')
+        Alert.success('操作成功', '成就存档已导出', 5)
     } else {
         msgbox.innerText = ret.msg
     }
