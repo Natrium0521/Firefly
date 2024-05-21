@@ -9,16 +9,16 @@ class alert {
         ele.innerHTML =
             `<div class="icon"><img src="./img/svg/${type}.svg"></div>
             <div class="text"><div class="title">${title}</div><div class="desc">${desc}</div></div>
-            <div class="close-btn"><div class="progress"></div><img src="./img/svg/close-small.svg"></div>`
+            <div class="close-btn"><svg width="24" height="24"> <circle cy="12" cx="12" r="11"></circle> </svg><img src="./img/svg/close-small.svg"></div>`
         ele.querySelector('.close-btn').addEventListener('click', (e) => {
             this.alert_flip.refresh()
             alert_layer.removeChild(e.target.closest('.alert-box'))
             this.alert_flip.play(500)
         })
         if (duration > 0) {
-            ele.querySelector('.close-btn .progress').style.animationDuration = `${duration}s`
+            ele.querySelector('.close-btn svg circle').style.animationDuration = `${duration}s`
         } else {
-            ele.querySelector('.close-btn .progress').style.animationPlayState = 'paused'
+            ele.querySelector('.close-btn svg circle').style.animationPlayState = 'paused'
         }
         this.alert_flip.append(ele)
         this.alert_flip.refresh()

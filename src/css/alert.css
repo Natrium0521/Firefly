@@ -41,6 +41,7 @@
 
         .text {
             flex-grow: 1;
+            word-break: break-all;
 
             .title {
                 user-select: text;
@@ -57,7 +58,10 @@
 
         .close-btn {
             height: 60px;
+            width: 24px;
             opacity: 0.8;
+            position: relative;
+            flex-shrink: 0;
 
             &:hover {
                 scale: 1.05;
@@ -67,20 +71,27 @@
                 scale: 1.03;
             }
 
-            .progress {
-                margin-top: 18px;
-                background: transparent;
-                height: 20px;
-                width: 20px;
-                border-radius: 50%;
-                border: 2px solid gray;
-                rotate: 45deg;
-                animation: close-btn-progress-anim 1s linear forwards;
+            &>svg {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%) rotate(-90deg);
+            }
+
+            &>svg>circle {
+                fill: none;
+                stroke: #0004;
+                stroke-width: 2;
+                stroke-linecap: round;
+                stroke-dasharray: 69.08;
+                stroke-dashoffset: 69.08;
+                animation: circle-anim 1s linear forwards;
                 animation-delay: -0s;
             }
 
             img {
-                transform: translateY(calc(-100% - 0px));
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
             }
         }
     }
@@ -101,49 +112,12 @@
     }
 }
 
-@keyframes close-btn-progress-anim {
+@keyframes circle-anim {
     0% {
-        clip-path: polygon(0% 0%,
-                0% 0%,
-                0% 0%,
-                0% 0%,
-                0% 0%,
-                50% 50%);
-    }
-
-    25% {
-        clip-path: polygon(0% 0%,
-                100% 0%,
-                100% 0%,
-                100% 0%,
-                100% 0%,
-                50% 50%);
-    }
-
-    50% {
-        clip-path: polygon(0% 0%,
-                100% 0%,
-                100% 100%,
-                100% 100%,
-                100% 100%,
-                50% 50%);
-    }
-
-    75% {
-        clip-path: polygon(0% 0%,
-                100% 0%,
-                100% 100%,
-                0% 100%,
-                0% 100%,
-                50% 50%);
+        stroke-dashoffset: 69.08;
     }
 
     100% {
-        clip-path: polygon(0% 0%,
-                100% 0%,
-                100% 100%,
-                0% 100%,
-                0% 0%,
-                50% 50%);
+        stroke-dashoffset: 0;
     }
 }
