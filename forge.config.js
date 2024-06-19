@@ -1,7 +1,7 @@
 module.exports = {
   packagerConfig: {
     asar: true,
-    appVersion: '0.2.5',
+    appVersion: '0.2.6',
     icon: './src/img/favicon.ico',
     name: 'Firefly',
     win32metadata: {

@@ -6,7 +6,7 @@
 
 # 流萤工具箱
 
-_使用 [electron](https://github.com/electron/electron) 开发的《崩坏：星穹铁道》工具箱_
+_✨使用 [electron](https://github.com/electron/electron) 开发的《崩坏：星穹铁道》工具箱✨_
 
 </div>
 
@@ -42,17 +42,19 @@ npm run main
 
 游戏版本更新后会尽快在 [main branch](https://github.com/Natrium0521/Firefly/tree/main) 更新
 
-但由于互斥成就没有直接的数据，所以 [Release](https://github.com/Natrium0521/Firefly/releases) 版可能会延迟发布或频繁更新
+但由于互斥成就没有直接的数据，所以 [Release](https://github.com/Natrium0521/Firefly/releases) 版可能会延迟发布
 
 ## 开发计划
 
 ~~只是计划（暑假有空再说~~
 
+- [ ] 重构
+
 - [ ] 角色信息（类似米游社）
 
 - [ ] 材料计算
 
-- [ ] 个性化
+- [ ] 自定义背景等
 
 ## Special Thanks
 
