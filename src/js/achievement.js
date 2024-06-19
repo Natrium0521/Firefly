@@ -1,4 +1,9 @@
 textMap = {}// 字典
+const textReplaceMap = {
+    '{NICKNAME}': '-2090701432',
+    '{TEXTJOIN#54}': '-262052143',
+    '{TEXTJOIN#87}': '-978224911'
+}
 meAchievement = []// 互斥成就
 achievementSeries = {}
 achievementData = {}
@@ -310,8 +315,9 @@ const initAchievement = async () => {
             desc = desc.replaceAll(`#${i}[m]`, p['Value'])
             desc = desc.replaceAll(`#${i}`, p['Value'])
         })
-        desc = desc.replaceAll('{TEXTJOIN#54}', textMap['-262052143'])
-        desc = desc.replaceAll('{NICKNAME}', textMap['-2090701432'])
+        Object.entries(textReplaceMap).forEach(([k, hash]) => {
+            desc = desc.replaceAll(k, textMap[hash])
+        })
         main_desc = desc.includes('※') ? desc.split('※')[0] : desc
         sub_desc = desc.includes('※') ? '※' + desc.split('※')[1] : ''
         rew = rarity_map[achievement['Rarity']]['rew']
