@@ -1,38 +1,33 @@
 module.exports = {
-  packagerConfig: {
-    asar: true,
-    appVersion: '0.2.6',
-    icon: './src/img/favicon.ico',
-    name: 'Firefly',
-    win32metadata: {
-      ProductName: '流萤工具箱',
-      CompanyName: 'Firefly',
-      FileDescription: '流萤工具箱'
-    }
-  },
-  rebuildConfig: {},
-  makers: [
-    {
-      name: '@electron-forge/maker-squirrel',
-      config: {},
+    packagerConfig: {
+        asar: true,
+        appVersion: '0.3.0',
+        icon: './src/renderer/assets/image/favicon.ico',
+        name: 'Firefly',
+        win32metadata: {
+            ProductName: '流萤工具箱',
+            CompanyName: 'Firefly',
+            FileDescription: '流萤工具箱',
+        },
+        ignore: [/^\/src/, /^\/.vscode/, /(.eslintrc.js)|(.gitignore)|(.prettierrc)|(electron.vite.config.js)|(forge.config.js)|(tsconfig.*)/],
     },
-    {
-      name: '@electron-forge/maker-zip',
-      platforms: ['darwin'],
-    },
-    {
-      name: '@electron-forge/maker-deb',
-      config: {},
-    },
-    {
-      name: '@electron-forge/maker-rpm',
-      config: {},
-    },
-  ],
-  plugins: [
-    {
-      name: '@electron-forge/plugin-auto-unpack-natives',
-      config: {},
-    },
-  ],
+    rebuildConfig: {},
+    makers: [
+        {
+            name: '@electron-forge/maker-squirrel',
+            config: {},
+        },
+        {
+            name: '@electron-forge/maker-zip',
+            platforms: ['darwin'],
+        },
+        {
+            name: '@electron-forge/maker-deb',
+            config: {},
+        },
+        {
+            name: '@electron-forge/maker-rpm',
+            config: {},
+        },
+    ],
 };

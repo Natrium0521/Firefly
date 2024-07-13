@@ -16,14 +16,17 @@ _✨使用 [electron](https://github.com/electron/electron) 开发的《崩坏�
 
 - 跃迁记录分析
 
+- 解锁120帧
+
 ## 使用
 
 ### 从源代码运行
 
 ```
-git clone
+git clone https://github.com/Natrium0521/Firefly.git
+cd Firefly
 npm install
-npm run main
+npm start
 ```
 
 ### 下载打包的文件
@@ -46,15 +49,15 @@ npm run main
 
 ## 开发计划
 
-~~只是计划（暑假有空再说~~
-
-- [ ] 重构
+~~只是计划（有空再说~~
 
 - [ ] 角色信息（类似米游社）
 
 - [ ] 材料计算
 
 - [ ] 自定义背景等
+
+- [x] 重构
 
 ## Special Thanks
 
