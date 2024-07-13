@@ -1,0 +1,31 @@
+{
+    "config": [
+        "getAppVersion"
+    ],
+    "setting": [
+        "getAppSettings",
+        "setAppSettings"
+    ],
+    "unlockfps": [
+        "isFPSUnlocked",
+        "toggleFPS"
+    ],
+    "achievement": [
+        "getAchievementUids",
+        "getAchievementData",
+        "newAchievementData",
+        "delAchievementData",
+        "exportAchievementData",
+        "importAchievementData",
+        "setAchievementStatus"
+    ],
+    "gacha": [
+        "getGachaUids",
+        "getGachaData",
+        "newGachaData",
+        "delGachaData",
+        "exportGachaData",
+        "importGachaData",
+        "getGachaURL"
+    ]
+}
