@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./src/img/icon.png" width="200" height="200" alt="Firefly">
+    <img src="./src/static/image/icon.png" width="200" height="200" alt="Firefly">
 </p>
 
 <div align="center">
