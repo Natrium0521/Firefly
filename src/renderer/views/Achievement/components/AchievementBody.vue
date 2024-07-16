@@ -109,6 +109,7 @@ onMounted(async () => {
     achievementData = await window.fireflyAPI.loadJson('AchievementData');
     const achievementSeries = await window.fireflyAPI.loadJson('AchievementSeries');
     const achievementVersion = await window.fireflyAPI.loadJson('AchievementVersion');
+    const textReplaceMap = await window.fireflyAPI.loadJson('AchievementTextReplaceMap');
     const rarityMap = {
         High: {
             icon: 1,
@@ -122,11 +123,6 @@ onMounted(async () => {
             icon: 3,
             reward: 5,
         },
-    };
-    const textReplaceMap = {
-        '{NICKNAME}': '-2090701432',
-        '{TEXTJOIN#54}': '-262052143',
-        '{TEXTJOIN#87}': '-978224911',
     };
 
     // 成就部分
@@ -167,7 +163,7 @@ onMounted(async () => {
             tmp_desc = tmp_desc.replaceAll(`#${i}`, p['Value']);
         });
         Object.entries(textReplaceMap).forEach(([k, hash]) => {
-            tmp_desc = tmp_desc.replaceAll(k, textMapStore.getText(hash));
+            tmp_desc = tmp_desc.replaceAll(k, textMapStore.getText(hash['Hash']));
         });
         tmp['achievement_desc_upper'] = tmp_desc.includes('※') ? tmp_desc.split('※')[0] : tmp_desc;
         tmp['achievement_desc_lower'] = tmp_desc.includes('※') ? '※' + tmp_desc.replace(/^.*?※/, '') : '';

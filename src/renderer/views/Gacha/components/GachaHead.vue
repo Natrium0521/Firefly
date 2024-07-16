@@ -153,6 +153,7 @@ const onRefreshAlertMounted = () => {
         if (ret['msg'] == 'OK') {
             urlTextarea.val(ret['data']['url']);
             warningSpan.html('<br>获取成功，正在检测是否有效');
+            isRefreshing.value = true;
             fetch(ret['data']['url'])
                 .then((response) => response.json())
                 .then((data) => {
@@ -166,6 +167,9 @@ const onRefreshAlertMounted = () => {
                 })
                 .catch(() => {
                     warningSpan.html('<br>GET请求失败，请检查网络连接');
+                })
+                .finally(() => {
+                    isRefreshing.value = false;
                 });
         } else {
             warningSpan.html('<br>自动获取URL失败，请先在游戏内打开跃迁记录页面并翻看几次');

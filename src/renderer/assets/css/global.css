@@ -25,7 +25,6 @@ img {
     -webkit-user-drag: none;
 }
 
-
 input::selection,
 textarea::selection {
     color: #fff;

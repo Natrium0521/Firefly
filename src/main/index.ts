@@ -4,7 +4,7 @@ import fs from 'fs';
 
 import settingService from './service/settingService';
 
-// 禁用硬件加速，更流畅
+// 禁用硬件加速
 app.disableHardwareAcceleration();
 
 // 安装包不运行
