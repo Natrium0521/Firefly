@@ -84,7 +84,7 @@ class AchievementService {
                     .showSaveDialog(BrowserWindow.getAllWindows()[0], {
                         title: '导出成就存档',
                         buttonLabel: '导出',
-                        defaultPath: `%USERPROFILE%/Desktop/Firefly_AchievementExport_v${app.getVersion()}_${this.achievementUids[uid]}_${uid}.json`,
+                        defaultPath: path.join(app.getPath('desktop'), `Firefly_AchievementExport_v${app.getVersion()}_${this.achievementUids[uid]}_${uid}.json`),
                         filters: [{ name: 'json', extensions: ['json'] }],
                     })
                     .then((result) => {
@@ -116,7 +116,7 @@ class AchievementService {
                     .showOpenDialog(BrowserWindow.getAllWindows()[0], {
                         title: '导入存档',
                         buttonLabel: '导入',
-                        defaultPath: '%USERPROFILE%/Desktop/',
+                        defaultPath: app.getPath('desktop'),
                         filters: [{ name: 'json', extensions: ['json'] }],
                     })
                     .then((result) => {

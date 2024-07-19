@@ -51,6 +51,7 @@
                 <span>导入格式：</span>
                 <select id="select-type">
                     <option value="srgf_v1.0">SRGF v1.0</option>
+                    <option value="uigf_v4.0">UIGF v4.0</option>
                 </select>
             </div>
             <div class="warning-area">若UID已存在将合并记录，不存在则自动新建记录</div>
@@ -63,8 +64,9 @@
         <Alert id="alert-export" v-if="showExportAlert" @close="showExportAlert = false" title="导出记录" @vue:mounted="onExportAlertMounted">
             <div class="select-item-area">
                 <span>导出格式：</span>
-                <select id="select-type">
+                <select id="select-type" @change="onSelectExportFormat">
                     <option value="srgf_v1.0">SRGF v1.0</option>
+                    <option value="uigf_v4.0">UIGF v4.0</option>
                 </select>
             </div>
             <div class="warning-area"></div>
@@ -249,7 +251,6 @@ const onRefreshAlertMounted = () => {
                     isRefreshing.value = false;
                     return;
                 }
-                let containsDuplicate = false;
                 if (isIncremental && items.length > 0) {
                     if (fetchingGachaUid === undefined) {
                         fetchingGachaUid = items[0]['uid'];
@@ -262,7 +263,6 @@ const onRefreshAlertMounted = () => {
                     tmp.forEach((item) => {
                         if (fetchingGachaData[item.id] === undefined) items.push(item);
                     });
-                    if (tmp.length != items.length) containsDuplicate = true;
                 }
                 if (items.length == 0) {
                     warningSpan.html(`${gachaTypeName}池数据请求完成<br>共获取 ${cnt} 条记录`);
@@ -363,11 +363,36 @@ const onImportAlertMounted = () => {
     });
 };
 
-const onExportAlertMounted = () => {
+let exportable = false;
+const onSelectExportFormat = async () => {
+    const type = $('#alert-export #select-type').val() + '';
+    const warningSpan = $('#alert-export .warning-area');
+    warningSpan.html('');
+    exportable = false;
+    if (type == 'srgf_v1.0') {
+        if (!(await userGachaStore.checkExportable(showingUid.value))) {
+            warningSpan.html('当前记录存在未知角色/光锥<br>为避免导出数据有误，请更新后再尝试导出');
+            return;
+        }
+        exportable = true;
+    } else if (type == 'uigf_v4.0') {
+        for (let uid of Object.keys(gachaUids.value)) {
+            if (!(await userGachaStore.checkExportable(uid))) {
+                warningSpan.html(`uid为 ${uid} 的记录存在未知角色/光锥<br>为避免导出数据有误，请更新后再尝试导出`);
+                return;
+            }
+        }
+        warningSpan.html('注意：UIGFv4.0 会将所有 uid 的跃迁记录导出到一个文件');
+        exportable = true;
+    }
+};
+const onExportAlertMounted = async () => {
+    await onSelectExportFormat();
     $('#alert-export #button-cancel').on('click', () => {
         showExportAlert.value = false;
     });
     $('#alert-export #button-confirm').on('click', async () => {
+        if (!exportable) return;
         const type = $('#alert-export #select-type').val() + '';
         const warningSpan = $('#alert-export .warning-area');
         const ret = await userGachaStore.exportGachaData(type);

@@ -71,9 +71,9 @@ class GachaService {
     }
 
     public async exportGachaData(uid: string, type = 'srgf_v1.0') {
-        if (!/^\d{9}$/.test(uid)) return { msg: 'Invalid UID' };
-        if (this.gachaUids[uid] === undefined) return { msg: 'UID not found' };
         if (type == 'srgf_v1.0') {
+            if (!/^\d{9}$/.test(uid)) return { msg: 'Invalid UID' };
+            if (this.gachaUids[uid] === undefined) return { msg: 'UID not found' };
             const exportData = {
                 info: {
                     srgf_version: 'v1.0',
@@ -109,8 +109,67 @@ class GachaService {
                     .showSaveDialog(BrowserWindow.getAllWindows()[0], {
                         title: '导出跃迁记录为SRGF',
                         buttonLabel: '导出',
-                        defaultPath: `%USERPROFILE%/Desktop/Firefly_GachaExport_v${app.getVersion()}_${this.gachaUids[uid]}_${uid}.json`,
+                        defaultPath: path.join(app.getPath('desktop'), `Firefly_GachaExport_v${app.getVersion()}_${this.gachaUids[uid]}_${uid}.SRGF.json`),
                         filters: [{ name: 'SRGF json', extensions: ['json'] }],
+                    })
+                    .then((result) => {
+                        if (result.canceled) {
+                            msg = 'Canceled';
+                        } else {
+                            fs.writeFileSync(result.filePath, JSON.stringify(exportData, null, 4), 'utf-8');
+                        }
+                    })
+                    .catch((err) => {
+                        msg = err.message;
+                    });
+            } catch (error) {
+                return { msg: error.message };
+            }
+            return { msg: msg };
+        } else if (type == 'uigf_v4.0') {
+            const exportData = {
+                info: {
+                    export_app: 'Firefly',
+                    export_app_version: app.getVersion(),
+                    export_timestamp: Math.floor(new Date().getTime() / 1000),
+                    version: 'v4.0',
+                },
+                hkrpg: [],
+            };
+            const AvatarConfig = this.loadJson('AvatarConfig');
+            const EquipmentConfig = this.loadJson('EquipmentConfig');
+            const TextMapCHS = this.loadJson('TextMapCHS');
+            Object.keys(this.gachaUids).forEach((uid) => {
+                const userNode = {
+                    uid: `${uid}`,
+                    lang: 'zh-cn',
+                    timezone: 8,
+                    list: [],
+                };
+                Object.values(JSON.parse(fs.readFileSync(path.join(this.gachaDataPath, `./${uid}.json`), 'utf-8'))).forEach((item) => {
+                    const node = item;
+                    node['count'] = '1';
+                    if (node['item_id'].length == 4) {
+                        node['item_type'] = '角色';
+                        node['name'] = TextMapCHS[AvatarConfig[node['item_id']]['AvatarName']['Hash']];
+                        node['rank_type'] = AvatarConfig[node['item_id']]['Rarity'].at(-1);
+                    } else {
+                        node['item_type'] = '光锥';
+                        node['name'] = TextMapCHS[EquipmentConfig[node['item_id']]['EquipmentName']['Hash']];
+                        node['rank_type'] = EquipmentConfig[node['item_id']]['Rarity'].at(-1);
+                    }
+                    userNode.list.push(node);
+                });
+                exportData.hkrpg.push(userNode);
+            });
+            let msg = 'OK';
+            try {
+                await dialog
+                    .showSaveDialog(BrowserWindow.getAllWindows()[0], {
+                        title: '导出跃迁记录为UIGF',
+                        buttonLabel: '导出',
+                        defaultPath: path.join(app.getPath('desktop'), `Firefly_GachaExport_v${app.getVersion()}.UIGF.json`),
+                        filters: [{ name: 'UIGF json', extensions: ['json'] }],
                     })
                     .then((result) => {
                         if (result.canceled) {
@@ -141,7 +200,7 @@ class GachaService {
                         .showOpenDialog(BrowserWindow.getAllWindows()[0], {
                             title: '导入SRGF格式跃迁记录',
                             buttonLabel: '导入',
-                            defaultPath: '%USERPROFILE%/Desktop/',
+                            defaultPath: app.getPath('desktop'),
                             filters: [{ name: 'SRGF json', extensions: ['json'] }],
                         })
                         .then((result) => {
@@ -160,6 +219,56 @@ class GachaService {
                 } catch (error) {
                     return { msg: error.message };
                 }
+            } else if (type == 'uigf_v4.0') {
+                let msg = 'OK';
+                let uid = '';
+                try {
+                    await dialog
+                        .showOpenDialog(BrowserWindow.getAllWindows()[0], {
+                            title: '导入UIGF格式跃迁记录',
+                            buttonLabel: '导入',
+                            defaultPath: app.getPath('desktop'),
+                            filters: [{ name: 'UIGF json', extensions: ['json'] }],
+                        })
+                        .then((result) => {
+                            if (result.canceled) {
+                                msg = 'Canceled';
+                            } else {
+                                data = JSON.parse(fs.readFileSync(result.filePaths[0], 'utf-8'));
+                            }
+                        })
+                        .catch((err) => {
+                            msg = err.message;
+                        });
+                    if (msg != 'OK') return { msg: msg };
+                    if (data['info']['version'] != 'v4.0') return { msg: 'Unsupport UIGF version' };
+                    if (data['hkrpg'] === undefined || data['hkrpg'].length == 0) return { msg: 'No StarRail data' };
+                    data['hkrpg'].forEach((userNode: unknown) => {
+                        if (!/^\d{9}$/.test(userNode['uid'])) throw new Error('Invalid UID');
+                        if (userNode['list'] === undefined) throw new Error('Invalid UIGF');
+                        if (userNode['timezone'] === undefined) throw new Error('Invalid UIGF');
+                        const item_keys = ['gacha_id', 'gacha_type', 'item_id', 'time', 'id'];
+                        userNode['list'].forEach((item: unknown) => {
+                            item_keys.forEach((key) => {
+                                if (item[key] === undefined) throw new Error('Invalid UIGF');
+                            });
+                        });
+                    });
+                    for (const userNode of data['hkrpg']) {
+                        const srgfData = {
+                            info: {
+                                region_time_zone: userNode['timezone'],
+                                uid: userNode['uid'],
+                            },
+                            list: userNode['list'],
+                        };
+                        await this.importGachaData('srgf_v1.0', srgfData);
+                        uid = userNode['uid'];
+                    }
+                } catch (error) {
+                    return { msg: error.message };
+                }
+                return { msg: 'OK', data: { uid: uid } };
             }
         }
         const uid = `${data['info']['uid']}`;

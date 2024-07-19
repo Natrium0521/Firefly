@@ -74,6 +74,23 @@ export const useUserGacha = defineStore('usergacha', () => {
         return ret;
     };
 
+    /**
+     * 检查 uid 对应记录是否可以导出
+     * 可以则返回 true
+     */
+    const checkExportable = async (uid: string) => {
+        const validItemIds = new Set();
+        Object.keys(avatarConfig.value).forEach((itemId) => validItemIds.add(itemId));
+        Object.keys(lightconeConfig.value).forEach((itemId) => validItemIds.add(itemId));
+        let isExportable = true;
+        Object.values((await window.fireflyAPI.gacha.getGachaData(uid))['data']).forEach((item) => {
+            if (!validItemIds.has(item['item_id'])) {
+                isExportable = false;
+            }
+        });
+        return isExportable;
+    };
+
     const getGachaURL = async () => {
         return await window.fireflyAPI.gacha.getGachaURL();
     };
@@ -93,6 +110,7 @@ export const useUserGacha = defineStore('usergacha', () => {
         refreshGachaData,
         importGachaData,
         exportGachaData,
+        checkExportable,
         getGachaURL,
     };
 });
