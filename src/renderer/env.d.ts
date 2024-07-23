@@ -38,6 +38,12 @@ declare interface Window {
             importGachaData: (type?: string, data?: unknown) => Promise<unknown>;
             getGachaURL: (server?: string) => Promise<unknown>;
         };
+        update: {
+            doDownload: (url: string) => Promise<void>;
+            getDownloadInfo: () => Promise<{ progress: number; speed: number; state: undefined | 'downloading' | 'downloaded' | 'cancelled' | 'interrupted' | 'failed' }>;
+            cancelDownload: () => Promise<void>;
+            doUpdate: (hash: string) => Promise<'no update file' | 'CRC32 verification failed' | 'updating'>;
+        };
 
         openURL: (url: string) => void;
         sendMainWindowMsg: (msg: string) => void;

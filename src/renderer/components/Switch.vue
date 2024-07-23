@@ -17,7 +17,7 @@ const checked = computed({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 input {
     width: 48px;
     height: 24px;

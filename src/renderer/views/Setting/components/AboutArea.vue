@@ -17,9 +17,9 @@ import $ from 'jquery';
 import { onMounted } from 'vue';
 
 onMounted(() => {
-    $('a').on('click', function (e) {
+    $('a').on('click', (e) => {
         e.preventDefault();
-        const href = $(this).attr('href');
+        const href = e.currentTarget.getAttribute('href');
         if (href) {
             window.fireflyAPI.openURL(href);
         }
@@ -30,7 +30,7 @@ onMounted(() => {
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .about-area {
     position: relative;
     height: 200px;

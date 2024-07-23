@@ -19,7 +19,7 @@ import Switch from '../../../components/Switch.vue';
 defineProps(['title', 'desc', 'iconPath']);
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .setting-item-switch {
     background-color: #fff5;
     border-radius: 5px;

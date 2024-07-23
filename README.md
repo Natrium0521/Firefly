@@ -31,9 +31,9 @@ npm start
 
 ### 下载打包的文件
 
-+ **推荐**：从最新 Release 下载压缩包解压运行 Firefly.exe
++ 从最新 Release 下载压缩包解压运行 Firefly.exe
 
-+ 或者：下载安装包进行安装
++ 或者：下载安装包进行安装（不能选择安装路径）
 
 ## 关于跃迁记录
 
@@ -47,6 +47,10 @@ npm start
 
 但由于互斥成就没有直接的数据，所以 [Release](https://github.com/Natrium0521/Firefly/releases) 版可能会延迟发布
 
+## 关于软件更新
+
+设置中可以检测更新，需要访问 `GitHub` 下载资源，替换文件使用 `PowerShell` 脚本，若更新失败可以前往 [Release](https://github.com/Natrium0521/Firefly/releases) 下载
+
 ## 开发计划
 
 ~~只是计划（有空再说~~
@@ -55,9 +59,9 @@ npm start
 
 - [ ] 材料计算
 
-- [ ] 自定义背景等
-
 - [x] 重构
+
+- [x] 软件内更新
 
 ## Special Thanks
 

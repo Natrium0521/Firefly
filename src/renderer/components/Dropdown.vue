@@ -28,7 +28,7 @@ onMounted(() => {
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .dropdown-content {
     visibility: hidden;
     opacity: 0;

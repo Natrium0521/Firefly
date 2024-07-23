@@ -27,5 +27,11 @@
         "exportGachaData",
         "importGachaData",
         "getGachaURL"
+    ],
+    "update": [
+        "doDownload",
+        "getDownloadInfo",
+        "cancelDownload",
+        "doUpdate"
     ]
 }

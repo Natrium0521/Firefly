@@ -11,7 +11,7 @@
 defineProps(['title']);
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .setting-area {
     padding: 5px;
 }

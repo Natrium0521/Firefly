@@ -31,7 +31,7 @@ onMounted(() => {
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .app-title {
     width: 100%;
     height: 45px;
