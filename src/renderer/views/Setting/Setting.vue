@@ -6,7 +6,7 @@
             <SettingItemSwitch title="Debug模式（重启生效）" desc="不建议非开发人员开启" :icon-path="DebugIconPath" v-model="isDebugOn" />
             <SettingItemButton title="更新工具箱" desc="需要能访问 GitHub" button-text="检查更新" :icon-path="UpdateIconPath" @onButtonClick="showUpdateAlert = true" />
             <Alert id="update-alert" v-if="showUpdateAlert" @close="!['downloading', 'updating'].includes(updateState) ? (showUpdateAlert = false) : false" title="更新" @vue:mounted="onUpdateAlertMounted">
-                <div class="update-info">{{ updateInfo }}</div>
+                <div class="update-info" v-html="updateInfo"></div>
                 <div class="release-href" v-show="['need_update', 'downloading', 'download_failed', 'update_failed'].includes(updateState)">使用浏览器下载：<a href="https://github.com/Natrium0521/Firefly/releases/latest">GitHub</a></div>
                 <div class="download-info" v-show="updateState == 'downloading'">
                     <div class="size">{{ downloadInfoSize }}</div>
@@ -124,6 +124,11 @@ const doCheck = () => {
     fetch('https://api.github.com/repos/Natrium0521/Firefly/releases/latest')
         .then((res) => res.json())
         .then((res) => {
+            if (res['message'] && res['message'].includes('API rate limit exceeded')) {
+                updateInfo.value = 'API请求次数超限<br>请尝试更换代理或直接访问GitHub';
+                updateState.value = 'check_failed';
+                return;
+            }
             if (isNewVersion(res['tag_name'])) {
                 res['assets'].forEach((asset: unknown) => {
                     if (asset['name'].endsWith('.asar')) {
@@ -144,7 +149,7 @@ const doCheck = () => {
             }
         })
         .catch(() => {
-            updateInfo.value = '无法获取最新版本，请检查网络连接';
+            updateInfo.value = '无法获取最新版本<br>请检查网络连接';
             updateState.value = 'check_failed';
         });
 };
@@ -291,6 +296,10 @@ const onUpdateAlertMounted = async () => {
 }
 
 #update-alert {
+    .update-info {
+        text-align: center;
+    }
+
     .release-href {
         margin-top: 8px;
         font-size: 0.95em;

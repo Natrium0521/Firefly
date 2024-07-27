@@ -50,8 +50,8 @@
             <div class="select-item-area">
                 <span>导入格式：</span>
                 <select id="select-type">
-                    <option value="srgf_v1.0">SRGF v1.0</option>
                     <option value="uigf_v4.0">UIGF v4.0</option>
+                    <option value="srgf_v1.0">SRGF v1.0</option>
                 </select>
             </div>
             <div class="warning-area">若UID已存在将合并记录，不存在则自动新建记录</div>
@@ -65,8 +65,8 @@
             <div class="select-item-area">
                 <span>导出格式：</span>
                 <select id="select-type" @change="onSelectExportFormat">
-                    <option value="srgf_v1.0">SRGF v1.0</option>
                     <option value="uigf_v4.0">UIGF v4.0</option>
+                    <option value="srgf_v1.0">SRGF v1.0</option>
                 </select>
             </div>
             <div class="warning-area"></div>

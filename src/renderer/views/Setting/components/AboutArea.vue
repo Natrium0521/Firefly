@@ -6,7 +6,7 @@
             <div class="links">
                 <div>项目链接 <a href="https://github.com/Natrium0521/Firefly">GitHub</a></div>
                 <div>游戏数据来自 <a href="https://github.com/Dimbreath/StarRailData">StarRailData</a></div>
-                <div>跃迁记录导出标准 <a href="https://uigf.org/">SRGF / UIGF(Beta)</a></div>
+                <div>跃迁记录导出标准 <a href="https://uigf.org/">SRGF / UIGF</a></div>
             </div>
         </div>
     </div>
