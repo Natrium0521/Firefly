@@ -4195,6 +4195,47 @@
       1
     ]
   },
+  "21046": {
+    "EquipmentID": 21046,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": -973364450
+    },
+    "EquipmentDesc": {
+      "Hash": 371857150
+    },
+    "Rarity": "CombatPowerLightconeRarity4",
+    "AvatarBaseType": "Shaman",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 2,
+    "SkillID": 21046,
+    "ExpProvide": 12000,
+    "CoinCost": 6000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/21046.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/21046.png",
+    "ItemRightPanelOffset": [
+      8,
+      -134,
+      0.74
+    ],
+    "AvatarDetailOffset": [
+      8,
+      -126,
+      1.15
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
   "22002": {
     "EquipmentID": 22002,
     "Release": true,
@@ -4267,6 +4308,88 @@
       0,
       -78,
       1
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "23030": {
+    "EquipmentID": 23030,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": -1658973977
+    },
+    "EquipmentDesc": {
+      "Hash": 371857150
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Warrior",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23030,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23030.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23030.png",
+    "ItemRightPanelOffset": [
+      -57,
+      -165,
+      1.2
+    ],
+    "AvatarDetailOffset": [
+      -62,
+      -149,
+      1.9
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "23029": {
+    "EquipmentID": 23029,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": -92890045
+    },
+    "EquipmentDesc": {
+      "Hash": 371857150
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Warlock",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23029,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23029.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23029.png",
+    "ItemRightPanelOffset": [
+      -10,
+      -230,
+      1.1
+    ],
+    "AvatarDetailOffset": [
+      -16,
+      -218,
+      1.7
     ],
     "BattleDialogOffset": [
       0,

@@ -25,7 +25,7 @@ onMounted(() => {
         }
     });
     window.fireflyAPI.config.getAppVersion().then((version) => {
-        $('.version').html(`工具箱版本 v${version}<br>适配游戏版本 v2.3`);
+        $('.version').html(`工具箱版本 v${version}<br>适配游戏版本 v2.4`);
     });
 });
 </script>
