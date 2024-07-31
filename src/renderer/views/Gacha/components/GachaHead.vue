@@ -8,7 +8,7 @@
             <div class="url-area" :class="{ shrink: refreshingItems.length > 0 }">
                 <div class="label">URL:</div>
                 <div class="btn">自动获取</div>
-                <textarea spellcheck="false" placeholder="https://api-takumi.mihoyo.com/common/gacha_record/api/getGachaLog?"></textarea>
+                <textarea spellcheck="false" placeholder="https://public-operation-hkrpg.mihoyo.com/common/gacha_record/api/getGachaLog?"></textarea>
             </div>
             <div class="card-area" :class="{ show: refreshingItems.length > 0 }">
                 <CardGridItem v-for="item in refreshingItems" :key="item.id" :item="item" />
@@ -193,7 +193,7 @@ const onRefreshAlertMounted = () => {
             warningSpan.html('<br>URL错误');
             return;
         }
-        if (urlObj.hostname != 'api-takumi.mihoyo.com' || urlObj.pathname != '/common/gacha_record/api/getGachaLog') {
+        if (!urlObj.hostname.endsWith('mihoyo.com') || urlObj.pathname != '/common/gacha_record/api/getGachaLog') {
             warningSpan.html('<br>非米哈游抽卡分析链接');
             return;
         }

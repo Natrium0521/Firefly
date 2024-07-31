@@ -1,6 +1,6 @@
 {
   "name": "firefly",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "流萤工具箱",
   "main": "./dist/main/index.js",
   "scripts": {
