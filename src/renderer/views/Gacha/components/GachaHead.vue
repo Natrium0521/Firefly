@@ -33,7 +33,6 @@
             </div>
         </Alert>
         <GachaHeadButton :icon-path="SwitchIcon" :btn-title="gachaViewTypeNext" btn-class="theme" @click="switchGachaPool" class="switch-button" />
-        <div style="flex-grow: 1"></div>
         <GachaHeadButton :icon-path="ImportIcon" btn-title="导入" btn-class="hover-drop" class="import-button">
             <div class="import-dropdown">
                 <div class="import-dropdown-item" @click="showImportAlert = true">
@@ -193,7 +192,7 @@ const onRefreshAlertMounted = () => {
             warningSpan.html('<br>URL错误');
             return;
         }
-        if (!urlObj.hostname.endsWith('mihoyo.com') || urlObj.pathname != '/common/gacha_record/api/getGachaLog') {
+        if (!urlObj.hostname.endsWith('mihoyo.com') || !urlObj.pathname.match(/gacha/i)) {
             warningSpan.html('<br>非米哈游抽卡分析链接');
             return;
         }
@@ -448,6 +447,7 @@ const onDeleteAlertMounted = () => {
 
 .import-button {
     line-height: 50px;
+    margin-left: auto;
 }
 
 .import-dropdown {

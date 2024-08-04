@@ -11,7 +11,6 @@ function createFireflyAPIBridge(): unknown {
         });
     });
 
-    bridge['openURL'] = (url: string) => ipcRenderer.send('openURL', url);
     bridge['sendMainWindowMsg'] = (msg: string) => ipcRenderer.send('sendMainWindowMsg', msg);
 
     bridge['loadJson'] = (fName: string) => ipcRenderer.invoke('loadJson', fName);

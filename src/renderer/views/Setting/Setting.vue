@@ -236,13 +236,6 @@ const doUpdate = () => {
     });
 };
 const onUpdateAlertMounted = async () => {
-    $('#update-alert a').on('click', (e) => {
-        e.preventDefault();
-        const href = e.currentTarget.getAttribute('href');
-        if (href) {
-            window.fireflyAPI.openURL(href);
-        }
-    });
     $('#update-alert #button-cancel').on('click', () => {
         switch (updateState.value) {
             case 'downloading':

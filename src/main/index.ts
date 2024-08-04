@@ -58,6 +58,12 @@ const createMainWindow = () => {
             mainWindow.hide();
         }
     });
+    mainWindow.webContents.on('will-navigate', (detail) => {
+        if (!detail.isSameDocument) {
+            detail.preventDefault();
+            shell.openExternal(detail.url);
+        }
+    });
 
     // mainWindow.webContents.openDevTools();
 };
@@ -118,11 +124,6 @@ Object.entries(ipcFireflyAPI).forEach(([serviceName, fnNames]) => {
             return await service[serviceName][fnName](...args);
         });
     });
-});
-
-// 打开外部链接
-ipcMain.on('openURL', (ev, url) => {
-    shell.openExternal(url);
 });
 
 ipcMain.on('sendMainWindowMsg', (ev, msg) => {
