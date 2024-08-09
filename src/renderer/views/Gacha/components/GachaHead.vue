@@ -446,13 +446,21 @@ const onDeleteAlertMounted = () => {
 }
 
 .import-button {
-    line-height: 50px;
     margin-left: auto;
+
+    &::after{
+        content: '';
+        position: absolute;
+        height: 5px;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+    }
 }
 
 .import-dropdown {
     position: absolute;
-    background-color: #fffa;
+    background-color: #fffc;
     border-radius: 5px;
     top: 45px;
     left: 0;

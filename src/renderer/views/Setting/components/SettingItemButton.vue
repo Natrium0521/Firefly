@@ -23,6 +23,7 @@ defineProps(['title', 'desc', 'iconPath', 'buttonText']);
     align-items: center;
     gap: 15px;
     min-height: 60px;
+    transition: all 100ms ease;
 
     &:hover {
         background-color: #fffc;
