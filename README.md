@@ -8,6 +8,11 @@
 
 _✨使用 [electron](https://github.com/electron/electron) 开发的《崩坏：星穹铁道》工具箱✨_
 
+![license](https://img.shields.io/github/license/Natrium0521/Firefly)
+![downloads](https://img.shields.io/github/downloads/Natrium0521/Firefly/total)
+![release](https://img.shields.io/github/v/release/Natrium0521/Firefly?color=9f71d3)
+![game version](https://img.shields.io/badge/for_HSR-v2.4-9f71d3)
+
 </div>
 
 ## 目前包含的功能
@@ -55,9 +60,9 @@ npm start
 
 ~~只是计划（有空再说~~
 
-- [ ] 角色信息（类似米游社）
+- [ ] 国际服适配
 
-- [ ] 材料计算
+- [ ] i18n
 
 - [x] 重构
 
