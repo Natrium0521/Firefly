@@ -43,6 +43,14 @@ defineProps(['item']);
     border-radius: 5px;
     animation: bg-bar-anim 1s linear forwards paused;
     animation-delay: -0s;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: -50px;
+        background: repeating-linear-gradient(45deg, transparent 0px 18px, #fff3 18px 32px);
+        animation: bg-bar-mask-anim 5s linear infinite;
+    }
 }
 
 .icon {
@@ -82,24 +90,34 @@ defineProps(['item']);
 @keyframes bg-bar-anim {
     0% {
         width: 0%;
-        background: #0f07;
+        background: #0f09;
     }
 
     50% {
-        background: #0f07;
+        background: #0f09;
     }
 
     70% {
-        background: #fa07;
+        background: #fa09;
     }
 
     80% {
-        background: #f007;
+        background: #f009;
     }
 
     100% {
         width: 100%;
-        background: #f007;
+        background: #f009;
+    }
+}
+
+@keyframes bg-bar-mask-anim {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: 45px;
     }
 }
 </style>
