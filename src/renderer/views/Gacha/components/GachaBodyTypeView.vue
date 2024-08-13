@@ -1,6 +1,6 @@
 <template>
     <div class="gacha-type-view">
-        <div class="container">
+        <div class="container" ref="container">
             <div class="scroll">
                 <div class="content">
                     <GachaBodyTypeViewBox :box-size="boxSize" gacha-title="限定角色" :gacha-count="avatarCount" :gacha-analyze="avatarAnalyze" :gacha-detail="avatarDetail" />
@@ -13,7 +13,6 @@
 </template>
 
 <script setup lang="ts">
-import $ from 'jquery';
 import { computed, onActivated, onMounted, ref } from 'vue';
 import GachaBodyTypeViewBox from './GachaBodyTypeViewBox.vue';
 import { useTextMap } from '../../../store/textmap';
@@ -321,29 +320,25 @@ const normalDetail = computed(() => {
     return detail;
 });
 
+const container = ref(null);
 const containerSize = ref({ height: 0, width: 0 });
 const boxSize = ref({ height: 0, width: 0 });
 const boxCount = 3;
-let maxWidth = 0;
-
+const minWidth = 280;
 const calcBoxSize = () => {
-    const target = $('.container')[0];
+    const target = container.value;
     if (target === undefined) return;
     containerSize.value.height = target.clientHeight;
     containerSize.value.width = target.clientWidth;
     boxSize.value.height = target.clientHeight - 5;
-    if ((maxWidth + 5) * boxCount > target.clientWidth) boxSize.value.width = maxWidth;
+    if ((minWidth + 5) * boxCount > target.clientWidth) boxSize.value.width = minWidth;
     else boxSize.value.width = target.clientWidth / boxCount - 5;
 };
-
+const resizeObserver = new ResizeObserver(calcBoxSize);
 onMounted(() => {
-    if (maxWidth == 0) {
-        maxWidth = $('.container')[0].clientWidth / 3 - 5;
-    }
     calcBoxSize();
-    $(window).on('resize', calcBoxSize);
+    resizeObserver.observe(container.value);
 });
-
 onActivated(() => {
     calcBoxSize();
 });

@@ -1,6 +1,6 @@
 <template>
     <div class="app-content">
-        <div class="app-content-sidebar-wrapper">
+        <div class="app-content-sidebar-wrapper" :class="{ collapsed: isSidebarCollapsed }">
             <div class="app-content-sidebar">
                 <div class="app-content-sidebar-item" :class="{ selected: currentComponent == Achievement }" @click="onSidebarItemClick($event, Achievement)">
                     <img src="../assets/image/hsr/AchievementIcon.png" />
@@ -14,9 +14,12 @@
                     <img src="../assets/image/hsr/SettingsIcon.png" />
                     <span>设置</span>
                 </div>
+                <div class="app-content-sidebar-item" style="margin-top: auto; width: 45px;" @click="isSidebarCollapsed = !isSidebarCollapsed">
+                    <img src="../assets/image/svg/hamburger-button.svg" style="transform: translate(8px, -50%);"/>
+                </div>
             </div>
         </div>
-        <div class="app-content-main">
+        <div class="app-content-main" :class="{ collapsed: isSidebarCollapsed }">
             <Transition :name="transitionName">
                 <KeepAlive>
                     <component :is="currentComponent" />
@@ -37,7 +40,7 @@ const componentIndex = new WeakMap([
     [Gacha, 2],
     [Setting, 3],
 ]);
-
+const isSidebarCollapsed = ref(false);
 const currentComponent = shallowRef(Achievement);
 const transitionName = ref('');
 
@@ -67,6 +70,15 @@ function onSidebarItemClick(event: MouseEvent, component: any) {
     height: 100%;
     left: 0;
     top: 0;
+    transition: all 300ms ease;
+
+    &.collapsed {
+        width: 60px;
+
+        & img {
+            transform: translate(8px, -50%);
+        }
+    }
 }
 
 .app-content-sidebar {
@@ -76,10 +88,8 @@ function onSidebarItemClick(event: MouseEvent, component: any) {
     left: 5px;
     top: 5px;
     background-color: #fff8;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fill, 45px);
-    gap: 5px;
+    display: flex;
+    flex-direction: column;
     overflow-y: overlay;
     overflow-x: hidden;
     scrollbar-gutter: stable;
@@ -96,6 +106,7 @@ function onSidebarItemClick(event: MouseEvent, component: any) {
     position: relative;
     border-radius: 5px;
     height: 45px;
+    flex-shrink: 0;
     margin-bottom: 5px;
     margin-left: 5px;
     transition: all 50ms ease;
@@ -120,13 +131,14 @@ function onSidebarItemClick(event: MouseEvent, component: any) {
     transform: translate(10px, -50%);
     height: 28px;
     filter: drop-shadow(1px 1px 2px #000c);
+    transition: all 300ms ease;
 }
 
 .app-content-sidebar-item span {
     position: absolute;
     top: 50%;
     transform: translate(50px, -50%);
-    font-size: 1em;
+    text-wrap: nowrap;
 }
 
 .app-content-main {
@@ -140,6 +152,11 @@ function onSidebarItemClick(event: MouseEvent, component: any) {
     overflow-y: overlay;
     overflow-x: hidden;
     scrollbar-gutter: stable;
+    transition: all 300ms ease;
+
+    &.collapsed {
+        left: 65px;
+    }
 }
 
 .app-content-main {
