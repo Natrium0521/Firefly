@@ -8,10 +8,10 @@
 
 _✨使用 [electron](https://github.com/electron/electron) 开发的《崩坏：星穹铁道》工具箱✨_
 
-![license](https://img.shields.io/github/license/Natrium0521/Firefly)
-![downloads](https://img.shields.io/github/downloads/Natrium0521/Firefly/total)
-![release](https://img.shields.io/github/v/release/Natrium0521/Firefly?color=9f71d3)
-![game version](https://img.shields.io/badge/for_HSR-v2.4-9f71d3)
+[![license](https://img.shields.io/github/license/Natrium0521/Firefly)](./LICENSE)
+[![downloads](https://img.shields.io/github/downloads/Natrium0521/Firefly/total)](https://github.com/Natrium0521/Firefly/releases/latest)
+[![release](https://img.shields.io/github/v/release/Natrium0521/Firefly?color=9f71d3)](https://github.com/Natrium0521/Firefly/releases/latest)
+[![game version](https://img.shields.io/badge/for_HSR-v2.4-9f71d3)](https://github.com/Natrium0521/Firefly/releases/latest)
 
 </div>
 
