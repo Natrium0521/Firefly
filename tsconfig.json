@@ -4,6 +4,12 @@
         "esModuleInterop": true,
         "experimentalDecorators": true,
         "resolveJsonModule": true,
+        "downlevelIteration": true,
+        "paths": {
+            "@renderer/*": [
+                "./src/renderer/*"
+            ]
+        },
         "types": [
             "electron-vite/node"
         ]

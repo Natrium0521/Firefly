@@ -14,8 +14,8 @@
                     <img src="../assets/image/hsr/SettingsIcon.png" />
                     <span>设置</span>
                 </div>
-                <div class="app-content-sidebar-item" style="margin-top: auto; width: 45px;" @click="isSidebarCollapsed = !isSidebarCollapsed">
-                    <img src="../assets/image/svg/hamburger-button.svg" style="transform: translate(8px, -50%);"/>
+                <div class="app-content-sidebar-item" style="margin-top: auto; width: 45px" @click="isSidebarCollapsed = !isSidebarCollapsed">
+                    <img src="../assets/image/svg/hamburger-button.svg" style="transform: translate(8px, -50%)" />
                 </div>
             </div>
         </div>
@@ -26,6 +26,7 @@
                 </KeepAlive>
             </Transition>
         </div>
+        <Toast />
     </div>
 </template>
 
@@ -34,6 +35,7 @@ import { ref, shallowRef } from 'vue';
 import Achievement from './Achievement/Achievement.vue';
 import Gacha from './Gacha/Gacha.vue';
 import Setting from './Setting/Setting.vue';
+import Toast from '@renderer/components/Toast/Toast.vue';
 
 const componentIndex = new WeakMap([
     [Achievement, 1],
