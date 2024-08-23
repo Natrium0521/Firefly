@@ -5,8 +5,8 @@
                 <img :src="IconMap[toast.type ?? 'info']" />
             </div>
             <div class="text">
-                <div class="title">{{ toast.title }}</div>
-                <div class="desc">{{ toast.content }}</div>
+                <div class="title" v-html="toast.title"></div>
+                <div class="desc" v-html="toast.content"></div>
             </div>
             <div class="close-btn" @click="toast.close()">
                 <svg width="24" height="24">

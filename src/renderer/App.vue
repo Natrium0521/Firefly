@@ -12,6 +12,7 @@ import AppContent from './views/AppContent.vue';
 import { useTextMap } from './store/textmap';
 import { useUserAchievement } from './store/userachievement';
 import { useUserGacha } from './store/usergacha';
+import Toast from './components/Toast';
 
 onMounted(() => {
     $(document).on('keydown', (e) => {
@@ -38,6 +39,38 @@ onMounted(() => {
     });
     window.fireflyAPI.unlockfps.isFPSUnlocked();
     useTextMap().loadTextMap('TextMapCHS');
+    window.fireflyAPI.config.getAppVersion().then((res) => {
+        let versionNow = res;
+        const isNewVersion = (version: string) => {
+            if (version.startsWith('v')) {
+                version = version.substring(1);
+            }
+            const versionNowArray = versionNow.split('.').map(Number);
+            const versionArray = version.split('.').map(Number);
+            const maxLength = Math.max(versionNowArray.length, versionArray.length);
+            while (versionNowArray.length < maxLength) versionNowArray.push(0);
+            while (versionArray.length < maxLength) versionArray.push(0);
+            for (let i = 0; i < maxLength; i++) {
+                if (versionNowArray[i] > versionArray[i]) {
+                    return false;
+                } else if (versionNowArray[i] < versionArray[i]) {
+                    return true;
+                }
+            }
+            return false;
+        };
+        fetch('https://api.github.com/repos/Natrium0521/Firefly/releases/latest')
+            .then((res) => res.json())
+            .then((res) => {
+                if (res['message'] && res['message'].includes('API rate limit exceeded')) {
+                    return;
+                }
+                if (isNewVersion(res['tag_name'])) {
+                    Toast.info('发现新版本', '可前往设置页面更新或直接跳转 <a href="https://github.com/Natrium0521/Firefly/releases/latest">GitHub</a> 下载', 60000);
+                }
+            })
+            .catch(() => {});
+    });
 });
 </script>
 

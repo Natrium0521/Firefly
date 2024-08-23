@@ -42,6 +42,7 @@ const componentIndex = new WeakMap([
     [Gacha, 2],
     [Setting, 3],
 ]);
+// TODO: load from settings
 const isSidebarCollapsed = ref(false);
 const currentComponent = shallowRef(Achievement);
 const transitionName = ref('');
