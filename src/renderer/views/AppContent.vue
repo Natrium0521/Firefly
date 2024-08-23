@@ -81,6 +81,11 @@ function onSidebarItemClick(event: MouseEvent, component: any) {
         & img {
             transform: translate(8px, -50%);
         }
+
+        & span {
+            transform: translate(40px, -50%);
+            opacity: 0;
+        }
     }
 }
 
@@ -142,6 +147,7 @@ function onSidebarItemClick(event: MouseEvent, component: any) {
     top: 50%;
     transform: translate(50px, -50%);
     text-wrap: nowrap;
+    transition: all 300ms ease;
 }
 
 .app-content-main {
