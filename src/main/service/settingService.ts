@@ -10,6 +10,7 @@ class SettingService {
         ThemeColor: [115, 93, 141],
         LastAchievementUid: '000000000',
         LastGachaUid: '000000000',
+        SidebarCollapsed: false,
     };
 
     constructor() {

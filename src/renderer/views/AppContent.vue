@@ -31,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, shallowRef } from 'vue';
+import { ref, shallowRef, watch } from 'vue';
 import Achievement from './Achievement/Achievement.vue';
 import Gacha from './Gacha/Gacha.vue';
 import Setting from './Setting/Setting.vue';
@@ -42,8 +42,10 @@ const componentIndex = new WeakMap([
     [Gacha, 2],
     [Setting, 3],
 ]);
-// TODO: load from settings
 const isSidebarCollapsed = ref(false);
+window.fireflyAPI.setting.getAppSettings().then((settings) => {
+    isSidebarCollapsed.value = settings['SidebarCollapsed'];
+});
 const currentComponent = shallowRef(Achievement);
 const transitionName = ref('');
 
@@ -56,6 +58,10 @@ function onSidebarItemClick(event: MouseEvent, component: any) {
     }
     currentComponent.value = component;
 }
+
+watch(isSidebarCollapsed, () => {
+    window.fireflyAPI.setting.setAppSettings('SidebarCollapsed', isSidebarCollapsed.value);
+});
 </script>
 
 <style scoped lang="scss">
