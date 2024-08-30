@@ -331,7 +331,7 @@ class GachaService {
             const urlWebCachePath = path.join(gameDataPath, `./webCaches/${maxVersion}/Cache/Cache_Data/data_2`);
             const urlLines = fs.readFileSync(urlWebCachePath, 'utf-8').split('1/0/');
             urlLines.forEach((line) => {
-                if (line.match(/^http.*mihoyo\.com.*?gacha.*\?/i)) {
+                if (line.match(/^http.*(?:hkrpg|api).*mihoyo\.com.*?gacha.*\?/i)) {
                     url = line.match(/^.*?\x00/)[0].slice(0, -1);
                 }
             });
