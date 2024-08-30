@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import Switch from '../../../components/Switch.vue';
+import Switch from '@renderer/components/Switch.vue';
 
 defineProps(['title', 'desc', 'iconPath']);
 </script>

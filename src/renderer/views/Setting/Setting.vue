@@ -4,7 +4,7 @@
         <SettingArea title="流萤工具箱">
             <SettingItemSwitch title="关闭时直接退出" desc="不保留托盘图标" :icon-path="CloseIconPath" v-model="isCloseDirectly" />
             <SettingItemSwitch title="Debug模式（重启生效）" desc="不建议非开发人员开启" :icon-path="DebugIconPath" v-model="isDebugOn" />
-            <SettingItemButton title="更新工具箱" desc="需要能访问 GitHub" button-text="检查更新" :icon-path="UpdateIconPath" @onButtonClick="showUpdateAlert = true" />
+            <SettingItemButtonSwitch title="启动时自动检查更新" desc="需要能访问 GitHub" button-text="检查更新" :icon-path="UpdateIconPath" @onButtonClick="showUpdateAlert = true" v-model="isCheckUpdateOnLaunch" />
             <Alert id="update-alert" v-if="showUpdateAlert" @close="!['downloading', 'updating'].includes(updateState) ? (showUpdateAlert = false) : false" title="更新" @vue:mounted="onUpdateAlertMounted">
                 <div class="update-info" v-html="updateInfo"></div>
                 <div class="release-href" v-show="['need_update', 'downloading', 'download_failed', 'update_failed'].includes(updateState)">使用浏览器下载：<a href="https://github.com/Natrium0521/Firefly/releases/latest">GitHub</a></div>
@@ -31,16 +31,16 @@
 <script setup lang="ts">
 import $ from 'jquery';
 import { onMounted, ref, watch } from 'vue';
-import Alert from '../../components/Alert.vue';
-import ProgressBar from '../../components/ProgressBar.vue';
+import Alert from '@renderer/components/Alert.vue';
+import ProgressBar from '@renderer/components/ProgressBar.vue';
 import AboutArea from './components/AboutArea.vue';
 import SettingArea from './components/SettingArea.vue';
 import SettingItemSwitch from './components/SettingItemSwitch.vue';
-import SettingItemButton from './components/SettingItemButton.vue';
-import CloseIconPath from '../../assets/image/svg/close-circle.svg';
-import DebugIconPath from '../../assets/image/svg/bug.svg';
-import UpdateIconPath from '../../assets/image/svg/update.svg';
-import UnlockIconPath from '../../assets/image/svg/unlock.svg';
+import SettingItemButtonSwitch from './components/SettingItemButtonSwitch.vue';
+import CloseIconPath from '@renderer/assets/image/svg/close-circle.svg';
+import DebugIconPath from '@renderer/assets/image/svg/bug.svg';
+import UpdateIconPath from '@renderer/assets/image/svg/update.svg';
+import UnlockIconPath from '@renderer/assets/image/svg/unlock.svg';
 
 let isFPSUnlocked = ref(false);
 let unlockFPSDesc = ref('检测中');
@@ -80,10 +80,20 @@ watch(isDebugOn, () => {
     });
 });
 
+let isCheckUpdateOnLaunch = ref(false);
+watch(isCheckUpdateOnLaunch, () => {
+    window.fireflyAPI.setting.setAppSettings('CheckUpdateOnLaunch', isCheckUpdateOnLaunch.value).then((res) => {
+        if (res['CheckUpdateOnLaunch'] !== isCheckUpdateOnLaunch.value) {
+            isCheckUpdateOnLaunch.value = res['CheckUpdateOnLaunch'];
+        }
+    });
+});
+
 onMounted(() => {
     window.fireflyAPI.setting.getAppSettings().then((res) => {
         isDebugOn.value = res['Debug'];
         isCloseDirectly.value = res['CloseDirectly'];
+        isCheckUpdateOnLaunch.value = res['CheckUpdateOnLaunch'];
     });
     window.fireflyAPI.config.getAppVersion().then((res) => {
         versionNow = res;

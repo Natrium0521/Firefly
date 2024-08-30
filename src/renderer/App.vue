@@ -36,41 +36,55 @@ onMounted(() => {
     window.fireflyAPI.setting.getAppSettings().then((res) => {
         const [r, g, b] = res['ThemeColor'];
         $(':root').css('--theme-color', `rgb(${r}, ${g}, ${b})`);
+        if (res['CheckUpdateOnLaunch']) checkUpdate();
     });
     window.fireflyAPI.unlockfps.isFPSUnlocked();
     useTextMap().loadTextMap('TextMapCHS');
-    window.fireflyAPI.config.getAppVersion().then((res) => {
-        let versionNow = res;
-        const isNewVersion = (version: string) => {
-            if (version.startsWith('v')) {
-                version = version.substring(1);
-            }
-            const versionNowArray = versionNow.split('.').map(Number);
-            const versionArray = version.split('.').map(Number);
-            const maxLength = Math.max(versionNowArray.length, versionArray.length);
-            while (versionNowArray.length < maxLength) versionNowArray.push(0);
-            while (versionArray.length < maxLength) versionArray.push(0);
-            for (let i = 0; i < maxLength; i++) {
-                if (versionNowArray[i] > versionArray[i]) {
-                    return false;
-                } else if (versionNowArray[i] < versionArray[i]) {
-                    return true;
+    const checkUpdate = () =>
+        window.fireflyAPI.config.getAppVersion().then((res) => {
+            let versionNow = res;
+            const isNewVersion = (version: string) => {
+                if (version.startsWith('v')) {
+                    version = version.substring(1);
                 }
-            }
-            return false;
-        };
-        fetch('https://api.github.com/repos/Natrium0521/Firefly/releases/latest')
-            .then((res) => res.json())
-            .then((res) => {
-                if (res['message'] && res['message'].includes('API rate limit exceeded')) {
-                    return;
+                const versionNowArray = versionNow.split('.').map(Number);
+                const versionArray = version.split('.').map(Number);
+                const maxLength = Math.max(versionNowArray.length, versionArray.length);
+                while (versionNowArray.length < maxLength) versionNowArray.push(0);
+                while (versionArray.length < maxLength) versionArray.push(0);
+                for (let i = 0; i < maxLength; i++) {
+                    if (versionNowArray[i] > versionArray[i]) {
+                        return false;
+                    } else if (versionNowArray[i] < versionArray[i]) {
+                        return true;
+                    }
                 }
-                if (isNewVersion(res['tag_name'])) {
-                    Toast.info('发现新版本', '可前往设置页面更新或直接跳转 <a href="https://github.com/Natrium0521/Firefly/releases/latest">GitHub</a> 下载', 60000);
-                }
-            })
-            .catch(() => {});
-    });
+                return false;
+            };
+            fetch('https://api.github.com/repos/Natrium0521/Firefly/releases/latest')
+                .then((res) => res.json())
+                .then((res) => {
+                    if (res['message'] && res['message'].includes('API rate limit exceeded')) {
+                        return;
+                    }
+                    if (isNewVersion(res['tag_name'])) {
+                        let changeLog = '';
+                        res['body'].split('\r\n\r\n').forEach((item) => {
+                            if (item.startsWith('## ')) {
+                                changeLog += item.substring(3) + '<br>&emsp;';
+                            } else if (item.startsWith('#### ')) {
+                                changeLog += item.substring(5) + '：<br>';
+                            } else if (item.startsWith('+ ')) {
+                                changeLog += '&emsp;' + item.substring(2) + '<br>';
+                            } else {
+                                changeLog += item + '<br>';
+                            }
+                        });
+                        Toast.info('发现新版本', '可前往设置页面更新或直接跳转 <a href="https://github.com/Natrium0521/Firefly/releases/latest">GitHub</a> 下载<br><br>' + changeLog, 60000);
+                    }
+                })
+                .catch(() => {});
+        });
 });
 </script>
 

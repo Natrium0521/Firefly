@@ -11,6 +11,7 @@ class SettingService {
         LastAchievementUid: '000000000',
         LastGachaUid: '000000000',
         SidebarCollapsed: false,
+        CheckUpdateOnLaunch: true,
     };
 
     constructor() {
