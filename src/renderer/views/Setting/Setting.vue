@@ -129,9 +129,9 @@ const isNewVersion = (version: string) => {
 };
 let downloadLink = '';
 let totalSize = 0;
-const doCheck = () => {
+const doCheck = (useCache: boolean = false) => {
     updateInfo.value = '正在检查更新';
-    fetch('https://api.github.com/repos/Natrium0521/Firefly/releases/latest')
+    fetch('https://api.github.com/repos/Natrium0521/Firefly/releases/latest', useCache ? undefined : { headers: { 'cache-control': 'no-cache' } })
         .then((res) => res.json())
         .then((res) => {
             if (res['message'] && res['message'].includes('API rate limit exceeded')) {
@@ -275,7 +275,7 @@ const onUpdateAlertMounted = async () => {
                 break;
         }
     });
-    if (updateState.value == 'initial') doCheck();
+    if (updateState.value == 'initial') doCheck(true);
 };
 </script>
 
