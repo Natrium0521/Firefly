@@ -1,5 +1,5 @@
 <template>
-    <div class="grid-item" :class="[item.upType ?? '']" :title="`${item.name}\n${item.time}`">
+    <div class="grid-item" :class="[item.upType ?? 'normal']" :title="`${item.name}\n${item.time}`">
         <div class="icon" :class="[item.iconType]" :style="{ bottom: item.count === undefined ? 0 : '15px' }">
             <img :src="iconMap[item.itemId] ?? (`${item.itemId}`.length == 4 ? iconMap[999] : iconMap['Icon_TestLightcone01'])" />
         </div>
