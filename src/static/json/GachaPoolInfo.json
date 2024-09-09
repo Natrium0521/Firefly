@@ -1138,5 +1138,185 @@
             21012,
             21046
         ]
+    },
+    "2041": {
+        "GachaID": 2041,
+        "GachaType": "AvatarUp",
+        "Version": "2.5",
+        "StartTime": "2024-09-10 09:00:00",
+        "EndTime": "2024-10-02 11:59:00",
+        "UpItems5": [
+            1220
+        ],
+        "UpItems4": [
+            1009,
+            1111,
+            1223
+        ]
+    },
+    "3041": {
+        "GachaID": 3041,
+        "GachaType": "WeaponUp",
+        "Version": "2.5",
+        "StartTime": "2024-09-10 09:00:00",
+        "EndTime": "2024-10-02 11:59:00",
+        "UpItems5": [
+            23031
+        ],
+        "UpItems4": [
+            21006,
+            21010,
+            21015
+        ]
+    },
+    "2042": {
+        "GachaID": 2042,
+        "GachaType": "AvatarUp",
+        "Version": "2.5",
+        "StartTime": "2024-09-10 09:00:00",
+        "EndTime": "2024-10-02 11:59:00",
+        "UpItems5": [
+            1309
+        ],
+        "UpItems4": [
+            1009,
+            1111,
+            1223
+        ]
+    },
+    "3042": {
+        "GachaID": 3042,
+        "GachaType": "WeaponUp",
+        "Version": "2.5",
+        "StartTime": "2024-09-10 09:00:00",
+        "EndTime": "2024-10-02 11:59:00",
+        "UpItems5": [
+            23026
+        ],
+        "UpItems4": [
+            21006,
+            21010,
+            21015
+        ]
+    },
+    "2043": {
+        "GachaID": 2043,
+        "GachaType": "AvatarUp",
+        "Version": "2.5",
+        "StartTime": "2024-09-10 09:00:00",
+        "EndTime": "2024-10-02 11:59:00",
+        "UpItems5": [
+            1307
+        ],
+        "UpItems4": [
+            1009,
+            1111,
+            1223
+        ]
+    },
+    "3043": {
+        "GachaID": 3043,
+        "GachaType": "WeaponUp",
+        "Version": "2.5",
+        "StartTime": "2024-09-10 09:00:00",
+        "EndTime": "2024-10-02 11:59:00",
+        "UpItems5": [
+            23022
+        ],
+        "UpItems4": [
+            21006,
+            21010,
+            21015
+        ]
+    },
+    "2044": {
+        "GachaID": 2044,
+        "GachaType": "AvatarUp",
+        "Version": "2.5",
+        "StartTime": "2024-09-10 09:00:00",
+        "EndTime": "2024-10-02 11:59:00",
+        "UpItems5": [
+            1005
+        ],
+        "UpItems4": [
+            1009,
+            1111,
+            1223
+        ]
+    },
+    "3044": {
+        "GachaID": 3044,
+        "GachaType": "WeaponUp",
+        "Version": "2.5",
+        "StartTime": "2024-09-10 09:00:00",
+        "EndTime": "2024-10-02 11:59:00",
+        "UpItems5": [
+            23006
+        ],
+        "UpItems4": [
+            21006,
+            21010,
+            21015
+        ]
+    },
+    "2045": {
+        "GachaID": 2045,
+        "GachaType": "AvatarUp",
+        "Version": "2.5",
+        "StartTime": "2024-10-02 12:00:00",
+        "EndTime": "2024-10-22 15:00:00",
+        "UpItems5": [
+            1222
+        ],
+        "UpItems4": [
+            1105,
+            1210,
+            1312
+        ]
+    },
+    "3045": {
+        "GachaID": 3045,
+        "GachaType": "WeaponUp",
+        "Version": "2.5",
+        "StartTime": "2024-10-02 12:00:00",
+        "EndTime": "2024-10-22 15:00:00",
+        "UpItems5": [
+            23032
+        ],
+        "UpItems4": [
+            21007,
+            21011,
+            21047
+        ]
+    },
+    "2046": {
+        "GachaID": 2046,
+        "GachaType": "AvatarUp",
+        "Version": "2.5",
+        "StartTime": "2024-10-02 12:00:00",
+        "EndTime": "2024-10-22 15:00:00",
+        "UpItems5": [
+            1112
+        ],
+        "UpItems4": [
+            1105,
+            1210,
+            1312
+        ]
+    },
+    "3046": {
+        "GachaID": 3046,
+        "GachaType": "WeaponUp",
+        "Version": "2.5",
+        "StartTime": "2024-10-02 12:00:00",
+        "EndTime": "2024-10-22 15:00:00",
+        "UpItems5": [
+            23016
+        ],
+        "UpItems4": [
+            21007,
+            21011,
+            21047
+        ]
     }
 }

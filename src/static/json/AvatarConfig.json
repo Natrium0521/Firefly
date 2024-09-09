@@ -4246,6 +4246,120 @@
     "AssistBgOffset": [],
     "AvatarSelfShowOffset": []
   },
+  "1220": {
+    "AvatarID": 1220,
+    "AvatarName": {
+      "Hash": 1914764700
+    },
+    "AvatarFullName": {
+      "Hash": -378932311
+    },
+    "AdventurePlayerID": 1220,
+    "AvatarVOTag": "feixiao",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "AvatarInitialSkinName": {
+      "Hash": 371857150
+    },
+    "AvatarInitialSkinDesc": {
+      "Hash": 371857150
+    },
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Feixiao_00_Config.json",
+    "DamageType": "Wind",
+    "SPNeed": {
+      "Value": 12
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      122001,
+      122002,
+      122003,
+      122004,
+      122005,
+      122006
+    ],
+    "RewardList": [
+      {
+        "ItemID": 11220,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 40
+      }
+    ],
+    "RewardListMax": [
+      {
+        "ItemID": 252,
+        "ItemNum": 100
+      }
+    ],
+    "SkillList": [
+      122001,
+      122002,
+      122003,
+      122004,
+      122006,
+      122007,
+      122008,
+      122009,
+      122014
+    ],
+    "AvatarBaseType": "Rogue",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Feixiao_00/Avatar_Feixiao_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1220.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1220.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1220.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1220.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1220B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1220.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Feixiao_00/Manikin_Avatar_Lady_Feixiao_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Feixiao_00_Config.json",
+    "AvatarDesc": {
+      "Hash": 371857150
+    },
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/RogueSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1220.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1220.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1220.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1220.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1220.png",
+    "AvatarCutinIntroText": {
+      "Hash": -390458595
+    },
+    "AvatarDropOffset": [
+      54,
+      45,
+      0.63,
+      54,
+      45,
+      0.63,
+      54,
+      45,
+      0.63
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [
+      33,
+      -77,
+      1.1
+    ],
+    "AssistBgOffset": [
+      -142,
+      -244,
+      1
+    ],
+    "AvatarSelfShowOffset": [
+      -14.6,
+      -100,
+      4.5
+    ]
+  },
   "1221": {
     "AvatarID": 1221,
     "AvatarName": {
@@ -4337,6 +4451,204 @@
       0.64,
       -44,
       76.1,
+      0.64
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
+  "1222": {
+    "AvatarID": 1222,
+    "AvatarName": {
+      "Hash": 751965286
+    },
+    "AvatarFullName": {
+      "Hash": 688366948
+    },
+    "AdventurePlayerID": 1222,
+    "AvatarVOTag": "lingsha",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "AvatarInitialSkinName": {
+      "Hash": 371857150
+    },
+    "AvatarInitialSkinDesc": {
+      "Hash": 371857150
+    },
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Lingsha_00_Config.json",
+    "DamageType": "Fire",
+    "SPNeed": {
+      "Value": 110
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      122201,
+      122202,
+      122203,
+      122204,
+      122205,
+      122206
+    ],
+    "RewardList": [
+      {
+        "ItemID": 11222,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 40
+      }
+    ],
+    "RewardListMax": [
+      {
+        "ItemID": 252,
+        "ItemNum": 100
+      }
+    ],
+    "SkillList": [
+      122201,
+      122202,
+      122203,
+      122204,
+      122206,
+      122207
+    ],
+    "AvatarBaseType": "Priest",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Lingsha_00/Avatar_Lingsha_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1222.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1222.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1222.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1222.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1222B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1222.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Lingsha_00/Manikin_Avatar_Maid_Lingsha_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Lingsha_00_Config.json",
+    "AvatarDesc": {
+      "Hash": 371857150
+    },
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/PriestSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1222.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1222.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1222.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1222.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1222.png",
+    "AvatarCutinIntroText": {
+      "Hash": -390458593
+    },
+    "AvatarDropOffset": [
+      -32.1,
+      24,
+      0.64,
+      -32.1,
+      24,
+      0.64,
+      -32.1,
+      24,
+      0.64
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
+  "1223": {
+    "AvatarID": 1223,
+    "AvatarName": {
+      "Hash": -1976918069
+    },
+    "AvatarFullName": {
+      "Hash": 1414245981
+    },
+    "AdventurePlayerID": 1223,
+    "AvatarVOTag": "moze",
+    "Rarity": "CombatPowerAvatarRarityType4",
+    "AvatarInitialSkinName": {
+      "Hash": 371857150
+    },
+    "AvatarInitialSkinDesc": {
+      "Hash": 371857150
+    },
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Moze_00_Config.json",
+    "DamageType": "Thunder",
+    "SPNeed": {
+      "Value": 120
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      122301,
+      122302,
+      122303,
+      122304,
+      122305,
+      122306
+    ],
+    "RewardList": [
+      {
+        "ItemID": 11223,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 8
+      }
+    ],
+    "RewardListMax": [
+      {
+        "ItemID": 252,
+        "ItemNum": 20
+      }
+    ],
+    "SkillList": [
+      122301,
+      122302,
+      122303,
+      122304,
+      122306,
+      122307
+    ],
+    "AvatarBaseType": "Rogue",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Moze_00/Avatar_Moze_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1223.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1223.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1223.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1223.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1223B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1223.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Moze_00/Manikin_Avatar_Male_Moze_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Moze_00_Config.json",
+    "AvatarDesc": {
+      "Hash": 371857150
+    },
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/RogueSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1223.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1223.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1223.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1223.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1223.png",
+    "AvatarCutinIntroText": {
+      "Hash": 371857150
+    },
+    "AvatarDropOffset": [
+      24.8,
+      75.5,
+      0.64,
+      24.8,
+      75.5,
+      0.64,
+      24.8,
+      75.5,
       0.64
     ],
     "AvatarTrialOffset": [],

@@ -4236,6 +4236,47 @@
       1
     ]
   },
+  "21047": {
+    "EquipmentID": 21047,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": -973364451
+    },
+    "EquipmentDesc": {
+      "Hash": 371857150
+    },
+    "Rarity": "CombatPowerLightconeRarity4",
+    "AvatarBaseType": "Rogue",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 2,
+    "SkillID": 21047,
+    "ExpProvide": 12000,
+    "CoinCost": 6000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/21047.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/21047.png",
+    "ItemRightPanelOffset": [
+      -34,
+      -161,
+      0.9
+    ],
+    "AvatarDetailOffset": [
+      -28,
+      -147,
+      1.4
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
   "22002": {
     "EquipmentID": 22002,
     "Release": true,
@@ -4390,6 +4431,88 @@
       -16,
       -218,
       1.7
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "23031": {
+    "EquipmentID": 23031,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": -1658973978
+    },
+    "EquipmentDesc": {
+      "Hash": 371857150
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Rogue",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23031,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23031.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23031.png",
+    "ItemRightPanelOffset": [
+      82,
+      -216,
+      1.1
+    ],
+    "AvatarDetailOffset": [
+      74,
+      -186,
+      1.65
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "23032": {
+    "EquipmentID": 23032,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": -1658973975
+    },
+    "EquipmentDesc": {
+      "Hash": 371857150
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Priest",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23032,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23032.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23032.png",
+    "ItemRightPanelOffset": [
+      -34,
+      -132,
+      0.8
+    ],
+    "AvatarDetailOffset": [
+      -33,
+      -121,
+      1.23
     ],
     "BattleDialogOffset": [
       0,

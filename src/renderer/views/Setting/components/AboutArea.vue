@@ -2,7 +2,7 @@
     <div class="about-area">
         <div class="about">
             <div class="icon_"><img class="icon" src="../../../../static/image/icon.png" /></div>
-            <div class="version">工具箱版本 v{{ version }}<br />适配游戏版本 v2.4</div>
+            <div class="version">工具箱版本 v{{ version }}<br />适配游戏版本 v2.5</div>
             <div class="links">
                 <div>项目链接 <a href="https://github.com/Natrium0521/Firefly">GitHub</a></div>
                 <div>游戏数据来自 <a href="https://github.com/Dimbreath/StarRailData">StarRailData</a></div>
