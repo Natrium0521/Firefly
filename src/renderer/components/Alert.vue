@@ -1,7 +1,7 @@
 <template>
     <teleport to=".app-content">
-        <div class="alert-layer" :id="$props.id">
-            <div class="alert-box">
+        <div class="alert-layer" :id="$props.id" ref="alertLayer" @mousedown="onAlertLayerMouseDown" @mouseup="onAlertLayerMouseUp">
+            <div class="alert-box" ref="alertBox">
                 <div class="alert-title">{{ props.title }}</div>
                 <div class="alert-content">
                     <slot></slot>
@@ -12,26 +12,27 @@
 </template>
 
 <script setup lang="ts">
-import $ from 'jquery';
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 const emits = defineEmits(['close']);
 const props = defineProps(['title', 'id']);
 
 // 用于确认鼠标点击和松开的对象都是layer，防止从box按下后拖动到layer触发关闭事件
 let isLayerClicked = false;
 
+const alertLayer = ref<HTMLDivElement>(null);
+const alertBox = ref<HTMLDivElement>(null);
+const onAlertLayerMouseDown = (e: MouseEvent) => {
+    isLayerClicked = e.target === alertLayer.value;
+};
+const onAlertLayerMouseUp = (e: MouseEvent) => {
+    if (isLayerClicked && e.target === alertLayer.value) {
+        emits('close');
+    }
+    isLayerClicked = false;
+};
 onMounted(() => {
-    $('.alert-layer').on('mousedown', (e) => {
-        isLayerClicked = $(e.target).hasClass('alert-layer');
-    });
-    $('.alert-layer').on('mouseup', (e) => {
-        if (isLayerClicked && $(e.target).hasClass('alert-layer')) {
-            emits('close');
-        }
-        isLayerClicked = false;
-    });
-    $('.alert-layer')[0].animate([{ opacity: 0 }, { opacity: 1 }], 200);
-    $('.alert-box')[0].animate([{ transform: 'translateY(10px)' }, { transform: 'translateY(0)' }], 200);
+    alertLayer.value.animate([{ opacity: 0 }, { opacity: 1 }], 200);
+    alertBox.value.animate([{ transform: 'translateY(10px)' }, { transform: 'translateY(0)' }], 200);
 });
 </script>
 

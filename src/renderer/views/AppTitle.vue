@@ -2,33 +2,28 @@
     <div class="app-title draggable">
         <img class="app-title-icon" src="../assets/image/favicon.ico" />
         <div class="app-title-text">流萤工具箱</div>
-        <div class="app-title-close undraggable">
+        <div class="app-title-close undraggable" @click="onCloseClick">
             <img src="../assets/image/svg/app-title-close.svg" />
         </div>
-        <div class="app-title-maxize undraggable">
+        <div class="app-title-maxize undraggable" @click="onMaxizeClick">
             <img src="../assets/image/svg/app-title-maxize.svg" />
         </div>
-        <div class="app-title-minize undraggable">
+        <div class="app-title-minize undraggable" @click="onMinizeClick">
             <img src="../assets/image/svg/app-title-minize.svg" />
         </div>
     </div>
 </template>
 
 <script setup lang="ts" name="AppTitle">
-import { onMounted } from 'vue';
-import $ from 'jquery';
-
-onMounted(() => {
-    $('.app-title-close').on('click', () => {
-        window.fireflyAPI.sendMainWindowMsg('close');
-    });
-    $('.app-title-maxize').on('click', () => {
-        window.fireflyAPI.sendMainWindowMsg('maxize');
-    });
-    $('.app-title-minize').on('click', () => {
-        window.fireflyAPI.sendMainWindowMsg('minize');
-    });
-});
+const onCloseClick = () => {
+    window.fireflyAPI.sendMainWindowMsg('close');
+};
+const onMaxizeClick = () => {
+    window.fireflyAPI.sendMainWindowMsg('maxize');
+};
+const onMinizeClick = () => {
+    window.fireflyAPI.sendMainWindowMsg('minize');
+};
 </script>
 
 <style lang="scss" scoped>

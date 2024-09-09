@@ -5,7 +5,6 @@
 </template>
 
 <script setup lang="ts">
-import $ from 'jquery';
 import { onMounted } from 'vue';
 import AppTitle from './views/AppTitle.vue';
 import AppContent from './views/AppContent.vue';
@@ -15,7 +14,7 @@ import { useUserGacha } from './store/usergacha';
 import Toast from './components/Toast';
 
 onMounted(() => {
-    $(document).on('keydown', (e) => {
+    document.addEventListener('keydown', (e) => {
         switch (e.key) {
             case 'Escape':
                 window.fireflyAPI.sendMainWindowMsg('esc');
@@ -35,7 +34,7 @@ onMounted(() => {
     useUserGacha().init();
     window.fireflyAPI.setting.getAppSettings().then((res) => {
         const [r, g, b] = res['ThemeColor'];
-        $(':root').css('--theme-color', `rgb(${r}, ${g}, ${b})`);
+        document.documentElement.style.setProperty('--theme-color', `rgb(${r}, ${g}, ${b})`);
         if (res['CheckUpdateOnLaunch']) checkUpdate();
     });
     window.fireflyAPI.unlockfps.isFPSUnlocked();

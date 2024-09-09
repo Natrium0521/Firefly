@@ -7,7 +7,6 @@
 </template>
 
 <script setup lang="ts">
-import $ from 'jquery';
 import { computed, onActivated, onMounted, ref, toRefs, watch } from 'vue';
 import emitter from '../../../utils/mitt';
 import AchievementItem from './AchievementItem.vue';
@@ -79,7 +78,7 @@ const renderItems = computed(() => {
 onMounted(() => {
     // 防止一开始容器高度为0，导致视口高度计算错误
     scopeHeight.value = viewScope.value.clientHeight;
-    $(window).on('resize', () => {
+    window.addEventListener('resize', () => {
         // 窗口大小改变时，重新获取视口高度
         scopeHeight.value = viewScope.value.clientHeight;
     });

@@ -1,13 +1,16 @@
 <template>
-    <div class="button" :class="[btnClass]" >
-        <img class="icon" :src="iconPath" />
+    <div class="button" :class="[btnClass]">
+        <img class="icon" :src="iconPath" ref="icon" />
         <div class="label">{{ btnTitle }}</div>
         <slot></slot>
     </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 defineProps(['iconPath', 'btnTitle', 'btnClass']);
+const icon = ref<HTMLImageElement>(null);
+defineExpose({ icon });
 </script>
 
 <style scoped lang="scss">

@@ -97,86 +97,86 @@
                 </template>
                 <template #content="params">
                     <div class="more-content">
-                        <div class="more-item" @click="(showNewlyAlert = true), params.toggleDropdown()">
+                        <div class="more-item" @click="(showingAlert = 'newly'), params.toggleDropdown()">
                             <img class="more-item-icon" :src="NewlyIcon" />
                             <div class="more-item-name">新建</div>
-                            <Alert id="alert-newly" v-if="showNewlyAlert" @close="showNewlyAlert = false" title="新建存档" @vue:mounted="onNewlyAlertMounted">
+                            <Alert v-if="showingAlert === 'newly'" @close="showingAlert = 'none'" title="新建存档" @vue:mounted="onNewlyAlertMounted">
                                 <div class="input-item-area">
                                     <span>UID：</span>
-                                    <input id="input-uid" type="text" placeholder="九位数字UID" spellcheck="false"/>
+                                    <input ref="newlyUidInput" type="text" placeholder="九位数字UID" spellcheck="false" />
                                 </div>
                                 <div class="input-item-area">
                                     <span>名称：</span>
-                                    <input id="input-nickname" type="text" placeholder="展示在成就页面的名称" spellcheck="false"/>
+                                    <input ref="newlyNicknameInput" type="text" placeholder="展示在成就页面的名称" spellcheck="false" />
                                 </div>
-                                <div class="warning-area"></div>
+                                <div class="warning-area" ref="newlyWarningArea"></div>
                                 <div class="button-area">
-                                    <div id="button-cancel" class="button">取消</div>
-                                    <div id="button-confirm" class="button theme">新建</div>
+                                    <div class="button" @click="showingAlert = 'none'">取消</div>
+                                    <div class="button theme" @click="onNewlyConfirm">新建</div>
                                 </div>
                             </Alert>
                         </div>
-                        <div class="more-item" @click="(showImportAlert = true), params.toggleDropdown()">
+                        <div class="more-item" @click="(showingAlert = 'import'), params.toggleDropdown()">
                             <img class="more-item-icon" :src="ImportIcon" />
                             <div class="more-item-name">导入</div>
-                            <Alert id="alert-import" v-if="showImportAlert" @close="showImportAlert = false" title="导入存档" @vue:mounted="onImportAlertMounted">
+                            <Alert v-if="showingAlert === 'import'" @close="showingAlert = 'none'" title="导入存档">
                                 <div class="select-item-area">
                                     <span>导入格式：</span>
-                                    <select id="select-type">
+                                    <select ref="importTypeSelect">
                                         <option value="firefly">流萤</option>
                                     </select>
                                 </div>
-                                <div class="warning-area">注意：该操作会覆盖当前存档，现有数据将永久丢失</div>
+                                <div class="warning-area" ref="importWarningArea">注意：该操作会覆盖当前存档，现有数据将永久丢失</div>
                                 <div class="button-area">
-                                    <div id="button-cancel" class="button">取消</div>
-                                    <div id="button-confirm" class="button theme">导入</div>
+                                    <div class="button" @click="showingAlert = 'none'">取消</div>
+                                    <div class="button theme" @click="onImportConfirm">导入</div>
                                 </div>
                             </Alert>
                         </div>
-                        <div class="more-item" @click="(showExportAlert = true), params.toggleDropdown()">
+                        <div class="more-item" @click="(showingAlert = 'export'), params.toggleDropdown()">
                             <img class="more-item-icon" :src="ExportIcon" />
                             <div class="more-item-name">导出</div>
-                            <Alert id="alert-export" v-if="showExportAlert" @close="showExportAlert = false" title="导出存档" @vue:mounted="onExportAlertMounted">
+                            <Alert v-if="showingAlert === 'export'" @close="showingAlert = 'none'" title="导出存档">
                                 <div class="select-item-area">
                                     <span>导出格式：</span>
-                                    <select id="select-type">
+                                    <select ref="exportTypeSelect">
                                         <option value="firefly">流萤</option>
                                     </select>
                                 </div>
-                                <div class="warning-area"></div>
+                                <div class="warning-area" ref="exportWarningArea"></div>
                                 <div class="button-area">
-                                    <div id="button-cancel" class="button">取消</div>
-                                    <div id="button-confirm" class="button theme">导出</div>
+                                    <div class="button" @click="showingAlert = 'none'">取消</div>
+                                    <div class="button theme" @click="onExportConfirm">导出</div>
                                 </div>
                             </Alert>
                         </div>
-                        <div class="more-item" @click="(showRenameAlert = true), params.toggleDropdown()">
+                        <div class="more-item" @click="(showingAlert = 'rename'), params.toggleDropdown()">
                             <img class="more-item-icon" :src="RenameIcon" />
                             <div class="more-item-name">重命名</div>
-                            <Alert id="alert-rename" v-if="showRenameAlert" @close="showRenameAlert = false" title="修改当前存档名称" @vue:mounted="onRenameAlertMounted">
+                            <Alert v-if="showingAlert === 'rename'" @close="showingAlert = 'none'" title="修改当前存档名称" @vue:mounted="onRenameAlertMounted">
                                 <div class="input-item-area">
                                     <span>名称：</span>
-                                    <input id="input-new-nickname" type="text" :placeholder="achievementUids[showingUid]" spellcheck="false"/>
+                                    <input ref="renameInput" type="text" :placeholder="achievementUids[showingUid]" spellcheck="false" />
                                 </div>
-                                <div class="warning-area"></div>
+                                <div class="warning-area" ref="renameWarningArea"></div>
                                 <div class="button-area">
-                                    <div id="button-cancel" class="button">取消</div>
-                                    <div id="button-confirm" class="button theme">重命名</div>
+                                    <div class="button" @click="showingAlert = 'none'">取消</div>
+                                    <div class="button theme" @click="onRenameConfirm">重命名</div>
                                 </div>
                             </Alert>
                         </div>
-                        <div class="more-item" @click="(showDeleteAlert = true), params.toggleDropdown()">
+                        <div class="more-item" @click="(showingAlert = 'delete'), params.toggleDropdown()">
                             <img class="more-item-icon" :src="DeleteIcon" />
                             <div class="more-item-name">删除</div>
-                            <Alert id="alert-delete" v-if="showDeleteAlert" @close="showDeleteAlert = false" title="删除当前存档" @vue:mounted="onDeleteAlertMounted">
+                            <Alert v-if="showingAlert === 'delete'" @close="showingAlert = 'none'" title="删除当前存档">
                                 <div class="input-item-area">
                                     <span>确认：</span>
-                                    <input id="input-delete-confirm" type="text" placeholder="请输入 删除" spellcheck="false"/>
+                                    <input ref="deleteInput" type="text" placeholder="请输入 删除" spellcheck="false" @keydown="$event.key === 'Enter' && onDeleteConfirm()" />
                                 </div>
-                                <div class="warning-area">注意：该操作将导致成就存档被永久删除无法恢复</div>
+                                <div class="warning-area" ref="deleteWarningArea">注意：该操作将导致成就存档被永久删除无法恢复</div>
                                 <div class="button-area">
-                                    <div id="button-cancel" class="button">取消</div>
-                                    <div id="button-confirm" class="button theme">删除</div>
+                                    <div class="button" @click="showingAlert = 'none'">取消</div>
+                                    <div class="button theme" @click="onDeleteConfirm">删除</div>
                                 </div>
                             </Alert>
                         </div>
@@ -188,7 +188,6 @@
 </template>
 
 <script setup lang="ts">
-import $ from 'jquery';
 import { computed, onMounted, ref } from 'vue';
 import emitter from '../../../utils/mitt';
 import UidDropdown from '../../../components/UidDropdown.vue';
@@ -273,148 +272,122 @@ emitter.on('achievement:clearSearch', () => {
     searchBoxValue.value = '';
 });
 
-const showNewlyAlert = ref(false);
-const showImportAlert = ref(false);
-const showExportAlert = ref(false);
-const showRenameAlert = ref(false);
-const showDeleteAlert = ref(false);
-
+const newlyUidInput = ref<HTMLInputElement>(null);
+const newlyNicknameInput = ref<HTMLInputElement>(null);
+const newlyWarningArea = ref<HTMLSpanElement>(null);
+const onNewlyConfirm = async () => {
+    const uid = newlyUidInput.value.value + '';
+    const nickname = newlyNicknameInput.value.value + '';
+    const warningSpan = newlyWarningArea.value;
+    if (!/^\d{9}$/.test(uid)) {
+        warningSpan.textContent = 'UID应为9位数字';
+    } else if (nickname.length == 0) {
+        warningSpan.textContent = '备注不能为空';
+    } else if (achievementUids.value[uid] !== undefined) {
+        warningSpan.textContent = 'UID已存在';
+    } else {
+        const ret = await userAchievementStore.newAchiUser(uid, nickname);
+        if (ret['msg'] === 'OK') {
+            showingAlert.value = 'none';
+        } else {
+            warningSpan.textContent = ret['msg'];
+        }
+    }
+};
 const onNewlyAlertMounted = () => {
-    $('#alert-newly #button-cancel').on('click', () => {
-        showNewlyAlert.value = false;
-    });
-    $('#alert-newly #button-confirm').on('click', async () => {
-        const uid = $('#alert-newly #input-uid').val() + '';
-        const nickname = $('#alert-newly #input-nickname').val() + '';
-        const warningSpan = $('#alert-newly .warning-area');
-        if (!/^\d{9}$/.test(uid)) {
-            warningSpan.text('UID应为9位数字');
-        } else if (nickname.length == 0) {
-            warningSpan.text('备注不能为空');
-        } else if (achievementUids.value[uid] !== undefined) {
-            warningSpan.text('UID已存在');
-        } else {
-            const ret = await userAchievementStore.newAchiUser(uid, nickname);
-            if (ret['msg'] == 'OK') {
-                showNewlyAlert.value = false;
-            } else {
-                warningSpan.text(ret['msg']);
-            }
+    newlyUidInput.value.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab' || e.key === 'Enter') {
+            newlyNicknameInput.value.focus();
         }
     });
-    $('#alert-newly #input-uid').on('keydown', (e) => {
-        if (e.key == 'Tab' || e.key == 'Enter') {
-            $('#alert-newly #input-nickname').trigger('focus');
+    newlyNicknameInput.value.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab') {
+            newlyUidInput.value.focus();
+        } else if (e.key === 'Enter') {
+            onNewlyConfirm();
         }
     });
-    $('#alert-newly #input-nickname').on('keydown', (e) => {
-        if (e.key == 'Tab') {
-            $('#alert-newly #input-uid').trigger('focus');
-        } else if (e.key == 'Enter') {
-            $('#alert-newly #button-confirm').trigger('click');
-        }
-    });
-    $('#alert-newly #input-uid').trigger('focus');
+    newlyUidInput.value.focus();
 };
 
-const onImportAlertMounted = () => {
-    $('#alert-import #button-cancel').on('click', () => {
-        showImportAlert.value = false;
-    });
-    $('#alert-import #button-confirm').on('click', async () => {
-        const type = $('#alert-import #select-type').val() + '';
-        const warningSpan = $('#alert-import .warning-area');
-        const ret = await userAchievementStore.importAchiData(type);
-        if (ret['msg'] == 'OK') {
-            showImportAlert.value = false;
-        } else {
-            warningSpan.text(ret['msg']);
-        }
-    });
+const importTypeSelect = ref<HTMLSelectElement>(null);
+const importWarningArea = ref<HTMLSpanElement>(null);
+const onImportConfirm = async () => {
+    const type = importTypeSelect.value.value + '';
+    const warningSpan = importWarningArea.value;
+    const ret = await userAchievementStore.importAchiData(type);
+    if (ret['msg'] === 'OK') {
+        showingAlert.value = 'none';
+    } else {
+        warningSpan.textContent = ret['msg'];
+    }
 };
 
-const onExportAlertMounted = () => {
-    $('#alert-export #button-cancel').on('click', () => {
-        showExportAlert.value = false;
-    });
-    $('#alert-export #button-confirm').on('click', async () => {
-        const type = $('#alert-export #select-type').val() + '';
-        const warningSpan = $('#alert-export .warning-area');
-        const ret = await userAchievementStore.exportAchiData(type);
-        if (ret['msg'] == 'OK') {
-            showExportAlert.value = false;
-        } else {
-            warningSpan.text(ret['msg']);
-        }
-    });
+const exportTypeSelect = ref<HTMLSelectElement>(null);
+const exportWarningArea = ref<HTMLSpanElement>(null);
+const onExportConfirm = async () => {
+    const type = exportTypeSelect.value.value + '';
+    const warningSpan = exportWarningArea.value;
+    const ret = await userAchievementStore.exportAchiData(type);
+    if (ret['msg'] === 'OK') {
+        showingAlert.value = 'none';
+    } else {
+        warningSpan.textContent = ret['msg'];
+    }
 };
 
+const renameInput = ref<HTMLInputElement>(null);
+const renameWarningArea = ref<HTMLSpanElement>(null);
+const onRenameConfirm = async () => {
+    const nickname = renameInput.value.value + '';
+    const warningSpan = renameWarningArea.value;
+    if (nickname.length === 0) {
+        warningSpan.textContent = '新名称不能为空';
+    } else {
+        const ret = await userAchievementStore.newAchiUser(showingUid.value, nickname);
+        if (ret['msg'] === 'OK') {
+            showingAlert.value = 'none';
+        } else {
+            warningSpan.textContent = ret['msg'];
+        }
+    }
+};
 const onRenameAlertMounted = () => {
-    $('#alert-rename #button-cancel').on('click', () => {
-        showRenameAlert.value = false;
-    });
-    $('#alert-rename #button-confirm').on('click', async () => {
-        const nickname = $('#alert-rename #input-new-nickname').val() + '';
-        const warningSpan = $('#alert-rename .warning-area');
-        if (nickname.length == 0) {
-            warningSpan.text('新名称不能为空');
-        } else {
-            const ret = await userAchievementStore.newAchiUser(showingUid.value, nickname);
-            if (ret['msg'] == 'OK') {
-                showRenameAlert.value = false;
-            } else {
-                warningSpan.text(ret['msg']);
-            }
+    renameInput.value.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            onRenameConfirm();
         }
     });
-    $('#alert-rename #input-new-nickname').on('keydown', (e) => {
-        if (e.key == 'Enter') {
-            $('#alert-rename #button-confirm').trigger('click');
-        }
-    });
-    $('#alert-rename #input-new-nickname').trigger('focus');
+    renameInput.value.focus();
 };
 
-const onDeleteAlertMounted = () => {
-    $('#alert-delete #button-cancel').on('click', () => {
-        showDeleteAlert.value = false;
-    });
-    $('#alert-delete #button-confirm').on('click', async () => {
-        const confirmed = $('#alert-delete #input-delete-confirm').val() + '' == '删除';
-        const warningSpan = $('#alert-delete .warning-area');
-        if (!confirmed) {
-            warningSpan.text('要确认删除当前存档，请在上方输入框内输入删除两字');
-        } else if (Object.keys(achievementUids.value).length == 1) {
-            warningSpan.text('最后一个存档无法删除');
+const deleteInput = ref<HTMLInputElement>(null);
+const deleteWarningArea = ref<HTMLSpanElement>(null);
+const onDeleteConfirm = async () => {
+    const confirmed = deleteInput.value.value + '' === '删除';
+    const warningSpan = deleteWarningArea.value;
+    if (!confirmed) {
+        warningSpan.textContent = '要确认删除当前存档，请在上方输入框内输入删除两字';
+    } else if (Object.keys(achievementUids.value).length === 1) {
+        warningSpan.textContent = '最后一个存档无法删除';
+    } else {
+        const ret = await userAchievementStore.deleteAchiUser(showingUid.value);
+        if (ret['msg'] === 'OK') {
+            showingAlert.value = 'none';
         } else {
-            const ret = await userAchievementStore.deleteAchiUser(showingUid.value);
-            if (ret['msg'] == 'OK') {
-                showDeleteAlert.value = false;
-            } else {
-                warningSpan.text(ret['msg']);
-            }
+            warningSpan.textContent = ret['msg'];
         }
-    });
-    $('#alert-delete #input-delete-confirm').on('keydown', (e) => {
-        if (e.key == 'Enter') {
-            $('#alert-delete #button-confirm').trigger('click');
-        }
-    });
+    }
 };
 
-onMounted(() => {
-    $('body').on('keydown', (e) => {
-        if (e.key == 'Escape') {
-            if (showNewlyAlert.value || showImportAlert.value || showExportAlert.value || showRenameAlert.value || showDeleteAlert.value) {
-                showNewlyAlert.value = false;
-                showImportAlert.value = false;
-                showExportAlert.value = false;
-                showRenameAlert.value = false;
-                showDeleteAlert.value = false;
-                e.stopPropagation();
-            }
+const showingAlert = ref<'newly' | 'import' | 'export' | 'rename' | 'delete' | 'none'>('none');
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        if (showingAlert.value !== 'none') {
+            showingAlert.value = 'none';
+            e.stopPropagation();
         }
-    });
+    }
 });
 </script>
 

@@ -3,95 +3,94 @@
         <div class="gacha-head-uid">
             <UidDropdown :uids="gachaUids" :showing-uid="showingUid" @select-uid="selectUid" />
         </div>
-        <GachaHeadButton :icon-path="RefreshIcon" btn-title="刷新" btn-class="white" @click="showRefreshAlert = true" />
-        <Alert id="alert-refresh" v-if="showRefreshAlert" @close="!isRefreshing ? (showRefreshAlert = false) : false" title="刷新记录" @vue:mounted="onRefreshAlertMounted">
+        <GachaHeadButton :icon-path="RefreshIcon" btn-title="刷新" btn-class="white" @click="showingAlert = 'refresh'" />
+        <Alert id="alert-refresh" v-if="showingAlert === 'refresh'" @close="!isRefreshing && (showingAlert = 'none')" title="刷新记录" @vue:mounted="refreshingItems = []">
             <div class="url-area" :class="{ shrink: refreshingItems.length > 0 }">
                 <div class="label">URL:</div>
-                <div class="btn">自动获取</div>
-                <textarea spellcheck="false" placeholder="https://public-operation-hkrpg.mihoyo.com/common/gacha_record/api/getGachaLog?"></textarea>
+                <div class="btn" @click="onGetUrlConfirm">自动获取</div>
+                <textarea ref="refreshUrlTextarea" spellcheck="false" placeholder="https://public-operation-hkrpg.mihoyo.com/common/gacha_record/api/getGachaLog?"></textarea>
             </div>
-            <div class="card-area" :class="{ show: refreshingItems.length > 0 }">
+            <div class="card-area" :class="{ show: refreshingItems.length > 0 }" ref="refreshCardArea">
                 <CardGridItem v-for="item in refreshingItems" :key="item.id" :item="item" />
             </div>
-            <div class="warning-area">自动获取URL前请先在游戏内查看一次跃迁记录并多翻看几页<br />未被记录过的UID会自动新建记录并保存</div>
+            <div class="warning-area" ref="refreshWarningArea">自动获取URL前请先在游戏内查看一次跃迁记录并多翻看几页<br />未被记录过的UID会自动新建记录并保存</div>
             <div class="button-area">
-                <div id="button-cancel" class="button">取消</div>
-                <div id="button-confirm-full-refresh" class="button theme" title="请求能获取的所有记录">全量</div>
-                <div id="button-confirm-incremental-refresh" class="button theme" title="请求到已存在的记录就立即停止">增量</div>
+                <div class="button" @click="!isRefreshing && (showingAlert = 'none')">取消</div>
+                <div class="button theme" title="请求能获取的所有记录" @click="onRefreshConfirm(false)">全量</div>
+                <div class="button theme" title="请求到已存在的记录就立即停止" @click="onRefreshConfirm(true)">增量</div>
             </div>
         </Alert>
-        <GachaHeadButton :icon-path="RenameIcon" btn-title="重命名" btn-class="white" @click="showRenameAlert = true" />
-        <Alert id="alert-rename" v-if="showRenameAlert" @close="showRenameAlert = false" title="修改当前记录名称" @vue:mounted="onRenameAlertMounted">
+        <GachaHeadButton :icon-path="RenameIcon" btn-title="重命名" btn-class="white" @click="showingAlert = 'rename'" />
+        <Alert id="alert-rename" v-if="showingAlert === 'rename'" @close="showingAlert = 'none'" title="修改当前记录名称" @vue:mounted="renameInput.focus()">
             <div class="input-item-area">
                 <span>名称：</span>
-                <input id="input-new-nickname" type="text" :placeholder="gachaUids[showingUid]" spellcheck="false" />
+                <input ref="renameInput" type="text" :placeholder="gachaUids[showingUid]" spellcheck="false" @keydown="$event.key === 'Enter' && onRenameConfirm()" />
             </div>
-            <div class="warning-area"></div>
+            <div class="warning-area" ref="renameWarningArea"></div>
             <div class="button-area">
-                <div id="button-cancel" class="button">取消</div>
-                <div id="button-confirm" class="button theme">重命名</div>
+                <div class="button" @click="showingAlert = 'none'">取消</div>
+                <div class="button theme" @click="onRenameConfirm">重命名</div>
             </div>
         </Alert>
-        <GachaHeadButton :icon-path="SwitchIcon" :btn-title="gachaViewTypeNext" btn-class="theme" @click="switchGachaPool" class="switch-button" />
-        <GachaHeadButton :icon-path="ImportIcon" btn-title="导入" btn-class="hover-drop" class="import-button">
-            <div class="import-dropdown">
-                <div class="import-dropdown-item" @click="showImportAlert = true">
+        <GachaHeadButton :icon-path="SwitchIcon" :btn-title="gachaViewTypeNext" btn-class="theme" @click="switchGachaPool" ref="switchButton" />
+        <GachaHeadButton :icon-path="ImportIcon" btn-title="导入" btn-class="hover-drop" class="import-button" @mouseenter="showImportDropdown = true" @mouseleave="showImportDropdown = false">
+            <div class="import-dropdown" :class="{ show: showImportDropdown }">
+                <div class="import-dropdown-item" @click="showingAlert = 'import'">
                     <img :src="FromFileIcon" />
                     <div>从文件导入</div>
                 </div>
-                <div class="import-dropdown-item" @click="showRefreshAlert = true">
+                <div class="import-dropdown-item" @click="showingAlert = 'refresh'">
                     <img :src="FromLinkIcon" />
                     <div>从链接导入</div>
                 </div>
             </div>
         </GachaHeadButton>
-        <Alert id="alert-import" v-if="showImportAlert" @close="showImportAlert = false" title="导入记录" @vue:mounted="onImportAlertMounted">
+        <Alert id="alert-import" v-if="showingAlert === 'import'" @close="showingAlert = 'none'" title="导入记录">
             <div class="select-item-area">
                 <span>导入格式：</span>
-                <select id="select-type">
+                <select ref="importTypeSelect">
                     <option value="uigf_v4.0">UIGF v4.0</option>
                     <option value="srgf_v1.0">SRGF v1.0</option>
                 </select>
             </div>
-            <div class="warning-area">若UID已存在将合并记录，不存在则自动新建记录</div>
+            <div class="warning-area" ref="importWarningArea">若UID已存在将合并记录，不存在则自动新建记录</div>
             <div class="button-area">
-                <div id="button-cancel" class="button">取消</div>
-                <div id="button-confirm" class="button theme">导入</div>
+                <div class="button" @click="showingAlert = 'none'">取消</div>
+                <div class="button theme" @click="onImportConfirm">导入</div>
             </div>
         </Alert>
-        <GachaHeadButton :icon-path="ExportIcon" btn-title="导出" btn-class="white" @click="showExportAlert = true" />
-        <Alert id="alert-export" v-if="showExportAlert" @close="showExportAlert = false" title="导出记录" @vue:mounted="onExportAlertMounted">
+        <GachaHeadButton :icon-path="ExportIcon" btn-title="导出" btn-class="white" @click="showingAlert = 'export'" />
+        <Alert id="alert-export" v-if="showingAlert === 'export'" @close="showingAlert = 'none'" title="导出记录" @vue:mounted="onSelectExportFormat">
             <div class="select-item-area">
                 <span>导出格式：</span>
-                <select id="select-type" @change="onSelectExportFormat">
+                <select ref="exportTypeSelect" @change="onSelectExportFormat">
                     <option value="uigf_v4.0">UIGF v4.0</option>
                     <option value="srgf_v1.0">SRGF v1.0</option>
                 </select>
             </div>
-            <div class="warning-area"></div>
+            <div class="warning-area" ref="exportWarningArea"></div>
             <div class="button-area">
-                <div id="button-cancel" class="button">取消</div>
-                <div id="button-confirm" class="button theme">导出</div>
+                <div class="button" @click="showingAlert = 'none'">取消</div>
+                <div class="button theme" @click="onExportConfirm">导出</div>
             </div>
         </Alert>
-        <GachaHeadButton :icon-path="DeleteIcon" btn-title="删除" btn-class="red" @click="showDeleteAlert = true" />
-        <Alert id="alert-delete" v-if="showDeleteAlert" @close="showDeleteAlert = false" title="删除当前记录" @vue:mounted="onDeleteAlertMounted">
+        <GachaHeadButton :icon-path="DeleteIcon" btn-title="删除" btn-class="red" @click="showingAlert = 'delete'" />
+        <Alert id="alert-delete" v-if="showingAlert === 'delete'" @close="showingAlert = 'none'" title="删除当前记录">
             <div class="input-item-area">
                 <span>确认：</span>
-                <input id="input-delete-confirm" type="text" placeholder="请输入 删除" spellcheck="false" />
+                <input ref="deleteInput" type="text" placeholder="请输入 删除" spellcheck="false" @keydown="$event.key === 'Enter' && onDeleteConfirm()" />
             </div>
-            <div class="warning-area">注意：该操作将导致跃迁记录被永久删除无法恢复</div>
+            <div class="warning-area" ref="deleteWarningArea">注意：该操作将导致跃迁记录被永久删除无法恢复</div>
             <div class="button-area">
-                <div id="button-cancel" class="button">取消</div>
-                <div id="button-confirm" class="button theme">删除</div>
+                <div class="button" @click="showingAlert = 'none'">取消</div>
+                <div class="button theme" @click="onDeleteConfirm">删除</div>
             </div>
         </Alert>
     </div>
 </template>
 
 <script setup lang="ts">
-import $ from 'jquery';
-import { ref, onMounted, computed } from 'vue';
+import { ref, computed } from 'vue';
 import emitter from '../../../utils/mitt';
 import UidDropdown from '../../../components/UidDropdown.vue';
 import GachaHeadButton from './GachaHeadButton.vue';
@@ -117,318 +116,283 @@ function selectUid(uid: string) {
     userGachaStore.setCurrGachaUid(uid);
 }
 
+const switchButton = ref<{ icon: HTMLImageElement }>(null);
 function switchGachaPool() {
-    $('.switch-button .icon')[0].animate([{ rotate: '0deg' }, { rotate: '180deg' }], { duration: 300, fill: 'backwards', easing: 'ease' });
+    switchButton.value.icon.animate([{ rotate: '0deg' }, { rotate: '180deg' }], { duration: 300, fill: 'backwards', easing: 'ease' });
     emitter.emit('gacha:toggleGachaView', gachaViewTypeNext.value);
     gachaViewTypeNext.value = gachaViewTypeNext.value === '卡池' ? '分类' : '卡池';
 }
 
-onMounted(() => {
-    $('.import-button').on('mouseenter', () => {
-        $('.import-dropdown').addClass('show');
-    });
-    $('.import-button').on('mouseleave', () => {
-        $('.import-dropdown').removeClass('show');
-    });
-});
+const showImportDropdown = ref(false);
 
 const isRefreshing = ref(false);
 const refreshingItems = ref([]);
-const showRefreshAlert = ref(false);
-const showRenameAlert = ref(false);
-const showImportAlert = ref(false);
-const showExportAlert = ref(false);
-const showDeleteAlert = ref(false);
 
-const onRefreshAlertMounted = () => {
-    refreshingItems.value = [];
-    const warningSpan = $('#alert-refresh .warning-area');
-    const urlTextarea = $('#alert-refresh .url-area textarea');
-    const cardArea = $('#alert-refresh .card-area')[0] as HTMLElement;
-    $('#alert-refresh #button-cancel').on('click', () => {
-        if (!isRefreshing.value) showRefreshAlert.value = false;
-    });
-    $('#alert-refresh .url-area .btn').on('click', async () => {
-        if (isRefreshing.value) return;
-        const ret = await userGachaStore.getGachaURL();
-        if (ret['msg'] == 'OK') {
-            urlTextarea.val(ret['data']['url']);
-            warningSpan.html('<br>获取成功，正在检测是否有效');
-            isRefreshing.value = true;
-            fetch(ret['data']['url'])
+const refreshWarningArea = ref<HTMLDivElement>(null);
+const refreshUrlTextarea = ref<HTMLTextAreaElement>(null);
+const refreshCardArea = ref<HTMLDivElement>(null);
+const onRefreshConfirm = async (isIncremental: boolean) => {
+    const warningSpan = refreshWarningArea.value;
+    if (isRefreshing.value) return;
+    warningSpan.innerHTML = '<br>准备请求数据';
+    // 检查URL合法性
+    const url = refreshUrlTextarea.value.value + '';
+    if (url == '') {
+        warningSpan.innerHTML = '<br>请先填入链接或尝试自动获取链接';
+        return;
+    }
+    let urlObj: URL = null;
+    try {
+        urlObj = new URL(url);
+    } catch (error) {
+        warningSpan.innerHTML = '<br>URL错误';
+        return;
+    }
+    if (!urlObj.hostname.endsWith('mihoyo.com') || !urlObj.pathname.match(/gacha/i)) {
+        warningSpan.innerHTML = '<br>非米哈游抽卡分析链接';
+        return;
+    }
+    // 检查URL状态
+    const baseKeys = ['authkey_ver', 'authkey', 'game_biz', 'lang'];
+    const baseParams = new URLSearchParams(Array.from(urlObj.searchParams.entries()).filter(([k]) => baseKeys.includes(k)));
+    urlObj.search = baseParams.toString() + '&size=20';
+    let region_time_zone = 0;
+    let flag = true;
+    await fetch(urlObj)
+        .then((response) => response.json())
+        .then((data) => {
+            if (data['retcode'] == 0) {
+                flag = false;
+                region_time_zone = data['data']['region_time_zone'];
+            } else if (data['retcode'] == -101) {
+                warningSpan.innerHTML = '链接已过期<br>请在游戏内重新查看跃迁记录并多翻看几页再尝试自动获取';
+            } else {
+                warningSpan.innerHTML = `数据请求失败<br>${data['retcode']}: ${data['message']}`;
+            }
+        })
+        .catch(() => {
+            warningSpan.innerHTML = '<br>GET请求失败，请检查网络连接';
+        });
+    if (flag) return;
+    // 请求
+    isRefreshing.value = true;
+    const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+    const data = { info: {}, list: [] };
+    let fetchingGachaUid = undefined;
+    let fetchingGachaData = {};
+    const GachaTypes = { '1': '常驻', '2': '新手', '11': '限定角色', '12': '限定光锥' };
+    for (let [gachaTypeId, gachaTypeName] of Object.entries(GachaTypes)) {
+        warningSpan.innerHTML = `<br>正在请求${gachaTypeName}池数据`;
+        let cnt = 0;
+        let endId = '0';
+        let exitFlag = false;
+        while (true) {
+            let items = [];
+            await fetch(urlObj.href + `&gacha_type=${gachaTypeId}&end_id=${endId}`)
                 .then((response) => response.json())
                 .then((data) => {
-                    if (data['retcode'] == 0) {
-                        warningSpan.html('成功从网页缓存中获取URL<br>点击下方按钮开始请求数据');
-                    } else if (data['retcode'] == -101) {
-                        warningSpan.html('链接已过期<br>请在游戏内重新查看跃迁记录并多翻看几页再尝试自动获取');
+                    if (data['retcode'] != 0) {
+                        warningSpan.innerHTML = `数据请求失败<br>${data['retcode']}: ${data['message']}`;
+                        exitFlag = true;
                     } else {
-                        warningSpan.html(`数据请求失败<br>${data['retcode']}: ${data['message']}`);
+                        items = data['data']['list'];
                     }
                 })
                 .catch(() => {
-                    warningSpan.html('<br>GET请求失败，请检查网络连接');
-                })
-                .finally(() => {
-                    isRefreshing.value = false;
+                    warningSpan.innerHTML = '<br>GET请求失败，请检查网络连接';
+                    exitFlag = true;
                 });
+            if (exitFlag) {
+                isRefreshing.value = false;
+                return;
+            }
+            if (isIncremental && items.length > 0) {
+                if (fetchingGachaUid === undefined) {
+                    fetchingGachaUid = items[0]['uid'];
+                    if (gachaUids.value[fetchingGachaUid] !== undefined) {
+                        fetchingGachaData = (await window.fireflyAPI.gacha.getGachaData(fetchingGachaUid))['data'];
+                    }
+                }
+                let tmp = items;
+                items = [];
+                tmp.forEach((item) => {
+                    if (fetchingGachaData[item.id] === undefined) items.push(item);
+                });
+            }
+            if (items.length == 0) {
+                warningSpan.innerHTML = `${gachaTypeName}池数据请求完成<br>共获取 ${cnt} 条记录`;
+                break;
+            }
+            endId = items.at(-1).id;
+            if (Object.keys(data.info).length == 0) {
+                data.info = {
+                    srgf_version: 'v1.0',
+                    uid: items[0]['uid'],
+                    lang: items[0]['lang'],
+                    region_time_zone: region_time_zone,
+                };
+            }
+            items.forEach((item) => data.list.push(item));
+            let delta = items.splice(0, 5);
+            while (delta.length > 0) {
+                cnt += delta.length;
+                delta.forEach((item) => {
+                    refreshingItems.value.push({
+                        id: item['id'],
+                        itemId: item['item_id'],
+                        name: item['name'],
+                        iconType: `star${item['rank_type']}`,
+                        time: item['time'],
+                    });
+                });
+                requestAnimationFrame(() => (refreshCardArea.value.scrollTop = refreshCardArea.value.scrollHeight));
+                warningSpan.innerHTML = `正在请求UID: ${data.info['uid']} 的跃迁记录<br>已获取${cnt}条${gachaTypeName}池记录`;
+                await sleep(100);
+                delta = items.splice(0, 5);
+            }
+        }
+        await sleep(500);
+    }
+    isRefreshing.value = false;
+    if (fetchingGachaUid === undefined && data.info['uid'] === undefined) {
+        warningSpan.innerHTML = '未获取到跃迁记录<br>请确认游戏内是否可以查询到跃迁记录';
+        return;
+    }
+    warningSpan.innerHTML = `UID: ${fetchingGachaUid ?? data.info['uid']} 跃迁记录请求完成<br>共获取 ${data.list.length} 条记录`;
+    if (data.list.length) {
+        const ret = await userGachaStore.refreshGachaData('srgf_v1.0', data);
+        if (ret['msg'] == 'OK') {
+            warningSpan.innerHTML = `UID: ${fetchingGachaUid ?? data.info['uid']} 跃迁记录请求完成<br>共获取 ${data.list.length} 条记录，数据已保存`;
         } else {
-            warningSpan.html('<br>自动获取URL失败，请先在游戏内打开跃迁记录页面并翻看几次');
+            warningSpan.innerHTML = ret['msg'];
         }
-    });
-    const refresh = async (isIncremental: boolean) => {
-        if (isRefreshing.value) return;
-        warningSpan.html('<br>准备请求数据');
-        // 检查URL合法性
-        const url = urlTextarea.val() + '';
-        if (url == '') {
-            warningSpan.html('<br>请先填入链接或尝试自动获取链接');
-            return;
-        }
-        let urlObj: URL = null;
-        try {
-            urlObj = new URL(url);
-        } catch (error) {
-            warningSpan.html('<br>URL错误');
-            return;
-        }
-        if (!urlObj.hostname.endsWith('mihoyo.com') || !urlObj.pathname.match(/gacha/i)) {
-            warningSpan.html('<br>非米哈游抽卡分析链接');
-            return;
-        }
-        // 检查URL状态
-        const baseKeys = ['authkey_ver', 'authkey', 'game_biz', 'lang'];
-        const baseParams = new URLSearchParams(Array.from(urlObj.searchParams.entries()).filter(([k]) => baseKeys.includes(k)));
-        urlObj.search = baseParams.toString() + '&size=20';
-        let region_time_zone = 0;
-        let flag = true;
-        await fetch(urlObj)
+    }
+};
+const onGetUrlConfirm = async () => {
+    const warningSpan = refreshWarningArea.value;
+    if (isRefreshing.value) return;
+    const ret = await userGachaStore.getGachaURL();
+    if (ret['msg'] == 'OK') {
+        refreshUrlTextarea.value.value = ret['data']['url'];
+        warningSpan.innerHTML = '<br>获取成功，正在检测是否有效';
+        isRefreshing.value = true;
+        fetch(ret['data']['url'])
             .then((response) => response.json())
             .then((data) => {
                 if (data['retcode'] == 0) {
-                    flag = false;
-                    region_time_zone = data['data']['region_time_zone'];
+                    warningSpan.innerHTML = '成功从网页缓存中获取URL<br>点击下方按钮开始请求数据';
                 } else if (data['retcode'] == -101) {
-                    warningSpan.html('链接已过期<br>请在游戏内重新查看跃迁记录并多翻看几页再尝试自动获取');
+                    warningSpan.innerHTML = '链接已过期<br>请在游戏内重新查看跃迁记录并多翻看几页再尝试自动获取';
                 } else {
-                    warningSpan.html(`数据请求失败<br>${data['retcode']}: ${data['message']}`);
+                    warningSpan.innerHTML = `数据请求失败<br>${data['retcode']}: ${data['message']}`;
                 }
             })
             .catch(() => {
-                warningSpan.html('<br>GET请求失败，请检查网络连接');
+                warningSpan.innerHTML = '<br>GET请求失败，请检查网络连接';
+            })
+            .finally(() => {
+                isRefreshing.value = false;
             });
-        if (flag) return;
-        // 请求
-        isRefreshing.value = true;
-        const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-        const data = { info: {}, list: [] };
-        let fetchingGachaUid = undefined;
-        let fetchingGachaData = {};
-        const GachaTypes = { '1': '常驻', '2': '新手', '11': '限定角色', '12': '限定光锥' };
-        for (let [gachaTypeId, gachaTypeName] of Object.entries(GachaTypes)) {
-            warningSpan.html(`<br>正在请求${gachaTypeName}池数据`);
-            let cnt = 0;
-            let endId = '0';
-            let exitFlag = false;
-            while (true) {
-                let items = [];
-                await fetch(urlObj.href + `&gacha_type=${gachaTypeId}&end_id=${endId}`)
-                    .then((response) => response.json())
-                    .then((data) => {
-                        if (data['retcode'] != 0) {
-                            warningSpan.html(`数据请求失败<br>${data['retcode']}: ${data['message']}`);
-                            exitFlag = true;
-                        } else {
-                            items = data['data']['list'];
-                        }
-                    })
-                    .catch(() => {
-                        warningSpan.html('<br>GET请求失败，请检查网络连接');
-                        exitFlag = true;
-                    });
-                if (exitFlag) {
-                    isRefreshing.value = false;
-                    return;
-                }
-                if (isIncremental && items.length > 0) {
-                    if (fetchingGachaUid === undefined) {
-                        fetchingGachaUid = items[0]['uid'];
-                        if (gachaUids.value[fetchingGachaUid] !== undefined) {
-                            fetchingGachaData = (await window.fireflyAPI.gacha.getGachaData(fetchingGachaUid))['data'];
-                        }
-                    }
-                    let tmp = items;
-                    items = [];
-                    tmp.forEach((item) => {
-                        if (fetchingGachaData[item.id] === undefined) items.push(item);
-                    });
-                }
-                if (items.length == 0) {
-                    warningSpan.html(`${gachaTypeName}池数据请求完成<br>共获取 ${cnt} 条记录`);
-                    break;
-                }
-                endId = items.at(-1).id;
-                if (Object.keys(data.info).length == 0) {
-                    data.info = {
-                        srgf_version: 'v1.0',
-                        uid: items[0]['uid'],
-                        lang: items[0]['lang'],
-                        region_time_zone: region_time_zone,
-                    };
-                }
-                items.forEach((item) => data.list.push(item));
-                let delta = items.splice(0, 5);
-                while (delta.length > 0) {
-                    cnt += delta.length;
-                    delta.forEach((item) => {
-                        refreshingItems.value.push({
-                            id: item['id'],
-                            itemId: item['item_id'],
-                            name: item['name'],
-                            iconType: `star${item['rank_type']}`,
-                            time: item['time'],
-                        });
-                    });
-                    requestAnimationFrame(() => (cardArea.scrollTop = cardArea.scrollHeight));
-                    warningSpan.html(`正在请求UID: ${data.info['uid']} 的跃迁记录<br>已获取${cnt}条${gachaTypeName}池记录`);
-                    await sleep(100);
-                    delta = items.splice(0, 5);
-                }
-            }
-            await sleep(500);
-        }
-        isRefreshing.value = false;
-        if (fetchingGachaUid === undefined && data.info['uid'] === undefined) {
-            warningSpan.html('未获取到跃迁记录<br>请确认游戏内是否可以查询到跃迁记录');
-            return;
-        }
-        warningSpan.html(`UID: ${fetchingGachaUid ?? data.info['uid']} 跃迁记录请求完成<br>共获取 ${data.list.length} 条记录`);
-        if (data.list.length) {
-            const ret = await userGachaStore.refreshGachaData('srgf_v1.0', data);
-            if (ret['msg'] == 'OK') {
-                warningSpan.html(`UID: ${fetchingGachaUid ?? data.info['uid']} 跃迁记录请求完成<br>共获取 ${data.list.length} 条记录，数据已保存`);
-            } else {
-                warningSpan.text(ret['msg']);
-            }
-        }
-    };
-    $('#alert-refresh #button-confirm-full-refresh').on('click', () => {
-        refresh(false);
-    });
-    $('#alert-refresh #button-confirm-incremental-refresh').on('click', () => {
-        refresh(true);
-    });
+    } else {
+        warningSpan.innerHTML = '<br>自动获取URL失败，请先在游戏内打开跃迁记录页面并翻看几次';
+    }
 };
 
-const onRenameAlertMounted = () => {
-    $('#alert-rename #button-cancel').on('click', () => {
-        showRenameAlert.value = false;
-    });
-    $('#alert-rename #button-confirm').on('click', async () => {
-        const nickname = $('#alert-rename #input-new-nickname').val() + '';
-        const warningSpan = $('#alert-rename .warning-area');
-        if (nickname.length == 0) {
-            warningSpan.text('新名称不能为空');
+const renameWarningArea = ref<HTMLDivElement>(null);
+const renameInput = ref<HTMLInputElement>(null);
+const onRenameConfirm = async () => {
+    const nickname = renameInput.value.value + '';
+    const warningSpan = renameWarningArea.value;
+    if (nickname.length == 0) {
+        warningSpan.innerText = '新名称不能为空';
+    } else {
+        const ret = await userGachaStore.newGachaUser(showingUid.value, nickname);
+        if (ret['msg'] === 'OK') {
+            showingAlert.value = 'none';
         } else {
-            const ret = await userGachaStore.newGachaUser(showingUid.value, nickname);
-            if (ret['msg'] == 'OK') {
-                showRenameAlert.value = false;
-            } else {
-                warningSpan.text(ret['msg']);
-            }
+            warningSpan.innerText = ret['msg'];
         }
-    });
-    $('#alert-rename #input-new-nickname').on('keydown', (e) => {
-        if (e.key == 'Enter') {
-            $('#alert-rename #button-confirm').trigger('click');
-        }
-    });
-    $('#alert-rename #input-new-nickname').trigger('focus');
+    }
 };
 
-const onImportAlertMounted = () => {
-    $('#alert-import #button-cancel').on('click', () => {
-        showImportAlert.value = false;
-    });
-    $('#alert-import #button-confirm').on('click', async () => {
-        const type = $('#alert-import #select-type').val() + '';
-        const warningSpan = $('#alert-import .warning-area');
-        const ret = await userGachaStore.importGachaData(type);
-        if (ret['msg'] == 'OK') {
-            showImportAlert.value = false;
-        } else {
-            warningSpan.text(ret['msg']);
-        }
-    });
+const importWarningArea = ref<HTMLDivElement>(null);
+const importTypeSelect = ref<HTMLSelectElement>(null);
+const onImportConfirm = async () => {
+    const type = importTypeSelect.value + '';
+    const warningSpan = importWarningArea.value;
+    const ret = await userGachaStore.importGachaData(type);
+    if (ret['msg'] === 'OK') {
+        showingAlert.value = 'none';
+    } else {
+        warningSpan.innerText = ret['msg'];
+    }
 };
 
 let exportable = false;
+const exportWarningArea = ref<HTMLDivElement>(null);
+const exportTypeSelect = ref<HTMLSelectElement>(null);
 const onSelectExportFormat = async () => {
-    const type = $('#alert-export #select-type').val() + '';
-    const warningSpan = $('#alert-export .warning-area');
-    warningSpan.html('');
+    const type = exportTypeSelect.value.value + '';
+    const warningSpan = exportWarningArea.value;
+    warningSpan.innerHTML = '';
     exportable = false;
     if (type == 'srgf_v1.0') {
         if (!(await userGachaStore.checkExportable(showingUid.value))) {
-            warningSpan.html('当前记录存在未知角色/光锥<br>为避免导出数据有误，请更新后再尝试导出');
+            warningSpan.innerHTML = '当前记录存在未知角色/光锥<br>为避免导出数据有误，请更新后再尝试导出';
             return;
         }
         exportable = true;
     } else if (type == 'uigf_v4.0') {
         for (let uid of Object.keys(gachaUids.value)) {
             if (!(await userGachaStore.checkExportable(uid))) {
-                warningSpan.html(`uid为 ${uid} 的记录存在未知角色/光锥<br>为避免导出数据有误，请更新后再尝试导出`);
+                warningSpan.innerHTML = `uid为 ${uid} 的记录存在未知角色/光锥<br>为避免导出数据有误，请更新后再尝试导出`;
                 return;
             }
         }
-        warningSpan.html('注意：UIGFv4.0 会将所有 uid 的跃迁记录导出到一个文件');
+        warningSpan.innerHTML = '注意：UIGFv4.0 会将所有 uid 的跃迁记录导出到一个文件';
         exportable = true;
     }
 };
-const onExportAlertMounted = async () => {
-    await onSelectExportFormat();
-    $('#alert-export #button-cancel').on('click', () => {
-        showExportAlert.value = false;
-    });
-    $('#alert-export #button-confirm').on('click', async () => {
-        if (!exportable) return;
-        const type = $('#alert-export #select-type').val() + '';
-        const warningSpan = $('#alert-export .warning-area');
-        const ret = await userGachaStore.exportGachaData(type);
-        if (ret['msg'] == 'OK') {
-            showExportAlert.value = false;
-        } else {
-            warningSpan.text(ret['msg']);
-        }
-    });
+const onExportConfirm = async () => {
+    if (!exportable) return;
+    const type = exportTypeSelect.value.value + '';
+    const warningSpan = exportWarningArea.value;
+    const ret = await userGachaStore.exportGachaData(type);
+    if (ret['msg'] === 'OK') {
+        showingAlert.value = 'none';
+    } else {
+        warningSpan.innerHTML = ret['msg'];
+    }
 };
 
-const onDeleteAlertMounted = () => {
-    $('#alert-delete #button-cancel').on('click', () => {
-        showDeleteAlert.value = false;
-    });
-    $('#alert-delete #button-confirm').on('click', async () => {
-        const confirmed = $('#alert-delete #input-delete-confirm').val() + '' == '删除';
-        const warningSpan = $('#alert-delete .warning-area');
-        if (!confirmed) {
-            warningSpan.text('要确认删除当前记录，请在上方输入框内输入删除两字');
-        } else if (Object.keys(gachaUids.value).length == 1) {
-            warningSpan.text('最后一个记录无法删除');
+const deleteWarningArea = ref<HTMLDivElement>(null);
+const deleteInput = ref<HTMLInputElement>(null);
+const onDeleteConfirm = async () => {
+    const confirmed = deleteInput.value.value + '' === '删除';
+    const warningSpan = deleteWarningArea.value;
+    if (!confirmed) {
+        warningSpan.innerText = '要确认删除当前记录，请在上方输入框内输入删除两字';
+    } else if (Object.keys(gachaUids.value).length == 1) {
+        warningSpan.innerText = '最后一个记录无法删除';
+    } else {
+        const ret = await userGachaStore.deleteGachaUser(showingUid.value);
+        if (ret['msg'] == 'OK') {
+            showingAlert.value = 'none';
         } else {
-            const ret = await userGachaStore.deleteGachaUser(showingUid.value);
-            if (ret['msg'] == 'OK') {
-                showDeleteAlert.value = false;
-            } else {
-                warningSpan.text(ret['msg']);
-            }
+            warningSpan.innerText = ret['msg'];
         }
-    });
-    $('#alert-delete #input-delete-confirm').on('keydown', (e) => {
-        if (e.key == 'Enter') {
-            $('#alert-delete #button-confirm').trigger('click');
-        }
-    });
+    }
 };
+
+const showingAlert = ref<'refresh' | 'rename' | 'import' | 'export' | 'delete' | 'none'>('none');
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        if (showingAlert.value !== 'none' && !isRefreshing.value) {
+            showingAlert.value = 'none';
+            e.stopPropagation();
+        }
+    }
+});
 </script>
 
 <style scoped lang="scss">
@@ -448,7 +412,7 @@ const onDeleteAlertMounted = () => {
 .import-button {
     margin-left: auto;
 
-    &::after{
+    &::after {
         content: '';
         position: absolute;
         height: 5px;

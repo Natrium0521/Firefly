@@ -2,13 +2,13 @@
     <div class="pool-detail-view">
         <div class="summary">
             <div class="title">统计（数量）：</div>
-            <div class="box">
+            <div class="box" ref="summaryBox">
                 <CardGridItem v-for="item in summary" :key="item.itemId" :item="item" />
             </div>
         </div>
         <div class="record">
             <div class="title">记录（正序）：</div>
-            <div class="box">
+            <div class="box" ref="recordBox">
                 <CardGridItem v-for="item in detail" :key="item.id" :item="item" />
             </div>
         </div>
@@ -16,8 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import $ from 'jquery';
-import { computed, watch } from 'vue';
+import { computed, watch, ref } from 'vue';
 import CardGridItem from './CardGridItem.vue';
 
 const props = defineProps(['detail']);
@@ -51,10 +50,17 @@ const summary = computed(() => {
     return items;
 });
 
+const summaryBox = ref<HTMLDivElement>(null);
+const recordBox = ref<HTMLDivElement>(null);
 watch(
     () => props.detail,
     () => {
-        $('.pool-detail-view .box').scrollTop(0);
+        if (summaryBox.value) {
+            summaryBox.value.scrollTop = 0;
+        }
+        if (recordBox.value) {
+            recordBox.value.scrollTop = 0;
+        }
     }
 );
 </script>

@@ -17,8 +17,8 @@
                     </div>
                 </div>
                 <div class="button-area" v-show="!['initial', 'updating', 'update_failed'].includes(updateState)">
-                    <div id="button-cancel" class="button">取消</div>
-                    <div id="button-confirm" class="button theme" v-show="updateState != 'downloading'">{{ { need_update: '下载', is_latest: '重试', check_failed: '重试', download_failed: '重试', downloaded: '更新' }[updateState] }}</div>
+                    <div id="button-cancel" class="button" @click="onUpdateAlertCancelButtonClick">取消</div>
+                    <div id="button-confirm" class="button theme" @click="onUpdateAlertConfirmButtonClick" v-show="updateState != 'downloading'">{{ { need_update: '下载', is_latest: '重试', check_failed: '重试', download_failed: '重试', downloaded: '更新' }[updateState] }}</div>
                 </div>
             </Alert>
         </SettingArea>
@@ -29,7 +29,6 @@
 </template>
 
 <script setup lang="ts">
-import $ from 'jquery';
 import { onMounted, ref, watch } from 'vue';
 import Alert from '@renderer/components/Alert.vue';
 import ProgressBar from '@renderer/components/ProgressBar.vue';
@@ -245,36 +244,36 @@ const doUpdate = () => {
         }
     });
 };
+const onUpdateAlertCancelButtonClick = () => {
+    switch (updateState.value) {
+        case 'downloading':
+            window.fireflyAPI.update.cancelDownload();
+            break;
+        default:
+            showUpdateAlert.value = false;
+            break;
+    }
+};
+const onUpdateAlertConfirmButtonClick = () => {
+    switch (updateState.value) {
+        case 'need_update':
+            doDownload();
+            break;
+        case 'is_latest':
+            doCheck();
+            break;
+        case 'check_failed':
+            doCheck();
+            break;
+        case 'download_failed':
+            doDownload();
+            break;
+        case 'downloaded':
+            doUpdate();
+            break;
+    }
+};
 const onUpdateAlertMounted = async () => {
-    $('#update-alert #button-cancel').on('click', () => {
-        switch (updateState.value) {
-            case 'downloading':
-                window.fireflyAPI.update.cancelDownload();
-                break;
-            default:
-                showUpdateAlert.value = false;
-                break;
-        }
-    });
-    $('#update-alert #button-confirm').on('click', () => {
-        switch (updateState.value) {
-            case 'need_update':
-                doDownload();
-                break;
-            case 'is_latest':
-                doCheck();
-                break;
-            case 'check_failed':
-                doCheck();
-                break;
-            case 'download_failed':
-                doDownload();
-                break;
-            case 'downloaded':
-                doUpdate();
-                break;
-        }
-    });
     if (updateState.value == 'initial') doCheck(true);
 };
 </script>
