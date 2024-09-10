@@ -79,7 +79,7 @@ onMounted(() => {
                                 changeLog += item + '<br>';
                             }
                         });
-                        Toast.info('发现新版本', '可前往设置页面更新或直接跳转 <a href="https://github.com/Natrium0521/Firefly/releases/latest">GitHub</a> 下载<br><br>' + changeLog, 60000);
+                        Toast.info('发现新版本', '可前往设置页面更新或直接跳转 <a href="https://github.com/Natrium0521/Firefly/releases/latest" style="text-decoration: none;">GitHub</a> 下载<br><br>' + changeLog, 60000);
                     }
                 })
                 .catch(() => {});
