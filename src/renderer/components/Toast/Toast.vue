@@ -40,13 +40,15 @@ const setToastItemRefs = (el: any, id: number) => {
     if (!el) return;
     toastItemRefs[id] = el;
 };
-
+const lastAnims = []
 const updateToastList = (newToastList: ToastItem[]) => {
     const oldPosition = {};
     toastList.value?.forEach((toast: ToastItem) => {
         oldPosition[toast.id] = toastItemRefs[toast.id].getBoundingClientRect().bottom;
     });
     toastList.value = newToastList;
+    lastAnims.forEach((anim) => anim.cancel());
+    lastAnims.length = 0;
     requestAnimationFrame(() => {
         toastList.value.forEach((toast: ToastItem) => {
             const newPosition = toastItemRefs[toast.id].getBoundingClientRect();
@@ -55,7 +57,8 @@ const updateToastList = (newToastList: ToastItem[]) => {
             }
             const diff = oldPosition[toast.id] - newPosition.bottom;
             const keyframes = [{ transform: `translateY(${diff}px)` }, { transform: `translateY(0px)` }];
-            toastItemRefs[toast.id].animate(keyframes, { duration: 500, easing: 'ease' });
+            const anim = toastItemRefs[toast.id].animate(keyframes, { duration: 500, easing: 'ease' });
+            lastAnims.push(anim);
         });
     });
 };

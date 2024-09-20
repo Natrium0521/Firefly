@@ -1,7 +1,7 @@
 <template>
     <div class="about-area">
         <div class="about">
-            <div class="icon_"><img class="icon" src="../../../../static/image/icon.png" /></div>
+            <div class="icon_" @click="EasterEggCount++"><img class="icon" src="../../../../static/image/icon.png" /></div>
             <div class="version">工具箱版本 v{{ version }}<br />适配游戏版本 v2.5</div>
             <div class="links">
                 <div>项目链接 <a href="https://github.com/Natrium0521/Firefly">GitHub</a></div>
@@ -13,7 +13,8 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, watch } from 'vue';
+import Toast from '@renderer/components/Toast';
 
 const version = ref('');
 
@@ -21,6 +22,20 @@ onMounted(() => {
     window.fireflyAPI.config.getAppVersion().then((v) => {
         version.value = v;
     });
+});
+
+const EasterEggCount = ref(0);
+const IfICanStopOneHeartFromBreaking = ['Birds are born with no shackles', 'Then what fetters my fate', 'Blown away, the white petals', 'Leave me trapped in the cage', 'The endless isolation', "Can't wear down my illusion", "Someday, I'll make a dream unchained", 'Let my heart bravely spread the wings', 'Soaring past the night', 'To trace the bright moonlight', 'Let the clouds heal me of the stings', 'Gently wipe the sorrow off my life', 'I dream', 'What is meant by “Miracle”', 'A word outside my days?', 'Once again, repeat warbles', 'But how could I escape?', 'No further hesitation', 'on those unanswered questions', "So now, I'll make a dream unchained", 'Let my heart bravely spread the wings', 'Soaring past the night', 'To trace the bright moonlight', 'Let the clouds heal me of the stings', 'Gently wipe the sorrow off my life', 'I dream'];
+watch(EasterEggCount, (count) => {
+    if (count === 1) {
+        Toast.info('这里没有彩蛋。', `${count}`, 5000);
+    }
+    if (count === 3) {
+        Toast.info('你只是不小心点到的，对吧？', `${count}`, 5000);
+    }
+    if (count >= 10) {
+        Toast.info(IfICanStopOneHeartFromBreaking[(count - 10) % IfICanStopOneHeartFromBreaking.length], `${count}`, 5000);
+    }
 });
 </script>
 
