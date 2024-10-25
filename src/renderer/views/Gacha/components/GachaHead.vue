@@ -318,7 +318,7 @@ const onRenameConfirm = async () => {
 const importWarningArea = ref<HTMLDivElement>(null);
 const importTypeSelect = ref<HTMLSelectElement>(null);
 const onImportConfirm = async () => {
-    const type = importTypeSelect.value + '';
+    const type = importTypeSelect.value.value + '';
     const warningSpan = importWarningArea.value;
     const ret = await userGachaStore.importGachaData(type);
     if (ret['msg'] === 'OK') {
