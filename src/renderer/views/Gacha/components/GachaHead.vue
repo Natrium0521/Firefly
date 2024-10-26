@@ -135,6 +135,7 @@ const onRefreshConfirm = async (isIncremental: boolean) => {
     const warningSpan = refreshWarningArea.value;
     if (isRefreshing.value) return;
     warningSpan.innerHTML = '<br>准备请求数据';
+    refreshingItems.value.length = 0;
     // 检查URL合法性
     const url = refreshUrlTextarea.value.value + '';
     if (url == '') {
