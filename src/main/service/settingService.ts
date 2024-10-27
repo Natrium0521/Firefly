@@ -2,9 +2,9 @@ import configService from './configService';
 import fs from 'fs';
 
 class SettingService {
-    private appSettings: unknown;
+    private appSettings: AppSettings;
     private appSettingsPath: string;
-    private initSettings = {
+    private initSettings: AppSettings = {
         Debug: false,
         CloseDirectly: true,
         ThemeColor: [115, 93, 141],

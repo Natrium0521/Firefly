@@ -1,5 +1,4 @@
 /// <reference types="vite/client" />
-
 declare module '*.vue' {
     import type { DefineComponent } from 'vue';
     // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/ban-types
@@ -13,12 +12,12 @@ declare interface Window {
             getAppVersion: () => Promise<string>;
         };
         setting: {
-            getAppSettings: () => Promise<unknown>;
-            setAppSettings: (key: string, value: unknown) => Promise<unknown>;
+            getAppSettings: () => Promise<AppSettings>;
+            setAppSettings: (key: string, value: unknown) => Promise<AppSettings>;
         };
         unlockfps: {
-            isFPSUnlocked: (server?: string) => Promise<unknown>;
-            toggleFPS: (server?: string) => Promise<unknown>;
+            isFPSUnlocked: (server?: string) => Promise<{ msg: string }>;
+            toggleFPS: (server?: string) => Promise<{ msg: 'OK'; fps: number } | { msg: string }>;
         };
         achievement: {
             getAchievementUids: () => Promise<unknown>;

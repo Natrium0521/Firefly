@@ -32,7 +32,7 @@ class UnlockFPSService {
         return await gameReg.getAsync(this.gameRegItemNames[server]);
     }
 
-    public async isFPSUnlocked(server = 'cn') {
+    public async isFPSUnlocked(server = 'cn'): Promise<{ msg: string }> {
         try {
             const targetRegItem = await this.getRegistryItem(server);
             if (targetRegItem === undefined) return { msg: 'reg not found' };
@@ -54,7 +54,7 @@ class UnlockFPSService {
         }
     }
 
-    public async toggleFPS(server = 'cn') {
+    public async toggleFPS(server = 'cn'): Promise<{ msg: 'OK'; fps: number } | { msg: string }> {
         try {
             const gameReg = this.getRegistry(server);
             const targetRegItem = await this.getRegistryItem(server);
