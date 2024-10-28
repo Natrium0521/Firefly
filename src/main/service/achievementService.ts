@@ -8,7 +8,8 @@ class AchievementService {
     private appDataPath: string;
     private achievementDataPath: string;
     private achievementUidsPath: string;
-    private achievementUids: unknown;
+    private achievementUids: Record<string, string>;
+    private mysBrowserWindow: BrowserWindow;
 
     constructor() {
         this.appDataPath = configService.getAppDataPath();
@@ -179,6 +180,75 @@ class AchievementService {
         }
         fs.writeFileSync(path.join(this.achievementDataPath, `./${uid}.json`), JSON.stringify(data, null, 4), 'utf-8');
         return { msg: 'OK', data: ret };
+    }
+
+    public async refreshAchievementFromMYS() {
+        return new Promise(async (resolve) => {
+            this.mysBrowserWindow = new BrowserWindow({
+                width: 720,
+                height: 480,
+                minWidth: 720,
+                minHeight: 480,
+            });
+            this.mysBrowserWindow.on('closed', () => {
+                this.mysBrowserWindow = null;
+                resolve('Canceled');
+            });
+            await this.mysBrowserWindow.webContents.session.clearStorageData({ storages: ['cookies'] });
+            this.mysBrowserWindow.loadURL('https://act.mihoyo.com/sr/event/cultivation-tool/index.html#/tools/achievement');
+            let flag = false;
+            this.mysBrowserWindow.webContents.session.webRequest.onBeforeSendHeaders({ urls: ['*://api-takumi.mihoyo.com/event/rpgcultivate/achievement/list*'] }, (details, callback) => {
+                if (details.method === 'OPTIONS') return callback({});
+                if (flag) return callback({});
+                flag = true;
+                const newURL = details.url.replace('need_all=false', 'need_all=true').replace('show_hide=false', 'show_hide=true');
+                fetch(newURL, { headers: details.requestHeaders })
+                    .then((response) => response.json())
+                    .then(async (data) => {
+                        if (data.retcode === 0) {
+                            const uid = newURL.match(/badge_uid=(\d+)/)[1];
+                            if (this.achievementUids[uid] === undefined) {
+                                await this.newAchievementData(uid, 'Trailblazer');
+                            }
+                            await settingService.setAppSettings('LastAchievementUid', uid);
+                            const achievementMetaIds = new Set(Object.keys(JSON.parse(fs.readFileSync(path.join(__dirname, '../static/json/AchievementData.json'), 'utf-8'))));
+                            const finishedIds = [];
+                            data.data.achievement_list.forEach((achievement: { finished: boolean; id: string }) => {
+                                if (achievement.finished && achievementMetaIds.has(achievement.id)) {
+                                    finishedIds.push(achievement.id);
+                                }
+                            });
+                            const oldData = JSON.parse(fs.readFileSync(path.join(this.achievementDataPath, `./${uid}.json`), 'utf-8'));
+                            const newData = {};
+                            const timeNow = Math.floor(new Date().getTime() / 1000);
+                            finishedIds.forEach((achievementId) => {
+                                if (oldData[achievementId] === undefined) {
+                                    newData[achievementId] = {
+                                        id: achievementId,
+                                        timestamp: timeNow,
+                                        current: 0,
+                                        status: 2,
+                                    };
+                                } else {
+                                    newData[achievementId] = oldData[achievementId];
+                                }
+                            });
+                            fs.writeFileSync(path.join(this.achievementDataPath, `./${uid}.json`), JSON.stringify(newData, null, 4), 'utf-8');
+                            resolve(uid);
+                        } else {
+                            resolve(data);
+                        }
+                        this.mysBrowserWindow?.close();
+                        this.mysBrowserWindow = null;
+                    });
+                callback({});
+            });
+        });
+    }
+
+    public async cancelRefreshAchievementFromMYS() {
+        this.mysBrowserWindow?.close();
+        this.mysBrowserWindow = null;
     }
 }
 

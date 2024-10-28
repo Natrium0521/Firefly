@@ -114,6 +114,18 @@
                                     <div class="button" @click="showingAlert = 'none'">取消</div>
                                     <div class="button theme" @click="onNewlyConfirm">新建</div>
                                 </div>
+                                <a href="" style="margin-top: 5px" @click.prevent="showingAlert = 'refresh'">从米游社导入</a>
+                            </Alert>
+                        </div>
+                        <div class="more-item" @click="(showingAlert = 'refresh'), params.toggleDropdown()">
+                            <img class="more-item-icon" :src="RefreshIcon" />
+                            <div class="more-item-name">刷新</div>
+                            <Alert v-if="showingAlert === 'refresh'" @close="!isMYSBrowserWindowOpen && (showingAlert = 'none')" title="从米游社刷新/导入">
+                                <div class="warning-area" ref="refreshWarningArea">从米游社刷新需要登录米游社账号，只会影响登录账号对应UID的成就存档<br />本次登录仅用于获取成就数据，不会保存或泄漏任何凭证</div>
+                                <div class="button-area">
+                                    <div class="button" @click="onRefreshCancel">取消</div>
+                                    <div class="button theme" @click="onRefreshConfirm">登录</div>
+                                </div>
                             </Alert>
                         </div>
                         <div class="more-item" @click="(showingAlert = 'import'), params.toggleDropdown()">
@@ -131,6 +143,7 @@
                                     <div class="button" @click="showingAlert = 'none'">取消</div>
                                     <div class="button theme" @click="onImportConfirm">导入</div>
                                 </div>
+                                <a href="" style="margin-top: 5px" @click.prevent="showingAlert = 'refresh'">从米游社导入</a>
                             </Alert>
                         </div>
                         <div class="more-item" @click="(showingAlert = 'export'), params.toggleDropdown()">
@@ -198,12 +211,14 @@ import FilterIcon from '../../../assets/image/svg/filter.svg';
 import BatchIcon from '../../../assets/image/svg/done-all.svg';
 import MoreIcon from '../../../assets/image/svg/more.svg';
 import NewlyIcon from '../../../assets/image/svg/newlybuild.svg';
+import RefreshIcon from '../../../assets/image/svg/refresh.svg';
 import ImportIcon from '../../../assets/image/svg/import.svg';
 import ExportIcon from '../../../assets/image/svg/export.svg';
 import RenameIcon from '../../../assets/image/svg/rename.svg';
 import DeleteIcon from '../../../assets/image/svg/delete.svg';
 import { useUserAchievement } from '../../../store/userachievement';
 import Alert from '../../../components/Alert.vue';
+import Toast from '@renderer/components/Toast';
 
 let searchBoxValue = ref('');
 let groupedVersionList = ref([]);
@@ -310,6 +325,27 @@ const onNewlyAlertMounted = () => {
     newlyUidInput.value.focus();
 };
 
+const refreshWarningArea = ref<HTMLSpanElement>(null);
+let isMYSBrowserWindowOpen = false;
+const onRefreshConfirm = async () => {
+    if (isMYSBrowserWindowOpen) return;
+    isMYSBrowserWindowOpen = true;
+    window.fireflyAPI.achievement.refreshAchievementFromMYS().then((ret) => {
+        isMYSBrowserWindowOpen = false;
+        if (/\d+/.test(`${ret}`)) {
+            userAchievementStore.init();
+            showingAlert.value = 'none';
+            Toast.success('刷新成功', `UID: ${ret}<br>数据可能有10分钟延迟，若刷新不完全可稍后再试`, 10000);
+        } else {
+            refreshWarningArea.value.innerHTML = `刷新失败<br>${JSON.stringify(ret)}`;
+        }
+    });
+};
+const onRefreshCancel = async () => {
+    if (isMYSBrowserWindowOpen) window.fireflyAPI.achievement.cancelRefreshAchievementFromMYS();
+    else showingAlert.value = 'none';
+};
+
 const importTypeSelect = ref<HTMLSelectElement>(null);
 const importWarningArea = ref<HTMLSpanElement>(null);
 const onImportConfirm = async () => {
@@ -380,7 +416,7 @@ const onDeleteConfirm = async () => {
     }
 };
 
-const showingAlert = ref<'newly' | 'import' | 'export' | 'rename' | 'delete' | 'none'>('none');
+const showingAlert = ref<'newly' | 'refresh' | 'import' | 'export' | 'rename' | 'delete' | 'none'>('none');
 window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         if (showingAlert.value !== 'none') {
