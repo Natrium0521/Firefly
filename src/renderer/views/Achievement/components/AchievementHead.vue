@@ -121,7 +121,11 @@
                             <img class="more-item-icon" :src="RefreshIcon" />
                             <div class="more-item-name">刷新</div>
                             <Alert v-if="showingAlert === 'refresh'" @close="!isMYSBrowserWindowOpen && (showingAlert = 'none')" title="从米游社刷新/导入">
-                                <div class="warning-area" ref="refreshWarningArea">从米游社刷新需要登录米游社账号，只会影响登录账号对应UID的成就存档<br />本次登录仅用于获取成就数据，不会保存或泄漏任何凭证</div>
+                                <div style="display: flex; gap: 10px; align-items: center">
+                                    <Checkbox v-model="refreshAutoLogin" />
+                                    自动登录上次的账号（如果凭证还没过期）
+                                </div>
+                                <div class="warning-area" ref="refreshWarningArea">从米游社刷新需要登录米游社账号，只会影响登录账号对应UID的成就存档<br />本次登录仅用于获取成就数据，不会泄漏任何凭证</div>
                                 <div class="button-area">
                                     <div class="button" @click="onRefreshCancel">取消</div>
                                     <div class="button theme" @click="onRefreshConfirm">登录</div>
@@ -218,6 +222,7 @@ import RenameIcon from '../../../assets/image/svg/rename.svg';
 import DeleteIcon from '../../../assets/image/svg/delete.svg';
 import { useUserAchievement } from '../../../store/userachievement';
 import Alert from '../../../components/Alert.vue';
+import Checkbox from '@renderer/components/Checkbox.vue';
 import Toast from '@renderer/components/Toast';
 
 let searchBoxValue = ref('');
@@ -325,12 +330,13 @@ const onNewlyAlertMounted = () => {
     newlyUidInput.value.focus();
 };
 
+const refreshAutoLogin = ref(true);
 const refreshWarningArea = ref<HTMLSpanElement>(null);
 let isMYSBrowserWindowOpen = false;
 const onRefreshConfirm = async () => {
     if (isMYSBrowserWindowOpen) return;
     isMYSBrowserWindowOpen = true;
-    window.fireflyAPI.achievement.refreshAchievementFromMYS().then((ret) => {
+    window.fireflyAPI.achievement.refreshAchievementFromMYS(refreshAutoLogin.value).then((ret) => {
         isMYSBrowserWindowOpen = false;
         if (/\d+/.test(`${ret}`)) {
             userAchievementStore.init();

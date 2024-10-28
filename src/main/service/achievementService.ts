@@ -182,7 +182,7 @@ class AchievementService {
         return { msg: 'OK', data: ret };
     }
 
-    public async refreshAchievementFromMYS() {
+    public async refreshAchievementFromMYS(keepCookie = false) {
         return new Promise(async (resolve) => {
             this.mysBrowserWindow = new BrowserWindow({
                 width: 720,
@@ -194,7 +194,7 @@ class AchievementService {
                 this.mysBrowserWindow = null;
                 resolve('Canceled');
             });
-            await this.mysBrowserWindow.webContents.session.clearStorageData({ storages: ['cookies'] });
+            if (!keepCookie) await this.mysBrowserWindow.webContents.session.clearStorageData({ storages: ['cookies'] });
             this.mysBrowserWindow.loadURL('https://act.mihoyo.com/sr/event/cultivation-tool/index.html#/tools/achievement');
             let flag = false;
             this.mysBrowserWindow.webContents.session.webRequest.onBeforeSendHeaders({ urls: ['*://api-takumi.mihoyo.com/event/rpgcultivate/achievement/list*'] }, (details, callback) => {
