@@ -45,7 +45,7 @@ class UnlockFPSService {
             if (json['FPS'] === undefined) {
                 return { msg: 'no fps setting' };
             }
-            if (json['FPS'] == 120) {
+            if (json['FPS'] === 120) {
                 return { msg: 'unlocked' };
             }
             return { msg: 'locked' };
@@ -68,7 +68,7 @@ class UnlockFPSService {
             if (json['FPS'] === undefined) {
                 return { msg: 'no fps setting' };
             }
-            if (json['FPS'] == 120) {
+            if (json['FPS'] === 120) {
                 json['FPS'] = 60;
             } else {
                 json['FPS'] = 120;

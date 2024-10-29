@@ -1,6 +1,6 @@
 <template>
     <div class="gacha-body">
-        <Transition :name="currentView == GachaBodyPoolView ? 'slide-left' : 'slide-right'">
+        <Transition :name="currentView === GachaBodyPoolView ? 'slide-left' : 'slide-right'">
             <KeepAlive>
                 <component :is="currentView" />
             </KeepAlive>
@@ -17,7 +17,7 @@ import GachaBodyPoolView from './GachaBodyPoolView.vue';
 const currentView = shallowRef(GachaBodyTypeView);
 
 function toggleGachaView(toggleTo: string) {
-    if (toggleTo == '卡池') currentView.value = GachaBodyPoolView;
+    if (toggleTo === '卡池') currentView.value = GachaBodyPoolView;
     else currentView.value = GachaBodyTypeView;
 }
 

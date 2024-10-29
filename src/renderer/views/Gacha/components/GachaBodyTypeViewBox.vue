@@ -3,11 +3,11 @@
         <div class="title-area">
             <div class="text">{{ gachaTitle }}</div>
             <div class="btns">
-                <div class="slider" :class="{ toggle: currentDetailView == CardListView }"></div>
-                <div class="gridview" :class="{ on: currentDetailView == CardGridView }" @click="currentDetailView = CardGridView">
+                <div class="slider" :class="{ toggle: currentDetailView === CardListView }"></div>
+                <div class="gridview" :class="{ on: currentDetailView === CardGridView }" @click="currentDetailView = CardGridView">
                     <img src="../../../assets/image/svg/view-grid-card.svg" />
                 </div>
-                <div class="listview" :class="{ on: currentDetailView == CardListView }" @click="currentDetailView = CardListView">
+                <div class="listview" :class="{ on: currentDetailView === CardListView }" @click="currentDetailView = CardListView">
                     <img src="../../../assets/image/svg/view-grid-list.svg" />
                 </div>
             </div>
@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="detail-area">
-            <Transition :name="currentDetailView == CardGridView ? 'slide-left' : 'slide-right'">
+            <Transition :name="currentDetailView === CardGridView ? 'slide-left' : 'slide-right'">
                 <KeepAlive>
                     <component :is="currentDetailView" :gacha-detail="gachaDetail" />
                 </KeepAlive>

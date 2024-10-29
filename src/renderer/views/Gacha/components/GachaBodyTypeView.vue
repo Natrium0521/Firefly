@@ -53,7 +53,7 @@ const gachaPoolNewbie = computed(() =>
  */
 const getItemStar = (itemId: number | string): number => {
     // 4位数字为角色，5位数字为光锥
-    if (`${itemId}`.length == 4) {
+    if (`${itemId}`.length === 4) {
         return avatarConfig.value[itemId] ? +avatarConfig.value[itemId]['Rarity'].at(-1) : 4;
     } else {
         return lightconeConfig.value[itemId] ? +lightconeConfig.value[itemId]['Rarity'].at(-1) : 4;
@@ -67,7 +67,7 @@ const getItemStar = (itemId: number | string): number => {
  */
 const getItemName = (itemId: number | string): string => {
     // 4位数字为角色，5位数字为光锥
-    if (`${itemId}`.length == 4) {
+    if (`${itemId}`.length === 4) {
         if (avatarConfig.value[itemId]) return textMapStore.getText(avatarConfig.value[itemId]['AvatarName']['Hash']);
         else return `${itemId}`;
     } else {
@@ -85,7 +85,7 @@ const getItemName = (itemId: number | string): string => {
 const countLastStarn = (items: any[], targetStar: number) => {
     let count = 0;
     for (let i = items.length - 1; i >= 0; i--) {
-        if (getItemStar(items[i]['item_id']) == targetStar) break;
+        if (getItemStar(items[i]['item_id']) === targetStar) break;
         count++;
     }
     return count;
@@ -106,14 +106,14 @@ const avatarAnalyze = computed(() => {
     analyze['endDate'] = gachaPoolAvatar.value.length ? gachaPoolAvatar.value.at(-1)['time'].split(' ')[0].replaceAll('-', '.') : '';
     let star5Count = 0;
     gachaPoolAvatar.value.forEach((item) => {
-        if (getItemStar(item['item_id']) == 5) star5Count++;
+        if (getItemStar(item['item_id']) === 5) star5Count++;
     });
     let star5UpCount = 0;
     gachaPoolAvatar.value.forEach((item) => {
-        if (getItemStar(item['item_id']) == 5 && gachaPoolInfo.value[item['gacha_id']] && gachaPoolInfo.value[item['gacha_id']]['UpItems5'].indexOf(+item['item_id']) != -1) star5UpCount++;
+        if (getItemStar(item['item_id']) === 5 && gachaPoolInfo.value[item['gacha_id']] && gachaPoolInfo.value[item['gacha_id']]['UpItems5'].indexOf(+item['item_id']) !== -1) star5UpCount++;
     });
     // 修复最近一次五星是歪的情况的不歪概率
-    let fixUpRate = avatarDetail.value.length && avatarDetail.value[0]['upType'] == 'noup' ? 1 : 0;
+    let fixUpRate = avatarDetail.value.length && avatarDetail.value[0]['upType'] === 'noup' ? 1 : 0;
     analyze['dataGroup'] = [
         {
             label: '五星数',
@@ -143,7 +143,7 @@ const avatarDetail = computed(() => {
     let count = 0;
     gachaPoolAvatar.value.forEach((item) => {
         count++;
-        if (getItemStar(item['item_id']) == 5) {
+        if (getItemStar(item['item_id']) === 5) {
             detail.unshift({
                 id: item['id'],
                 itemId: item['item_id'],
@@ -151,7 +151,7 @@ const avatarDetail = computed(() => {
                 count: count,
                 iconType: 'star5',
                 progress: (count / 90) * 100,
-                upType: gachaPoolInfo.value[item['gacha_id']] && gachaPoolInfo.value[item['gacha_id']]['UpItems5'].indexOf(+item['item_id']) != -1 ? 'up' : 'noup',
+                upType: gachaPoolInfo.value[item['gacha_id']] && gachaPoolInfo.value[item['gacha_id']]['UpItems5'].indexOf(+item['item_id']) !== -1 ? 'up' : 'noup',
                 time: item['time'],
             });
             count = 0;
@@ -175,14 +175,14 @@ const lightconeAnalyze = computed(() => {
     analyze['endDate'] = gachaPoolLightcone.value.length ? gachaPoolLightcone.value.at(-1)['time'].split(' ')[0].replaceAll('-', '.') : '';
     let star5Count = 0;
     gachaPoolLightcone.value.forEach((item) => {
-        if (getItemStar(item['item_id']) == 5) star5Count++;
+        if (getItemStar(item['item_id']) === 5) star5Count++;
     });
     let star5UpCount = 0;
     gachaPoolLightcone.value.forEach((item) => {
-        if (getItemStar(item['item_id']) == 5 && gachaPoolInfo.value[item['gacha_id']] && gachaPoolInfo.value[item['gacha_id']]['UpItems5'].indexOf(+item['item_id']) != -1) star5UpCount++;
+        if (getItemStar(item['item_id']) === 5 && gachaPoolInfo.value[item['gacha_id']] && gachaPoolInfo.value[item['gacha_id']]['UpItems5'].indexOf(+item['item_id']) !== -1) star5UpCount++;
     });
     // 修复最近一次五星是歪的情况的不歪概率
-    let fixUpRate = lightconeDetail.value.length && lightconeDetail.value[0]['upType'] == 'noup' ? 1 : 0;
+    let fixUpRate = lightconeDetail.value.length && lightconeDetail.value[0]['upType'] === 'noup' ? 1 : 0;
     analyze['dataGroup'] = [
         {
             label: '五星数',
@@ -212,7 +212,7 @@ const lightconeDetail = computed(() => {
     let count = 0;
     gachaPoolLightcone.value.forEach((item) => {
         count++;
-        if (getItemStar(item['item_id']) == 5) {
+        if (getItemStar(item['item_id']) === 5) {
             detail.unshift({
                 id: item['id'],
                 itemId: item['item_id'],
@@ -220,7 +220,7 @@ const lightconeDetail = computed(() => {
                 count: count,
                 iconType: 'star5',
                 progress: (count / 80) * 100,
-                upType: gachaPoolInfo.value[item['gacha_id']] && gachaPoolInfo.value[item['gacha_id']]['UpItems5'].indexOf(+item['item_id']) != -1 ? 'up' : 'noup',
+                upType: gachaPoolInfo.value[item['gacha_id']] && gachaPoolInfo.value[item['gacha_id']]['UpItems5'].indexOf(+item['item_id']) !== -1 ? 'up' : 'noup',
                 time: item['time'],
             });
             count = 0;
@@ -251,11 +251,11 @@ const normalAnalyze = computed(() => {
     analyze['endDate'] = gachaPoolNormal.value.length ? gachaPoolNormal.value.at(-1)['time'].split(' ')[0].replaceAll('-', '.') : '';
     let normalStar5Count = 0;
     gachaPoolNormal.value.forEach((item) => {
-        if (getItemStar(item['item_id']) == 5) normalStar5Count++;
+        if (getItemStar(item['item_id']) === 5) normalStar5Count++;
     });
     let newbieStar5Count = 0;
     gachaPoolNewbie.value.forEach((item) => {
-        if (getItemStar(item['item_id']) == 5) newbieStar5Count++;
+        if (getItemStar(item['item_id']) === 5) newbieStar5Count++;
     });
     analyze['dataGroup'] = [
         {
@@ -286,7 +286,7 @@ const normalDetail = computed(() => {
     let count = 0;
     gachaPoolNewbie.value.forEach((item) => {
         count++;
-        if (getItemStar(item['item_id']) == 5) {
+        if (getItemStar(item['item_id']) === 5) {
             detail.unshift({
                 id: item['id'],
                 itemId: item['item_id'],
@@ -303,7 +303,7 @@ const normalDetail = computed(() => {
     count = 0;
     gachaPoolNormal.value.forEach((item) => {
         count++;
-        if (getItemStar(item['item_id']) == 5) {
+        if (getItemStar(item['item_id']) === 5) {
             detail.unshift({
                 id: item['id'],
                 itemId: item['item_id'],

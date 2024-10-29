@@ -33,7 +33,7 @@ const props = defineProps(['item', 'isSelected', 'clicked']);
  */
 const getItemName = (itemId: number | string): string => {
     // 4位数字为角色，5位数字为光锥
-    if (`${itemId}`.length == 4) {
+    if (`${itemId}`.length === 4) {
         if (avatarConfig.value[itemId]) return textMapStore.getText(avatarConfig.value[itemId]['AvatarName']['Hash']);
         else return `${itemId}`;
     } else {
@@ -117,8 +117,8 @@ const upItems = computed(() => {
         });
     }
     const sortedItemIds = Object.keys(itemInfo).sort((a, b) => {
-        if (itemInfo[a].star != itemInfo[b].star) return itemInfo[b].star - itemInfo[a].star;
-        if (itemInfo[a].count != itemInfo[b].count) return itemInfo[b].count - itemInfo[a].count;
+        if (itemInfo[a].star !== itemInfo[b].star) return itemInfo[b].star - itemInfo[a].star;
+        if (itemInfo[a].count !== itemInfo[b].count) return itemInfo[b].count - itemInfo[a].count;
         return +itemInfo[a].itemId - +itemInfo[b].itemId;
     });
     const items = [];

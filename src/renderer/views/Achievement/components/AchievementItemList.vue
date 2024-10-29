@@ -27,7 +27,7 @@ watch(items, () => {
     items.value.forEach((item: any, index: number) => {
         // 计算每个item下标变化情况，用于计算动画的距离
         let diff = 0;
-        if (oldItemsOrder.indexOf(item.achievement_id) == -1) {
+        if (oldItemsOrder.indexOf(item.achievement_id) === -1) {
             diff = index + 1;
         } else {
             diff = index - oldItemsOrder.indexOf(item.achievement_id);
@@ -40,7 +40,7 @@ watch(items, () => {
     requestAnimationFrame(() => {
         items.value.slice(startIndex, endIndex).forEach((item: any) => {
             // 给渲染的DOM添加动画
-            if (itemDiffs[item.achievement_id] != 0) {
+            if (itemDiffs[item.achievement_id] !== 0) {
                 let style = window.getComputedStyle(itemRefs[item.achievement_id]);
                 let matrix = style.transform === 'none' ? [1, 0, 0, 1, 0, 0] : style.transform.split('(')[1].split(')')[0].split(',').map(Number);
                 let translateY = matrix[5];
@@ -61,7 +61,7 @@ const scrollTop = ref(0);
 const scopeHeight = ref(0);
 function onScroll(e: any) {
     scrollTop.value = e.target.scrollTop;
-    if (scopeHeight.value != e.target.clientHeight) scopeHeight.value = e.target.clientHeight;
+    if (scopeHeight.value !== e.target.clientHeight) scopeHeight.value = e.target.clientHeight;
 }
 let startIndex = 0;
 let endIndex = 0;

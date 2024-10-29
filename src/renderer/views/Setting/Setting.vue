@@ -8,7 +8,7 @@
             <Alert id="update-alert" v-if="showUpdateAlert" @close="!['downloading', 'updating'].includes(updateState) ? (showUpdateAlert = false) : false" title="更新" @vue:mounted="onUpdateAlertMounted">
                 <div class="update-info" v-html="updateInfo"></div>
                 <div class="release-href" v-show="['need_update', 'downloading', 'download_failed', 'update_failed'].includes(updateState)">使用浏览器下载：<a href="https://github.com/Natrium0521/Firefly/releases/latest">GitHub</a></div>
-                <div class="download-info" v-show="updateState == 'downloading'">
+                <div class="download-info" v-show="updateState === 'downloading'">
                     <div class="size">{{ downloadInfoSize }}</div>
                     <div class="speed">{{ downloadInfoSpeed }}</div>
                     <div class="progress">{{ downloadInfoProgress }}%</div>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="button-area" v-show="!['initial', 'updating', 'update_failed'].includes(updateState)">
                     <div id="button-cancel" class="button" @click="onUpdateAlertCancelButtonClick">取消</div>
-                    <div id="button-confirm" class="button theme" @click="onUpdateAlertConfirmButtonClick" v-show="updateState != 'downloading'">{{ { need_update: '下载', is_latest: '重试', check_failed: '重试', download_failed: '重试', downloaded: '更新' }[updateState] }}</div>
+                    <div id="button-confirm" class="button theme" @click="onUpdateAlertConfirmButtonClick" v-show="updateState !== 'downloading'">{{ { need_update: '下载', is_latest: '重试', check_failed: '重试', download_failed: '重试', downloaded: '更新' }[updateState] }}</div>
                 </div>
             </Alert>
         </SettingArea>
@@ -54,7 +54,7 @@ watch(isFPSUnlocked, () => {
         if ((res['msg'] === 'unlocked') !== isFPSUnlocked.value) {
             unlockFPSEnabled = false;
             window.fireflyAPI.unlockfps.toggleFPS().then((res) => {
-                isFPSUnlocked.value = res['fps'] == 120;
+                isFPSUnlocked.value = res['fps'] === 120;
                 unlockFPSEnabled = true;
             });
         }
@@ -146,7 +146,7 @@ const doCheck = (useCache: boolean = false) => {
                         asarHash = asset['name'].replace('.asar', '');
                     }
                 });
-                if (downloadLink == '') {
+                if (downloadLink === '') {
                     throw new Error('asar not found');
                 } else {
                     updateInfo.value = '发现新版 ' + res['tag_name'];
@@ -191,7 +191,7 @@ const doDownload = () => {
                         updateInfo.value = '下载失败';
                         updateState.value = 'download_failed';
                 }
-                if (info.state != 'downloading') clearInterval(downloadTimer);
+                if (info.state !== 'downloading') clearInterval(downloadTimer);
                 downloadInfoProgress.value = (info.progress * 100).toFixed(2);
                 let unit = 'B/s';
                 let speed = ~~info.speed;
@@ -274,7 +274,7 @@ const onUpdateAlertConfirmButtonClick = () => {
     }
 };
 const onUpdateAlertMounted = async () => {
-    if (updateState.value == 'initial') doCheck(true);
+    if (updateState.value === 'initial') doCheck(true);
 };
 </script>
 

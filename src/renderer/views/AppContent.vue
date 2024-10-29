@@ -2,15 +2,15 @@
     <div class="app-content">
         <div class="app-content-sidebar-wrapper" :class="{ collapsed: isSidebarCollapsed }">
             <div class="app-content-sidebar">
-                <div class="app-content-sidebar-item" :class="{ selected: currentComponent == Achievement }" @click="onSidebarItemClick($event, Achievement)">
+                <div class="app-content-sidebar-item" :class="{ selected: currentComponent === Achievement }" @click="onSidebarItemClick($event, Achievement)">
                     <img src="../assets/image/hsr/AchievementIcon.png" />
                     <span>成就管理</span>
                 </div>
-                <div class="app-content-sidebar-item" :class="{ selected: currentComponent == Gacha }" @click="onSidebarItemClick($event, Gacha)">
+                <div class="app-content-sidebar-item" :class="{ selected: currentComponent === Gacha }" @click="onSidebarItemClick($event, Gacha)">
                     <img src="../assets/image/hsr/DrawcardIcon.png" />
                     <span>跃迁记录</span>
                 </div>
-                <div class="app-content-sidebar-item" :class="{ selected: currentComponent == Setting }" @click="onSidebarItemClick($event, Setting)">
+                <div class="app-content-sidebar-item" :class="{ selected: currentComponent === Setting }" @click="onSidebarItemClick($event, Setting)">
                     <img src="../assets/image/hsr/SettingsIcon.png" />
                     <span>设置</span>
                 </div>

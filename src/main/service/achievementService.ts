@@ -1,6 +1,6 @@
 import { app, BrowserWindow, dialog } from 'electron';
-import configService from './configService';
-import settingService from './settingService';
+import configService from './ConfigService';
+import settingService from './SettingService';
 import path from 'path';
 import fs from 'fs';
 
@@ -61,7 +61,7 @@ class AchievementService {
     public async delAchievementData(uid: string) {
         if (!/^\d{9}$/.test(uid)) return { msg: 'Invalid UID' };
         if (this.achievementUids[uid] === undefined) return { msg: 'UID not found' };
-        if (Object.keys(this.achievementUids).length == 1) return { msg: 'The last UID cant be deleted' };
+        if (Object.keys(this.achievementUids).length === 1) return { msg: 'The last UID cant be deleted' };
         delete this.achievementUids[uid];
         this.saveAchievementUids();
         return { msg: 'OK' };
@@ -70,7 +70,7 @@ class AchievementService {
     public async exportAchievementData(uid: string, type: string) {
         if (!/^\d{9}$/.test(uid)) return { msg: 'Invalid UID' };
         if (this.achievementUids[uid] === undefined) return { msg: 'UID not found' };
-        if (type == 'firefly') {
+        if (type === 'firefly') {
             const exportData = {
                 info: {
                     export_app: 'Firefly',
@@ -109,7 +109,7 @@ class AchievementService {
 
     public async importAchievementData(uid: string, type: string) {
         if (!/^\d{9}$/.test(uid)) return { msg: 'Invalid UID' };
-        if (type == 'firefly') {
+        if (type === 'firefly') {
             let msg = 'OK';
             try {
                 let importData = {};
@@ -130,8 +130,8 @@ class AchievementService {
                     .catch((err) => {
                         msg = err.message;
                     });
-                if (msg != 'OK') return { msg: msg };
-                if (importData['info']['export_app'] != 'Firefly') return { msg: 'Unknown app' };
+                if (msg !== 'OK') return { msg: msg };
+                if (importData['info']['export_app'] !== 'Firefly') return { msg: 'Unknown app' };
                 if (importData['list'] === undefined) return { msg: 'No data' };
                 const list = {};
                 const timenow = Math.floor(new Date().getTime() / 1000);
@@ -163,7 +163,7 @@ class AchievementService {
         if (this.achievementUids[uid] === undefined) return { msg: 'UID not found' };
         const data = JSON.parse(fs.readFileSync(path.join(this.achievementDataPath, `./${uid}.json`), 'utf-8'));
         let ret = [];
-        if (achievementStatus == 1) {
+        if (achievementStatus === 1) {
             achievementIds.forEach((achievementId) => delete data[achievementId]);
             ret = null;
         } else {

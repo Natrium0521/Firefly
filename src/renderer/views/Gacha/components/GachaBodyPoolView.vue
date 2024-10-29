@@ -27,7 +27,7 @@ const userGachaData = computed(() => userGachaStore.gachaCurrData ?? {});
  */
 const getItemStar = (itemId: number | string): number => {
     // 4位数字为角色，5位数字为光锥
-    if (`${itemId}`.length == 4) {
+    if (`${itemId}`.length === 4) {
         return avatarConfig.value[itemId] ? +avatarConfig.value[itemId]['Rarity'].at(-1) : 4;
     } else {
         return lightconeConfig.value[itemId] ? +lightconeConfig.value[itemId]['Rarity'].at(-1) : 4;
@@ -41,7 +41,7 @@ const getItemStar = (itemId: number | string): number => {
  */
 const getItemName = (itemId: number | string): string => {
     // 4位数字为角色，5位数字为光锥
-    if (`${itemId}`.length == 4) {
+    if (`${itemId}`.length === 4) {
         if (avatarConfig.value[itemId]) return textMapStore.getText(avatarConfig.value[itemId]['AvatarName']['Hash']);
         else return `${itemId}`;
     } else {
@@ -73,7 +73,7 @@ const poolDetail = computed(() => {
 });
 const poolListItems = computed(() => {
     const orderedIds = Object.keys(poolDetail.value).sort((a, b) => {
-        if (+a % 1000 == +b % 1000) {
+        if (+a % 1000 === +b % 1000) {
             return +b - +a;
         } else {
             return (+a % 1000) - (+b % 1000);

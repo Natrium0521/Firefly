@@ -138,7 +138,7 @@ const onRefreshConfirm = async (isIncremental: boolean) => {
     refreshingItems.value.length = 0;
     // 检查URL合法性
     const url = refreshUrlTextarea.value.value + '';
-    if (url == '') {
+    if (url === '') {
         warningSpan.innerHTML = '<br>请先填入链接或尝试自动获取链接';
         return;
     }
@@ -220,12 +220,12 @@ const onRefreshConfirm = async (isIncremental: boolean) => {
                     if (fetchingGachaData[item.id] === undefined) items.push(item);
                 });
             }
-            if (items.length == 0) {
+            if (items.length === 0) {
                 warningSpan.innerHTML = `${gachaTypeName}池数据请求完成<br>共获取 ${cnt} 条记录`;
                 break;
             }
             endId = items.at(-1).id;
-            if (Object.keys(data.info).length == 0) {
+            if (Object.keys(data.info).length === 0) {
                 data.info = {
                     srgf_version: 'v1.0',
                     uid: items[0]['uid'],
@@ -262,7 +262,7 @@ const onRefreshConfirm = async (isIncremental: boolean) => {
     warningSpan.innerHTML = `UID: ${fetchingGachaUid ?? data.info['uid']} 跃迁记录请求完成<br>共获取 ${data.list.length} 条记录`;
     if (data.list.length) {
         const ret = await userGachaStore.refreshGachaData('srgf_v1.0', data);
-        if (ret['msg'] == 'OK') {
+        if (ret['msg'] === 'OK') {
             warningSpan.innerHTML = `UID: ${fetchingGachaUid ?? data.info['uid']} 跃迁记录请求完成<br>共获取 ${data.list.length} 条记录，数据已保存`;
         } else {
             warningSpan.innerHTML = ret['msg'];
@@ -273,7 +273,7 @@ const onGetUrlConfirm = async () => {
     const warningSpan = refreshWarningArea.value;
     if (isRefreshing.value) return;
     const ret = await userGachaStore.getGachaURL();
-    if (ret['msg'] == 'OK') {
+    if (ret['msg'] === 'OK') {
         refreshUrlTextarea.value.value = ret['data']['url'];
         warningSpan.innerHTML = '<br>获取成功，正在检测是否有效';
         isRefreshing.value = true;
@@ -304,7 +304,7 @@ const renameInput = ref<HTMLInputElement>(null);
 const onRenameConfirm = async () => {
     const nickname = renameInput.value.value + '';
     const warningSpan = renameWarningArea.value;
-    if (nickname.length == 0) {
+    if (nickname.length === 0) {
         warningSpan.innerText = '新名称不能为空';
     } else {
         const ret = await userGachaStore.newGachaUser(showingUid.value, nickname);
@@ -337,13 +337,13 @@ const onSelectExportFormat = async () => {
     const warningSpan = exportWarningArea.value;
     warningSpan.innerHTML = '';
     exportable = false;
-    if (type == 'srgf_v1.0') {
+    if (type === 'srgf_v1.0') {
         if (!(await userGachaStore.checkExportable(showingUid.value))) {
             warningSpan.innerHTML = '当前记录存在未知角色/光锥<br>为避免导出数据有误，请更新后再尝试导出';
             return;
         }
         exportable = true;
-    } else if (type == 'uigf_v4.0') {
+    } else if (type === 'uigf_v4.0') {
         for (let uid of Object.keys(gachaUids.value)) {
             if (!(await userGachaStore.checkExportable(uid))) {
                 warningSpan.innerHTML = `uid为 ${uid} 的记录存在未知角色/光锥<br>为避免导出数据有误，请更新后再尝试导出`;
@@ -373,11 +373,11 @@ const onDeleteConfirm = async () => {
     const warningSpan = deleteWarningArea.value;
     if (!confirmed) {
         warningSpan.innerText = '要确认删除当前记录，请在上方输入框内输入删除两字';
-    } else if (Object.keys(gachaUids.value).length == 1) {
+    } else if (Object.keys(gachaUids.value).length === 1) {
         warningSpan.innerText = '最后一个记录无法删除';
     } else {
         const ret = await userGachaStore.deleteGachaUser(showingUid.value);
-        if (ret['msg'] == 'OK') {
+        if (ret['msg'] === 'OK') {
             showingAlert.value = 'none';
         } else {
             warningSpan.innerText = ret['msg'];

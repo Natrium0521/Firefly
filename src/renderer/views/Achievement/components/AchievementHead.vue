@@ -205,7 +205,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { Ref, computed, onMounted, ref } from 'vue';
 import emitter from '../../../utils/mitt';
 import UidDropdown from '../../../components/UidDropdown.vue';
 import Dropdown from '../../../components/Dropdown.vue';
@@ -241,7 +241,7 @@ const filterSettingDefault = {
     ShowVisible: false,
     ShowMEOnly: false,
 };
-const filterSetting = ref(JSON.parse(JSON.stringify(filterSettingDefault)));
+const filterSetting: Ref<typeof filterSettingDefault> = ref(JSON.parse(JSON.stringify(filterSettingDefault)));
 
 function selectUid(uid: string) {
     userAchievementStore.setCurrAchiUid(uid);
@@ -265,7 +265,7 @@ onMounted(async () => {
 
 function setAllAchievementStatus(e: DOMEvent, s: number) {
     const btnText = (e.target as HTMLElement).innerHTML;
-    if (btnText.slice(0, 2) == '确认') {
+    if (btnText.slice(0, 2) === '确认') {
         emitter.emit('achievement:setAllShowingAchievementsStatus', s);
         (e.target as HTMLElement).innerHTML = btnText.slice(2);
     } else {
@@ -277,8 +277,8 @@ const isFiltering = computed(() => {
     emitter.emit('achievement:setFilterSetting', filterSetting.value);
     let eq = true;
     Object.keys(filterSetting.value).forEach((k) => {
-        if (k == 'Version' && filterSetting.value[k].length > 0) eq = false;
-        else if (k != 'Version' && filterSetting.value[k] != filterSettingDefault[k]) eq = false;
+        if (k === 'Version' && filterSetting.value[k].length > 0) eq = false;
+        else if (k !== 'Version' && filterSetting.value[k] !== filterSettingDefault[k]) eq = false;
     });
     return !eq;
 });
@@ -301,7 +301,7 @@ const onNewlyConfirm = async () => {
     const warningSpan = newlyWarningArea.value;
     if (!/^\d{9}$/.test(uid)) {
         warningSpan.textContent = 'UID应为9位数字';
-    } else if (nickname.length == 0) {
+    } else if (nickname.length === 0) {
         warningSpan.textContent = '备注不能为空';
     } else if (achievementUids.value[uid] !== undefined) {
         warningSpan.textContent = 'UID已存在';

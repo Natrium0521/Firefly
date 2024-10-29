@@ -39,8 +39,8 @@ const summary = computed(() => {
         }
     });
     const sortedItemIds = Object.keys(itemInfo).sort((a, b) => {
-        if (itemInfo[a].star != itemInfo[b].star) return itemInfo[b].star - itemInfo[a].star;
-        if (itemInfo[a].count != itemInfo[b].count) return itemInfo[b].count - itemInfo[a].count;
+        if (itemInfo[a].star !== itemInfo[b].star) return itemInfo[b].star - itemInfo[a].star;
+        if (itemInfo[a].count !== itemInfo[b].count) return itemInfo[b].count - itemInfo[a].count;
         return +itemInfo[a].itemId - +itemInfo[b].itemId;
     });
     const items = [];

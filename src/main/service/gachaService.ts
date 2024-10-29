@@ -1,6 +1,6 @@
 import { app, BrowserWindow, dialog } from 'electron';
-import configService from './configService';
-import settingService from './settingService';
+import configService from './ConfigService';
+import settingService from './SettingService';
 import path from 'path';
 import fs from 'fs';
 
@@ -64,14 +64,14 @@ class GachaService {
     public async delGachaData(uid: string) {
         if (!/^\d{9}$/.test(uid)) return { msg: 'Invalid UID' };
         if (this.gachaUids[uid] === undefined) return { msg: 'UID not found' };
-        if (Object.keys(this.gachaUids).length == 1) return { msg: 'The last UID cant be deleted' };
+        if (Object.keys(this.gachaUids).length === 1) return { msg: 'The last UID cant be deleted' };
         delete this.gachaUids[uid];
         this.saveGachaUids();
         return { msg: 'OK' };
     }
 
     public async exportGachaData(uid: string, type = 'srgf_v1.0') {
-        if (type == 'srgf_v1.0') {
+        if (type === 'srgf_v1.0') {
             if (!/^\d{9}$/.test(uid)) return { msg: 'Invalid UID' };
             if (this.gachaUids[uid] === undefined) return { msg: 'UID not found' };
             const exportData = {
@@ -92,7 +92,7 @@ class GachaService {
             Object.values(JSON.parse(fs.readFileSync(path.join(this.gachaDataPath, `./${uid}.json`), 'utf-8'))).forEach((item) => {
                 const node = item;
                 node['count'] = '1';
-                if (node['item_id'].length == 4) {
+                if (node['item_id'].length === 4) {
                     node['item_type'] = '角色';
                     node['name'] = TextMapCHS[AvatarConfig[node['item_id']]['AvatarName']['Hash']];
                     node['rank_type'] = AvatarConfig[node['item_id']]['Rarity'].at(-1);
@@ -126,7 +126,7 @@ class GachaService {
                 return { msg: error.message };
             }
             return { msg: msg };
-        } else if (type == 'uigf_v4.0') {
+        } else if (type === 'uigf_v4.0') {
             const exportData = {
                 info: {
                     export_app: 'Firefly',
@@ -149,7 +149,7 @@ class GachaService {
                 Object.values(JSON.parse(fs.readFileSync(path.join(this.gachaDataPath, `./${uid}.json`), 'utf-8'))).forEach((item) => {
                     const node = item;
                     node['count'] = '1';
-                    if (node['item_id'].length == 4) {
+                    if (node['item_id'].length === 4) {
                         node['item_type'] = '角色';
                         node['name'] = TextMapCHS[AvatarConfig[node['item_id']]['AvatarName']['Hash']];
                         node['rank_type'] = AvatarConfig[node['item_id']]['Rarity'].at(-1);
@@ -192,8 +192,8 @@ class GachaService {
 
     public async importGachaData(type = 'srgf_v1.0', data = {}) {
         // data 为空使用文件导入
-        if (Object.keys(data).length == 0) {
-            if (type == 'srgf_v1.0') {
+        if (Object.keys(data).length === 0) {
+            if (type === 'srgf_v1.0') {
                 let msg = 'OK';
                 try {
                     await dialog
@@ -213,13 +213,13 @@ class GachaService {
                         .catch((err) => {
                             msg = err.message;
                         });
-                    if (msg != 'OK') return { msg: msg };
-                    if (data['info']['srgf_version'] != 'v1.0') return { msg: 'Unsupport SRGF version' };
+                    if (msg !== 'OK') return { msg: msg };
+                    if (data['info']['srgf_version'] !== 'v1.0') return { msg: 'Unsupport SRGF version' };
                     if (data['list'] === undefined) return { msg: 'No data' };
                 } catch (error) {
                     return { msg: error.message };
                 }
-            } else if (type == 'uigf_v4.0') {
+            } else if (type === 'uigf_v4.0') {
                 let msg = 'OK';
                 let uid = '';
                 try {
@@ -240,9 +240,9 @@ class GachaService {
                         .catch((err) => {
                             msg = err.message;
                         });
-                    if (msg != 'OK') return { msg: msg };
-                    if (data['info']['version'] != 'v4.0') return { msg: 'Unsupport UIGF version' };
-                    if (data['hkrpg'] === undefined || data['hkrpg'].length == 0) return { msg: 'No StarRail data' };
+                    if (msg !== 'OK') return { msg: msg };
+                    if (data['info']['version'] !== 'v4.0') return { msg: 'Unsupport UIGF version' };
+                    if (data['hkrpg'] === undefined || data['hkrpg'].length === 0) return { msg: 'No StarRail data' };
                     data['hkrpg'].forEach((userNode: unknown) => {
                         if (!/^\d{9}$/.test(userNode['uid'])) throw new Error('Invalid UID');
                         if (userNode['list'] === undefined) throw new Error('Invalid UIGF');
@@ -308,7 +308,7 @@ class GachaService {
 
     public async getGachaURL(server = 'cn') {
         let url = '';
-        if (server == 'cn') {
+        if (server === 'cn') {
             const playerLogPath = path.join(this.appDataPath, '../../../LocalLow/miHoYo/崩坏：星穹铁道/Player.log');
             const gameDataPath = fs.readFileSync(playerLogPath, 'utf-8').match(/Loading player data from (.*)data\.unity3d/)[1];
             const webCachePath = path.join(gameDataPath, './webCaches/');
@@ -327,7 +327,7 @@ class GachaService {
                     }
                 }
             });
-            if (maxVersion == '0.0.0.0') return { msg: 'URL not found' };
+            if (maxVersion === '0.0.0.0') return { msg: 'URL not found' };
             const urlWebCachePath = path.join(gameDataPath, `./webCaches/${maxVersion}/Cache/Cache_Data/data_2`);
             const urlLines = fs.readFileSync(urlWebCachePath, 'utf-8').split('1/0/');
             urlLines.forEach((line) => {
@@ -335,7 +335,7 @@ class GachaService {
                     url = line.match(/^.*?\x00/)[0].slice(0, -1);
                 }
             });
-            if (url == '') return { msg: 'URL not found' };
+            if (url === '') return { msg: 'URL not found' };
             const searchKeys = ['authkey_ver', 'authkey', 'game_biz', 'lang'];
             const urlObj = new URL(url);
             const params = urlObj.searchParams;

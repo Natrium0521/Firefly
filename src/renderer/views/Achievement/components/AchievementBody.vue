@@ -80,7 +80,7 @@ let achievementData = {};
 let meAchievement = [];
 let meAchievementMap = {};
 const refreshAchievementSeriesItemProgress = () => {
-    if (achievementSeriesItems.value.length == 0) return;
+    if (achievementSeriesItems.value.length === 0) return;
     const achievementSeries = {};
     achievementSeriesItems.value.forEach((item) => {
         item['count_finished'] = 0;
@@ -140,7 +140,7 @@ onMounted(async () => {
         tmp['achievement_id'] = item['AchievementID'];
         tmp['achievement_version'] = item['AchievementVersion'];
         tmp['achievement_title'] = textMapStore.getText(item['AchievementTitle']['Hash']).replaceAll('<unbreak>', '').replaceAll('</unbreak>', '');
-        tmp['achievement_show_type'] = item['ShowType'] == 'ShowAfterFinish' ? '隐藏' : '';
+        tmp['achievement_show_type'] = item['ShowType'] === 'ShowAfterFinish' ? '隐藏' : '';
         tmp['achievement_reward'] = rarityMap[item['Rarity']]['reward'];
         tmp['achievement_priority'] = item['Priority'];
         tmp['achievement_icon'] = achievementSeries[item['SeriesID']]['IconPath'].split('/').at(-1).replace('_s.png', rarityMap[item['Rarity']]['icon']);
@@ -236,7 +236,7 @@ watchEffect(() => {
     // 处理要展示的成就
     filteredAchievementItems.value = [];
     // 选择的成就集或者搜索结果
-    if (searchString.value == '') {
+    if (searchString.value === '') {
         achievementItems.value.forEach((item) => {
             if (selectedSeries.value == 0 || item.series_id == selectedSeries.value) {
                 filteredAchievementItems.value.push(item);
@@ -250,7 +250,7 @@ watchEffect(() => {
         });
     }
     // 筛选的版本
-    if (filterSetting.value.Version.length != 0) {
+    if (filterSetting.value.Version.length !== 0) {
         filteredAchievementItems.value = filteredAchievementItems.value.filter((item) => filterSetting.value.Version.includes(item.achievement_version));
     }
     // 筛选完成状态
@@ -260,8 +260,8 @@ watchEffect(() => {
     }
     // 筛选隐藏状态
     if (filterSetting.value.ShowHidden || filterSetting.value.ShowVisible) {
-        if (!filterSetting.value.ShowVisible) filteredAchievementItems.value = filteredAchievementItems.value.filter((item) => item.achievement_show_type == '隐藏');
-        if (!filterSetting.value.ShowHidden) filteredAchievementItems.value = filteredAchievementItems.value.filter((item) => item.achievement_show_type == '');
+        if (!filterSetting.value.ShowVisible) filteredAchievementItems.value = filteredAchievementItems.value.filter((item) => item.achievement_show_type === '隐藏');
+        if (!filterSetting.value.ShowHidden) filteredAchievementItems.value = filteredAchievementItems.value.filter((item) => item.achievement_show_type === '');
     }
     // 只显示互斥成就
     if (filterSetting.value.ShowMEOnly) filteredAchievementItems.value = filteredAchievementItems.value.filter((item) => meAchievementMap[item.achievement_id] !== undefined);

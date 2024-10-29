@@ -23,7 +23,7 @@ export const useUserGacha = defineStore('usergacha', () => {
     const setCurrGachaUid = async (uid: string) => {
         if (uid == gachaCurrUid.value) return;
         const ret = await window.fireflyAPI.gacha.getGachaData(uid, true);
-        if (ret['msg'] == 'OK') {
+        if (ret['msg'] === 'OK') {
             gachaCurrUid.value = uid;
             gachaCurrData.value = ret['data'];
         }
@@ -31,7 +31,7 @@ export const useUserGacha = defineStore('usergacha', () => {
 
     const newGachaUser = async (uid: string, nickname: string) => {
         const ret = await window.fireflyAPI.gacha.newGachaData(uid, nickname);
-        if (ret['msg'] == 'OK') {
+        if (ret['msg'] === 'OK') {
             gachaUids.value[uid] = nickname;
             gachaCurrUid.value = uid;
             gachaCurrData.value = (await window.fireflyAPI.gacha.getGachaData(uid, true))['data'];
@@ -41,7 +41,7 @@ export const useUserGacha = defineStore('usergacha', () => {
 
     const deleteGachaUser = async (uid: string) => {
         const ret = await window.fireflyAPI.gacha.delGachaData(uid);
-        if (ret['msg'] == 'OK') {
+        if (ret['msg'] === 'OK') {
             delete gachaUids.value[uid];
             gachaCurrUid.value = Object.keys(gachaUids.value)[0];
             gachaCurrData.value = (await window.fireflyAPI.gacha.getGachaData(gachaCurrUid.value, true))['data'];
@@ -51,7 +51,7 @@ export const useUserGacha = defineStore('usergacha', () => {
 
     const refreshGachaData = async (type: string, data: unknown) => {
         const ret = await window.fireflyAPI.gacha.importGachaData(type, data);
-        if (ret['msg'] == 'OK') {
+        if (ret['msg'] === 'OK') {
             gachaUids.value = (await window.fireflyAPI.gacha.getGachaUids())['data'];
             gachaCurrUid.value = ret['data']['uid'];
             gachaCurrData.value = (await window.fireflyAPI.gacha.getGachaData(gachaCurrUid.value))['data'];
@@ -61,7 +61,7 @@ export const useUserGacha = defineStore('usergacha', () => {
 
     const importGachaData = async (type: string) => {
         const ret = await window.fireflyAPI.gacha.importGachaData(type);
-        if (ret['msg'] == 'OK') {
+        if (ret['msg'] === 'OK') {
             gachaUids.value = (await window.fireflyAPI.gacha.getGachaUids())['data'];
             gachaCurrUid.value = ret['data']['uid'];
             gachaCurrData.value = (await window.fireflyAPI.gacha.getGachaData(gachaCurrUid.value))['data'];

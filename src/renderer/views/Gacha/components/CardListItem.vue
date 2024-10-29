@@ -2,7 +2,7 @@
     <div class="list-item" :class="[item.upType]" :title="item.time">
         <div class="bg-bar" :style="{ animationDelay: `-${item.progress / 100}s` }"></div>
         <div class="icon">
-            <img :src="iconMap[item.itemId] ?? (`${item.itemId}`.length == 4 ? iconMap[999] : iconMap['Icon_TestLightcone01'])" />
+            <img :src="iconMap[item.itemId] ?? (`${item.itemId}`.length === 4 ? iconMap[999] : iconMap['Icon_TestLightcone01'])" />
         </div>
         <div class="name">{{ item.name }}</div>
         <div class="tag">{{ tagMap[item.upType] }}</div>

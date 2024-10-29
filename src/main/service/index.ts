@@ -1,15 +1,15 @@
-import configService from './configService';
-import settingService from './settingService';
-import unlockFPSService from './unlockFPSService';
-import achievementService from './achievementService';
-import gachaService from './gachaService';
-import updateService from './updateService';
+import config from './ConfigService';
+import setting from './SettingService';
+import unlockfps from './UnlockFPSService';
+import achievement from './AchievementService';
+import gacha from './GachaService';
+import update from './UpdateService';
 
 export default {
-    config: configService,
-    setting: settingService,
-    unlockfps: unlockFPSService,
-    achievement: achievementService,
-    gacha: gachaService,
-    update: updateService,
+    config,
+    setting,
+    unlockfps,
+    achievement,
+    gacha,
+    update,
 };

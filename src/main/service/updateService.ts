@@ -76,7 +76,7 @@ class UpdateService {
             this.downloadState = 'failed';
             return 'no update file';
         }
-        if (this.calcCRC32(updateAsarPath) != hash.toUpperCase()) {
+        if (this.calcCRC32(updateAsarPath) !== hash.toUpperCase()) {
             this.downloadState = 'failed';
             return 'CRC32 verification failed';
         }
