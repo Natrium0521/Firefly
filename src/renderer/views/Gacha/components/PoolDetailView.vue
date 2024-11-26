@@ -100,6 +100,7 @@ watch(
     left: 0;
     right: 0;
     bottom: 0;
+    overflow-x: hidden;
     overflow-y: overlay;
     scroll-behavior: smooth;
     background-color: #fff7;

@@ -139,14 +139,18 @@ const doCheck = (useCache: boolean = false) => {
                 return;
             }
             if (isNewVersion(res['tag_name'])) {
-                res['assets'].forEach((asset: unknown) => {
-                    if (asset['name'].endsWith('.asar')) {
-                        downloadLink = asset['browser_download_url'];
-                        totalSize = asset['size'];
-                        asarHash = asset['name'].replace('.asar', '');
-                    }
-                });
-                if (downloadLink === '') {
+                const asarAsset = res['assets'].filter((asset: any) => asset['name'].endsWith('.asar')).pop();
+                if (asarAsset) {
+                    asarHash = asarAsset['name'].replace('.asar', '');
+                    totalSize = asarAsset['size'];
+                    downloadLink = asarAsset['browser_download_url'];
+                }
+                const patchAsset = res['assets'].filter((asset: any) => asset['name'] === `${versionNow}_${res['tag_name'].replace('v', '')}.patch`).pop();
+                if (patchAsset) {
+                    totalSize = patchAsset['size'];
+                    downloadLink = patchAsset['browser_download_url'];
+                }
+                if (!downloadLink || !asarHash) {
                     throw new Error('asar not found');
                 } else {
                     updateInfo.value = '发现新版 ' + res['tag_name'];
@@ -172,7 +176,9 @@ const doDownload = () => {
     updateState.value = 'downloading';
     downloadTimer = setInterval(() => {
         window.fireflyAPI.update.getDownloadInfo().then((info) => {
-            if (info.progress && info.speed && info.state) {
+            if (info.state) {
+                info.progress ??= 0;
+                info.speed ??= 0;
                 switch (info.state) {
                     case 'downloading':
                         updateInfo.value = '下载中';
@@ -230,6 +236,10 @@ const doDownload = () => {
 const doUpdate = () => {
     window.fireflyAPI.update.doUpdate(asarHash).then((res) => {
         switch (res) {
+            case 'patch failed':
+                updateInfo.value = '更新失败：补丁失败，请前往 GitHub 下载';
+                updateState.value = 'update_failed';
+                break;
             case 'no update file':
                 updateInfo.value = '更新失败：缺少更新文件';
                 updateState.value = 'update_failed';

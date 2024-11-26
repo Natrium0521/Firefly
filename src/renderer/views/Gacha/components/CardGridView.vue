@@ -19,6 +19,7 @@ defineProps(['gachaDetail']);
     right: 5px;
     border-radius: 5px;
     background-color: #fff7;
+    overflow-x: hidden;
     overflow-y: overlay;
     box-shadow: 1px 1px 2px #0003 inset;
     padding: 5px;

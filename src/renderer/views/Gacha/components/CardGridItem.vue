@@ -4,6 +4,7 @@
             <img :src="iconMap[item.itemId] ?? (`${item.itemId}`.length === 4 ? iconMap[999] : iconMap['Icon_TestLightcone01'])" />
         </div>
         <div v-if="item.count !== undefined" class="text">{{ item.count }}</div>
+        <img v-if="isChristmas && `${item.itemId}`.length === 4" src="../../../assets/image/svg/christmas-hat.svg" style="position: absolute; right: -92px; top: -98px; scale: 0.3; transform: rotate(30deg); filter: brightness(0.9)" />
     </div>
 </template>
 
@@ -16,6 +17,8 @@ Object.keys(icons).forEach((key) => {
 });
 
 defineProps(['item']);
+
+const isChristmas = new Date().getMonth() === 11 && new Date().getDate() === 25;
 </script>
 
 <style scoped lang="scss">

@@ -596,6 +596,7 @@ window.addEventListener('keydown', (e) => {
     grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
     grid-template-rows: repeat(auto-fill, 60px);
     gap: 5px;
+    overflow-x: hidden;
     overflow-y: scroll;
     scroll-behavior: smooth;
     transition: all 300ms ease;

@@ -2,6 +2,8 @@ import { BrowserWindow } from 'electron';
 import path from 'path';
 import fs from 'fs';
 import { exec } from 'child_process';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const bsdiff = require('../static/node/bsdiff.node');
 
 class UpdateService {
     private exePath: string;
@@ -22,7 +24,7 @@ class UpdateService {
         if (this.downloadState === 'downloading' || this.downloadState === 'downloaded') return;
         this.mainWindow.webContents.session.once('will-download', (event, item) => {
             this.downloadItem = item;
-            item.setSavePath(path.join(this.exePath, '../resources/update.asar'));
+            item.setSavePath(path.join(this.exePath, '../resources/update.' + url.split('.').pop()));
             this.lastTime = Date.now();
             this.lastBytes = 0;
             this.downloadSpeed = 0;
@@ -71,7 +73,18 @@ class UpdateService {
 
     public async doUpdate(hash: string) {
         process.noAsar = true;
+        const originAsarPath = path.join(this.exePath, '../resources/app.asar');
+        const patchPath = path.join(this.exePath, '../resources/update.patch');
         const updateAsarPath = path.join(this.exePath, '../resources/update.asar');
+        if (fs.existsSync(patchPath)) {
+            try {
+                bsdiff.patchSync(originAsarPath, updateAsarPath, patchPath);
+            } catch (e) {
+                this.downloadState = 'failed';
+                return 'patch failed';
+            }
+            fs.rmSync(patchPath);
+        }
         if (!fs.existsSync(updateAsarPath)) {
             this.downloadState = 'failed';
             return 'no update file';
@@ -102,7 +115,7 @@ class UpdateService {
         `;
         const psPath = path.join(this.exePath, '../update.ps1');
         fs.writeFileSync(psPath, psContent, 'utf-8');
-        exec('powershell.exe -File ./update.ps1');
+        setTimeout(() => exec('powershell.exe -File ./update.ps1'));
         return 'updating';
     }
 
