@@ -231,7 +231,7 @@ const doDownload = () => {
                 downloadInfoSize.value = size.toFixed(2) + unit;
             }
         });
-    }, 1000);
+    }, 250);
 };
 const doUpdate = () => {
     window.fireflyAPI.update.doUpdate(asarHash).then((res) => {

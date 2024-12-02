@@ -4630,14 +4630,96 @@
     "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/22003.png",
     "ImagePath": "SpriteOutput/LightConeMaxFigures/22003.png",
     "ItemRightPanelOffset": [
-      18,
-      -135,
-      0.8
+      19,
+      -117,
+      1.2
     ],
     "AvatarDetailOffset": [
       19,
       -117,
       1.2
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "23035": {
+    "EquipmentID": 23035,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": -1658973982
+    },
+    "EquipmentDesc": {
+      "Hash": 371857150
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Warlock",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23035,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23035.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23035.png",
+    "ItemRightPanelOffset": [
+      7,
+      -218,
+      1.35
+    ],
+    "AvatarDetailOffset": [
+      -5,
+      -189,
+      1.9
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "23034": {
+    "EquipmentID": 23034,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": -1658973981
+    },
+    "EquipmentDesc": {
+      "Hash": 371857150
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Shaman",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23034,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23034.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23034.png",
+    "ItemRightPanelOffset": [
+      2,
+      -80,
+      0.68
+    ],
+    "AvatarDetailOffset": [
+      -6,
+      -83,
+      1.1
     ],
     "BattleDialogOffset": [
       0,

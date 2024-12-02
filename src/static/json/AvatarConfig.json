@@ -4773,6 +4773,118 @@
       5
     ]
   },
+  "1225": {
+    "AvatarID": 1225,
+    "AvatarName": {
+      "Hash": 1511480173
+    },
+    "AvatarFullName": {
+      "Hash": 271014362
+    },
+    "AdventurePlayerID": 1225,
+    "AvatarVOTag": "fugue",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "AvatarInitialSkinName": {
+      "Hash": 371857150
+    },
+    "AvatarInitialSkinDesc": {
+      "Hash": 371857150
+    },
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Fugue_00_Config.json",
+    "DamageType": "Fire",
+    "SPNeed": {
+      "Value": 130
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      122501,
+      122502,
+      122503,
+      122504,
+      122505,
+      122506
+    ],
+    "RewardList": [
+      {
+        "ItemID": 11225,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 40
+      }
+    ],
+    "RewardListMax": [
+      {
+        "ItemID": 252,
+        "ItemNum": 100
+      }
+    ],
+    "SkillList": [
+      122501,
+      122502,
+      122503,
+      122504,
+      122506,
+      122507,
+      122508
+    ],
+    "AvatarBaseType": "Warlock",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Fugue_00/Avatar_Fugue_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1225.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1225.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1225.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1225.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1225B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1225.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Fugue_00/Manikin_Avatar_Maid_Fugue_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Fugue_00_Config.json",
+    "AvatarDesc": {
+      "Hash": 371857150
+    },
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/WarlockSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1225.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1225.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1225.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1225.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1225.png",
+    "AvatarCutinIntroText": {
+      "Hash": 371857150
+    },
+    "AvatarDropOffset": [
+      115,
+      97,
+      0.64,
+      115,
+      97,
+      0.64,
+      115,
+      97,
+      0.64
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [
+      54,
+      -164,
+      1.2
+    ],
+    "AssistBgOffset": [
+      -34,
+      -86,
+      1
+    ],
+    "AvatarSelfShowOffset": [
+      1.5,
+      -60,
+      4
+    ]
+  },
   "1301": {
     "AvatarID": 1301,
     "AvatarName": {
@@ -5909,6 +6021,121 @@
     "AssistOffset": [],
     "AssistBgOffset": [],
     "AvatarSelfShowOffset": []
+  },
+  "1313": {
+    "AvatarID": 1313,
+    "AvatarName": {
+      "Hash": 772168265
+    },
+    "AvatarFullName": {
+      "Hash": 1073167130
+    },
+    "AdventurePlayerID": 1313,
+    "AvatarVOTag": "sunday",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "AvatarInitialSkinName": {
+      "Hash": 371857150
+    },
+    "AvatarInitialSkinDesc": {
+      "Hash": 371857150
+    },
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Sunday_10_Config.json",
+    "DamageType": "Imaginary",
+    "SPNeed": {
+      "Value": 130
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      131301,
+      131302,
+      131303,
+      131304,
+      131305,
+      131306
+    ],
+    "RewardList": [
+      {
+        "ItemID": 11313,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 40
+      }
+    ],
+    "RewardListMax": [
+      {
+        "ItemID": 252,
+        "ItemNum": 100
+      }
+    ],
+    "SkillList": [
+      131301,
+      131302,
+      131303,
+      131304,
+      131306,
+      131307
+    ],
+    "AvatarBaseType": "Shaman",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Sunday_10/Avatar_Sunday_10.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1313.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1313.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1313.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1313.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1313B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1313.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Sunday_10/Manikin_Avatar_Lad_Sunday_10.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Sunday_10_Config.json",
+    "AvatarDesc": {
+      "Hash": 371857150
+    },
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/ShamanSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1313.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1313.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1313.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1313.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1313.png",
+    "AvatarCutinIntroText": {
+      "Hash": 1175625444
+    },
+    "AvatarDropOffset": [
+      5,
+      -95,
+      0.64,
+      5,
+      -95,
+      0.64,
+      5,
+      -95,
+      0.64
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [
+      -21,
+      -48,
+      1
+    ],
+    "AssistOffset": [
+      10,
+      -42,
+      1.3
+    ],
+    "AssistBgOffset": [
+      -140,
+      -260,
+      1
+    ],
+    "AvatarSelfShowOffset": [
+      -55,
+      -45,
+      5
+    ]
   },
   "1314": {
     "AvatarID": 1314,
