@@ -70,8 +70,8 @@ class GachaService {
         return { msg: 'OK' };
     }
 
-    public async exportGachaData(uid: string, type = 'srgf_v1.0') {
-        if (type === 'srgf_v1.0') {
+    public async exportGachaData(uid: string | string[], type = 'srgf_v1.0') {
+        if (type === 'srgf_v1.0' && !Array.isArray(uid)) {
             if (!/^\d{9}$/.test(uid)) return { msg: 'Invalid UID' };
             if (this.gachaUids[uid] === undefined) return { msg: 'UID not found' };
             const exportData = {
@@ -139,7 +139,7 @@ class GachaService {
             const AvatarConfig = this.loadJson('AvatarConfig');
             const EquipmentConfig = this.loadJson('EquipmentConfig');
             const TextMapCHS = this.loadJson('TextMapCHS');
-            Object.keys(this.gachaUids).forEach((uid) => {
+            (Array.isArray(uid) && uid.length > 0 ? uid : Object.keys(this.gachaUids)).forEach((uid) => {
                 const userNode = {
                     uid: `${uid}`,
                     lang: 'zh-cn',

@@ -68,6 +68,19 @@
                     <option value="srgf_v1.0">SRGF v1.0</option>
                 </select>
             </div>
+            <div class="select-uigf-uid-area" v-show="isExportingUIGF">
+                <div class="wrapper">
+                    <div v-for="[uid, nickname] in Object.entries(gachaUids)" :key="uid" class="uid-checkbox" @click="selectedUIGFUids.has(uid) ? selectedUIGFUids.delete(uid) : selectedUIGFUids.add(uid)">
+                        <Checkbox class="checkbox" :model-value="selectedUIGFUids.has(uid)" />
+                        <div class="nickname">{{ nickname }}</div>
+                        <div class="uid">{{ uid }}</div>
+                    </div>
+                </div>
+                <div class="select-all-button" @click="selectedUIGFUids.size === Object.keys(gachaUids).length ? selectedUIGFUids.clear() : (selectedUIGFUids = new Set<string>(Object.keys(gachaUids)))">
+                    <Checkbox :model-value="selectedUIGFUids.size === Object.keys(gachaUids).length" />
+                    <span style="margin-left: 8px">全选</span>
+                </div>
+            </div>
             <div class="warning-area" ref="exportWarningArea"></div>
             <div class="button-area">
                 <div class="button" @click="showingAlert = 'none'">取消</div>
@@ -90,21 +103,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
-import emitter from '../../../utils/mitt';
-import UidDropdown from '../../../components/UidDropdown.vue';
+import { ref, computed, toRaw } from 'vue';
+import emitter from '@renderer/utils/mitt';
+import UidDropdown from '@renderer/components/UidDropdown.vue';
+import Checkbox from '@renderer/components/Checkbox.vue';
 import GachaHeadButton from './GachaHeadButton.vue';
-import Alert from '../../../components/Alert.vue';
+import Alert from '@renderer/components/Alert.vue';
 import CardGridItem from './CardGridItem.vue';
-import RefreshIcon from '../../../assets/image/svg/refresh.svg';
-import RenameIcon from '../../../assets/image/svg/rename.svg';
-import SwitchIcon from '../../../assets/image/svg/switch.svg';
-import ImportIcon from '../../../assets/image/svg/import.svg';
-import ExportIcon from '../../../assets/image/svg/export.svg';
-import DeleteIcon from '../../../assets/image/svg/delete.svg';
-import FromFileIcon from '../../../assets/image/svg/file-code.svg';
-import FromLinkIcon from '../../../assets/image/svg/link.svg';
-import { useUserGacha } from '../../../store/usergacha';
+import RefreshIcon from '@renderer/assets/image/svg/refresh.svg';
+import RenameIcon from '@renderer/assets/image/svg/rename.svg';
+import SwitchIcon from '@renderer/assets/image/svg/switch.svg';
+import ImportIcon from '@renderer/assets/image/svg/import.svg';
+import ExportIcon from '@renderer/assets/image/svg/export.svg';
+import DeleteIcon from '@renderer/assets/image/svg/delete.svg';
+import FromFileIcon from '@renderer/assets/image/svg/file-code.svg';
+import FromLinkIcon from '@renderer/assets/image/svg/link.svg';
+import { useUserGacha } from '@renderer/store/usergacha';
 
 const gachaViewTypeNext = ref('卡池');
 const userGachaStore = useUserGacha();
@@ -332,11 +346,14 @@ const onImportConfirm = async () => {
 let exportable = false;
 const exportWarningArea = ref<HTMLDivElement>(null);
 const exportTypeSelect = ref<HTMLSelectElement>(null);
+const isExportingUIGF = ref(false);
+const selectedUIGFUids = ref(new Set<string>());
 const onSelectExportFormat = async () => {
     const type = exportTypeSelect.value.value + '';
     const warningSpan = exportWarningArea.value;
     warningSpan.innerHTML = '';
     exportable = false;
+    isExportingUIGF.value = false;
     if (type === 'srgf_v1.0') {
         if (!(await userGachaStore.checkExportable(showingUid.value))) {
             warningSpan.innerHTML = '当前记录存在未知角色/光锥<br>为避免导出数据有误，请更新后再尝试导出';
@@ -350,7 +367,8 @@ const onSelectExportFormat = async () => {
                 return;
             }
         }
-        warningSpan.innerHTML = '注意：UIGFv4.0 会将所有 uid 的跃迁记录导出到一个文件';
+        isExportingUIGF.value = true;
+        selectedUIGFUids.value = new Set<string>(Object.keys(gachaUids.value));
         exportable = true;
     }
 };
@@ -358,7 +376,11 @@ const onExportConfirm = async () => {
     if (!exportable) return;
     const type = exportTypeSelect.value.value + '';
     const warningSpan = exportWarningArea.value;
-    const ret = await userGachaStore.exportGachaData(type);
+    if (isExportingUIGF.value && selectedUIGFUids.value.size === 0) {
+        warningSpan.innerHTML = '请至少选择一个要导出的uid';
+        return;
+    }
+    const ret = await userGachaStore.exportGachaData(type, isExportingUIGF.value ? [...selectedUIGFUids.value] : undefined);
     if (ret['msg'] === 'OK') {
         showingAlert.value = 'none';
     } else {
@@ -526,6 +548,99 @@ window.addEventListener('keydown', (e) => {
         border: solid 1px var(--theme-color);
         border-radius: 3px;
         padding: 0 4px;
+    }
+}
+
+.select-uigf-uid-area {
+    margin-top: 10px;
+
+    .wrapper {
+        padding: 4px 4px 4px 9px;
+        margin-bottom: 8px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        width: 325px;
+        overflow-y: scroll;
+        background-color: #fff7;
+        border-top: 1px solid #0003;
+        border-right: 1px solid #ccc3;
+        border-bottom: 1px solid #ccc3;
+        border-left: 1px solid #0003;
+        border-radius: 5px;
+        max-height: 250px;
+
+        &::-webkit-scrollbar-track {
+            margin: 3px;
+        }
+
+        .uid-checkbox {
+            position: relative;
+            border-top: 1px solid #ccc3;
+            border-right: 1px solid #0003;
+            border-bottom: 1px solid #0003;
+            border-left: 1px solid #ccc3;
+            border-radius: 5px;
+            height: 50px;
+            background-color: #fff9;
+            transition: all 100ms ease;
+
+            .checkbox {
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                margin: auto;
+                left: 8px;
+            }
+
+            .nickname {
+                position: absolute;
+                left: 38px;
+                top: 8px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 110px;
+            }
+
+            .uid {
+                position: absolute;
+                bottom: 8px;
+                left: 40px;
+                font-size: 0.75em;
+                color: var(--theme-color);
+            }
+
+            &:hover {
+                filter: brightness(0.95);
+            }
+
+            &:active {
+                filter: brightness(0.88);
+            }
+        }
+    }
+
+    .select-all-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 100ms ease;
+        padding: 4px;
+        border-radius: 5px;
+        width: 80px;
+        left: 0;
+        right: 0;
+        position: relative;
+        margin: auto;
+
+        &:hover {
+            background-color: #eee;
+        }
+
+        &:active {
+            background-color: #ddd;
+        }
     }
 }
 

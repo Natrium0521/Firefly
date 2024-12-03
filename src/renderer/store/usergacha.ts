@@ -69,8 +69,8 @@ export const useUserGacha = defineStore('usergacha', () => {
         return ret;
     };
 
-    const exportGachaData = async (type: string) => {
-        const ret = await window.fireflyAPI.gacha.exportGachaData(gachaCurrUid.value, type);
+    const exportGachaData = async (type: string, uids?: string[]) => {
+        const ret = await window.fireflyAPI.gacha.exportGachaData(uids || gachaCurrUid.value, type);
         return ret;
     };
 

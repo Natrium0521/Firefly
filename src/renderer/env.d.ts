@@ -35,7 +35,7 @@ declare interface Window {
             getGachaData: (uid: string, changeLastGachaUid?: boolean) => Promise<unknown>;
             newGachaData: (uid: string, nickname: string) => Promise<unknown>;
             delGachaData: (uid: string) => Promise<unknown>;
-            exportGachaData: (uid: string, type?: string) => Promise<unknown>;
+            exportGachaData: (uid: string | string[], type?: string) => Promise<unknown>;
             importGachaData: (type?: string, data?: unknown) => Promise<unknown>;
             getGachaURL: (server?: string) => Promise<unknown>;
         };
