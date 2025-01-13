@@ -44,6 +44,7 @@
     "winreg": "^1.2.5"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.1"
+    "electron-squirrel-startup": "^1.0.1",
+    "vue-router": "^4.5.0"
   }
 }

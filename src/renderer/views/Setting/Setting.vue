@@ -30,6 +30,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import Alert from '@renderer/components/Alert.vue';
 import ProgressBar from '@renderer/components/ProgressBar.vue';
 import AboutArea from './components/AboutArea.vue';
@@ -40,6 +41,20 @@ import CloseIconPath from '@renderer/assets/image/svg/close-circle.svg';
 import DebugIconPath from '@renderer/assets/image/svg/bug.svg';
 import UpdateIconPath from '@renderer/assets/image/svg/update.svg';
 import UnlockIconPath from '@renderer/assets/image/svg/unlock.svg';
+
+const route = useRoute();
+const router = useRouter();
+watch(
+    () => route.fullPath,
+    () => {
+        if (route.path === '/setting') {
+            if (route.query?.showUpdate === 'true') {
+                showUpdateAlert.value = true;
+                router.replace('/setting');
+            }
+        }
+    }
+);
 
 let isFPSUnlocked = ref(false);
 let unlockFPSDesc = ref('检测中');
@@ -97,6 +112,10 @@ onMounted(() => {
     window.fireflyAPI.config.getAppVersion().then((res) => {
         versionNow = res;
     });
+    if (route.fullPath === '/setting?showUpdate=true') {
+        showUpdateAlert.value = true;
+        router.replace('/setting');
+    }
 });
 
 const showUpdateAlert = ref(false);

@@ -65,6 +65,13 @@ const createMainWindow = () => {
         }
     });
 
+    mainWindow.webContents.on('before-input-event', (event, input) => {
+        if (input.control && input.shift && input.key.toLowerCase() === 'i' && settingService.getAppSettingsSync()['Debug']) {
+            mainWindow.webContents.toggleDevTools();
+            event.preventDefault();
+        }
+    });
+
     // mainWindow.webContents.openDevTools();
 };
 

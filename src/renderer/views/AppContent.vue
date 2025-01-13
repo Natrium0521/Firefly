@@ -2,62 +2,71 @@
     <div class="app-content">
         <div class="app-content-sidebar-wrapper" :class="{ collapsed: isSidebarCollapsed }">
             <div class="app-content-sidebar">
-                <div class="app-content-sidebar-item" :class="{ selected: currentComponent === Achievement }" @click="onSidebarItemClick($event, Achievement)">
+                <RouterLink to="/achievement" active-class="selected" class="app-content-sidebar-item">
                     <img src="../assets/image/hsr/AchievementIcon.png" />
                     <span>成就管理</span>
-                </div>
-                <div class="app-content-sidebar-item" :class="{ selected: currentComponent === Gacha }" @click="onSidebarItemClick($event, Gacha)">
+                </RouterLink>
+                <RouterLink to="/gacha" active-class="selected" class="app-content-sidebar-item">
                     <img src="../assets/image/hsr/DrawcardIcon.png" />
                     <span>跃迁记录</span>
-                </div>
-                <div class="app-content-sidebar-item" :class="{ selected: currentComponent === Setting }" @click="onSidebarItemClick($event, Setting)">
+                </RouterLink>
+                <RouterLink to="/setting" active-class="selected" class="app-content-sidebar-item">
                     <img src="../assets/image/hsr/SettingsIcon.png" />
                     <span>设置</span>
-                </div>
+                </RouterLink>
                 <div class="app-content-sidebar-item" style="margin-top: auto; width: 45px" @click="isSidebarCollapsed = !isSidebarCollapsed">
                     <img src="../assets/image/svg/hamburger-button.svg" style="transform: translate(8px, -50%)" />
                 </div>
             </div>
         </div>
         <div class="app-content-main" :class="{ collapsed: isSidebarCollapsed }">
-            <Transition :name="transitionName">
-                <KeepAlive>
-                    <component :is="currentComponent" />
-                </KeepAlive>
-            </Transition>
+            <RouterView v-slot="{ Component }">
+                <Transition :name="transitionName">
+                    <KeepAlive>
+                        <component :is="Component" />
+                    </KeepAlive>
+                </Transition>
+            </RouterView>
         </div>
         <Toast />
     </div>
 </template>
 
 <script setup lang="ts">
-import { ref, shallowRef, watch } from 'vue';
-import Achievement from './Achievement/Achievement.vue';
-import Gacha from './Gacha/Gacha.vue';
-import Setting from './Setting/Setting.vue';
+import { ref, watch } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import Toast from '@renderer/components/Toast/Toast.vue';
 
-const componentIndex = new WeakMap([
-    [Achievement, 1],
-    [Gacha, 2],
-    [Setting, 3],
-]);
 const isSidebarCollapsed = ref(false);
 window.fireflyAPI.setting.getAppSettings().then((settings) => {
     isSidebarCollapsed.value = settings['SidebarCollapsed'];
 });
-const currentComponent = shallowRef(Achievement);
-const transitionName = ref('');
 
-function onSidebarItemClick(event: MouseEvent, component: any) {
-    if (currentComponent.value === component) return;
-    if (componentIndex.get(currentComponent.value) > componentIndex.get(component)) {
-        transitionName.value = 'slide-down';
-    } else {
-        transitionName.value = 'slide-up';
+const router = useRouter();
+router.push('/achievement');
+
+const route = useRoute();
+const transitionName = ref('');
+let pathBefore = '/achievement';
+const pathIndex = {
+    '/achievement': 0,
+    '/gacha': 1,
+    '/setting': 2,
+};
+watch(
+    () => route.path,
+    () => {
+        if (pathBefore === route.path) return;
+        const indexBefore = pathIndex[pathBefore];
+        const indexNow = pathIndex[route.path];
+        if (indexBefore > indexNow) {
+            transitionName.value = 'slide-down';
+        } else if (indexBefore < indexNow) {
+            transitionName.value = 'slide-up';
+        }
+        pathBefore = route.path;
     }
-    currentComponent.value = component;
-}
+);
 
 watch(isSidebarCollapsed, () => {
     window.fireflyAPI.setting.setAppSettings('SidebarCollapsed', isSidebarCollapsed.value);
@@ -124,6 +133,7 @@ watch(isSidebarCollapsed, () => {
     margin-bottom: 5px;
     margin-left: 5px;
     transition: all 50ms ease;
+    cursor: default;
 }
 
 .app-content-sidebar-item:hover {
@@ -153,6 +163,7 @@ watch(isSidebarCollapsed, () => {
     top: 50%;
     transform: translate(50px, -50%);
     text-wrap: nowrap;
+    color: black;
     transition: all 300ms ease;
 }
 

@@ -30,6 +30,11 @@ onMounted(() => {
                 break;
         }
     });
+    document.body.addEventListener('mousedown', function (e) {
+        if (e.target instanceof HTMLElement && e.target.closest('a')) {
+            e.preventDefault();
+        }
+    });
     useUserAchievement().init();
     useUserGacha().init();
     window.fireflyAPI.setting.getAppSettings().then((res) => {
@@ -79,7 +84,7 @@ onMounted(() => {
                                 changeLog += item + '<br>';
                             }
                         });
-                        Toast.info('发现新版本', '可前往设置页面更新或直接跳转 <a href="https://github.com/Natrium0521/Firefly/releases/latest" style="text-decoration: none;">GitHub</a> 下载<br><br>' + changeLog, 60000);
+                        Toast.info('发现新版本', '<a href="#/setting?showUpdate=true" style="text-decoration: none;">点击前往更新页</a><br><br>' + changeLog, 60000);
                     }
                 })
                 .catch(() => {});
