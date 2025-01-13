@@ -11,7 +11,7 @@ _✨使用 [electron](https://github.com/electron/electron) 开发的《崩坏�
 [![license](https://img.shields.io/github/license/Natrium0521/Firefly)](./LICENSE)
 [![downloads](https://img.shields.io/github/downloads/Natrium0521/Firefly/total)](https://github.com/Natrium0521/Firefly/releases/latest)
 [![release](https://img.shields.io/github/v/release/Natrium0521/Firefly?color=9f71d3)](https://github.com/Natrium0521/Firefly/releases/latest)
-[![game version](https://img.shields.io/badge/for_HSR-v2.7-9f71d3)](https://github.com/Natrium0521/Firefly/releases/latest)
+[![game version](https://img.shields.io/badge/for_HSR-v3.0-9f71d3)](https://github.com/Natrium0521/Firefly/releases/latest)
 
 </div>
 
@@ -58,15 +58,9 @@ npm start
 
 ## 开发计划
 
-~~只是计划（有空再说~~
+由于本人近期以及未来空闲时间比较少，所以项目不会再增加新功能，但每个游戏版本还是会更新一下的
 
-- [ ] 国际服适配
-
-- [ ] i18n
-
-- [x] 重构
-
-- [x] 软件内更新
+有兴趣加新功能或维护的可以提交 PR
 
 ## Special Thanks
 

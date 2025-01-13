@@ -164,6 +164,7 @@ onMounted(async () => {
         });
         Object.entries(textReplaceMap).forEach(([k, hash]) => {
             tmp_desc = tmp_desc.replaceAll(k, textMapStore.getText(hash['Hash']));
+            tmp['achievement_title'] = tmp['achievement_title'].replaceAll(k, textMapStore.getText(hash['Hash']));
         });
         tmp['achievement_desc_upper'] = tmp_desc.includes('※') ? tmp_desc.split('※')[0] : tmp_desc;
         tmp['achievement_desc_lower'] = tmp_desc.includes('※') ? '※' + tmp_desc.replace(/^.*?※/, '') : '';
