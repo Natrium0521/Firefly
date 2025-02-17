@@ -197,7 +197,7 @@ class AchievementService {
             if (!keepCookie) await this.mysBrowserWindow.webContents.session.clearStorageData({ storages: ['cookies'] });
             this.mysBrowserWindow.loadURL('https://act.mihoyo.com/sr/event/cultivation-tool/index.html#/tools/achievement');
             let flag = false;
-            this.mysBrowserWindow.webContents.session.webRequest.onBeforeSendHeaders({ urls: ['*://api-takumi.mihoyo.com/event/rpgcultivate/achievement/list*'] }, (details, callback) => {
+            this.mysBrowserWindow.webContents.session.webRequest.onBeforeSendHeaders({ urls: ['*://*.mihoyo.com/event/rpgcultivate/achievement/list*'] }, (details, callback) => {
                 if (details.method === 'OPTIONS') return callback({});
                 if (flag) return callback({});
                 flag = true;
