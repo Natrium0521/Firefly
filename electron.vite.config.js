@@ -22,7 +22,7 @@ const hashFiles = ['AchievementData.json', 'AchievementSeries.json', 'Achievemen
 const lessenTextMap = (textMapFilePath, hashFilePath) => {
     const hashs = new Set();
     hashFiles.forEach((file) => {
-        const hashRegex = /"Hash": ?(-?\d+)/gm;
+        const hashRegex = /"Hash": ?"(\d+)"/gm;
         const hashFileContent = fs.readFileSync(path.join(hashFilePath, file), 'utf-8');
         let match;
         while ((match = hashRegex.exec(hashFileContent)) !== null) {

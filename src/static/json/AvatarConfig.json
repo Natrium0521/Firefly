@@ -2,20 +2,14 @@
   "1001": {
     "AvatarID": 1001,
     "AvatarName": {
-      "Hash": -531793651
+      "Hash": "6186714091647966180"
     },
     "AvatarFullName": {
-      "Hash": -1063124016
+      "Hash": "9058972803650014395"
     },
     "AdventurePlayerID": 1001,
     "AvatarVOTag": "mar7th",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Mar_7th_00_Config.json",
     "DamageType": "Ice",
     "SPNeed": {
@@ -66,9 +60,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1001.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Mar_7th_00/Manikin_Avatar_Maid_Mar_7th_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Mar_7th_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/KnightSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -79,7 +70,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1001.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1001.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257942
+      "Hash": "7663786577497784004"
     },
     "AvatarDropOffset": [
       31,
@@ -117,20 +108,14 @@
   "1002": {
     "AvatarID": 1002,
     "AvatarName": {
-      "Hash": -935078178
+      "Hash": "10239807114774791393"
     },
     "AvatarFullName": {
-      "Hash": -8036553
+      "Hash": "5982200128528119830"
     },
     "AdventurePlayerID": 1002,
     "AvatarVOTag": "danheng",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_DanHeng_00_Config.json",
     "DamageType": "Wind",
     "SPNeed": {
@@ -181,9 +166,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1002.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/DanHeng_00/Manikin_Avatar_Lad_DanHeng_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_DanHeng_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/RogueSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -194,7 +176,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1002.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1002.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257945
+      "Hash": "9591651858232036873"
     },
     "AvatarDropOffset": [
       -65,
@@ -232,20 +214,14 @@
   "1003": {
     "AvatarID": 1003,
     "AvatarName": {
-      "Hash": 631005763
+      "Hash": "17590286599225097191"
     },
     "AvatarFullName": {
-      "Hash": -844315511
+      "Hash": "4755307755787948674"
     },
     "AdventurePlayerID": 1003,
     "AvatarVOTag": "himeko",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Himeko_00_Config.json",
     "DamageType": "Fire",
     "SPNeed": {
@@ -296,9 +272,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1003.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Himeko_00/Manikin_Avatar_Lady_Himeko_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Himeko_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/MageSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -309,7 +282,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1003.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1003.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257944
+      "Hash": "3146994100761246998"
     },
     "AvatarDropOffset": [
       11.9,
@@ -351,20 +324,14 @@
   "1004": {
     "AvatarID": 1004,
     "AvatarName": {
-      "Hash": 227721236
+      "Hash": "2178816269909174781"
     },
     "AvatarFullName": {
-      "Hash": -871204766
+      "Hash": "10896822417289878666"
     },
     "AdventurePlayerID": 1004,
     "AvatarVOTag": "welt",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Welt_00_Config.json",
     "DamageType": "Imaginary",
     "SPNeed": {
@@ -415,9 +382,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1004.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Welt_00/Manikin_Avatar_Male_Welt_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Welt_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarlockSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -428,7 +392,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1004.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1004.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257939
+      "Hash": "2522493300009250447"
     },
     "AvatarDropOffset": [
       12,
@@ -466,20 +430,14 @@
   "1005": {
     "AvatarID": 1005,
     "AvatarName": {
-      "Hash": 1793805177
+      "Hash": "831482934451783913"
     },
     "AvatarFullName": {
-      "Hash": -1328813516
+      "Hash": "10572658971334269700"
     },
     "AdventurePlayerID": 1005,
     "AvatarVOTag": "kafka",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Kafka_00_Config.json",
     "DamageType": "Thunder",
     "SPNeed": {
@@ -530,9 +488,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1005.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Kafka_00/Manikin_Avatar_Lady_Kafka_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Kafka_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarlockSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -543,7 +498,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1005.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1005.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257938
+      "Hash": "5554621838917182947"
     },
     "AvatarDropOffset": [
       1,
@@ -577,20 +532,14 @@
   "1006": {
     "AvatarID": 1006,
     "AvatarName": {
-      "Hash": 1390520650
+      "Hash": "12437709666645057337"
     },
     "AvatarFullName": {
-      "Hash": 621775846
+      "Hash": "9128069838706287746"
     },
     "AdventurePlayerID": 1006,
     "AvatarVOTag": "silverwolf",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Silwolf_00_Config.json",
     "DamageType": "Quantum",
     "SPNeed": {
@@ -641,9 +590,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1006.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Silwolf_00/Manikin_Avatar_Girl_Silwolf_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Silwolf_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarlockSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -654,7 +600,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1006.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1006.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257941
+      "Hash": "4242231675534793921"
     },
     "AvatarDropOffset": [
       -33,
@@ -692,20 +638,14 @@
   "1008": {
     "AvatarID": 1008,
     "AvatarName": {
-      "Hash": 1840859344
+      "Hash": "4959846561380667115"
     },
     "AvatarFullName": {
-      "Hash": 1185245652
+      "Hash": "1168184588698982600"
     },
     "AdventurePlayerID": 1008,
     "AvatarVOTag": "arlan",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Arlan_00_Config.json",
     "DamageType": "Thunder",
     "SPNeed": {
@@ -756,9 +696,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1008.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Arlan_00/Manikin_Avatar_Boy_Arlan_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Arlan_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarriorSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -769,7 +706,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1008.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1008.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257935
+      "Hash": "667985318027174173"
     },
     "AvatarDropOffset": [
       -36,
@@ -807,20 +744,14 @@
   "1009": {
     "AvatarID": 1009,
     "AvatarName": {
-      "Hash": -888024011
+      "Hash": "1893706111363255403"
     },
     "AvatarFullName": {
-      "Hash": 1138827395
+      "Hash": "3731275339478603354"
     },
     "AdventurePlayerID": 1009,
     "AvatarVOTag": "asta",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Asta_00_Config.json",
     "DamageType": "Fire",
     "SPNeed": {
@@ -871,9 +802,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1009.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Asta_00/Manikin_Avatar_Maid_Asta_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Asta_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/ShamanSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -884,7 +812,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1009.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1009.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257934
+      "Hash": "9429550184220323785"
     },
     "AvatarDropOffset": [
       28,
@@ -922,20 +850,14 @@
   "1013": {
     "AvatarID": 1013,
     "AvatarName": {
-      "Hash": 631005764
+      "Hash": "6548832256366079839"
     },
     "AvatarFullName": {
-      "Hash": -683608126
+      "Hash": "4000731344953476658"
     },
     "AdventurePlayerID": 1013,
     "AvatarVOTag": "herta",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Herta_00_Config.json",
     "DamageType": "Ice",
     "SPNeed": {
@@ -986,9 +908,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1013.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Herta_00/Manikin_Avatar_Girl_Herta_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Herta_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/MageSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -999,7 +918,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1013.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1013.png",
     "AvatarCutinIntroText": {
-      "Hash": 1175625411
+      "Hash": "6514773557031476769"
     },
     "AvatarDropOffset": [
       21.9,
@@ -1037,20 +956,14 @@
   "1101": {
     "AvatarID": 1101,
     "AvatarName": {
-      "Hash": -2077674616
+      "Hash": "12577335996298259768"
     },
     "AvatarFullName": {
-      "Hash": 1695376073
+      "Hash": "13914671812122005226"
     },
     "AdventurePlayerID": 1101,
     "AvatarVOTag": "bronya",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Bronya_00_Config.json",
     "DamageType": "Wind",
     "SPNeed": {
@@ -1101,9 +1014,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1101.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Bronya_00/Manikin_Avatar_Maid_Bronya_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Bronya_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/ShamanSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -1114,7 +1024,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1101.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1101.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257847
+      "Hash": "3718197001771422989"
     },
     "AvatarDropOffset": [
       59,
@@ -1152,20 +1062,14 @@
   "1102": {
     "AvatarID": 1102,
     "AvatarName": {
-      "Hash": 651208739
+      "Hash": "11512502346378460564"
     },
     "AvatarFullName": {
-      "Hash": -327370702
+      "Hash": "4269901231115958065"
     },
     "AdventurePlayerID": 1102,
     "AvatarVOTag": "seele",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Seele_00_Config.json",
     "DamageType": "Quantum",
     "SPNeed": {
@@ -1216,9 +1120,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1102.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Seele_00/Manikin_Avatar_Maid_Seele_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Seele_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/RogueSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -1229,7 +1130,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1102.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1102.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257848
+      "Hash": "8517836371861335177"
     },
     "AvatarDropOffset": [
       145.5,
@@ -1267,20 +1168,14 @@
   "1103": {
     "AvatarID": 1103,
     "AvatarName": {
-      "Hash": -914875202
+      "Hash": "5848201789834711118"
     },
     "AvatarFullName": {
-      "Hash": -748459673
+      "Hash": "4307431385195389238"
     },
     "AdventurePlayerID": 1103,
     "AvatarVOTag": "serval",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Serval_00_Config.json",
     "DamageType": "Thunder",
     "SPNeed": {
@@ -1331,9 +1226,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1103.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Serval_00/Manikin_Avatar_Lady_Serval_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Serval_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/MageSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -1344,7 +1236,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1103.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1103.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257849
+      "Hash": "16279475033331194841"
     },
     "AvatarDropOffset": [
       -26,
@@ -1382,20 +1274,14 @@
   "1104": {
     "AvatarID": 1104,
     "AvatarName": {
-      "Hash": 1814008153
+      "Hash": "4662720147964902997"
     },
     "AvatarFullName": {
-      "Hash": 2027198969
+      "Hash": "9833334739112818824"
     },
     "AdventurePlayerID": 1104,
     "AvatarVOTag": "gepard",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Gepard_00_Config.json",
     "DamageType": "Ice",
     "SPNeed": {
@@ -1446,9 +1332,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1104.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Gepard_00/Manikin_Avatar_Male_Gepard_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Gepard_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/KnightSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -1459,7 +1342,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1104.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1104.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257842
+      "Hash": "14008162241229604444"
     },
     "AvatarDropOffset": [
       -95,
@@ -1497,20 +1380,14 @@
   "1105": {
     "AvatarID": 1105,
     "AvatarName": {
-      "Hash": 247924212
+      "Hash": "12514207603391426951"
     },
     "AvatarFullName": {
-      "Hash": -1244252722
+      "Hash": "10125622316360813403"
     },
     "AdventurePlayerID": 1105,
     "AvatarVOTag": "natasha",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Natasha_00_Config.json",
     "DamageType": "Physical",
     "SPNeed": {
@@ -1561,9 +1438,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1105.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Natasha_00/Manikin_Avatar_Lady_Natasha_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Natasha_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/PriestSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -1574,7 +1448,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1105.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1105.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257843
+      "Hash": "14858420587261808251"
     },
     "AvatarDropOffset": [
       -11,
@@ -1612,20 +1486,14 @@
   "1106": {
     "AvatarID": 1106,
     "AvatarName": {
-      "Hash": -1318159729
+      "Hash": "3030343134428618721"
     },
     "AvatarFullName": {
-      "Hash": -562028418
+      "Hash": "5203200728392923943"
     },
     "AdventurePlayerID": 1106,
     "AvatarVOTag": "pela",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Pela_00_Config.json",
     "DamageType": "Ice",
     "SPNeed": {
@@ -1676,9 +1544,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1106.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Pela_00/Manikin_Avatar_Girl_Pela_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Pela_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarlockSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -1689,7 +1554,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1106.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1106.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257844
+      "Hash": "8273807054445326605"
     },
     "AvatarDropOffset": [
       116,
@@ -1727,20 +1592,14 @@
   "1107": {
     "AvatarID": 1107,
     "AvatarName": {
-      "Hash": 1410723626
+      "Hash": "4657497849737059681"
     },
     "AvatarFullName": {
-      "Hash": 304527861
+      "Hash": "9822243427436464261"
     },
     "AdventurePlayerID": 1107,
     "AvatarVOTag": "clara",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Klara_00_Config.json",
     "DamageType": "Physical",
     "SPNeed": {
@@ -1791,9 +1650,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1107.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Klara_00/Manikin_Avatar_Girl_Klara_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Klara_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarriorSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -1804,7 +1660,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1107.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1107.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257845
+      "Hash": "6482682189086345572"
     },
     "AvatarDropOffset": [
       28,
@@ -1842,20 +1698,14 @@
   "1108": {
     "AvatarID": 1108,
     "AvatarName": {
-      "Hash": -867821035
+      "Hash": "3797624834743983017"
     },
     "AvatarFullName": {
-      "Hash": -2088319272
+      "Hash": "1736426826274298809"
     },
     "AdventurePlayerID": 1108,
     "AvatarVOTag": "sampo",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Sampo_00_Config.json",
     "DamageType": "Wind",
     "SPNeed": {
@@ -1906,9 +1756,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1108.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Sampo_00/Manikin_Avatar_Male_Sampo_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Sampo_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarlockSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -1919,7 +1766,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1108.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1108.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257838
+      "Hash": "11052185059466447870"
     },
     "AvatarDropOffset": [
       13,
@@ -1957,20 +1804,14 @@
   "1109": {
     "AvatarID": 1109,
     "AvatarName": {
-      "Hash": 1861062320
+      "Hash": "8885814719909498250"
     },
     "AvatarFullName": {
-      "Hash": 963907623
+      "Hash": "6064958644999633553"
     },
     "AdventurePlayerID": 1109,
     "AvatarVOTag": "hook",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Hook_00_Config.json",
     "DamageType": "Fire",
     "SPNeed": {
@@ -2022,9 +1863,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1109.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Hook_00/Manikin_Avatar_Kid_Hook_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Hook_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarriorSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -2035,7 +1873,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1109.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1109.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257839
+      "Hash": "15098666979177020377"
     },
     "AvatarDropOffset": [
       47,
@@ -2073,20 +1911,14 @@
   "1110": {
     "AvatarID": 1110,
     "AvatarName": {
-      "Hash": -511590674
+      "Hash": "6300665444027651453"
     },
     "AvatarFullName": {
-      "Hash": -1401838949
+      "Hash": "12327690325379070268"
     },
     "AdventurePlayerID": 1110,
     "AvatarVOTag": "lynx",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Lynx_00_Config.json",
     "DamageType": "Quantum",
     "SPNeed": {
@@ -2137,9 +1969,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1110.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Lynx_00/Manikin_Avatar_Girl_Lynx_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Lynx_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/PriestSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -2150,7 +1979,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1110.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1110.png",
     "AvatarCutinIntroText": {
-      "Hash": 1175625509
+      "Hash": "1654599571097827237"
     },
     "AvatarDropOffset": [
       -44,
@@ -2180,20 +2009,14 @@
   "1111": {
     "AvatarID": 1111,
     "AvatarName": {
-      "Hash": -2077674615
+      "Hash": "5638032823797991781"
     },
     "AvatarFullName": {
-      "Hash": 1696571191
+      "Hash": "12489492945474150490"
     },
     "AdventurePlayerID": 1111,
     "AvatarVOTag": "luka",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Luka_00_Config.json",
     "DamageType": "Physical",
     "SPNeed": {
@@ -2245,9 +2068,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1111.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Luka_00/Manikin_Avatar_Lad_Luka_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Luka_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarlockSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -2257,9 +2077,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1111.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1111.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1111.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [
       102,
       -95,
@@ -2292,20 +2109,14 @@
   "1112": {
     "AvatarID": 1112,
     "AvatarName": {
-      "Hash": 651208740
+      "Hash": "11869199815763640258"
     },
     "AvatarFullName": {
-      "Hash": -367521998
+      "Hash": "2821649587227459543"
     },
     "AdventurePlayerID": 1112,
     "AvatarVOTag": "topaz",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Topaz_00_Config.json",
     "DamageType": "Fire",
     "SPNeed": {
@@ -2356,9 +2167,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1112.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Topaz_00/Manikin_Avatar_Maid_Topaz_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Topaz_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/RogueSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -2368,9 +2176,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1112.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1112.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1112.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [
       -1,
       -63,
@@ -2395,20 +2200,14 @@
   "1201": {
     "AvatarID": 1201,
     "AvatarName": {
-      "Hash": -814118653
+      "Hash": "16637763514010100144"
     },
     "AvatarFullName": {
-      "Hash": 23154468
+      "Hash": "11250394371260275452"
     },
     "AdventurePlayerID": 1201,
     "AvatarVOTag": "qingque",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Qingque_00_Config.json",
     "DamageType": "Quantum",
     "SPNeed": {
@@ -2460,9 +2259,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1201.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Qingque_00/Manikin_Avatar_Girl_Qingque_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Qingque_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/MageSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -2473,7 +2269,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1201.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1201.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553258008
+      "Hash": "7083986278467156360"
     },
     "AvatarDropOffset": [
       48,
@@ -2503,20 +2299,14 @@
   "1202": {
     "AvatarID": 1202,
     "AvatarName": {
-      "Hash": 751965288
+      "Hash": "8701250082145497679"
     },
     "AvatarFullName": {
-      "Hash": 23263934
+      "Hash": "13634895725020071173"
     },
     "AdventurePlayerID": 1202,
     "AvatarVOTag": "tingyun",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Tingyun_00_Config.json",
     "DamageType": "Thunder",
     "SPNeed": {
@@ -2567,9 +2357,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1202.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Tingyun_00/Manikin_Avatar_Maid_Tingyun_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Tingyun_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/ShamanSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -2580,7 +2367,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1202.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1202.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553258007
+      "Hash": "1238610764730628028"
     },
     "AvatarDropOffset": [
       -19,
@@ -2614,20 +2401,14 @@
   "1203": {
     "AvatarID": 1203,
     "AvatarName": {
-      "Hash": -1976918067
+      "Hash": "2482429559561780479"
     },
     "AvatarFullName": {
-      "Hash": -1111281336
+      "Hash": "16654246569260621119"
     },
     "AdventurePlayerID": 1203,
     "AvatarVOTag": "luocha",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Luocha_00_Config.json",
     "DamageType": "Imaginary",
     "SPNeed": {
@@ -2678,9 +2459,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1203.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Luocha_00/Manikin_Avatar_Male_Luocha_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Luocha_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/PriestSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -2691,7 +2469,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1203.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1203.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553258006
+      "Hash": "6908010995833806476"
     },
     "AvatarDropOffset": [
       10.4,
@@ -2725,20 +2503,14 @@
   "1204": {
     "AvatarID": 1204,
     "AvatarName": {
-      "Hash": -54603766
+      "Hash": "330404745587936068"
     },
     "AvatarFullName": {
-      "Hash": 753361161
+      "Hash": "14891741277430641899"
     },
     "AdventurePlayerID": 1204,
     "AvatarVOTag": "jingyuan",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_JingYuan_00_Config.json",
     "DamageType": "Thunder",
     "SPNeed": {
@@ -2789,9 +2561,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1204.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/JingYuan_00/Manikin_Avatar_Male_JingYuan_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_JingYuan_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/MageSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -2802,7 +2571,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1204.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1204.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553258005
+      "Hash": "6569021980189190564"
     },
     "AvatarDropOffset": [
       21,
@@ -2840,20 +2609,14 @@
   "1205": {
     "AvatarID": 1205,
     "AvatarName": {
-      "Hash": 1511480175
+      "Hash": "4951589951007146550"
     },
     "AvatarFullName": {
-      "Hash": -1273337479
+      "Hash": "5073335473210565972"
     },
     "AdventurePlayerID": 1205,
     "AvatarVOTag": "blade",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Ren_00_Config.json",
     "DamageType": "Wind",
     "SPNeed": {
@@ -2905,9 +2668,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1205.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Ren_00/Manikin_Avatar_Male_Ren_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Ren_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarriorSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -2918,7 +2678,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1205.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1205.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553258004
+      "Hash": "10397965642424132492"
     },
     "AvatarDropOffset": [
       0,
@@ -2952,20 +2712,14 @@
   "1206": {
     "AvatarID": 1206,
     "AvatarName": {
-      "Hash": -1217403180
+      "Hash": "4806955196389400116"
     },
     "AvatarFullName": {
-      "Hash": -1520733615
+      "Hash": "15869177285034724491"
     },
     "AdventurePlayerID": 1206,
     "AvatarVOTag": "sushang",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Sushang_00_Config.json",
     "DamageType": "Physical",
     "SPNeed": {
@@ -3016,9 +2770,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1206.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Sushang_00/Manikin_Avatar_Maid_Sushang_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Sushang_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/RogueSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -3029,7 +2780,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1206.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1206.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553258003
+      "Hash": "3669475434585382350"
     },
     "AvatarDropOffset": [
       0,
@@ -3059,20 +2810,14 @@
   "1207": {
     "AvatarID": 1207,
     "AvatarName": {
-      "Hash": 348680761
+      "Hash": "1140041957738323619"
     },
     "AvatarFullName": {
-      "Hash": -223886223
+      "Hash": "2004236373029813620"
     },
     "AdventurePlayerID": 1207,
     "AvatarVOTag": "yukong",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Yukong_00_Config.json",
     "DamageType": "Imaginary",
     "SPNeed": {
@@ -3123,9 +2868,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1207.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Yukong_00/Manikin_Avatar_Lady_Yukong_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Yukong_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/ShamanSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -3136,7 +2878,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1207.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1207.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553258002
+      "Hash": "1646069451416275783"
     },
     "AvatarDropOffset": [
       87.7,
@@ -3170,20 +2912,14 @@
   "1208": {
     "AvatarID": 1208,
     "AvatarName": {
-      "Hash": 1558534342
+      "Hash": "10351737015595052238"
     },
     "AvatarFullName": {
-      "Hash": 689804049
+      "Hash": "1697900645579426127"
     },
     "AdventurePlayerID": 1208,
     "AvatarVOTag": "fuxuan",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_FuXuan_00_Config.json",
     "DamageType": "Quantum",
     "SPNeed": {
@@ -3234,9 +2970,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1208.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/FuXuan_00/Manikin_Avatar_Girl_FuXuan_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_FuXuan_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/KnightSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -3247,7 +2980,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1208.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1208.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553258001
+      "Hash": "4763544452084176885"
     },
     "AvatarDropOffset": [
       74,
@@ -3277,20 +3010,14 @@
   "1209": {
     "AvatarID": 1209,
     "AvatarName": {
-      "Hash": -1170349013
+      "Hash": "1960800194395687973"
     },
     "AvatarFullName": {
-      "Hash": -2117315133
+      "Hash": "11529980361658019655"
     },
     "AdventurePlayerID": 1209,
     "AvatarVOTag": "yanqing",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Yanqing_00_Config.json",
     "DamageType": "Ice",
     "SPNeed": {
@@ -3341,9 +3068,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1209.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Yanqing_00/Manikin_Avatar_Boy_Yanqing_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Yanqing_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/RogueSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -3353,9 +3077,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1209.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1209.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1209.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [
       -14,
       -15,
@@ -3380,20 +3101,14 @@
   "1210": {
     "AvatarID": 1210,
     "AvatarName": {
-      "Hash": 1914764703
+      "Hash": "13845204571586703663"
     },
     "AvatarFullName": {
-      "Hash": -1637273828
+      "Hash": "11082535725343009228"
     },
     "AdventurePlayerID": 1210,
     "AvatarVOTag": "guinaifen",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Guinaifen_00_Config.json",
     "DamageType": "Fire",
     "SPNeed": {
@@ -3444,9 +3159,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1210.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Guinaifen_00/Manikin_Avatar_Maid_Guinaifen_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Guinaifen_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarlockSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -3456,9 +3168,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1210.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1210.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1210.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [
       43,
       -28,
@@ -3491,20 +3200,14 @@
   "1211": {
     "AvatarID": 1211,
     "AvatarName": {
-      "Hash": -814118652
+      "Hash": "13619135324463789256"
     },
     "AvatarFullName": {
-      "Hash": 593491427
+      "Hash": "7965732797779289315"
     },
     "AdventurePlayerID": 1211,
     "AvatarVOTag": "bailu",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Bailu_00_Config.json",
     "DamageType": "Thunder",
     "SPNeed": {
@@ -3555,9 +3258,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1211.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Bailu_00/Manikin_Avatar_Kid_Bailu_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Bailu_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/PriestSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -3567,9 +3267,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1211.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1211.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1211.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [
       25,
       -30,
@@ -3602,20 +3299,14 @@
   "1212": {
     "AvatarID": 1212,
     "AvatarName": {
-      "Hash": 751965289
+      "Hash": "940795027444042330"
     },
     "AvatarFullName": {
-      "Hash": -877653918
+      "Hash": "13389119775939103964"
     },
     "AdventurePlayerID": 1212,
     "AvatarVOTag": "jingliu",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Jingliu_00_Config.json",
     "DamageType": "Ice",
     "SPNeed": {
@@ -3667,9 +3358,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1212.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Jingliu_00/Manikin_Avatar_Maid_Jingliu_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Jingliu_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarriorSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -3680,7 +3368,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1212.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1212.png",
     "AvatarCutinIntroText": {
-      "Hash": 1175625348
+      "Hash": "135116569269496186"
     },
     "AvatarDropOffset": [
       13,
@@ -3718,20 +3406,14 @@
   "1213": {
     "AvatarID": 1213,
     "AvatarName": {
-      "Hash": -1976918066
+      "Hash": "12834585016341721411"
     },
     "AvatarFullName": {
-      "Hash": -1905195496
+      "Hash": "4302302659856565139"
     },
     "AdventurePlayerID": 1213,
     "AvatarVOTag": "danhengil",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_DanHengIL_00_Config.json",
     "DamageType": "Imaginary",
     "SPNeed": {
@@ -3786,9 +3468,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1213.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/DanHengIL_00/Manikin_Avatar_Lad_DanHengIL_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_DanHengIL_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarriorSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -3799,7 +3478,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1213.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1213.png",
     "AvatarCutinIntroText": {
-      "Hash": 1175625349
+      "Hash": "3459129014667441219"
     },
     "AvatarDropOffset": [
       -35.8,
@@ -3837,20 +3516,14 @@
   "1214": {
     "AvatarID": 1214,
     "AvatarName": {
-      "Hash": -54603765
+      "Hash": "11495763016926788582"
     },
     "AvatarFullName": {
-      "Hash": -2054552258
+      "Hash": "12226349380891955506"
     },
     "AdventurePlayerID": 1214,
     "AvatarVOTag": "xueyi",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Xueyi_00_Config.json",
     "DamageType": "Quantum",
     "SPNeed": {
@@ -3901,9 +3574,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1214.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Xueyi_00/Manikin_Avatar_Maid_Xueyi_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Xueyi_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarriorSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -3914,7 +3584,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1214.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1214.png",
     "AvatarCutinIntroText": {
-      "Hash": 1175625350
+      "Hash": "2934404416082589795"
     },
     "AvatarDropOffset": [
       29,
@@ -3940,20 +3610,14 @@
   "1215": {
     "AvatarID": 1215,
     "AvatarName": {
-      "Hash": 1511480176
+      "Hash": "8944718300027499818"
     },
     "AvatarFullName": {
-      "Hash": -878473933
+      "Hash": "8591881960586679467"
     },
     "AdventurePlayerID": 1215,
     "AvatarVOTag": "hanya",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Hanya_00_Config.json",
     "DamageType": "Physical",
     "SPNeed": {
@@ -4004,9 +3668,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1215.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Hanya_00/Manikin_Avatar_Lady_Hanya_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Hanya_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/ShamanSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -4017,7 +3678,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1215.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1215.png",
     "AvatarCutinIntroText": {
-      "Hash": 1175625351
+      "Hash": "13147069237085226124"
     },
     "AvatarDropOffset": [
       29.3,
@@ -4047,20 +3708,14 @@
   "1217": {
     "AvatarID": 1217,
     "AvatarName": {
-      "Hash": 348680762
+      "Hash": "12871454551122846403"
     },
     "AvatarFullName": {
-      "Hash": -1850589142
+      "Hash": "9165625096386234328"
     },
     "AdventurePlayerID": 1217,
     "AvatarVOTag": "huohuo",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Huohuo_00_Config.json",
     "DamageType": "Wind",
     "SPNeed": {
@@ -4111,9 +3766,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1217.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Huohuo_00/Manikin_Avatar_Girl_Huohuo_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Huohuo_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/PriestSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -4124,7 +3776,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1217.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1217.png",
     "AvatarCutinIntroText": {
-      "Hash": 1175625353
+      "Hash": "2151406318153906395"
     },
     "AvatarDropOffset": [
       29.3,
@@ -4150,20 +3802,14 @@
   "1218": {
     "AvatarID": 1218,
     "AvatarName": {
-      "Hash": 1558534343
+      "Hash": "8300000119407817972"
     },
     "AvatarFullName": {
-      "Hash": 1575564764
+      "Hash": "6241750003545954645"
     },
     "AdventurePlayerID": 1218,
     "AvatarVOTag": "jiaoqiu",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Jiaoqiu_00_Config.json",
     "DamageType": "Fire",
     "SPNeed": {
@@ -4214,9 +3860,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1218.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Jiaoqiu_00/Manikin_Avatar_Lad_Jiaoqiu_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Jiaoqiu_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarlockSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -4227,7 +3870,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1218.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1218.png",
     "AvatarCutinIntroText": {
-      "Hash": 1175625354
+      "Hash": "3244008229634886780"
     },
     "AvatarDropOffset": [
       1,
@@ -4249,20 +3892,14 @@
   "1220": {
     "AvatarID": 1220,
     "AvatarName": {
-      "Hash": 1914764700
+      "Hash": "640945362161159110"
     },
     "AvatarFullName": {
-      "Hash": -378932311
+      "Hash": "14359009101684242945"
     },
     "AdventurePlayerID": 1220,
     "AvatarVOTag": "feixiao",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Feixiao_00_Config.json",
     "DamageType": "Wind",
     "SPNeed": {
@@ -4316,9 +3953,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1220.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Feixiao_00/Manikin_Avatar_Lady_Feixiao_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Feixiao_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/RogueSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -4329,7 +3963,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1220.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1220.png",
     "AvatarCutinIntroText": {
-      "Hash": -390458595
+      "Hash": "8294181126825002036"
     },
     "AvatarDropOffset": [
       54,
@@ -4363,20 +3997,14 @@
   "1221": {
     "AvatarID": 1221,
     "AvatarName": {
-      "Hash": -814118655
+      "Hash": "15084362025105138520"
     },
     "AvatarFullName": {
-      "Hash": 1931231335
+      "Hash": "8234014467756005628"
     },
     "AdventurePlayerID": 1221,
     "AvatarVOTag": "yunli",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Yunli_00_Config.json",
     "DamageType": "Physical",
     "SPNeed": {
@@ -4427,9 +4055,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1221.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Yunli_00/Manikin_Avatar_Girl_Yunli_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Yunli_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarriorSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -4439,9 +4064,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1221.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1221.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1221.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [
       -44,
       76.1,
@@ -4462,20 +4084,14 @@
   "1222": {
     "AvatarID": 1222,
     "AvatarName": {
-      "Hash": 751965286
+      "Hash": "1890772581194122354"
     },
     "AvatarFullName": {
-      "Hash": 688366948
+      "Hash": "3464068633614138322"
     },
     "AdventurePlayerID": 1222,
     "AvatarVOTag": "lingsha",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Lingsha_00_Config.json",
     "DamageType": "Fire",
     "SPNeed": {
@@ -4526,9 +4142,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1222.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Lingsha_00/Manikin_Avatar_Maid_Lingsha_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Lingsha_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/PriestSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -4539,7 +4152,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1222.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1222.png",
     "AvatarCutinIntroText": {
-      "Hash": -390458593
+      "Hash": "13795433100514047426"
     },
     "AvatarDropOffset": [
       -32.1,
@@ -4561,20 +4174,14 @@
   "1223": {
     "AvatarID": 1223,
     "AvatarName": {
-      "Hash": -1976918069
+      "Hash": "581825062468630609"
     },
     "AvatarFullName": {
-      "Hash": 1414245981
+      "Hash": "4816180736143290215"
     },
     "AdventurePlayerID": 1223,
     "AvatarVOTag": "moze",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Moze_00_Config.json",
     "DamageType": "Thunder",
     "SPNeed": {
@@ -4625,9 +4232,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1223.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Moze_00/Manikin_Avatar_Male_Moze_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Moze_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/RogueSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -4637,9 +4241,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1223.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1223.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1223.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [
       24.8,
       75.5,
@@ -4660,20 +4261,14 @@
   "1224": {
     "AvatarID": 1224,
     "AvatarName": {
-      "Hash": -54603768
+      "Hash": "16417870574330506928"
     },
     "AvatarFullName": {
-      "Hash": -1063124016
+      "Hash": "9058972803650014395"
     },
     "AdventurePlayerID": 1224,
     "AvatarVOTag": "mar7th2",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Mar_7th_10_Config.json",
     "DamageType": "Imaginary",
     "SPNeed": {
@@ -4725,9 +4320,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1224.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Mar_7th_10/Manikin_Avatar_Maid_Mar_7th_10.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Mar_7th_10_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/RogueSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -4737,9 +4329,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1224.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1224.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1224.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [
       31,
       29,
@@ -4776,20 +4365,14 @@
   "1225": {
     "AvatarID": 1225,
     "AvatarName": {
-      "Hash": 1511480173
+      "Hash": "3056810111125476882"
     },
     "AvatarFullName": {
-      "Hash": 271014362
+      "Hash": "5639957615682679791"
     },
     "AdventurePlayerID": 1225,
     "AvatarVOTag": "fugue",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Fugue_00_Config.json",
     "DamageType": "Fire",
     "SPNeed": {
@@ -4841,9 +4424,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1225.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Fugue_00/Manikin_Avatar_Maid_Fugue_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Fugue_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarlockSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -4853,9 +4433,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1225.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1225.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1225.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [
       115,
       97,
@@ -4888,20 +4465,14 @@
   "1301": {
     "AvatarID": 1301,
     "AvatarName": {
-      "Hash": 1934967678
+      "Hash": "6816343973270607908"
     },
     "AvatarFullName": {
-      "Hash": -1686189145
+      "Hash": "9976087090473181803"
     },
     "AdventurePlayerID": 1301,
     "AvatarVOTag": "gallagher",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Gallagher_00_Config.json",
     "DamageType": "Fire",
     "SPNeed": {
@@ -4953,9 +4524,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1301.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Gallagher_00/Manikin_Avatar_Male_Gallagher_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Gallagher_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/PriestSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -4965,9 +4533,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1301.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1301.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1301.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [
       -38,
       -6,
@@ -4988,20 +4553,14 @@
   "1302": {
     "AvatarID": 1302,
     "AvatarName": {
-      "Hash": -1956715091
+      "Hash": "16607369145002760691"
     },
     "AvatarFullName": {
-      "Hash": -1699195646
+      "Hash": "869909810382854550"
     },
     "AdventurePlayerID": 1302,
     "AvatarVOTag": "argenti",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Argenti_00_Config.json",
     "DamageType": "Physical",
     "SPNeed": {
@@ -5053,9 +4612,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1302.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Argenti_00/Manikin_Avatar_Male_Argenti_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Argenti_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/MageSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -5066,7 +4622,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1302.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1302.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257910
+      "Hash": "5532429784373709809"
     },
     "AvatarDropOffset": [
       205.4,
@@ -5092,20 +4648,14 @@
   "1303": {
     "AvatarID": 1303,
     "AvatarName": {
-      "Hash": 772168264
+      "Hash": "6427183216833446662"
     },
     "AvatarFullName": {
-      "Hash": -835139175
+      "Hash": "16599253304220206153"
     },
     "AdventurePlayerID": 1303,
     "AvatarVOTag": "ruanmei",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_RuanMei_00_Config.json",
     "DamageType": "Ice",
     "SPNeed": {
@@ -5156,9 +4706,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1303.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/RuanMei_00/Manikin_Avatar_Maid_RuanMei_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_RuanMei_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/ShamanSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -5169,7 +4716,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1303.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1303.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257911
+      "Hash": "11229444136574920679"
     },
     "AvatarDropOffset": [
       -6.1,
@@ -5195,20 +4742,14 @@
   "1304": {
     "AvatarID": 1304,
     "AvatarName": {
-      "Hash": 1531683151
+      "Hash": "1512189965928596940"
     },
     "AvatarFullName": {
-      "Hash": -107934339
+      "Hash": "7120301855670242165"
     },
     "AdventurePlayerID": 1304,
     "AvatarVOTag": "aventurine",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Aventurine_00_Config.json",
     "DamageType": "Imaginary",
     "SPNeed": {
@@ -5259,9 +4800,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1304.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Aventurine_00/Manikin_Avatar_Lad_Aventurine_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Aventurine_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/KnightSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -5271,9 +4809,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1304.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1304.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1304.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [
       -32.1,
       38,
@@ -5294,20 +4829,14 @@
   "1305": {
     "AvatarID": 1305,
     "AvatarName": {
-      "Hash": -34400790
+      "Hash": "5574869376996182732"
     },
     "AvatarFullName": {
-      "Hash": -2043468308
+      "Hash": "10016468331538463171"
     },
     "AdventurePlayerID": 1305,
     "AvatarVOTag": "drratio",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Dr_Ratio_00_Config.json",
     "DamageType": "Imaginary",
     "SPNeed": {
@@ -5358,9 +4887,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1305.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Dr_Ratio_00/Manikin_Avatar_Male_Dr_Ratio_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Dr_Ratio_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/RogueSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -5371,7 +4897,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1305.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1305.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257909
+      "Hash": "5561121916663663082"
     },
     "AvatarDropOffset": [
       24,
@@ -5409,20 +4935,14 @@
   "1306": {
     "AvatarID": 1306,
     "AvatarName": {
-      "Hash": 368883737
+      "Hash": "1154772689835031402"
     },
     "AvatarFullName": {
-      "Hash": -1042486512
+      "Hash": "4690715708837184285"
     },
     "AdventurePlayerID": 1306,
     "AvatarVOTag": "sparkle",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Sparkle_00_Config.json",
     "DamageType": "Quantum",
     "SPNeed": {
@@ -5473,9 +4993,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1306.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Sparkle_00/Manikin_Avatar_Girl_Sparkle_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Sparkle_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/ShamanSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -5485,9 +5002,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1306.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1306.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1306.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [
       12,
       51,
@@ -5508,20 +5022,14 @@
   "1307": {
     "AvatarID": 1307,
     "AvatarName": {
-      "Hash": -1197200204
+      "Hash": "5006907115971129934"
     },
     "AvatarFullName": {
-      "Hash": 2001738668
+      "Hash": "13204313422718342644"
     },
     "AdventurePlayerID": 1307,
     "AvatarVOTag": "blackswan",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_BlackSwan_00_Config.json",
     "DamageType": "Wind",
     "SPNeed": {
@@ -5572,9 +5080,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1307.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/BlackSwan_00/Manikin_Avatar_Lady_BlackSwan_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_BlackSwan_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarlockSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -5585,7 +5090,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1307.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1307.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257907
+      "Hash": "12554328238969819286"
     },
     "AvatarDropOffset": [
       -4,
@@ -5607,20 +5112,14 @@
   "1308": {
     "AvatarID": 1308,
     "AvatarName": {
-      "Hash": -1150146037
+      "Hash": "15302882570557665677"
     },
     "AvatarFullName": {
-      "Hash": 1372569644
+      "Hash": "13552546598161712110"
     },
     "AdventurePlayerID": 1308,
     "AvatarVOTag": "acheron",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Acheron_00_Config.json",
     "DamageType": "Thunder",
     "SPNeed": {
@@ -5675,9 +5174,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1308.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Acheron_00/Manikin_Avatar_Lady_Acheron_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Acheron_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarlockSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -5688,7 +5184,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1308.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1308.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257904
+      "Hash": "17057928712995074999"
     },
     "AvatarDropOffset": [
       9,
@@ -5710,20 +5206,14 @@
   "1309": {
     "AvatarID": 1309,
     "AvatarName": {
-      "Hash": 1578737318
+      "Hash": "16319070348582555665"
     },
     "AvatarFullName": {
-      "Hash": -11289014
+      "Hash": "13708130003328337085"
     },
     "AdventurePlayerID": 1309,
     "AvatarVOTag": "robin",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Robin_00_Config.json",
     "DamageType": "Physical",
     "SPNeed": {
@@ -5774,9 +5264,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1309.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Robin_00/Manikin_Avatar_Maid_Robin_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Robin_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/ShamanSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -5787,7 +5274,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1309.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1309.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257905
+      "Hash": "3647444301907528652"
     },
     "AvatarDropOffset": [
       -4,
@@ -5825,20 +5312,14 @@
   "1310": {
     "AvatarID": 1310,
     "AvatarName": {
-      "Hash": -793915676
+      "Hash": "17277451216686117891"
     },
     "AvatarFullName": {
-      "Hash": -515177433
+      "Hash": "17348010303840328548"
     },
     "AdventurePlayerID": 1310,
     "AvatarVOTag": "sam",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Sam_00_Config.json",
     "DamageType": "Fire",
     "SPNeed": {
@@ -5891,9 +5372,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1310.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Firefly_00/Manikin_Avatar_Maid_Firefly_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Firefly_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarriorSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -5903,9 +5381,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1310.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1310.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1310.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [
       54,
       45,
@@ -5926,20 +5401,14 @@
   "1312": {
     "AvatarID": 1312,
     "AvatarName": {
-      "Hash": -1956715090
+      "Hash": "15577682837980439839"
     },
     "AvatarFullName": {
-      "Hash": 109652686
+      "Hash": "5528849477405299386"
     },
     "AdventurePlayerID": 1312,
     "AvatarVOTag": "misha",
     "Rarity": "CombatPowerAvatarRarityType4",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Misha_00_Config.json",
     "DamageType": "Ice",
     "SPNeed": {
@@ -5990,9 +5459,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1312.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Misha_00/Manikin_Avatar_Boy_Misha_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Misha_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarriorSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -6002,9 +5468,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1312.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1312.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1312.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [
       -34,
       98,
@@ -6025,20 +5488,14 @@
   "1313": {
     "AvatarID": 1313,
     "AvatarName": {
-      "Hash": 772168265
+      "Hash": "7913253176711977067"
     },
     "AvatarFullName": {
-      "Hash": 1073167130
+      "Hash": "12376678529046609582"
     },
     "AdventurePlayerID": 1313,
     "AvatarVOTag": "sunday",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Sunday_10_Config.json",
     "DamageType": "Imaginary",
     "SPNeed": {
@@ -6089,9 +5546,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1313.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Sunday_10/Manikin_Avatar_Lad_Sunday_10.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Sunday_10_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/ShamanSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -6102,7 +5556,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1313.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1313.png",
     "AvatarCutinIntroText": {
-      "Hash": 1175625444
+      "Hash": "1308808829509749123"
     },
     "AvatarDropOffset": [
       5,
@@ -6140,20 +5594,14 @@
   "1314": {
     "AvatarID": 1314,
     "AvatarName": {
-      "Hash": 1531683152
+      "Hash": "2887610941167968962"
     },
     "AvatarFullName": {
-      "Hash": -1966747216
+      "Hash": "3376021538075502564"
     },
     "AdventurePlayerID": 1314,
     "AvatarVOTag": "jade",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Jade_00_Config.json",
     "DamageType": "Quantum",
     "SPNeed": {
@@ -6204,9 +5652,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1314.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Jade_00/Manikin_Avatar_Lady_Jade_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Jade_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/MageSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -6216,9 +5661,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1314.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1314.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1314.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [
       5,
       -66,
@@ -6239,20 +5681,14 @@
   "1315": {
     "AvatarID": 1315,
     "AvatarName": {
-      "Hash": -34400789
+      "Hash": "6424512602058263868"
     },
     "AvatarFullName": {
-      "Hash": -844857709
+      "Hash": "8088750835701923647"
     },
     "AdventurePlayerID": 1315,
     "AvatarVOTag": "boothill",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Boothill_00_Config.json",
     "DamageType": "Physical",
     "SPNeed": {
@@ -6304,9 +5740,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1315.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Boothill_00/Manikin_Avatar_Male_Boothill_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Boothill_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/RogueSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -6317,7 +5750,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1315.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1315.png",
     "AvatarCutinIntroText": {
-      "Hash": 1175625446
+      "Hash": "5686387458776346610"
     },
     "AvatarDropOffset": [
       10,
@@ -6355,20 +5788,14 @@
   "1317": {
     "AvatarID": 1317,
     "AvatarName": {
-      "Hash": -1197200203
+      "Hash": "9807064938372011036"
     },
     "AvatarFullName": {
-      "Hash": -2088320918
+      "Hash": "14170717352152412638"
     },
     "AdventurePlayerID": 1317,
     "AvatarVOTag": "rappa",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Rappa_00_Config.json",
     "DamageType": "Imaginary",
     "SPNeed": {
@@ -6423,9 +5850,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1317.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Rappa_00/Manikin_Avatar_Maid_Rappa_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Rappa_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/MageSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -6436,7 +5860,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1317.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1317.png",
     "AvatarCutinIntroText": {
-      "Hash": 1175625448
+      "Hash": "3489472940753852915"
     },
     "AvatarDropOffset": [
       13,
@@ -6474,20 +5898,14 @@
   "1401": {
     "AvatarID": 1401,
     "AvatarName": {
-      "Hash": -1096443655
+      "Hash": "4559632095226063367"
     },
     "AvatarFullName": {
-      "Hash": -2127496749
+      "Hash": "10277480450199268137"
     },
     "AdventurePlayerID": 1401,
     "AvatarVOTag": "theherta",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_TheHerta_00_Config.json",
     "DamageType": "Ice",
     "SPNeed": {
@@ -6539,9 +5957,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1401.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/TheHerta_00/Manikin_Avatar_Maid_TheHerta_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_TheHerta_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/MageSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -6552,7 +5967,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1401.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1401.png",
     "AvatarCutinIntroText": {
-      "Hash": -1553257810
+      "Hash": "1991735669500091676"
     },
     "AvatarDropOffset": [
       48,
@@ -6590,20 +6005,14 @@
   "1402": {
     "AvatarID": 1402,
     "AvatarName": {
-      "Hash": -1499728182
+      "Hash": "764283421684818925"
     },
     "AvatarFullName": {
-      "Hash": 107465559
+      "Hash": "6742128773131150834"
     },
     "AdventurePlayerID": 1402,
     "AvatarVOTag": "aglaea",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Aglaea_00_Config.json",
     "DamageType": "Thunder",
     "SPNeed": {
@@ -6656,9 +6065,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1402.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Aglaea_00/Manikin_Avatar_Lady_Aglaea_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Aglaea_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/MemorySkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -6668,9 +6074,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1402.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1402.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1402.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [
       -44,
       -134,
@@ -6688,23 +6091,193 @@
     "AssistBgOffset": [],
     "AvatarSelfShowOffset": []
   },
+  "1403": {
+    "AvatarID": 1403,
+    "AvatarName": {
+      "Hash": "15410848306228341212"
+    },
+    "AvatarFullName": {
+      "Hash": "4476479345548480464"
+    },
+    "AdventurePlayerID": 1403,
+    "AvatarVOTag": "tribbie",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Tribbie_00_Config.json",
+    "DamageType": "Quantum",
+    "SPNeed": {
+      "Value": 120
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      140301,
+      140302,
+      140303,
+      140304,
+      140305,
+      140306
+    ],
+    "RewardList": [
+      {
+        "ItemID": 11403,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 40
+      }
+    ],
+    "RewardListMax": [
+      {
+        "ItemID": 252,
+        "ItemNum": 100
+      }
+    ],
+    "SkillList": [
+      140301,
+      140302,
+      140303,
+      140304,
+      140306,
+      140307
+    ],
+    "AvatarBaseType": "Shaman",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Tribbie_00/Avatar_Tribbie_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1403.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1403.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1403.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1403.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1403B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1403.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Tribbie_00/Manikin_Avatar_Kid_Tribbie_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Tribbie_00_Config.json",
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/ShamanSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1403.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1403.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1403.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1403.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1403.png",
+    "AvatarDropOffset": [
+      113,
+      26,
+      0.64,
+      113,
+      26,
+      0.64,
+      113,
+      26,
+      0.64
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
+  "1404": {
+    "AvatarID": 1404,
+    "AvatarName": {
+      "Hash": "13777984539817850592"
+    },
+    "AvatarFullName": {
+      "Hash": "5512403484495660673"
+    },
+    "AdventurePlayerID": 1404,
+    "AvatarVOTag": "mydei",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Mydeimos_00_Config.json",
+    "DamageType": "Imaginary",
+    "SPNeed": {
+      "Value": 160
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      140401,
+      140402,
+      140403,
+      140404,
+      140405,
+      140406
+    ],
+    "RewardList": [
+      {
+        "ItemID": 11404,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 40
+      }
+    ],
+    "RewardListMax": [
+      {
+        "ItemID": 252,
+        "ItemNum": 100
+      }
+    ],
+    "SkillList": [
+      140401,
+      140402,
+      140403,
+      140404,
+      140406,
+      140407,
+      140409,
+      140411
+    ],
+    "AvatarBaseType": "Warrior",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Mydeimos_00/Avatar_Mydeimos_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1404.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1404.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1404.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1404.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1404B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1404.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Mydeimos_00/Manikin_Avatar_Male_Mydeimos_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Mydeimos_00_Config.json",
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/WarriorSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1404.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1404.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1404.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1404.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1404.png",
+    "AvatarDropOffset": [
+      139,
+      74,
+      0.64,
+      139,
+      74,
+      0.64,
+      139,
+      74,
+      0.64
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
   "8001": {
     "AvatarID": 8001,
     "AvatarName": {
-      "Hash": -531793818
+      "Hash": "15351791685587679468"
     },
     "AvatarFullName": {
-      "Hash": -1461075445
+      "Hash": "1889615116897637623"
     },
     "AdventurePlayerID": 8001,
     "AvatarVOTag": "playerboy",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_PlayerBoy_00_Config.json",
     "DamageType": "Physical",
     "SPNeed": {
@@ -6757,9 +6330,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_8001.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/PlayerBoy_00/Manikin_Avatar_Lad_PlayerBoy_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_PlayerBoy_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarriorSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -6770,7 +6340,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/8001.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/8001.png",
     "AvatarCutinIntroText": {
-      "Hash": -1378596035
+      "Hash": "2021220024962210302"
     },
     "AvatarDropOffset": [
       0,
@@ -6800,20 +6370,14 @@
   "8002": {
     "AvatarID": 8002,
     "AvatarName": {
-      "Hash": -935078345
+      "Hash": "915414112326692585"
     },
     "AvatarFullName": {
-      "Hash": 802741703
+      "Hash": "10220350920306746709"
     },
     "AdventurePlayerID": 8002,
     "AvatarVOTag": "playergirl",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_PlayerGirl_00_Config.json",
     "DamageType": "Physical",
     "SPNeed": {
@@ -6866,9 +6430,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_8002.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/PlayerGirl_00/Manikin_Avatar_Miss_PlayerGirl_00.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_PlayerGirl_00_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/WarriorSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -6879,7 +6440,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/8002.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/8002.png",
     "AvatarCutinIntroText": {
-      "Hash": -1378596038
+      "Hash": "17748756880574087670"
     },
     "AvatarDropOffset": [
       0,
@@ -6909,20 +6470,14 @@
   "8003": {
     "AvatarID": 8003,
     "AvatarName": {
-      "Hash": 631005596
+      "Hash": "1401066943349888144"
     },
     "AvatarFullName": {
-      "Hash": -1461075445
+      "Hash": "1889615116897637623"
     },
     "AdventurePlayerID": 8003,
     "AvatarVOTag": "playerboy2",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_PlayerBoy_10_Config.json",
     "DamageType": "Fire",
     "SPNeed": {
@@ -6974,9 +6529,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_8003.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/PlayerBoy_10/Manikin_Avatar_Lad_PlayerBoy_10.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_PlayerBoy_10_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/KnightSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -6987,7 +6539,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/8003.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/8003.png",
     "AvatarCutinIntroText": {
-      "Hash": -1378596037
+      "Hash": "10578871226263943560"
     },
     "AvatarDropOffset": [
       0,
@@ -7017,20 +6569,14 @@
   "8004": {
     "AvatarID": 8004,
     "AvatarName": {
-      "Hash": 227721069
+      "Hash": "12002536695852490847"
     },
     "AvatarFullName": {
-      "Hash": 802741703
+      "Hash": "10220350920306746709"
     },
     "AdventurePlayerID": 8004,
     "AvatarVOTag": "playergirl2",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_PlayerGirl_10_Config.json",
     "DamageType": "Fire",
     "SPNeed": {
@@ -7082,9 +6628,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_8004.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/PlayerGirl_10/Manikin_Avatar_Miss_PlayerGirl_10.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_PlayerGirl_10_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/KnightSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -7095,7 +6638,7 @@
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/8004.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/8004.png",
     "AvatarCutinIntroText": {
-      "Hash": -1378596032
+      "Hash": "6259004561578425684"
     },
     "AvatarDropOffset": [
       0,
@@ -7125,20 +6668,14 @@
   "8005": {
     "AvatarID": 8005,
     "AvatarName": {
-      "Hash": 1793805010
+      "Hash": "10447948767909792082"
     },
     "AvatarFullName": {
-      "Hash": -1461075445
+      "Hash": "1889615116897637623"
     },
     "AdventurePlayerID": 8005,
     "AvatarVOTag": "playerboy3",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_PlayerBoy_20_Config.json",
     "DamageType": "Imaginary",
     "SPNeed": {
@@ -7189,9 +6726,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_8005.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/PlayerBoy_20/Manikin_Avatar_Lad_PlayerBoy_20.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_PlayerBoy_20_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/ShamanSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -7201,9 +6735,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/8005.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/8005.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/8005.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [],
     "AvatarTrialOffset": [],
     "PlayerCardOffset": [],
@@ -7214,20 +6745,14 @@
   "8006": {
     "AvatarID": 8006,
     "AvatarName": {
-      "Hash": 1390520483
+      "Hash": "10393121115260878389"
     },
     "AvatarFullName": {
-      "Hash": 802741703
+      "Hash": "10220350920306746709"
     },
     "AdventurePlayerID": 8006,
     "AvatarVOTag": "playergirl3",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_PlayerGirl_20_Config.json",
     "DamageType": "Imaginary",
     "SPNeed": {
@@ -7278,9 +6803,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_8006.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/PlayerGirl_20/Manikin_Avatar_Miss_PlayerGirl_20.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_PlayerGirl_20_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/ShamanSkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -7290,9 +6812,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/8006.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/8006.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/8006.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [],
     "AvatarTrialOffset": [],
     "PlayerCardOffset": [],
@@ -7303,20 +6822,14 @@
   "8007": {
     "AvatarID": 8007,
     "AvatarName": {
-      "Hash": -1338362872
+      "Hash": "16176654588635246657"
     },
     "AvatarFullName": {
-      "Hash": -1461075445
+      "Hash": "1889615116897637623"
     },
     "AdventurePlayerID": 8007,
     "AvatarVOTag": "playerboy4",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_PlayerBoy_30_Config.json",
     "DamageType": "Ice",
     "SPNeed": {
@@ -7368,9 +6881,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_8007.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/PlayerBoy_30/Manikin_Avatar_Lad_PlayerBoy_30.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_PlayerBoy_30_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/MemorySkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -7380,9 +6890,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/8007.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/8007.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/8007.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [],
     "AvatarTrialOffset": [],
     "PlayerCardOffset": [],
@@ -7393,20 +6900,14 @@
   "8008": {
     "AvatarID": 8008,
     "AvatarName": {
-      "Hash": 1840859177
+      "Hash": "4088185837206355760"
     },
     "AvatarFullName": {
-      "Hash": 802741703
+      "Hash": "10220350920306746709"
     },
     "AdventurePlayerID": 8008,
     "AvatarVOTag": "playergirl4",
     "Rarity": "CombatPowerAvatarRarityType5",
-    "AvatarInitialSkinName": {
-      "Hash": 371857150
-    },
-    "AvatarInitialSkinDesc": {
-      "Hash": 371857150
-    },
     "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_PlayerGirl_30_Config.json",
     "DamageType": "Ice",
     "SPNeed": {
@@ -7458,9 +6959,6 @@
     "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_8008.prefab",
     "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/PlayerGirl_30/Manikin_Avatar_Miss_PlayerGirl_30.prefab",
     "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_PlayerGirl_30_Config.json",
-    "AvatarDesc": {
-      "Hash": 371857150
-    },
     "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
     "SkilltreePrefabPath": "UI/Avatar/Widget/MemorySkillTreeGroup.prefab",
     "DamageTypeResistance": [],
@@ -7470,9 +6968,6 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/8008.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/8008.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/8008.png",
-    "AvatarCutinIntroText": {
-      "Hash": 371857150
-    },
     "AvatarDropOffset": [],
     "AvatarTrialOffset": [],
     "PlayerCardOffset": [],

@@ -3,10 +3,7 @@
     "EquipmentID": 20000,
     "Release": true,
     "EquipmentName": {
-      "Hash": -234052537
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "1315631816518421847"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Rogue",
@@ -44,10 +41,7 @@
     "EquipmentID": 20001,
     "Release": true,
     "EquipmentName": {
-      "Hash": -234052538
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "626150995471578115"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Priest",
@@ -85,10 +79,7 @@
     "EquipmentID": 20002,
     "Release": true,
     "EquipmentName": {
-      "Hash": -234052535
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "131015357822286277"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Warrior",
@@ -126,10 +117,7 @@
     "EquipmentID": 20003,
     "Release": true,
     "EquipmentName": {
-      "Hash": -234052536
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "1980577345993249477"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Knight",
@@ -167,10 +155,7 @@
     "EquipmentID": 20004,
     "Release": true,
     "EquipmentName": {
-      "Hash": -234052541
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "6342114722180502380"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Warlock",
@@ -208,10 +193,7 @@
     "EquipmentID": 20005,
     "Release": true,
     "EquipmentName": {
-      "Hash": -234052542
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "15002084058293597877"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Shaman",
@@ -249,10 +231,7 @@
     "EquipmentID": 20006,
     "Release": true,
     "EquipmentName": {
-      "Hash": -234052539
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "2920583894071632168"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Mage",
@@ -290,10 +269,7 @@
     "EquipmentID": 20007,
     "Release": true,
     "EquipmentName": {
-      "Hash": -234052540
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "12734437266111259030"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Rogue",
@@ -331,10 +307,7 @@
     "EquipmentID": 20008,
     "Release": true,
     "EquipmentName": {
-      "Hash": -234052545
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "10739058991811781260"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Priest",
@@ -372,10 +345,7 @@
     "EquipmentID": 20009,
     "Release": true,
     "EquipmentName": {
-      "Hash": -234052546
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "11402115896427763107"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Warrior",
@@ -413,10 +383,7 @@
     "EquipmentID": 20010,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1332031404
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "13332347318490615628"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Knight",
@@ -454,10 +421,7 @@
     "EquipmentID": 20011,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1332031403
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "17785355910974162683"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Warlock",
@@ -495,10 +459,7 @@
     "EquipmentID": 20012,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1332031406
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "12247399936092798494"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Shaman",
@@ -536,10 +497,7 @@
     "EquipmentID": 20013,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1332031405
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "17410807256696397784"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Mage",
@@ -577,10 +535,7 @@
     "EquipmentID": 20014,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1332031400
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "2319508155290238659"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Rogue",
@@ -618,10 +573,7 @@
     "EquipmentID": 20015,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1332031399
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "13040055884517558711"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Priest",
@@ -659,10 +611,7 @@
     "EquipmentID": 20016,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1332031402
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "11103093482623620642"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Warrior",
@@ -700,10 +649,7 @@
     "EquipmentID": 20017,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1332031401
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "13879749833137113727"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Knight",
@@ -741,10 +687,7 @@
     "EquipmentID": 20018,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1332031396
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "12247613731536879846"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Warlock",
@@ -782,10 +725,7 @@
     "EquipmentID": 20019,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1332031395
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "15032070239134334540"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Shaman",
@@ -823,10 +763,7 @@
     "EquipmentID": 20020,
     "Release": true,
     "EquipmentName": {
-      "Hash": 928746877
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "12568713156998545906"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Mage",
@@ -864,10 +801,7 @@
     "EquipmentID": 21000,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1352234380
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "2167454448275708155"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Priest",
@@ -905,10 +839,7 @@
     "EquipmentID": 21001,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1352234379
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "7552929900027690675"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Warlock",
@@ -946,10 +877,7 @@
     "EquipmentID": 21002,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1352234382
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "14499399798298365304"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Knight",
@@ -987,10 +915,7 @@
     "EquipmentID": 21003,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1352234381
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "12928749239135264942"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Rogue",
@@ -1028,10 +953,7 @@
     "EquipmentID": 21004,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1352234376
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "10427242296541626113"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Shaman",
@@ -1069,10 +991,7 @@
     "EquipmentID": 21005,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1352234375
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "10839077926966289407"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Warrior",
@@ -1110,10 +1029,7 @@
     "EquipmentID": 21006,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1352234378
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "14111965920986505827"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Mage",
@@ -1151,10 +1067,7 @@
     "EquipmentID": 21008,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1352234372
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "7595585734525049293"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Warlock",
@@ -1192,10 +1105,7 @@
     "EquipmentID": 21009,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1352234371
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "1697621481831882137"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Knight",
@@ -1233,10 +1143,7 @@
     "EquipmentID": 21010,
     "Release": true,
     "EquipmentName": {
-      "Hash": -213849561
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "12749567746103982808"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Rogue",
@@ -1274,10 +1181,7 @@
     "EquipmentID": 21011,
     "Release": true,
     "EquipmentName": {
-      "Hash": -213849562
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "13158293906785266925"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Shaman",
@@ -1315,10 +1219,7 @@
     "EquipmentID": 21012,
     "Release": true,
     "EquipmentName": {
-      "Hash": -213849559
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "7988605493025865868"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Warrior",
@@ -1356,10 +1257,7 @@
     "EquipmentID": 21013,
     "Release": true,
     "EquipmentName": {
-      "Hash": -213849560
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "162961089588416007"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Mage",
@@ -1397,10 +1295,7 @@
     "EquipmentID": 21014,
     "Release": true,
     "EquipmentName": {
-      "Hash": -213849565
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "13174243432611028231"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Priest",
@@ -1438,10 +1333,7 @@
     "EquipmentID": 21015,
     "Release": true,
     "EquipmentName": {
-      "Hash": -213849566
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "13745399009822153287"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Warlock",
@@ -1479,10 +1371,7 @@
     "EquipmentID": 21016,
     "Release": true,
     "EquipmentName": {
-      "Hash": -213849563
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "1574056865504538423"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Knight",
@@ -1520,10 +1409,7 @@
     "EquipmentID": 21017,
     "Release": true,
     "EquipmentName": {
-      "Hash": -213849564
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "16799517243763151061"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Rogue",
@@ -1561,10 +1447,7 @@
     "EquipmentID": 21018,
     "Release": true,
     "EquipmentName": {
-      "Hash": -213849569
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "2617276305345465640"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Shaman",
@@ -1602,10 +1485,7 @@
     "EquipmentID": 21019,
     "Release": true,
     "EquipmentName": {
-      "Hash": -213849570
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "7087158918269789482"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Warrior",
@@ -1643,10 +1523,7 @@
     "EquipmentID": 21020,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1779933502
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "3011459729684543498"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Mage",
@@ -1684,10 +1561,7 @@
     "EquipmentID": 21021,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1779933503
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "5213115940555228162"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Priest",
@@ -1725,10 +1599,7 @@
     "EquipmentID": 21022,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1779933500
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "11556837653135001833"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Warlock",
@@ -1766,10 +1637,7 @@
     "EquipmentID": 21023,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1779933501
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "2437893704371924013"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Knight",
@@ -1807,10 +1675,7 @@
     "EquipmentID": 21024,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1779933506
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "7199060513447123746"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Rogue",
@@ -1848,10 +1713,7 @@
     "EquipmentID": 21026,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1779933504
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "2865330475640667594"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Warrior",
@@ -1889,10 +1751,7 @@
     "EquipmentID": 21027,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1779933505
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "10425213309433675372"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Mage",
@@ -1930,10 +1789,7 @@
     "EquipmentID": 21028,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1779933510
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "9790535670345159450"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Priest",
@@ -1971,10 +1827,7 @@
     "EquipmentID": 21029,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1779933511
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "16240711282141343645"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Warlock",
@@ -2012,10 +1865,7 @@
     "EquipmentID": 21030,
     "Release": true,
     "EquipmentName": {
-      "Hash": 948949853
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "12664422904687735233"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Knight",
@@ -2053,10 +1903,7 @@
     "EquipmentID": 21031,
     "Release": true,
     "EquipmentName": {
-      "Hash": 948949852
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "9181486690944903166"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Rogue",
@@ -2094,10 +1941,7 @@
     "EquipmentID": 21032,
     "Release": true,
     "EquipmentName": {
-      "Hash": 948949855
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "12162768609723681896"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Shaman",
@@ -2135,10 +1979,7 @@
     "EquipmentID": 21033,
     "Release": true,
     "EquipmentName": {
-      "Hash": 948949854
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "14096160680959455656"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Warrior",
@@ -2176,10 +2017,7 @@
     "EquipmentID": 21034,
     "Release": true,
     "EquipmentName": {
-      "Hash": 948949849
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "4457157234821228851"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Mage",
@@ -2217,10 +2055,7 @@
     "EquipmentID": 22000,
     "Release": true,
     "EquipmentName": {
-      "Hash": -516377539
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "6499212577580680601"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Warlock",
@@ -2260,10 +2095,7 @@
     "EquipmentID": 23000,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1069909378
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "15382217452095502614"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Mage",
@@ -2301,10 +2133,7 @@
     "EquipmentID": 23001,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1069909377
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "8801957355485281282"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Rogue",
@@ -2342,10 +2171,7 @@
     "EquipmentID": 23002,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1069909380
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "12383480154175459629"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Warrior",
@@ -2383,10 +2209,7 @@
     "EquipmentID": 23003,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1069909379
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "8522650187971319173"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Shaman",
@@ -2424,10 +2247,7 @@
     "EquipmentID": 23004,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1069909374
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "10183975544059560062"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Warlock",
@@ -2465,10 +2285,7 @@
     "EquipmentID": 23005,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1069909373
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "7937757985821192715"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Knight",
@@ -2506,10 +2323,7 @@
     "EquipmentID": 23006,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1069909376
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "17574691798561298326"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Warlock",
@@ -2547,10 +2361,7 @@
     "EquipmentID": 23007,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1069909375
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "12681543763079713620"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Warlock",
@@ -2588,10 +2399,7 @@
     "EquipmentID": 23008,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1069909370
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "14622040109051771747"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Priest",
@@ -2629,10 +2437,7 @@
     "EquipmentID": 23009,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1069909369
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "9878785544467344708"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Warrior",
@@ -2670,10 +2475,7 @@
     "EquipmentID": 23010,
     "Release": true,
     "EquipmentName": {
-      "Hash": -496174563
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "5016139085509664328"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Mage",
@@ -2711,10 +2513,7 @@
     "EquipmentID": 23011,
     "Release": true,
     "EquipmentName": {
-      "Hash": -496174564
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "4097943518132692404"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Knight",
@@ -2752,10 +2551,7 @@
     "EquipmentID": 23012,
     "Release": true,
     "EquipmentName": {
-      "Hash": -496174561
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "3988416931465964572"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Rogue",
@@ -2793,10 +2589,7 @@
     "EquipmentID": 23013,
     "Release": true,
     "EquipmentName": {
-      "Hash": -496174562
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "2939788966008364272"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Priest",
@@ -2834,10 +2627,7 @@
     "EquipmentID": 23014,
     "Release": true,
     "EquipmentName": {
-      "Hash": -496174567
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "8896320544221495485"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Warrior",
@@ -2875,10 +2665,7 @@
     "EquipmentID": 23015,
     "Release": true,
     "EquipmentName": {
-      "Hash": -496174568
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "5882077875757512131"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Warrior",
@@ -2916,10 +2703,7 @@
     "EquipmentID": 23016,
     "Release": true,
     "EquipmentName": {
-      "Hash": -496174565
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "6338477157066304065"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Rogue",
@@ -2957,10 +2741,7 @@
     "EquipmentID": 24000,
     "Release": true,
     "EquipmentName": {
-      "Hash": 330597467
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "4075116411984711274"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Warrior",
@@ -3000,10 +2781,7 @@
     "EquipmentID": 24001,
     "Release": true,
     "EquipmentName": {
-      "Hash": 330597466
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "6397781049354459849"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Rogue",
@@ -3043,10 +2821,7 @@
     "EquipmentID": 24002,
     "Release": true,
     "EquipmentName": {
-      "Hash": 330597469
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "2383987427860701439"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Knight",
@@ -3086,10 +2861,7 @@
     "EquipmentID": 21025,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1779933507
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "6669890141724855046"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Shaman",
@@ -3127,10 +2899,7 @@
     "EquipmentID": 23017,
     "Release": true,
     "EquipmentName": {
-      "Hash": -496174566
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "6652371494884618152"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Priest",
@@ -3168,10 +2937,7 @@
     "EquipmentID": 23018,
     "Release": true,
     "EquipmentName": {
-      "Hash": -496174571
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "7806293657413569732"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Mage",
@@ -3209,10 +2975,7 @@
     "EquipmentID": 23019,
     "Release": true,
     "EquipmentName": {
-      "Hash": -496174572
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "6511942529766525790"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Shaman",
@@ -3250,10 +3013,7 @@
     "EquipmentID": 23021,
     "Release": true,
     "EquipmentName": {
-      "Hash": -92890037
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "13392063733437188899"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Shaman",
@@ -3291,10 +3051,7 @@
     "EquipmentID": 23023,
     "Release": true,
     "EquipmentName": {
-      "Hash": -92890035
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "16572767459975564925"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Knight",
@@ -3332,10 +3089,7 @@
     "EquipmentID": 23020,
     "Release": true,
     "EquipmentName": {
-      "Hash": -92890036
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "13217917909606342578"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Rogue",
@@ -3373,10 +3127,7 @@
     "EquipmentID": 24003,
     "Release": true,
     "EquipmentName": {
-      "Hash": 330597468
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "6603370301531956729"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Warlock",
@@ -3416,10 +3167,7 @@
     "EquipmentID": 21035,
     "Release": true,
     "EquipmentName": {
-      "Hash": 948949848
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "14618451847251881593"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Priest",
@@ -3457,10 +3205,7 @@
     "EquipmentID": 21036,
     "Release": true,
     "EquipmentName": {
-      "Hash": 948949851
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "7190155227974321848"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Shaman",
@@ -3498,10 +3243,7 @@
     "EquipmentID": 21037,
     "Release": true,
     "EquipmentName": {
-      "Hash": 948949850
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "11986294710949841576"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Rogue",
@@ -3539,10 +3281,7 @@
     "EquipmentID": 21038,
     "Release": true,
     "EquipmentName": {
-      "Hash": 948949845
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "15061106384238445075"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Warrior",
@@ -3580,10 +3319,7 @@
     "EquipmentID": 21039,
     "Release": true,
     "EquipmentName": {
-      "Hash": 948949844
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "17221523966150677749"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Knight",
@@ -3621,10 +3357,7 @@
     "EquipmentID": 21040,
     "Release": true,
     "EquipmentName": {
-      "Hash": -973364448
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "11787985211097824188"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Mage",
@@ -3662,10 +3395,7 @@
     "EquipmentID": 21041,
     "Release": true,
     "EquipmentName": {
-      "Hash": -973364449
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "9917675222835188030"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Warlock",
@@ -3703,10 +3433,7 @@
     "EquipmentID": 23022,
     "Release": true,
     "EquipmentName": {
-      "Hash": -92890034
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "1760113629327884437"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Warlock",
@@ -3744,10 +3471,7 @@
     "EquipmentID": 21007,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1352234377
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "1689191955197149654"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Priest",
@@ -3785,10 +3509,7 @@
     "EquipmentID": 24004,
     "Release": true,
     "EquipmentName": {
-      "Hash": 330597463
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "15435895158678403029"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Mage",
@@ -3828,10 +3549,7 @@
     "EquipmentID": 22001,
     "Release": true,
     "EquipmentName": {
-      "Hash": -516377540
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "5044439088801606790"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Priest",
@@ -3871,10 +3589,7 @@
     "EquipmentID": 23024,
     "Release": true,
     "EquipmentName": {
-      "Hash": -92890040
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "2304736168270673834"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Warlock",
@@ -3912,10 +3627,7 @@
     "EquipmentID": 23025,
     "Release": true,
     "EquipmentName": {
-      "Hash": -92890041
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "5533133162833624556"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Warrior",
@@ -3953,10 +3665,7 @@
     "EquipmentID": 21042,
     "Release": true,
     "EquipmentName": {
-      "Hash": -973364446
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "10092969236133299188"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Warrior",
@@ -3994,10 +3703,7 @@
     "EquipmentID": 21043,
     "Release": true,
     "EquipmentName": {
-      "Hash": -973364447
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "14152526364798022068"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Knight",
@@ -4035,10 +3741,7 @@
     "EquipmentID": 23027,
     "Release": true,
     "EquipmentName": {
-      "Hash": -92890039
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "16562686593279533010"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Rogue",
@@ -4076,10 +3779,7 @@
     "EquipmentID": 23028,
     "Release": true,
     "EquipmentName": {
-      "Hash": -92890044
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "8391488999247369590"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Mage",
@@ -4117,10 +3817,7 @@
     "EquipmentID": 21044,
     "Release": true,
     "EquipmentName": {
-      "Hash": -973364452
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "10467065315466017245"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Warlock",
@@ -4158,10 +3855,7 @@
     "EquipmentID": 21045,
     "Release": true,
     "EquipmentName": {
-      "Hash": -973364453
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "2017811926861740653"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Mage",
@@ -4199,10 +3893,7 @@
     "EquipmentID": 21046,
     "Release": true,
     "EquipmentName": {
-      "Hash": -973364450
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "7852072680209603817"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Shaman",
@@ -4240,10 +3931,7 @@
     "EquipmentID": 21047,
     "Release": true,
     "EquipmentName": {
-      "Hash": -973364451
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "5449558217329844746"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Rogue",
@@ -4281,10 +3969,7 @@
     "EquipmentID": 21048,
     "Release": true,
     "EquipmentName": {
-      "Hash": -973364456
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "17607126303400988571"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Priest",
@@ -4322,10 +4007,7 @@
     "EquipmentID": 22002,
     "Release": true,
     "EquipmentName": {
-      "Hash": -516377537
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "12477180630545967573"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Shaman",
@@ -4365,10 +4047,7 @@
     "EquipmentID": 23026,
     "Release": true,
     "EquipmentName": {
-      "Hash": -92890038
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "7151795079392647332"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Shaman",
@@ -4406,10 +4085,7 @@
     "EquipmentID": 23030,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1658973977
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "9582006062334260573"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Warrior",
@@ -4447,10 +4123,7 @@
     "EquipmentID": 23029,
     "Release": true,
     "EquipmentName": {
-      "Hash": -92890045
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "458554896646617640"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Warlock",
@@ -4488,10 +4161,7 @@
     "EquipmentID": 23031,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1658973978
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "14143448995387386080"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Rogue",
@@ -4529,10 +4199,7 @@
     "EquipmentID": 23032,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1658973975
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "7711419540001836555"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Priest",
@@ -4570,10 +4237,7 @@
     "EquipmentID": 23033,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1658973976
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "166399991008704530"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Mage",
@@ -4611,10 +4275,7 @@
     "EquipmentID": 22003,
     "Release": true,
     "EquipmentName": {
-      "Hash": -516377538
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "3181001684884320491"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Warrior",
@@ -4654,10 +4315,7 @@
     "EquipmentID": 23035,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1658973982
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "2365588922771791772"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Warlock",
@@ -4695,10 +4353,7 @@
     "EquipmentID": 23034,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1658973981
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "17036794612158182092"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Shaman",
@@ -4736,10 +4391,7 @@
     "EquipmentID": 21050,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1755518907
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "3826288517981139592"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Memory",
@@ -4777,10 +4429,7 @@
     "EquipmentID": 23037,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1658973980
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "7647972073962524348"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Mage",
@@ -4818,10 +4467,7 @@
     "EquipmentID": 20021,
     "Release": true,
     "EquipmentName": {
-      "Hash": 928746876
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "8589021141704183905"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Memory",
@@ -4859,10 +4505,7 @@
     "EquipmentID": 20022,
     "Release": true,
     "EquipmentName": {
-      "Hash": 928746879
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "3133619668689285080"
     },
     "Rarity": "CombatPowerLightconeRarity3",
     "AvatarBaseType": "Memory",
@@ -4900,10 +4543,7 @@
     "EquipmentID": 21051,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1755518906
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "6987783680196069182"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Memory",
@@ -4941,10 +4581,7 @@
     "EquipmentID": 21052,
     "Release": true,
     "EquipmentName": {
-      "Hash": 1755518909
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "2812952012494006470"
     },
     "Rarity": "CombatPowerLightconeRarity4",
     "AvatarBaseType": "Memory",
@@ -4982,10 +4619,7 @@
     "EquipmentID": 23036,
     "Release": true,
     "EquipmentName": {
-      "Hash": -1658973979
-    },
-    "EquipmentDesc": {
-      "Hash": 371857150
+      "Hash": "12998084085250275171"
     },
     "Rarity": "CombatPowerLightconeRarity5",
     "AvatarBaseType": "Memory",
@@ -5007,6 +4641,122 @@
       11,
       -94,
       1.2
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "23038": {
+    "EquipmentID": 23038,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": "5079774664946893569"
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Shaman",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23038,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23038.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23038.png",
+    "ItemRightPanelOffset": [
+      1,
+      -93,
+      0.84
+    ],
+    "AvatarDetailOffset": [
+      2,
+      -86,
+      1.3
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "24005": {
+    "EquipmentID": 24005,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": "10592306546445443705"
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Memory",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 24005,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [
+      271
+    ],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/24005.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/24005.png",
+    "ItemRightPanelOffset": [
+      1,
+      -90,
+      0.7
+    ],
+    "AvatarDetailOffset": [
+      1,
+      -86,
+      1.1
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "23039": {
+    "EquipmentID": 23039,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": "10640455180150177057"
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Warrior",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23039,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23039.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23039.png",
+    "ItemRightPanelOffset": [
+      41,
+      -160,
+      0.91
+    ],
+    "AvatarDetailOffset": [
+      38,
+      -148,
+      1.4
     ],
     "BattleDialogOffset": [
       0,

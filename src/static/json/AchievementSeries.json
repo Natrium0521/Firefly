@@ -2,7 +2,7 @@
   "1": {
     "SeriesID": 1,
     "SeriesTitle": {
-      "Hash": -621359642
+      "Hash": "10688429699583087549"
     },
     "MainIconPath": "SpriteOutput/Achievement/CultivateAchievementIcon.png",
     "IconPath": "SpriteOutput/Achievement/CultivateAchievementIcon_s.png",
@@ -14,7 +14,7 @@
   "2": {
     "SeriesID": 2,
     "SeriesTitle": {
-      "Hash": -621359643
+      "Hash": "17275141053610613547"
     },
     "MainIconPath": "SpriteOutput/Achievement/CollectAchievementIcon.png",
     "IconPath": "SpriteOutput/Achievement/CollectAchievementIcon_s.png",
@@ -26,7 +26,7 @@
   "3": {
     "SeriesID": 3,
     "SeriesTitle": {
-      "Hash": -621359644
+      "Hash": "9284461757711506801"
     },
     "MainIconPath": "SpriteOutput/Achievement/MainLineAchievementIcon.png",
     "IconPath": "SpriteOutput/Achievement/MainLineAchievementIcon_s.png",
@@ -38,7 +38,7 @@
   "4": {
     "SeriesID": 4,
     "SeriesTitle": {
-      "Hash": -621359637
+      "Hash": "7105001345982424545"
     },
     "MainIconPath": "SpriteOutput/Achievement/ExploreAchievementIcon.png",
     "IconPath": "SpriteOutput/Achievement/ExploreAchievementIcon_s.png",
@@ -50,7 +50,7 @@
   "5": {
     "SeriesID": 5,
     "SeriesTitle": {
-      "Hash": -621359638
+      "Hash": "3253768704130197410"
     },
     "MainIconPath": "SpriteOutput/Achievement/ReputationAchievementIcon.png",
     "IconPath": "SpriteOutput/Achievement/ReputationAchievementIcon_s.png",
@@ -62,7 +62,7 @@
   "6": {
     "SeriesID": 6,
     "SeriesTitle": {
-      "Hash": -621359639
+      "Hash": "1818216263802286683"
     },
     "MainIconPath": "SpriteOutput/Achievement/ChallengeAchievementIcon.png",
     "IconPath": "SpriteOutput/Achievement/ChallengeAchievementIcon_s.png",
@@ -74,7 +74,7 @@
   "7": {
     "SeriesID": 7,
     "SeriesTitle": {
-      "Hash": -621359640
+      "Hash": "11039503433672916680"
     },
     "MainIconPath": "SpriteOutput/Achievement/BattleAchievementIcon.png",
     "IconPath": "SpriteOutput/Achievement/BattleAchievementIcon_s.png",
@@ -86,7 +86,7 @@
   "8": {
     "SeriesID": 8,
     "SeriesTitle": {
-      "Hash": -621359633
+      "Hash": "15734024159536764500"
     },
     "MainIconPath": "SpriteOutput/Achievement/TrackAchievementIcon.png",
     "IconPath": "SpriteOutput/Achievement/TrackAchievementIcon_s.png",
@@ -98,7 +98,7 @@
   "9": {
     "SeriesID": 9,
     "SeriesTitle": {
-      "Hash": -621359634
+      "Hash": "4954120379139927979"
     },
     "MainIconPath": "SpriteOutput/Achievement/RougeAchievementIcon.png",
     "IconPath": "SpriteOutput/Achievement/RougeAchievementIcon_s.png",
