@@ -36,12 +36,6 @@
         "ItemNum": 8
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
-      }
-    ],
     "SkillList": [
       100101,
       100102,
@@ -142,12 +136,6 @@
         "ItemNum": 8
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
-      }
-    ],
     "SkillList": [
       100201,
       100202,
@@ -246,12 +234,6 @@
       {
         "ItemID": 252,
         "ItemNum": 40
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
       }
     ],
     "SkillList": [
@@ -358,12 +340,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       100401,
       100402,
@@ -464,12 +440,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       100501,
       100502,
@@ -564,12 +534,6 @@
       {
         "ItemID": 252,
         "ItemNum": 40
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
       }
     ],
     "SkillList": [
@@ -672,12 +636,6 @@
         "ItemNum": 8
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
-      }
-    ],
     "SkillList": [
       100801,
       100802,
@@ -776,12 +734,6 @@
       {
         "ItemID": 252,
         "ItemNum": 8
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
       }
     ],
     "SkillList": [
@@ -884,12 +836,6 @@
         "ItemNum": 8
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
-      }
-    ],
     "SkillList": [
       101301,
       101302,
@@ -988,12 +934,6 @@
       {
         "ItemID": 252,
         "ItemNum": 40
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
       }
     ],
     "SkillList": [
@@ -1096,12 +1036,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       110201,
       110202,
@@ -1200,12 +1134,6 @@
       {
         "ItemID": 252,
         "ItemNum": 8
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
       }
     ],
     "SkillList": [
@@ -1308,12 +1236,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       110401,
       110402,
@@ -1412,12 +1334,6 @@
       {
         "ItemID": 252,
         "ItemNum": 8
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
       }
     ],
     "SkillList": [
@@ -1520,12 +1436,6 @@
         "ItemNum": 8
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
-      }
-    ],
     "SkillList": [
       110601,
       110602,
@@ -1624,12 +1534,6 @@
       {
         "ItemID": 252,
         "ItemNum": 40
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
       }
     ],
     "SkillList": [
@@ -1732,12 +1636,6 @@
         "ItemNum": 8
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
-      }
-    ],
     "SkillList": [
       110801,
       110802,
@@ -1836,12 +1734,6 @@
       {
         "ItemID": 252,
         "ItemNum": 8
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
       }
     ],
     "SkillList": [
@@ -1945,12 +1837,6 @@
         "ItemNum": 8
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
-      }
-    ],
     "SkillList": [
       111001,
       111002,
@@ -2041,12 +1927,6 @@
       {
         "ItemID": 252,
         "ItemNum": 8
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
       }
     ],
     "SkillList": [
@@ -2143,12 +2023,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       111201,
       111202,
@@ -2232,12 +2106,6 @@
       {
         "ItemID": 252,
         "ItemNum": 8
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
       }
     ],
     "SkillList": [
@@ -2331,12 +2199,6 @@
       {
         "ItemID": 252,
         "ItemNum": 8
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
       }
     ],
     "SkillList": [
@@ -2435,12 +2297,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       120301,
       120302,
@@ -2535,12 +2391,6 @@
       {
         "ItemID": 252,
         "ItemNum": 40
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
       }
     ],
     "SkillList": [
@@ -2643,12 +2493,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       120501,
       120502,
@@ -2746,12 +2590,6 @@
         "ItemNum": 8
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
-      }
-    ],
     "SkillList": [
       120601,
       120602,
@@ -2842,12 +2680,6 @@
       {
         "ItemID": 252,
         "ItemNum": 8
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
       }
     ],
     "SkillList": [
@@ -2946,12 +2778,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       120801,
       120802,
@@ -3044,12 +2870,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       120901,
       120902,
@@ -3133,12 +2953,6 @@
       {
         "ItemID": 252,
         "ItemNum": 8
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
       }
     ],
     "SkillList": [
@@ -3234,12 +3048,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       121101,
       121102,
@@ -3331,12 +3139,6 @@
       {
         "ItemID": 252,
         "ItemNum": 40
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
       }
     ],
     "SkillList": [
@@ -3438,12 +3240,6 @@
       {
         "ItemID": 252,
         "ItemNum": 40
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
       }
     ],
     "SkillList": [
@@ -3550,12 +3346,6 @@
         "ItemNum": 8
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
-      }
-    ],
     "SkillList": [
       121401,
       121402,
@@ -3642,12 +3432,6 @@
       {
         "ItemID": 252,
         "ItemNum": 8
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
       }
     ],
     "SkillList": [
@@ -3742,12 +3526,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       121701,
       121702,
@@ -3836,12 +3614,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       121801,
       121802,
@@ -3924,12 +3696,6 @@
       {
         "ItemID": 252,
         "ItemNum": 40
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
       }
     ],
     "SkillList": [
@@ -4031,12 +3797,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       122101,
       122102,
@@ -4116,12 +3876,6 @@
       {
         "ItemID": 252,
         "ItemNum": 40
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
       }
     ],
     "SkillList": [
@@ -4208,12 +3962,6 @@
         "ItemNum": 8
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
-      }
-    ],
     "SkillList": [
       122301,
       122302,
@@ -4293,12 +4041,6 @@
       {
         "ItemID": 252,
         "ItemNum": 8
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
       }
     ],
     "SkillList": [
@@ -4399,12 +4141,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       122501,
       122502,
@@ -4499,12 +4235,6 @@
         "ItemNum": 8
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
-      }
-    ],
     "SkillList": [
       130101,
       130102,
@@ -4585,12 +4315,6 @@
       {
         "ItemID": 252,
         "ItemNum": 40
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
       }
     ],
     "SkillList": [
@@ -4682,12 +4406,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       130301,
       130302,
@@ -4776,12 +4494,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       130401,
       130402,
@@ -4861,12 +4573,6 @@
       {
         "ItemID": 252,
         "ItemNum": 40
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
       }
     ],
     "SkillList": [
@@ -4969,12 +4675,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       130601,
       130602,
@@ -5054,12 +4754,6 @@
       {
         "ItemID": 252,
         "ItemNum": 40
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
       }
     ],
     "SkillList": [
@@ -5144,12 +4838,6 @@
       {
         "ItemID": 252,
         "ItemNum": 40
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
       }
     ],
     "SkillList": [
@@ -5238,12 +4926,6 @@
       {
         "ItemID": 252,
         "ItemNum": 40
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
       }
     ],
     "SkillList": [
@@ -5346,12 +5028,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       131001,
       131002,
@@ -5435,12 +5111,6 @@
         "ItemNum": 8
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
-      }
-    ],
     "SkillList": [
       131201,
       131202,
@@ -5520,12 +5190,6 @@
       {
         "ItemID": 252,
         "ItemNum": 40
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
       }
     ],
     "SkillList": [
@@ -5628,12 +5292,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       131401,
       131402,
@@ -5713,12 +5371,6 @@
       {
         "ItemID": 252,
         "ItemNum": 40
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
       }
     ],
     "SkillList": [
@@ -5820,12 +5472,6 @@
       {
         "ItemID": 252,
         "ItemNum": 40
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
       }
     ],
     "SkillList": [
@@ -5932,12 +5578,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       140101,
       140102,
@@ -6039,12 +5679,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       140201,
       140202,
@@ -6128,12 +5762,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       140301,
       140302,
@@ -6215,12 +5843,6 @@
         "ItemNum": 40
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 100
-      }
-    ],
     "SkillList": [
       140401,
       140402,
@@ -6267,6 +5889,172 @@
     "AssistBgOffset": [],
     "AvatarSelfShowOffset": []
   },
+  "1405": {
+    "AvatarID": 1405,
+    "AvatarName": {
+      "Hash": "14399225845844956184"
+    },
+    "AvatarFullName": {
+      "Hash": "5840934936952395343"
+    },
+    "AdventurePlayerID": 1405,
+    "AvatarVOTag": "anaxa",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Anaxa_00_Config.json",
+    "DamageType": "Wind",
+    "SPNeed": {
+      "Value": 140
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      140501,
+      140502,
+      140503,
+      140504,
+      140505,
+      140506
+    ],
+    "RewardList": [
+      {
+        "ItemID": 11405,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 40
+      }
+    ],
+    "SkillList": [
+      140501,
+      140502,
+      140503,
+      140504,
+      140506,
+      140507
+    ],
+    "AvatarBaseType": "Mage",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Anaxa_00/Avatar_Anaxa_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1405.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1405.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1405.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1405.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1405B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1405.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Anaxa_00/Manikin_Avatar_Lad_Anaxa_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Anaxa_00_Config.json",
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/MageSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1405.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1405.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1405.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1405.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1405.png",
+    "AvatarCutinIntroText": {
+      "Hash": "2828277968786309879"
+    },
+    "AvatarDropOffset": [
+      0,
+      12,
+      0.63,
+      0,
+      12,
+      0.63,
+      0,
+      12,
+      0.63
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
+  "1407": {
+    "AvatarID": 1407,
+    "AvatarName": {
+      "Hash": "6284038990417808171"
+    },
+    "AvatarFullName": {
+      "Hash": "8148736795739493904"
+    },
+    "AdventurePlayerID": 1407,
+    "AvatarVOTag": "castorice",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Castorice_00_Config.json",
+    "DamageType": "Quantum",
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      140701,
+      140702,
+      140703,
+      140704,
+      140705,
+      140706
+    ],
+    "RewardList": [
+      {
+        "ItemID": 11407,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 40
+      }
+    ],
+    "SkillList": [
+      140701,
+      140702,
+      140703,
+      140704,
+      140706,
+      140707,
+      140709
+    ],
+    "AvatarBaseType": "Memory",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Castorice_00/Avatar_Castorice_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1407.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1407.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1407.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1407.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1407B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1407.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Castorice_00/Manikin_Avatar_Maid_Castorice_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Castorice_00_Config.json",
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/MemorySkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1407.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1407.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1407.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1407.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1407.png",
+    "AvatarCutinIntroText": {
+      "Hash": "12022188858628007171"
+    },
+    "AvatarDropOffset": [
+      36,
+      8,
+      0.64,
+      36,
+      8,
+      0.64,
+      36,
+      8,
+      0.64
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
   "8001": {
     "AvatarID": 8001,
     "AvatarName": {
@@ -6302,12 +6090,6 @@
       {
         "ItemID": 252,
         "ItemNum": 8
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
       }
     ],
     "SkillList": [
@@ -6404,12 +6186,6 @@
         "ItemNum": 8
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
-      }
-    ],
     "SkillList": [
       800201,
       800202,
@@ -6502,12 +6278,6 @@
       {
         "ItemID": 252,
         "ItemNum": 8
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
       }
     ],
     "SkillList": [
@@ -6603,12 +6373,6 @@
         "ItemNum": 8
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
-      }
-    ],
     "SkillList": [
       800401,
       800402,
@@ -6702,12 +6466,6 @@
         "ItemNum": 8
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
-      }
-    ],
     "SkillList": [
       800501,
       800502,
@@ -6777,12 +6535,6 @@
       {
         "ItemID": 252,
         "ItemNum": 8
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
       }
     ],
     "SkillList": [
@@ -6856,12 +6608,6 @@
         "ItemNum": 8
       }
     ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
-      }
-    ],
     "SkillList": [
       800701,
       800702,
@@ -6932,12 +6678,6 @@
       {
         "ItemID": 252,
         "ItemNum": 8
-      }
-    ],
-    "RewardListMax": [
-      {
-        "ItemID": 252,
-        "ItemNum": 20
       }
     ],
     "SkillList": [
