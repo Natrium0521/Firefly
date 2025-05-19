@@ -5973,6 +5973,87 @@
     "AssistBgOffset": [],
     "AvatarSelfShowOffset": []
   },
+  "1406": {
+    "AvatarID": 1406,
+    "AvatarName": {
+      "Hash": "1283986297634256167"
+    },
+    "AvatarFullName": {
+      "Hash": "368420602193832713"
+    },
+    "AdventurePlayerID": 1406,
+    "AvatarVOTag": "cipher",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Cipher_00_Config.json",
+    "DamageType": "Quantum",
+    "SPNeed": {
+      "Value": 130
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      140601,
+      140602,
+      140603,
+      140604,
+      140605,
+      140606
+    ],
+    "RewardList": [
+      {
+        "ItemID": 11406,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 40
+      }
+    ],
+    "SkillList": [
+      140601,
+      140602,
+      140603,
+      140604,
+      140606,
+      140607
+    ],
+    "AvatarBaseType": "Warlock",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Cipher_00/Avatar_Cipher_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1406.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1406.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1406.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1406.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1406B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1406.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Cipher_00/Manikin_Avatar_Maid_Cipher_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Cipher_00_Config.json",
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/WarlockSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1406.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1406.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1406.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1406.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1406.png",
+    "AvatarDropOffset": [
+      2,
+      33,
+      0.64,
+      2,
+      33,
+      0.64,
+      2,
+      33,
+      0.64
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
   "1407": {
     "AvatarID": 1407,
     "AvatarName": {
@@ -6047,6 +6128,87 @@
       0.64,
       36,
       8,
+      0.64
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
+  "1409": {
+    "AvatarID": 1409,
+    "AvatarName": {
+      "Hash": "14193361837482662840"
+    },
+    "AvatarFullName": {
+      "Hash": "16820855178760207056"
+    },
+    "AdventurePlayerID": 1409,
+    "AvatarVOTag": "hyacine",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Hyacine_00_Config.json",
+    "DamageType": "Wind",
+    "SPNeed": {
+      "Value": 140
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      140901,
+      140902,
+      140903,
+      140904,
+      140905,
+      140906
+    ],
+    "RewardList": [
+      {
+        "ItemID": 11409,
+        "ItemNum": 1
+      },
+      {
+        "ItemID": 252,
+        "ItemNum": 40
+      }
+    ],
+    "SkillList": [
+      140901,
+      140902,
+      140903,
+      140904,
+      140906,
+      140907
+    ],
+    "AvatarBaseType": "Memory",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Hyacine_00/Avatar_Hyacine_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1409.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1409.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1409.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1409.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1409B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1409.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Hyacine_00/Manikin_Avatar_Girl_Hyacine_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Hyacine_00_Config.json",
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/MemorySkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1409.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1409.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1409.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1409.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1409.png",
+    "AvatarDropOffset": [
+      2,
+      33,
+      0.64,
+      2,
+      33,
+      0.64,
+      2,
+      33,
       0.64
     ],
     "AvatarTrialOffset": [],

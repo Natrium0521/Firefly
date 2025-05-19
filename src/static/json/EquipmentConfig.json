@@ -4769,6 +4769,44 @@
       1
     ]
   },
+  "23042": {
+    "EquipmentID": 23042,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": "1992513852031797087"
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Memory",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23042,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23042.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23042.png",
+    "ItemRightPanelOffset": [
+      -65,
+      -114,
+      0.95
+    ],
+    "AvatarDetailOffset": [
+      -64,
+      -102,
+      1.45
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
   "23041": {
     "EquipmentID": 23041,
     "Release": true,
@@ -4873,6 +4911,44 @@
       -3,
       126,
       1.05
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "23043": {
+    "EquipmentID": 23043,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": "17437100551828055817"
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Warlock",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23043,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23043.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23043.png",
+    "ItemRightPanelOffset": [
+      -7,
+      75,
+      0.76
+    ],
+    "AvatarDetailOffset": [
+      -8,
+      77,
+      1.17
     ],
     "BattleDialogOffset": [
       0,
