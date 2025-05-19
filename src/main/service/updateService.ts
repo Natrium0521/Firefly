@@ -138,7 +138,7 @@ class UpdateService {
             crc = (crc >>> 8) ^ table[(crc ^ fileContent[i]) & 0xff];
         }
         crc = (crc ^ 0xffffffff) >>> 0;
-        return crc.toString(16).toUpperCase();
+        return crc.toString(16).padStart(8, '0').toUpperCase();
     }
 }
 
