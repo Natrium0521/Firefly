@@ -20,6 +20,10 @@ class UnlockFPSService {
 
     private async getRegistryItem(server: string) {
         const gameReg = this.getRegistry(server);
+        const defaultRegItem = await gameReg.getAsync('GraphicsSettings_Model_h2986158309');
+        if (defaultRegItem !== undefined) {
+            return defaultRegItem;
+        }
         if (this.gameRegItemNames[server] === undefined) {
             const gameRegItems = await gameReg.valuesAsync();
             let targetRegItem = undefined;
