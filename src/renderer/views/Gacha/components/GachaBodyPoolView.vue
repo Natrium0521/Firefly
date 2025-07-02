@@ -1,8 +1,8 @@
 <template>
     <div class="gacha-pool-view">
-        <div class="pool-list">
+        <KeepScroll class="pool-list">
             <PoolListItem v-for="item of poolListItems" :key="item[0]['gacha_id']" :item="item" :clicked="() => (showingPoolId = item[0]['gacha_id'])" :isSelected="showingPoolId == item[0]['gacha_id']" />
-        </div>
+        </KeepScroll>
         <div class="pool-detail">
             <PoolDetailView :detail="showingDetail" />
         </div>
@@ -13,8 +13,9 @@
 import { computed, ref } from 'vue';
 import PoolListItem from './PoolListItem.vue';
 import PoolDetailView from './PoolDetailView.vue';
-import { useTextMap } from '../../../store/textmap';
-import { useUserGacha } from '../../../store/usergacha';
+import KeepScroll from '@renderer/components/KeepScroll.vue';
+import { useTextMap } from '@renderer/store/textmap';
+import { useUserGacha } from '@renderer/store/usergacha';
 
 const userGachaStore = useUserGacha();
 const textMapStore = useTextMap();
@@ -54,7 +55,7 @@ const avatarConfig = computed(() => userGachaStore.avatarConfig);
 const lightconeConfig = computed(() => userGachaStore.lightconeConfig);
 const gachaPoolAvatarAndLightcone = computed(() =>
     Object.values(userGachaData.value)
-        .filter((item) => item['gacha_type'] == '11' || item['gacha_type'] == '12')
+        // .filter((item) => item['gacha_type'] == '11' || item['gacha_type'] == '12')
         .sort((a, b) => a['id'] - b['id'])
 );
 const poolDetail = computed(() => {
@@ -72,12 +73,18 @@ const poolDetail = computed(() => {
     return detail;
 });
 const poolListItems = computed(() => {
-    const orderedIds = Object.keys(poolDetail.value).sort((a, b) => {
+    let orderedIds = Object.keys(poolDetail.value).sort((a, b) => {
         if (+a % 1000 === +b % 1000) {
             return +b - +a;
         } else {
             return (+a % 1000) - (+b % 1000);
         }
+    });
+    const topIds = [/4001/, /1001/, /[56]\d{3}/];
+    topIds.reverse().forEach((idPattern) => {
+        const front = orderedIds.filter((id) => !id.match(idPattern));
+        const back = orderedIds.filter((id) => id.match(idPattern));
+        orderedIds = front.concat(back);
     });
     const items = [];
     orderedIds.forEach((id) => {

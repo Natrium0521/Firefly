@@ -14,8 +14,8 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import CardGridItem from './CardGridItem.vue';
-import { useTextMap } from '../../../store/textmap';
-import { useUserGacha } from '../../../store/usergacha';
+import { useTextMap } from '@renderer/store/textmap';
+import { useUserGacha } from '@renderer/store/usergacha';
 
 const textMapStore = useTextMap();
 const userGachaStore = useUserGacha();
@@ -93,11 +93,50 @@ const upItems = computed(() => {
                 time: '',
             };
         });
-        props.item.forEach((item: any) => {
-            if (itemInfo[item.item_id]) {
-                itemInfo[item.item_id].count++;
-            }
-        });
+        if (Object.keys(itemInfo).length) {
+            props.item.forEach((item: any) => {
+                if (itemInfo[item.item_id]) {
+                    itemInfo[item.item_id].count++;
+                }
+            });
+        } else {
+            const starNCount = { '4': {}, '5': {} };
+            props.item.forEach((item: any) => {
+                const n = item.iconType.slice(-1);
+                if (n === '3') return;
+                if (starNCount[n][item.item_id]) {
+                    starNCount[n][item.item_id]++;
+                } else {
+                    starNCount[n][item.item_id] = 1;
+                }
+            });
+            const sortedStar5 = Object.keys(starNCount['5']).sort((a, b) => {
+                return starNCount['5'][b] - starNCount['5'][a];
+            });
+            const sortedStar4 = Object.keys(starNCount['4']).sort((a, b) => {
+                return starNCount['4'][b] - starNCount['4'][a];
+            });
+            sortedStar5.slice(0, 1).forEach((id) => {
+                itemInfo[id] = {
+                    itemId: id,
+                    name: getItemName(id),
+                    count: starNCount['5'][id],
+                    star: 5,
+                    iconType: 'star5',
+                    time: '',
+                };
+            });
+            sortedStar4.slice(0, 3).forEach((id) => {
+                itemInfo[id] = {
+                    itemId: id,
+                    name: getItemName(id),
+                    count: starNCount['4'][id],
+                    star: 4,
+                    iconType: 'star4',
+                    time: '',
+                };
+            });
+        }
     } else {
         props.item.forEach((item: any) => {
             if (getItemName(item.item_id) == item.item_id) {

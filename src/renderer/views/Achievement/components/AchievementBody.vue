@@ -1,8 +1,8 @@
 <template>
     <div class="achievement-body">
-        <div class="achievement-series-container">
+        <KeepScroll class="achievement-series-container">
             <AchievementSeries v-for="item of achievementSeriesItems" :key="item.series_id" :item="item" @click="selectSeries(item.series_id)" :selected="selectedSeries == item.series_id" />
-        </div>
+        </KeepScroll>
         <div class="achievement-item-container">
             <AchievementItemList class="scroller" :items="filteredAchievementItems" />
         </div>
@@ -11,11 +11,12 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, watch, provide, watchEffect } from 'vue';
-import emitter from '../../../utils/mitt';
+import emitter from '@renderer/utils/mitt';
 import AchievementItemList from './AchievementItemList.vue';
 import AchievementSeries from './AchievementSeries.vue';
-import { useTextMap } from '../../../store/textmap';
-import { useUserAchievement } from '../../../store/userachievement';
+import KeepScroll from '@renderer/components/KeepScroll.vue';
+import { useTextMap } from '@renderer/store/textmap';
+import { useUserAchievement } from '@renderer/store/userachievement';
 
 const achievementItems = ref([]);
 const filteredAchievementItems = ref([]);
@@ -146,8 +147,8 @@ onMounted(async () => {
         tmp['achievement_icon'] = achievementSeries[item['SeriesID']]['IconPath'].split('/').at(-1).replace('_s.png', rarityMap[item['Rarity']]['icon']);
         tmp['series_id'] = item['SeriesID'];
         tmp['series_priority'] = achievementSeries[item['SeriesID']]['Priority'];
-        let tmp_desc = textMapStore
-            .getText(item['AchievementDesc']['Hash'])
+        let tmp_desc = textMapStore.getText(item['AchievementDesc']['Hash']) || textMapStore.getText(item['HideAchievementDesc']['Hash']);
+        tmp_desc = tmp_desc
             .replaceAll('\\n', '')
             .replaceAll('<unbreak>', '')
             .replaceAll('</unbreak>', '')

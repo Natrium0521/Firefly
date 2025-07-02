@@ -1,4 +1,22 @@
 {
+    "1001": {
+        "GachaID": 1001,
+        "GachaType": "Normal",
+        "Version": "常驻池",
+        "StartTime": "2023-04-26 08:00:00",
+        "EndTime": "长期开放",
+        "UpItems5": [],
+        "UpItems4": []
+    },
+    "4001": {
+        "GachaID": 4001,
+        "GachaType": "Newbie",
+        "Version": "新手池",
+        "StartTime": "2023-04-26 08:00:00",
+        "EndTime": "长期开放",
+        "UpItems5": [],
+        "UpItems4": []
+    },
     "2003": {
         "GachaID": 2003,
         "GachaType": "AvatarUp",
@@ -2217,6 +2235,260 @@
             21007,
             21008,
             21051
+        ]
+    },
+    "2077": {
+        "GachaID": 2077,
+        "GachaType": "AvatarUp",
+        "Version": "3.4",
+        "StartTime": "2025-07-02 09:00:00",
+        "EndTime": "2025-07-23 11:59:00",
+        "UpItems5": [
+            1408
+        ],
+        "UpItems4": [
+            1001,
+            1202,
+            1207
+        ]
+    },
+    "3077": {
+        "GachaID": 3077,
+        "GachaType": "WeaponUp",
+        "Version": "3.4",
+        "StartTime": "2025-07-02 09:00:00",
+        "EndTime": "2025-07-23 11:59:00",
+        "UpItems5": [
+            23044
+        ],
+        "UpItems4": [
+            21011,
+            21019,
+            21054
+        ]
+    },
+    "2078": {
+        "GachaID": 2078,
+        "GachaType": "AvatarUp",
+        "Version": "3.4",
+        "StartTime": "2025-07-02 09:00:00",
+        "EndTime": "2025-07-23 11:59:00",
+        "UpItems5": [
+            1403
+        ],
+        "UpItems4": [
+            1001,
+            1202,
+            1207
+        ]
+    },
+    "3078": {
+        "GachaID": 3078,
+        "GachaType": "WeaponUp",
+        "Version": "3.4",
+        "StartTime": "2025-07-02 09:00:00",
+        "EndTime": "2025-07-23 11:59:00",
+        "UpItems5": [
+            23038
+        ],
+        "UpItems4": [
+            21011,
+            21019,
+            21054
+        ]
+    },
+    "2079": {
+        "GachaID": 2079,
+        "GachaType": "AvatarUp",
+        "Version": "3.4",
+        "StartTime": "2025-07-02 09:00:00",
+        "EndTime": "2025-07-23 11:59:00",
+        "UpItems5": [
+            1313
+        ],
+        "UpItems4": [
+            1001,
+            1202,
+            1207
+        ]
+    },
+    "3079": {
+        "GachaID": 3079,
+        "GachaType": "WeaponUp",
+        "Version": "3.4",
+        "StartTime": "2025-07-02 09:00:00",
+        "EndTime": "2025-07-23 11:59:00",
+        "UpItems5": [
+            23034
+        ],
+        "UpItems4": [
+            21011,
+            21019,
+            21054
+        ]
+    },
+    "2080": {
+        "GachaID": 2080,
+        "GachaType": "AvatarUp",
+        "Version": "3.4",
+        "StartTime": "2025-07-02 09:00:00",
+        "EndTime": "2025-07-23 11:59:00",
+        "UpItems5": [
+            1306
+        ],
+        "UpItems4": [
+            1001,
+            1202,
+            1207
+        ]
+    },
+    "3080": {
+        "GachaID": 3080,
+        "GachaType": "WeaponUp",
+        "Version": "3.4",
+        "StartTime": "2025-07-02 09:00:00",
+        "EndTime": "2025-07-23 11:59:00",
+        "UpItems5": [
+            23021
+        ],
+        "UpItems4": [
+            21011,
+            21019,
+            21054
+        ]
+    },
+    "5001": {
+        "GachaID": 5001,
+        "GachaType": "CollaborationAvatarUp",
+        "Version": "联动池",
+        "StartTime": "2025-07-11 12:00:00",
+        "EndTime": "长期开放",
+        "UpItems5": [
+            1014
+        ],
+        "UpItems4": []
+    },
+    "6001": {
+        "GachaID": 6001,
+        "GachaType": "CollaborationWeaponUp",
+        "Version": "联动池",
+        "StartTime": "2025-07-11 12:00:00",
+        "EndTime": "长期开放",
+        "UpItems5": [
+            23045
+        ],
+        "UpItems4": []
+    },
+    "5002": {
+        "GachaID": 5002,
+        "GachaType": "CollaborationAvatarUp",
+        "Version": "联动池",
+        "StartTime": "2025-07-11 12:00:00",
+        "EndTime": "长期开放",
+        "UpItems5": [
+            1015
+        ],
+        "UpItems4": []
+    },
+    "6002": {
+        "GachaID": 6002,
+        "GachaType": "CollaborationWeaponUp",
+        "Version": "联动池",
+        "StartTime": "2025-07-11 12:00:00",
+        "EndTime": "长期开放",
+        "UpItems5": [
+            23046
+        ],
+        "UpItems4": []
+    },
+    "2081": {
+        "GachaID": 2081,
+        "GachaType": "AvatarUp",
+        "Version": "3.4",
+        "StartTime": "2025-07-23 12:00:00",
+        "EndTime": "2025-08-12 15:00:00",
+        "UpItems5": [
+            1310
+        ],
+        "UpItems4": [
+            1110,
+            1111,
+            1215
+        ]
+    },
+    "3081": {
+        "GachaID": 3081,
+        "GachaType": "WeaponUp",
+        "Version": "3.4",
+        "StartTime": "2025-07-23 12:00:00",
+        "EndTime": "2025-08-12 15:00:00",
+        "UpItems5": [
+            23025
+        ],
+        "UpItems4": [
+            21012,
+            21015,
+            21017
+        ]
+    },
+    "2082": {
+        "GachaID": 2082,
+        "GachaType": "AvatarUp",
+        "Version": "3.4",
+        "StartTime": "2025-07-23 12:00:00",
+        "EndTime": "2025-08-12 15:00:00",
+        "UpItems5": [
+            1212
+        ],
+        "UpItems4": [
+            1110,
+            1111,
+            1215
+        ]
+    },
+    "3082": {
+        "GachaID": 3082,
+        "GachaType": "WeaponUp",
+        "Version": "3.4",
+        "StartTime": "2025-07-23 12:00:00",
+        "EndTime": "2025-08-12 15:00:00",
+        "UpItems5": [
+            23014
+        ],
+        "UpItems4": [
+            21012,
+            21015,
+            21017
+        ]
+    },
+    "2083": {
+        "GachaID": 2083,
+        "GachaType": "AvatarUp",
+        "Version": "3.4",
+        "StartTime": "2025-07-23 12:00:00",
+        "EndTime": "2025-08-12 15:00:00",
+        "UpItems5": [
+            1205
+        ],
+        "UpItems4": [
+            1110,
+            1111,
+            1215
+        ]
+    },
+    "3083": {
+        "GachaID": 3083,
+        "GachaType": "WeaponUp",
+        "Version": "3.4",
+        "StartTime": "2025-07-23 12:00:00",
+        "EndTime": "2025-08-12 15:00:00",
+        "UpItems5": [
+            23009
+        ],
+        "UpItems4": [
+            21012,
+            21015,
+            21017
         ]
     }
 }

@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 // @ts-ignore
-const icons: ImportMeta = import.meta.glob(['../../../assets/image/hsr/avataricon/*.png', '../../../assets/image/hsr/itemfigures/lightcone/*.png'], { eager: true });
+const icons: ImportMeta = import.meta.glob(['@renderer/assets/image/hsr/avataricon/*.png', '@renderer/assets/image/hsr/itemfigures/lightcone/*.png'], { eager: true });
 const iconMap = {};
 Object.keys(icons).forEach((key) => {
     iconMap[key.split('/').pop()?.split('.')[0]] = icons[key].default;

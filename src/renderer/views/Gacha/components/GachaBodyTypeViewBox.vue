@@ -59,7 +59,45 @@ import CardListView from './CardListView.vue';
 
 const currentDetailView = shallowRef(CardGridView);
 
-const props = defineProps(['boxSize', 'gachaTitle', 'gachaCount', 'gachaAnalyze', 'gachaDetail']);
+type GachaTitle = string;
+export type GachaCount = {
+    total: number;
+    star5: number;
+    star4: number;
+    star5percent: number;
+    star4percent: number;
+};
+export type GachaAnalyze = {
+    startDate: string;
+    endDate: string;
+    dataGroup: {
+        label: string;
+        value: number | string;
+        unit: string;
+    }[];
+};
+export type GachaDetail = {
+    id: string | number;
+    itemId: string | number;
+    name: string;
+    count: number;
+    iconType: 'star3' | 'star4' | 'star5';
+    progress: number;
+    upType: 'up' | 'noup' | 'newbie' | 'normal';
+    time: string;
+}[];
+export type BoxSize = {
+    width: number;
+    height: number;
+};
+
+const props = defineProps<{
+    gachaTitle: GachaTitle;
+    gachaCount: GachaCount;
+    gachaAnalyze: GachaAnalyze;
+    gachaDetail: GachaDetail;
+    boxSize: BoxSize;
+}>();
 const boxSize = toRef(props, 'boxSize');
 </script>
 

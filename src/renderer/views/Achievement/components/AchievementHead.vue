@@ -206,22 +206,22 @@
 
 <script setup lang="ts">
 import { Ref, computed, onMounted, ref } from 'vue';
-import emitter from '../../../utils/mitt';
-import UidDropdown from '../../../components/UidDropdown.vue';
-import Dropdown from '../../../components/Dropdown.vue';
-import CloseIcon from '../../../assets/image/svg/close.svg';
-import SearchIcon from '../../../assets/image/svg/search.svg';
-import FilterIcon from '../../../assets/image/svg/filter.svg';
-import BatchIcon from '../../../assets/image/svg/done-all.svg';
-import MoreIcon from '../../../assets/image/svg/more.svg';
-import NewlyIcon from '../../../assets/image/svg/newlybuild.svg';
-import RefreshIcon from '../../../assets/image/svg/refresh.svg';
-import ImportIcon from '../../../assets/image/svg/import.svg';
-import ExportIcon from '../../../assets/image/svg/export.svg';
-import RenameIcon from '../../../assets/image/svg/rename.svg';
-import DeleteIcon from '../../../assets/image/svg/delete.svg';
-import { useUserAchievement } from '../../../store/userachievement';
-import Alert from '../../../components/Alert.vue';
+import emitter from '@renderer/utils/mitt';
+import UidDropdown from '@renderer/components/UidDropdown.vue';
+import Dropdown from '@renderer/components/Dropdown.vue';
+import CloseIcon from '@renderer/assets/image/svg/close.svg';
+import SearchIcon from '@renderer/assets/image/svg/search.svg';
+import FilterIcon from '@renderer/assets/image/svg/filter.svg';
+import BatchIcon from '@renderer/assets/image/svg/done-all.svg';
+import MoreIcon from '@renderer/assets/image/svg/more.svg';
+import NewlyIcon from '@renderer/assets/image/svg/newlybuild.svg';
+import RefreshIcon from '@renderer/assets/image/svg/refresh.svg';
+import ImportIcon from '@renderer/assets/image/svg/import.svg';
+import ExportIcon from '@renderer/assets/image/svg/export.svg';
+import RenameIcon from '@renderer/assets/image/svg/rename.svg';
+import DeleteIcon from '@renderer/assets/image/svg/delete.svg';
+import { useUserAchievement } from '@renderer/store/userachievement';
+import Alert from '@renderer/components/Alert.vue';
 import Checkbox from '@renderer/components/Checkbox.vue';
 import Toast from '@renderer/components/Toast';
 

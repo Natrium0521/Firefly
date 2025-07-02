@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import { computed, onActivated, onMounted, ref, toRefs, watch } from 'vue';
-import emitter from '../../../utils/mitt';
+import emitter from '@renderer/utils/mitt';
 import AchievementItem from './AchievementItem.vue';
 
 const props = defineProps(['items']);

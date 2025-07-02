@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import { shallowRef } from 'vue';
-import emitter from '../../../utils/mitt';
+import emitter from '@renderer/utils/mitt';
 import GachaBodyTypeView from './GachaBodyTypeView.vue';
 import GachaBodyPoolView from './GachaBodyPoolView.vue';
 

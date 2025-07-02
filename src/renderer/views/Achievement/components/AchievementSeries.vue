@@ -12,17 +12,17 @@
 </template>
 
 <script setup lang="ts">
-import Prize1 from '../../../assets/image/hsr/achievement/Prize1.png';
-import CultivateAchievementIcon1 from '../../../assets/image/hsr/achievement/CultivateAchievementIcon1.png';
-import CollectAchievementIcon1 from '../../../assets/image/hsr/achievement/CollectAchievementIcon1.png';
-import MainLineAchievementIcon1 from '../../../assets/image/hsr/achievement/MainLineAchievementIcon1.png';
-import ExploreAchievementIcon1 from '../../../assets/image/hsr/achievement/ExploreAchievementIcon1.png';
-import ReputationAchievementIcon1 from '../../../assets/image/hsr/achievement/ReputationAchievementIcon1.png';
-import ChallengeAchievementIcon1 from '../../../assets/image/hsr/achievement/ChallengeAchievementIcon1.png';
-import BattleAchievementIcon1 from '../../../assets/image/hsr/achievement/BattleAchievementIcon1.png';
-import TrackAchievementIcon1 from '../../../assets/image/hsr/achievement/TrackAchievementIcon1.png';
-import RougeAchievementIcon1 from '../../../assets/image/hsr/achievement/RougeAchievementIcon1.png';
-import ProgressBar from '../../../components/ProgressBar.vue';
+import Prize1 from '@renderer/assets/image/hsr/achievement/Prize1.png';
+import CultivateAchievementIcon1 from '@renderer/assets/image/hsr/achievement/CultivateAchievementIcon1.png';
+import CollectAchievementIcon1 from '@renderer/assets/image/hsr/achievement/CollectAchievementIcon1.png';
+import MainLineAchievementIcon1 from '@renderer/assets/image/hsr/achievement/MainLineAchievementIcon1.png';
+import ExploreAchievementIcon1 from '@renderer/assets/image/hsr/achievement/ExploreAchievementIcon1.png';
+import ReputationAchievementIcon1 from '@renderer/assets/image/hsr/achievement/ReputationAchievementIcon1.png';
+import ChallengeAchievementIcon1 from '@renderer/assets/image/hsr/achievement/ChallengeAchievementIcon1.png';
+import BattleAchievementIcon1 from '@renderer/assets/image/hsr/achievement/BattleAchievementIcon1.png';
+import TrackAchievementIcon1 from '@renderer/assets/image/hsr/achievement/TrackAchievementIcon1.png';
+import RougeAchievementIcon1 from '@renderer/assets/image/hsr/achievement/RougeAchievementIcon1.png';
+import ProgressBar from '@renderer/components/ProgressBar.vue';
 
 const SeriesIcons = {
     Prize: Prize1,

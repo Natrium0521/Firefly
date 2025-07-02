@@ -9,17 +9,18 @@
         <div class="record">
             <div class="title">记录（正序）：</div>
             <div class="box" ref="recordBox">
-                <CardGridItem v-for="item in detail" :key="item.id" :item="item" />
+                <CardGridItem v-for="item in renderingDetail" :key="item.id" :item="item" />
             </div>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { computed, watch, ref } from 'vue';
+import { computed, watch, ref, onMounted } from 'vue';
 import CardGridItem from './CardGridItem.vue';
 
 const props = defineProps(['detail']);
+const renderingDetail = ref([]);
 
 const summary = computed(() => {
     const itemInfo = {};
@@ -52,6 +53,28 @@ const summary = computed(() => {
 
 const summaryBox = ref<HTMLDivElement>(null);
 const recordBox = ref<HTMLDivElement>(null);
+const batchRender = () => {
+    const immediateSize = 50;
+    const batchSize = 50;
+    const groupedDetail = [];
+    renderingDetail.value = props.detail.slice(0, immediateSize);
+    let idx = immediateSize;
+    while (idx < props.detail.length) {
+        groupedDetail.push(props.detail.slice(idx, idx + batchSize));
+        idx += batchSize;
+    }
+    idx = 0;
+    const appendBatch = () =>
+        setTimeout(() => {
+            if (idx >= groupedDetail.length) {
+                return;
+            }
+            renderingDetail.value.push(...groupedDetail[idx]);
+            idx++;
+            appendBatch();
+        }, 0);
+    appendBatch();
+};
 watch(
     () => props.detail,
     () => {
@@ -61,8 +84,10 @@ watch(
         if (recordBox.value) {
             recordBox.value.scrollTop = 0;
         }
+        batchRender();
     }
 );
+onMounted(() => batchRender());
 </script>
 
 <style lang="scss" scoped>

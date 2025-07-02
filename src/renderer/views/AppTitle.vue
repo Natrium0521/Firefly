@@ -45,7 +45,6 @@ const onMinizeClick = () => {
 
 .app-title-icon {
     float: left;
-    left: 5px;
     height: 100%;
     margin-left: 10px;
 }

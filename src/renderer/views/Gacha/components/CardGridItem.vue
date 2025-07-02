@@ -4,13 +4,13 @@
             <img :src="iconMap[item.itemId] ?? (`${item.itemId}`.length === 4 ? iconMap[999] : iconMap['Icon_TestLightcone01'])" />
         </div>
         <div v-if="item.count !== undefined" class="text">{{ item.count }}</div>
-        <img v-if="isChristmas && `${item.itemId}`.length === 4" src="../../../assets/image/svg/christmas-hat.svg" style="position: absolute; right: -92px; top: -98px; scale: 0.3; transform: rotate(30deg); filter: brightness(0.9)" />
+        <img v-if="isChristmas && `${item.itemId}`.length === 4" src="@renderer/assets/image/svg/christmas-hat.svg" style="position: absolute; right: -92px; top: -98px; scale: 0.3; transform: rotate(30deg); filter: brightness(0.9)" />
     </div>
 </template>
 
 <script setup lang="ts">
 // @ts-ignore
-const icons: ImportMeta = import.meta.glob(['../../../assets/image/hsr/avataricon/*.png', '../../../assets/image/hsr/itemfigures/lightcone/*.png'], { eager: true });
+const icons: ImportMeta = import.meta.glob(['@renderer/assets/image/hsr/avataricon/*.png', '@renderer/assets/image/hsr/itemfigures/lightcone/*.png'], { eager: true });
 const iconMap = {};
 Object.keys(icons).forEach((key) => {
     iconMap[key.split('/').pop()?.split('.')[0]] = icons[key].default;
