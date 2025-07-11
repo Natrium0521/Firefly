@@ -46,12 +46,6 @@ npm start
 
 可以使用 [feixiaoqiu2srgf](https://github.com/Natrium0521/feixiaoqiu2srgf) 将非小酋记录导出为SRGF
 
-## 关于游戏版本更新
-
-游戏版本更新后会尽快在 [main branch](https://github.com/Natrium0521/Firefly/tree/main) 更新
-
-但由于互斥成就没有直接的数据，所以 [Release](https://github.com/Natrium0521/Firefly/releases) 版可能会延迟发布
-
 ## 关于软件更新
 
 设置中可以检测更新，需要访问 `GitHub` 下载资源，替换文件使用 `PowerShell` 脚本，若更新失败可以前往 [Release](https://github.com/Natrium0521/Firefly/releases) 下载

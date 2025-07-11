@@ -195,7 +195,7 @@ const onRefreshConfirm = async (isIncremental: boolean) => {
     const data = { info: {}, list: [] };
     let fetchingGachaUid = undefined;
     let fetchingGachaData = {};
-    const GachaTypes = { '1': '常驻', '2': '新手', '11': '限定角色', '12': '限定光锥' };
+    const GachaTypes = { '1': '常驻', '2': '新手', '11': '限定角色', '12': '限定光锥', '21': '联动角色', '22': '联动光锥' };
     for (let [gachaTypeId, gachaTypeName] of Object.entries(GachaTypes)) {
         warningSpan.innerHTML = `<br>正在请求${gachaTypeName}池数据`;
         let cnt = 0;

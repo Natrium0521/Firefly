@@ -1,7 +1,7 @@
 <template>
     <div class="gacha-pool-view">
         <KeepScroll class="pool-list">
-            <PoolListItem v-for="item of poolListItems" :key="item[0]['gacha_id']" :item="item" :clicked="() => (showingPoolId = item[0]['gacha_id'])" :isSelected="showingPoolId == item[0]['gacha_id']" />
+            <PoolListItem v-for="item of renderingPoolListItems" :key="item[0]['gacha_id']" :item="item" :clicked="() => (showingPoolId = item[0]['gacha_id'])" :isSelected="showingPoolId == item[0]['gacha_id']" />
         </KeepScroll>
         <div class="pool-detail">
             <PoolDetailView :detail="showingDetail" />
@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, ref, watch, onMounted, onActivated } from 'vue';
 import PoolListItem from './PoolListItem.vue';
 import PoolDetailView from './PoolDetailView.vue';
 import KeepScroll from '@renderer/components/KeepScroll.vue';
@@ -92,6 +92,31 @@ const poolListItems = computed(() => {
     });
     return items;
 });
+const renderingPoolListItems = ref([]);
+const batchRender = () => {
+    const immediateSize = 10;
+    const batchSize = 10;
+    const groupedDetail = [];
+    renderingPoolListItems.value = poolListItems.value.slice(0, immediateSize);
+    let idx = immediateSize;
+    while (idx < poolListItems.value.length) {
+        groupedDetail.push(poolListItems.value.slice(idx, idx + batchSize));
+        idx += batchSize;
+    }
+    idx = 0;
+    const appendBatch = () =>
+        setTimeout(() => {
+            if (idx >= groupedDetail.length) {
+                return;
+            }
+            renderingPoolListItems.value.push(...groupedDetail[idx]);
+            idx++;
+            appendBatch();
+        }, 0);
+    appendBatch();
+};
+watch(poolListItems, batchRender);
+onMounted(batchRender);
 
 const showingPoolId = ref(null);
 const showingDetail = computed(() => {

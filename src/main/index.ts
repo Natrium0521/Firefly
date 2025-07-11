@@ -39,7 +39,7 @@ const createMainWindow = () => {
         frame: false,
         // resizable: false,
         // fullscreenable: false,
-        maximizable: false,
+        // maximizable: false,
         icon: path.join(__dirname, '../static/image/icon.png'),
         webPreferences: {
             backgroundThrottling: false,
