@@ -373,6 +373,7 @@ const onExportConfirm = async () => {
     const ret = await userAchievementStore.exportAchiData(type);
     if (ret['msg'] === 'OK') {
         showingAlert.value = 'none';
+        Toast.success('导出成功', `<a href='showfile:${ret['data']['path']}'>点击在资源管理器中查看</a>`, 30000);
     } else {
         warningSpan.textContent = ret['msg'];
     }

@@ -80,6 +80,7 @@ class AchievementService {
                 list: Object.values(JSON.parse(fs.readFileSync(path.join(this.achievementDataPath, `./${uid}.json`), 'utf-8'))),
             };
             let msg = 'OK';
+            let exportPath = '';
             try {
                 await dialog
                     .showSaveDialog(BrowserWindow.getAllWindows()[0], {
@@ -92,7 +93,8 @@ class AchievementService {
                         if (result.canceled) {
                             msg = 'Canceled';
                         } else {
-                            fs.writeFileSync(result.filePath, JSON.stringify(exportData, null, 4), 'utf-8');
+                            exportPath = result.filePath;
+                            fs.writeFileSync(exportPath, JSON.stringify(exportData, null, 4), 'utf-8');
                         }
                     })
                     .catch((err) => {
@@ -101,7 +103,7 @@ class AchievementService {
             } catch (error) {
                 return { msg: error.message };
             }
-            return { msg: msg };
+            return { msg: msg, data: { path: encodeURI(exportPath) } };
         } else {
             return { msg: 'Unknown type' };
         }

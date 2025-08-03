@@ -119,6 +119,7 @@ import DeleteIcon from '@renderer/assets/image/svg/delete.svg';
 import FromFileIcon from '@renderer/assets/image/svg/file-code.svg';
 import FromLinkIcon from '@renderer/assets/image/svg/link.svg';
 import { useUserGacha } from '@renderer/store/usergacha';
+import Toast from '@renderer/components/Toast';
 
 const gachaViewTypeNext = ref('卡池');
 const userGachaStore = useUserGacha();
@@ -383,6 +384,7 @@ const onExportConfirm = async () => {
     const ret = await userGachaStore.exportGachaData(type, isExportingUIGF.value ? [...selectedUIGFUids.value] : undefined);
     if (ret['msg'] === 'OK') {
         showingAlert.value = 'none';
+        Toast.success('导出成功', `<a href='showfile:${ret['data']['path']}'>点击在资源管理器中查看</a>`, 20000);
     } else {
         warningSpan.innerHTML = ret['msg'];
     }

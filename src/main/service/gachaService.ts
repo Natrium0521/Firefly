@@ -104,6 +104,7 @@ class GachaService {
                 exportData['list'].push(node);
             });
             let msg = 'OK';
+            let exportPath = '';
             try {
                 await dialog
                     .showSaveDialog(BrowserWindow.getAllWindows()[0], {
@@ -116,7 +117,8 @@ class GachaService {
                         if (result.canceled) {
                             msg = 'Canceled';
                         } else {
-                            fs.writeFileSync(result.filePath, JSON.stringify(exportData, null, 4), 'utf-8');
+                            exportPath = result.filePath;
+                            fs.writeFileSync(exportPath, JSON.stringify(exportData, null, 4), 'utf-8');
                         }
                     })
                     .catch((err) => {
@@ -125,7 +127,7 @@ class GachaService {
             } catch (error) {
                 return { msg: error.message };
             }
-            return { msg: msg };
+            return { msg: msg, data: { path: encodeURI(exportPath) } };
         } else if (type === 'uigf_v4.1') {
             const exportData = {
                 info: {
@@ -163,6 +165,7 @@ class GachaService {
                 exportData.hkrpg.push(userNode);
             });
             let msg = 'OK';
+            let exportPath = '';
             try {
                 await dialog
                     .showSaveDialog(BrowserWindow.getAllWindows()[0], {
@@ -175,7 +178,8 @@ class GachaService {
                         if (result.canceled) {
                             msg = 'Canceled';
                         } else {
-                            fs.writeFileSync(result.filePath, JSON.stringify(exportData, null, 4), 'utf-8');
+                            exportPath = result.filePath;
+                            fs.writeFileSync(exportPath, JSON.stringify(exportData, null, 4), 'utf-8');
                         }
                     })
                     .catch((err) => {
@@ -184,7 +188,7 @@ class GachaService {
             } catch (error) {
                 return { msg: error.message };
             }
-            return { msg: msg };
+            return { msg: msg, data: { path: encodeURI(exportPath) } };
         } else {
             return { msg: 'Unknown type' };
         }

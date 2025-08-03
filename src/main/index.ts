@@ -59,6 +59,11 @@ const createMainWindow = () => {
         }
     });
     mainWindow.webContents.on('will-navigate', (detail) => {
+        if (detail.url.startsWith('showfile:')) {
+            detail.preventDefault();
+            shell.showItemInFolder(decodeURI(detail.url).slice(9));
+            return;
+        }
         if (!detail.isSameDocument) {
             detail.preventDefault();
             shell.openExternal(detail.url);
