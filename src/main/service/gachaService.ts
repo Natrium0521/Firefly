@@ -126,13 +126,13 @@ class GachaService {
                 return { msg: error.message };
             }
             return { msg: msg };
-        } else if (type === 'uigf_v4.0') {
+        } else if (type === 'uigf_v4.1') {
             const exportData = {
                 info: {
                     export_app: 'Firefly',
                     export_app_version: app.getVersion(),
                     export_timestamp: Math.floor(new Date().getTime() / 1000),
-                    version: 'v4.0',
+                    version: 'v4.1',
                 },
                 hkrpg: [],
             };
@@ -219,7 +219,7 @@ class GachaService {
                 } catch (error) {
                     return { msg: error.message };
                 }
-            } else if (type === 'uigf_v4.0') {
+            } else if (type === 'uigf_v4.0' || type === 'uigf_v4.1') {
                 let msg = 'OK';
                 let uid = '';
                 try {
@@ -241,7 +241,7 @@ class GachaService {
                             msg = err.message;
                         });
                     if (msg !== 'OK') return { msg: msg };
-                    if (data['info']['version'] !== 'v4.0') return { msg: 'Unsupport UIGF version' };
+                    if (data['info']['version'] !== 'v4.0' && data['info']['version'] !== 'v4.1') return { msg: 'Unsupport UIGF version' };
                     if (data['hkrpg'] === undefined || data['hkrpg'].length === 0) return { msg: 'No StarRail data' };
                     data['hkrpg'].forEach((userNode: unknown) => {
                         if (!/^\d{9}$/.test(userNode['uid'])) throw new Error('Invalid UID');

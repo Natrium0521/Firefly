@@ -49,7 +49,7 @@
             <div class="select-item-area">
                 <span>导入格式：</span>
                 <select ref="importTypeSelect">
-                    <option value="uigf_v4.0">UIGF v4.0</option>
+                    <option value="uigf_v4.0">UIGF v4.0 / v4.1</option>
                     <option value="srgf_v1.0">SRGF v1.0</option>
                 </select>
             </div>
@@ -64,7 +64,7 @@
             <div class="select-item-area">
                 <span>导出格式：</span>
                 <select ref="exportTypeSelect" @change="onSelectExportFormat">
-                    <option value="uigf_v4.0">UIGF v4.0</option>
+                    <option value="uigf_v4.1">UIGF v4.1</option>
                     <option value="srgf_v1.0">SRGF v1.0</option>
                 </select>
             </div>
@@ -360,7 +360,7 @@ const onSelectExportFormat = async () => {
             return;
         }
         exportable = true;
-    } else if (type === 'uigf_v4.0') {
+    } else if (type === 'uigf_v4.1') {
         for (let uid of Object.keys(gachaUids.value)) {
             if (!(await userGachaStore.checkExportable(uid))) {
                 warningSpan.innerHTML = `uid为 ${uid} 的记录存在未知角色/光锥<br>为避免导出数据有误，请更新后再尝试导出`;
@@ -542,7 +542,7 @@ window.addEventListener('keydown', (e) => {
 .select-item-area {
     margin-top: 10px;
     display: grid;
-    grid-template-columns: auto 100px;
+    grid-template-columns: auto auto;
 
     select {
         border: solid 1px var(--theme-color);
