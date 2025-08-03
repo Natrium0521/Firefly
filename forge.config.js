@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 module.exports = {
     packagerConfig: {
         asar: true,
@@ -29,4 +31,15 @@ module.exports = {
             config: {},
         },
     ],
+    hooks: {
+        postPackage: async (forgeConfig, options) => {
+            const localesPath = options.outputPaths + '/locales';
+            const locales = new Set(['zh-CN']);
+            for (const file of await fs.promises.readdir(localesPath)) {
+                if (!locales.has(file.replace('.pak', ''))) {
+                    await fs.promises.unlink(localesPath + '/' + file);
+                }
+            }
+        }
+    }
 };
