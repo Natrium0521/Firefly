@@ -199,6 +199,12 @@ const onRefreshConfirm = async (isIncremental: boolean) => {
     const GachaTypes = { '1': '常驻', '2': '新手', '11': '限定角色', '12': '限定光锥', '21': '联动角色', '22': '联动光锥' };
     for (let [gachaTypeId, gachaTypeName] of Object.entries(GachaTypes)) {
         warningSpan.innerHTML = `<br>正在请求${gachaTypeName}池数据`;
+        if (gachaTypeId === '21' || gachaTypeId === '22') {
+            urlObj.pathname = '/common/gacha_record/api/getLdGachaLog';
+        } else {
+            urlObj.pathname = '/common/gacha_record/api/getGachaLog';
+        }
+        console.log(gachaTypeName, urlObj.href)
         let cnt = 0;
         let endId = '0';
         let exitFlag = false;
