@@ -809,188 +809,6 @@
       3
     ]
   },
-  "1014": {
-    "AvatarID": 1014,
-    "AvatarName": {
-      "Hash": "11292532298779825003"
-    },
-    "AvatarFullName": {
-      "Hash": "8951245737780219460"
-    },
-    "AdventurePlayerID": 1014,
-    "AvatarVOTag": "saber",
-    "Rarity": "CombatPowerAvatarRarityType5",
-    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Saber_00_Config.json",
-    "DamageType": "Wind",
-    "SPNeed": {
-      "Value": 360
-    },
-    "ExpGroup": 1,
-    "MaxPromotion": 6,
-    "MaxRank": 6,
-    "RankIDList": [
-      101401,
-      101402,
-      101403,
-      101404,
-      101405,
-      101406
-    ],
-    "SkillList": [
-      101401,
-      101402,
-      101403,
-      101404,
-      101406,
-      101407,
-      101408
-    ],
-    "AvatarBaseType": "Warrior",
-    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Saber_00/Avatar_Saber_00.prefab",
-    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1014.png",
-    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1014.png",
-    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1014.png",
-    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1014.png",
-    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1014B.png",
-    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1014.prefab",
-    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Saber_00/Manikin_Avatar_Maid_Saber_00.prefab",
-    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Saber_00_Config.json",
-    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
-    "SkilltreePrefabPath": "UI/Avatar/Widget/WarriorSkillTreeGroup.prefab",
-    "DamageTypeResistance": [],
-    "Release": true,
-    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1014.png",
-    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1014.png",
-    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1014.png",
-    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1014.png",
-    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1014.png",
-    "AvatarCutinIntroText": {
-      "Hash": "4799067612581879871"
-    },
-    "AvatarDropOffset": [
-      134,
-      2,
-      0.64,
-      134,
-      2,
-      0.64,
-      134,
-      2,
-      0.64
-    ],
-    "AvatarTrialOffset": [],
-    "PlayerCardOffset": [
-      82,
-      -84,
-      0.77
-    ],
-    "AssistOffset": [
-      70,
-      -72,
-      1.1
-    ],
-    "AssistBgOffset": [
-      108,
-      -300,
-      1
-    ],
-    "AvatarSelfShowOffset": [
-      0,
-      -100,
-      5
-    ]
-  },
-  "1015": {
-    "AvatarID": 1015,
-    "AvatarName": {
-      "Hash": "18287682968624271100"
-    },
-    "AvatarFullName": {
-      "Hash": "1286075273557870370"
-    },
-    "AdventurePlayerID": 1015,
-    "AvatarVOTag": "archer",
-    "Rarity": "CombatPowerAvatarRarityType5",
-    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Archer_00_Config.json",
-    "DamageType": "Quantum",
-    "SPNeed": {
-      "Value": 220
-    },
-    "ExpGroup": 1,
-    "MaxPromotion": 6,
-    "MaxRank": 6,
-    "RankIDList": [
-      101501,
-      101502,
-      101503,
-      101504,
-      101505,
-      101506
-    ],
-    "SkillList": [
-      101501,
-      101502,
-      101503,
-      101504,
-      101506,
-      101507,
-      101509
-    ],
-    "AvatarBaseType": "Rogue",
-    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Archer_00/Avatar_Archer_00.prefab",
-    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1015.png",
-    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1015.png",
-    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1015.png",
-    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1015.png",
-    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1015B.png",
-    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1015.prefab",
-    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Archer_00/Manikin_Avatar_Male_Archer_00.prefab",
-    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Archer_00_Config.json",
-    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
-    "SkilltreePrefabPath": "UI/Avatar/Widget/RogueSkillTreeGroup.prefab",
-    "DamageTypeResistance": [],
-    "Release": true,
-    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1015.png",
-    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1015.png",
-    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1015.png",
-    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1015.png",
-    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1015.png",
-    "AvatarCutinIntroText": {
-      "Hash": "7434233205966059744"
-    },
-    "AvatarDropOffset": [
-      45,
-      33,
-      0.64,
-      45,
-      33,
-      0.64,
-      45,
-      33,
-      0.64
-    ],
-    "AvatarTrialOffset": [],
-    "PlayerCardOffset": [
-      82,
-      -84,
-      0.77
-    ],
-    "AssistOffset": [
-      70,
-      -72,
-      1.1
-    ],
-    "AssistBgOffset": [
-      108,
-      -300,
-      1
-    ],
-    "AvatarSelfShowOffset": [
-      0,
-      -100,
-      5
-    ]
-  },
   "1101": {
     "AvatarID": 1101,
     "AvatarName": {
@@ -5797,6 +5615,148 @@
       2,
       33,
       0.64
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
+  "1410": {
+    "AvatarID": 1410,
+    "AvatarName": {
+      "Hash": "11044358311620332259"
+    },
+    "AvatarFullName": {
+      "Hash": "3748931306834827608"
+    },
+    "AdventurePlayerID": 1410,
+    "AvatarVOTag": "hysilens",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Harscyline_00_Config.json",
+    "DamageType": "Physical",
+    "SPNeed": {
+      "Value": 110
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      141001,
+      141002,
+      141003,
+      141004,
+      141005,
+      141006
+    ],
+    "SkillList": [
+      141001,
+      141002,
+      141003,
+      141004,
+      141006,
+      141007
+    ],
+    "AvatarBaseType": "Warlock",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Harscyline_00/Avatar_Harscyline_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1410.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1410.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1410.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1410.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1410B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1410.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Harscyline_00/Manikin_Avatar_Maid_Harscyline_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Harscyline_00_Config.json",
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/WarlockSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1410.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1410.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1410.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1410.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1410.png",
+    "AvatarDropOffset": [
+      175,
+      12,
+      0.63,
+      175,
+      12,
+      0.63,
+      175,
+      12,
+      0.63
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
+  "1412": {
+    "AvatarID": 1412,
+    "AvatarName": {
+      "Hash": "3528626799663072375"
+    },
+    "AvatarFullName": {
+      "Hash": "15603964000983029059"
+    },
+    "AdventurePlayerID": 1412,
+    "AvatarVOTag": "cerydra",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Cerydra_00_Config.json",
+    "DamageType": "Wind",
+    "SPNeed": {
+      "Value": 130
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      141201,
+      141202,
+      141203,
+      141204,
+      141205,
+      141206
+    ],
+    "SkillList": [
+      141201,
+      141202,
+      141203,
+      141204,
+      141206,
+      141207
+    ],
+    "AvatarBaseType": "Shaman",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Cerydra_00/Avatar_Cerydra_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1412.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1412.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1412.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1412.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1412B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1412.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Cerydra_00/Manikin_Avatar_Girl_Cerydra_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Cerydra_00_Config.json",
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/ShamanSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1412.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1412.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1412.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1412.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1412.png",
+    "AvatarDropOffset": [
+      57,
+      -50,
+      0.63,
+      57,
+      -50,
+      0.63,
+      57,
+      -50,
+      0.63
     ],
     "AvatarTrialOffset": [],
     "PlayerCardOffset": [],
