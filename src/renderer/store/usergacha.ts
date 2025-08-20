@@ -11,7 +11,10 @@ export const useUserGacha = defineStore('usergacha', () => {
     const gachaCurrData = ref(null);
 
     const init = async () => {
-        avatarConfig.value = await window.fireflyAPI.loadJson('AvatarConfig');
+        avatarConfig.value = {
+            ...await window.fireflyAPI.loadJson('AvatarConfig'),
+            ...await window.fireflyAPI.loadJson('AvatarConfigLD')
+        };
         lightconeConfig.value = await window.fireflyAPI.loadJson('EquipmentConfig');
         gachaPoolInfo.value = await window.fireflyAPI.loadJson('GachaPoolInfo');
         gachaBasicInfo.value = await window.fireflyAPI.loadJson('GachaBasicInfo');

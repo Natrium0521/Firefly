@@ -18,7 +18,7 @@ const copyAssets = (src, dst) => {
 };
 
 const textMapFiles = ['TextMapCHS.json'];
-const hashFiles = ['AchievementData.json', 'AchievementSeries.json', 'AchievementTextReplaceMap.json', 'AvatarConfig.json', 'EquipmentConfig.json', 'GachaBasicInfo.json'];
+const hashFiles = ['AchievementData.json', 'AchievementSeries.json', 'AchievementTextReplaceMap.json', 'AvatarConfig.json', 'AvatarConfigLD.json', 'EquipmentConfig.json', 'GachaBasicInfo.json'];
 const lessenTextMap = (textMapFilePath, hashFilePath) => {
     const hashs = new Set();
     hashFiles.forEach((file) => {

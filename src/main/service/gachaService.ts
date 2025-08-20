@@ -86,7 +86,7 @@ class GachaService {
                 },
                 list: [],
             };
-            const AvatarConfig = this.loadJson('AvatarConfig');
+            const AvatarConfig = { ...this.loadJson('AvatarConfig'), ...this.loadJson('AvatarConfigLD') };
             const EquipmentConfig = this.loadJson('EquipmentConfig');
             const TextMapCHS = this.loadJson('TextMapCHS');
             Object.values(JSON.parse(fs.readFileSync(path.join(this.gachaDataPath, `./${uid}.json`), 'utf-8'))).forEach((item) => {
@@ -138,7 +138,7 @@ class GachaService {
                 },
                 hkrpg: [],
             };
-            const AvatarConfig = this.loadJson('AvatarConfig');
+            const AvatarConfig = { ...this.loadJson('AvatarConfig'), ...this.loadJson('AvatarConfigLD') };
             const EquipmentConfig = this.loadJson('EquipmentConfig');
             const TextMapCHS = this.loadJson('TextMapCHS');
             (Array.isArray(uid) && uid.length > 0 ? uid : Object.keys(this.gachaUids)).forEach((uid) => {

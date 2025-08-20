@@ -48,6 +48,6 @@ declare interface Window {
 
         openURL: (url: string) => void;
         sendMainWindowMsg: (msg: string) => void;
-        loadJson: (fName: string) => Promise<unknown>;
+        loadJson: (fName: string) => Promise<any>;
     };
 }
