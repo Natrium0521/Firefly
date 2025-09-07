@@ -36,7 +36,7 @@ npm start
 
 ### 下载打包的文件
 
-+ **推荐**： 从最新 Release 下载压缩包解压运行
++ **推荐**： 从最新 Release 下载[压缩包](https://github.com/Natrium0521/Firefly/releases/latest/download/Firefly-win32-x64.zip)解压运行
 
 + 或者：下载安装包（不能选择安装路径）
 
