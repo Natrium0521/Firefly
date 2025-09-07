@@ -53,7 +53,9 @@ const summary = computed(() => {
 
 const summaryBox = ref<HTMLDivElement>(null);
 const recordBox = ref<HTMLDivElement>(null);
+let renderTask = null;
 const batchRender = () => {
+    clearTimeout(renderTask);
     const immediateSize = 50;
     const batchSize = 50;
     const groupedDetail = [];
@@ -65,7 +67,7 @@ const batchRender = () => {
     }
     idx = 0;
     const appendBatch = () =>
-        setTimeout(() => {
+        renderTask = setTimeout(() => {
             if (idx >= groupedDetail.length) {
                 return;
             }

@@ -61,7 +61,9 @@ const poolListItems = computed(() => {
     return items;
 });
 const renderingPoolListItems = ref([]);
+let renderTask = null;
 const batchRender = () => {
+    clearTimeout(renderTask);
     const immediateSize = 10;
     const batchSize = 10;
     const groupedDetail = [];
@@ -73,7 +75,7 @@ const batchRender = () => {
     }
     idx = 0;
     const appendBatch = () =>
-        setTimeout(() => {
+        renderTask = setTimeout(() => {
             if (idx >= groupedDetail.length) {
                 return;
             }
