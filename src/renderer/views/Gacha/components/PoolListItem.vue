@@ -21,26 +21,9 @@ const textMapStore = useTextMap();
 const userGachaStore = useUserGacha();
 const gachaPoolInfo = computed(() => userGachaStore.gachaPoolInfo);
 const gachaBasicInfo = computed(() => userGachaStore.gachaBasicInfo);
-const avatarConfig = computed(() => userGachaStore.avatarConfig);
-const lightconeConfig = computed(() => userGachaStore.lightconeConfig);
+const getItemName = userGachaStore.getItemName;
 
 const props = defineProps(['item', 'isSelected', 'clicked']);
-
-/**
- * 获取物品名称，不在元数据中的返回item_id
- * @param itemId 物品id
- * @returns 物品名称
- */
-const getItemName = (itemId: number | string): string => {
-    // 4位数字为角色，5位数字为光锥
-    if (`${itemId}`.length === 4) {
-        if (avatarConfig.value[itemId]) return textMapStore.getText(avatarConfig.value[itemId]['AvatarName']['Hash']);
-        else return `${itemId}`;
-    } else {
-        if (lightconeConfig.value[itemId]) return textMapStore.getText(lightconeConfig.value[itemId]['EquipmentName']['Hash']);
-        else return `${itemId}`;
-    }
-};
 
 const poolVersion = computed(() => {
     if (gachaPoolInfo.value[props.item[0].gacha_id]) {

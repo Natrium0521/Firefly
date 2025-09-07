@@ -10,49 +10,17 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch, onMounted, onActivated } from 'vue';
+import { computed, ref, watch, onMounted } from 'vue';
 import PoolListItem from './PoolListItem.vue';
 import PoolDetailView from './PoolDetailView.vue';
 import KeepScroll from '@renderer/components/KeepScroll.vue';
-import { useTextMap } from '@renderer/store/textmap';
 import { useUserGacha } from '@renderer/store/usergacha';
 
 const userGachaStore = useUserGacha();
-const textMapStore = useTextMap();
 const userGachaData = computed(() => userGachaStore.gachaCurrData ?? {});
+const getItemStar = userGachaStore.getItemStar;
+const getItemName = userGachaStore.getItemName;
 
-/**
- * 获取物品星级，不在元数据中的默认为4星
- * @param itemId 物品id
- * @returns 物品星级
- */
-const getItemStar = (itemId: number | string): number => {
-    // 4位数字为角色，5位数字为光锥
-    if (`${itemId}`.length === 4) {
-        return avatarConfig.value[itemId] ? +avatarConfig.value[itemId]['Rarity'].at(-1) : 4;
-    } else {
-        return lightconeConfig.value[itemId] ? +lightconeConfig.value[itemId]['Rarity'].at(-1) : 4;
-    }
-};
-
-/**
- * 获取物品名称，不在元数据中的返回item_id
- * @param itemId 物品id
- * @returns 物品名称
- */
-const getItemName = (itemId: number | string): string => {
-    // 4位数字为角色，5位数字为光锥
-    if (`${itemId}`.length === 4) {
-        if (avatarConfig.value[itemId]) return textMapStore.getText(avatarConfig.value[itemId]['AvatarName']['Hash']);
-        else return `${itemId}`;
-    } else {
-        if (lightconeConfig.value[itemId]) return textMapStore.getText(lightconeConfig.value[itemId]['EquipmentName']['Hash']);
-        else return `${itemId}`;
-    }
-};
-
-const avatarConfig = computed(() => userGachaStore.avatarConfig);
-const lightconeConfig = computed(() => userGachaStore.lightconeConfig);
 const gachaPoolAvatarAndLightcone = computed(() =>
     Object.values(userGachaData.value)
         // .filter((item) => item['gacha_type'] == '11' || item['gacha_type'] == '12')

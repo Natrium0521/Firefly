@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
+import { useTextMap } from './textmap';
 
 export const useUserGacha = defineStore('usergacha', () => {
     const avatarConfig = ref(null);
@@ -21,6 +22,13 @@ export const useUserGacha = defineStore('usergacha', () => {
         gachaUids.value = (await window.fireflyAPI.gacha.getGachaUids())['data'];
         gachaCurrUid.value = (await window.fireflyAPI.setting.getAppSettings())['LastGachaUid'];
         gachaCurrData.value = (await window.fireflyAPI.gacha.getGachaData(gachaCurrUid.value))['data'];
+        if (iconMap[999] === undefined) {
+            // @ts-ignore
+            const icons: ImportMeta = import.meta.glob(['@renderer/assets/image/hsr/avataricon/*.png', '@renderer/assets/image/hsr/itemfigures/lightcone/*.png'], { eager: true });
+            Object.keys(icons).forEach((key) => {
+                iconMap[key.split('/').pop()?.split('.')[0]] = icons[key].default;
+            });
+        }
     };
 
     const setCurrGachaUid = async (uid: string) => {
@@ -98,6 +106,53 @@ export const useUserGacha = defineStore('usergacha', () => {
         return await window.fireflyAPI.gacha.getGachaURL();
     };
 
+    const textMapStore = useTextMap();
+    const cachedItemStar = {};
+    const cachedItemNameHash = {};
+    const iconMap = {};
+    /**
+     * 获取物品星级，不在元数据中的默认为4星
+     * @param itemId 物品id
+     * @returns 物品星级
+     */
+    const getItemStar = (itemId: number | string): number => {
+        if (cachedItemStar[itemId]) return cachedItemStar[itemId];
+        // 4位数字为角色，5位数字为光锥
+        if (`${itemId}`.length === 4) {
+            return cachedItemStar[itemId] = avatarConfig.value[itemId] ? +avatarConfig.value[itemId]['Rarity'].at(-1) : 4;
+        } else {
+            return cachedItemStar[itemId] = lightconeConfig.value[itemId] ? +lightconeConfig.value[itemId]['Rarity'].at(-1) : 4;
+        }
+    };
+    /**
+     * 获取物品名称，不在元数据中的返回item_id
+     * @param itemId 物品id
+     * @returns 物品名称
+     */
+    const getItemName = (itemId: number | string): string => {
+        if (cachedItemNameHash[itemId]) return textMapStore.getText(cachedItemNameHash[itemId]);
+        // 4位数字为角色，5位数字为光锥
+        if (`${itemId}`.length === 4) {
+            if (avatarConfig.value[itemId]) {
+                cachedItemNameHash[itemId] = avatarConfig.value[itemId]['AvatarName']['Hash'];
+                return textMapStore.getText(cachedItemNameHash[itemId]);
+            } else {
+                return `${itemId}`;
+            }
+        } else {
+            if (lightconeConfig.value[itemId]) {
+                cachedItemNameHash[itemId] = lightconeConfig.value[itemId]['EquipmentName']['Hash'];
+                return textMapStore.getText(cachedItemNameHash[itemId]);
+            }
+            else {
+                return `${itemId}`;
+            }
+        }
+    };
+    const getIconSrc = (itemId: number | string): string => {
+        return iconMap[itemId] ?? (`${itemId}`.length === 4 ? iconMap[999] : iconMap['Icon_TestLightcone01'])
+    }
+
     return {
         avatarConfig,
         lightconeConfig,
@@ -115,5 +170,8 @@ export const useUserGacha = defineStore('usergacha', () => {
         exportGachaData,
         checkExportable,
         getGachaURL,
+        getItemStar,
+        getItemName,
+        getIconSrc,
     };
 });

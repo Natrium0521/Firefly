@@ -2,7 +2,7 @@
     <div class="list-item" :class="[item.upType]" :title="item.time">
         <div class="bg-bar" :style="{ animationDelay: `-${item.progress / 100}s` }"></div>
         <div class="icon">
-            <img :src="iconMap[item.itemId] ?? (`${item.itemId}`.length === 4 ? iconMap[999] : iconMap['Icon_TestLightcone01'])" />
+            <img :src="getIconSrc(item.itemId)" />
         </div>
         <div class="name">{{ item.name }}</div>
         <div class="tag">{{ tagMap[item.upType] }}</div>
@@ -11,12 +11,9 @@
 </template>
 
 <script setup lang="ts">
-// @ts-ignore
-const icons: ImportMeta = import.meta.glob(['@renderer/assets/image/hsr/avataricon/*.png', '@renderer/assets/image/hsr/itemfigures/lightcone/*.png'], { eager: true });
-const iconMap = {};
-Object.keys(icons).forEach((key) => {
-    iconMap[key.split('/').pop()?.split('.')[0]] = icons[key].default;
-});
+import { useUserGacha } from '@renderer/store/usergacha';
+
+const { getIconSrc } = useUserGacha();
 const tagMap = { up: 'UP', noup: '歪', newbie: '新', normal: '' };
 
 defineProps(['item']);

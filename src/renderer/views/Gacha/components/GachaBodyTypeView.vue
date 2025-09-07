@@ -18,16 +18,14 @@
 import { computed, onActivated, onMounted, ref } from 'vue';
 import GachaBodyTypeViewBox from './GachaBodyTypeViewBox.vue';
 import KeepScroll from '@renderer/components/KeepScroll.vue'
-import { useTextMap } from '@renderer/store/textmap';
 import { useUserGacha } from '@renderer/store/usergacha';
 
 const userGachaStore = useUserGacha();
-const textMapStore = useTextMap();
 const userGachaData = computed(() => userGachaStore.gachaCurrData ?? {});
-
-const avatarConfig = computed(() => userGachaStore.avatarConfig);
-const lightconeConfig = computed(() => userGachaStore.lightconeConfig);
 const gachaPoolInfo = computed(() => userGachaStore.gachaPoolInfo);
+const getItemStar = userGachaStore.getItemStar;
+const getItemName = userGachaStore.getItemName;
+
 const gachaPoolCollaborationAvatar = computed(() =>
     Object.values(userGachaData.value)
         .filter((item) => item['gacha_type'] == '21')
@@ -58,36 +56,6 @@ const gachaPoolNewbie = computed(() =>
         .filter((item) => item['gacha_type'] == '2')
         .sort((a, b) => a['id'] - b['id'])
 );
-
-/**
- * 获取物品星级，不在元数据中的默认为4星
- * @param itemId 物品id
- * @returns 物品星级
- */
-const getItemStar = (itemId: number | string): number => {
-    // 4位数字为角色，5位数字为光锥
-    if (`${itemId}`.length === 4) {
-        return avatarConfig.value[itemId] ? +avatarConfig.value[itemId]['Rarity'].at(-1) : 4;
-    } else {
-        return lightconeConfig.value[itemId] ? +lightconeConfig.value[itemId]['Rarity'].at(-1) : 4;
-    }
-};
-
-/**
- * 获取物品名称，不在元数据中的返回item_id
- * @param itemId 物品id
- * @returns 物品名称
- */
-const getItemName = (itemId: number | string): string => {
-    // 4位数字为角色，5位数字为光锥
-    if (`${itemId}`.length === 4) {
-        if (avatarConfig.value[itemId]) return textMapStore.getText(avatarConfig.value[itemId]['AvatarName']['Hash']);
-        else return `${itemId}`;
-    } else {
-        if (lightconeConfig.value[itemId]) return textMapStore.getText(lightconeConfig.value[itemId]['EquipmentName']['Hash']);
-        else return `${itemId}`;
-    }
-};
 
 /**
  * 获取距离上个四/五星抽数
