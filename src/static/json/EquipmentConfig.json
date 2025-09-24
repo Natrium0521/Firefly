@@ -5532,5 +5532,81 @@
       0,
       1
     ]
+  },
+  "23049": {
+    "EquipmentID": 23049,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": "4836366408334833891"
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Memory",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23049,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23049.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23049.png",
+    "ItemRightPanelOffset": [
+      37,
+      18,
+      0.85
+    ],
+    "AvatarDetailOffset": [
+      34.5,
+      27,
+      1.3
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "23051": {
+    "EquipmentID": 23051,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": "12008774210001466871"
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Knight",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23051,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23051.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23051.png",
+    "ItemRightPanelOffset": [
+      23.5,
+      -132,
+      0.75
+    ],
+    "AvatarDetailOffset": [
+      16,
+      -117,
+      1.14
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
   }
 }

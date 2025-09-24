@@ -5764,6 +5764,149 @@
     "AssistBgOffset": [],
     "AvatarSelfShowOffset": []
   },
+  "1413": {
+    "AvatarID": 1413,
+    "AvatarName": {
+      "Hash": "14327888430982372557"
+    },
+    "AvatarFullName": {
+      "Hash": "2207275047965958799"
+    },
+    "AdventurePlayerID": 1413,
+    "AvatarVOTag": "evernight",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Evernight_00_Config.json",
+    "DamageType": "Ice",
+    "SPNeed": {
+      "Value": 240
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      141301,
+      141302,
+      141303,
+      141304,
+      141305,
+      141306
+    ],
+    "SkillList": [
+      141301,
+      141302,
+      141303,
+      141304,
+      141306,
+      141307,
+      141309
+    ],
+    "AvatarBaseType": "Memory",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Evernight_00/Avatar_Evernight_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1413.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1413.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1413.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1413.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1413B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1413.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Evernight_00/Manikin_Avatar_Maid_Evernight_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Evernight_00_Config.json",
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/MemorySkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1413.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1413.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1413.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1413.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1413.png",
+    "AvatarDropOffset": [
+      88,
+      -13,
+      0.63,
+      88,
+      -13,
+      0.63,
+      88,
+      -13,
+      0.63
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
+  "1414": {
+    "AvatarID": 1414,
+    "AvatarName": {
+      "Hash": "12485086905499638965"
+    },
+    "AvatarFullName": {
+      "Hash": "7878471156237078889"
+    },
+    "AdventurePlayerID": 1414,
+    "AvatarVOTag": "danhengpt",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_DanHengPT_00_Config.json",
+    "DamageType": "Physical",
+    "SPNeed": {
+      "Value": 135
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      141401,
+      141402,
+      141403,
+      141404,
+      141405,
+      141406
+    ],
+    "SkillList": [
+      141401,
+      141402,
+      141403,
+      141404,
+      141406,
+      141407
+    ],
+    "AvatarBaseType": "Knight",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/DanHengPT_00/Avatar_DanHengPT_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1414.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1414.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1414.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1414.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1414B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1414.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/DanHengPT_00/Manikin_Avatar_Male_DanHengPT_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_DanHengPT_00_Config.json",
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/KnightSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1414.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1414.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1414.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1414.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1414.png",
+    "AvatarDropOffset": [
+      126,
+      42,
+      0.63,
+      126,
+      42,
+      0.63,
+      126,
+      42,
+      0.63
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
   "8001": {
     "AvatarID": 8001,
     "AvatarName": {

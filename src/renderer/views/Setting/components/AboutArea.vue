@@ -5,7 +5,7 @@
                 <img class="icon" src="../../../../static/image/icon.png" />
                 <img v-if="new Date().getMonth() === 11 && new Date().getDate() === 25" src="../../../assets/image/svg/christmas-hat.svg" style="position: absolute; left: -51px; top: -78px; scale: 0.7; transform: rotate(346deg); filter: brightness(0.9);">
             </div>
-            <div class="version">工具箱版本 v{{ version }}<br />适配游戏版本 v3.5</div>
+            <div class="version">工具箱版本 v{{ version }}<br />适配游戏版本 v3.6</div>
             <div class="links">
                 <div>项目链接 <a href="https://github.com/Natrium0521/Firefly">GitHub</a></div>
                 <div>游戏数据来自 <a href="https://github.com/DimbreathBot/TurnBasedGameData">StarRailData</a></div>
