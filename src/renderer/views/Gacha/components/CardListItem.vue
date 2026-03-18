@@ -29,6 +29,8 @@ defineProps(['item']);
     box-shadow: 1px 1px 2px #0003;
     flex-shrink: 0;
     overflow: hidden;
+    content-visibility: auto;
+    contain-intrinsic-size: 40px;
 
     & > div {
         position: absolute;
@@ -47,6 +49,7 @@ defineProps(['item']);
         inset: -50px;
         background: repeating-linear-gradient(45deg, transparent 0px 18px, #fff3 18px 32px);
         animation: bg-bar-mask-anim 5s linear infinite;
+        will-change: transform;
     }
 }
 
@@ -110,11 +113,10 @@ defineProps(['item']);
 
 @keyframes bg-bar-mask-anim {
     from {
-        background-position: 0;
+        transform: translateX(0);
     }
-
     to {
-        background-position: 45px;
+        transform: translateX(45px);
     }
 }
 </style>
