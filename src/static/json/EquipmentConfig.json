@@ -5952,5 +5952,83 @@
       0,
       1
     ]
+  },
+  "23056": {
+    "EquipmentID": 23056,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": "580008868750168993"
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Rogue",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23056,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23056.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23056.png",
+    "ItemRightPanelOffset": [
+      11,
+      -34,
+      0.7
+    ],
+    "AvatarDetailOffset": [
+      0,
+      -16,
+      1
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "24006": {
+    "EquipmentID": 24006,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": "13065036285849747195"
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Elation",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 24006,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [
+      271
+    ],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/24006.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/24006.png",
+    "ItemRightPanelOffset": [
+      -5,
+      70,
+      0.75
+    ],
+    "AvatarDetailOffset": [
+      0,
+      69,
+      1.05
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
   }
 }

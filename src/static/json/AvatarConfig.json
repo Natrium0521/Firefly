@@ -6199,6 +6199,77 @@
     "AssistBgOffset": [],
     "AvatarSelfShowOffset": []
   },
+  "1504": {
+    "AvatarID": 1504,
+    "AvatarName": {
+      "Hash": "16507315893888115872"
+    },
+    "AvatarFullName": {
+      "Hash": "2736458134374330701"
+    },
+    "AdventurePlayerID": 1504,
+    "AvatarVOTag": "ashveil",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Ashveil_00_Config.json",
+    "DamageType": "Thunder",
+    "SPNeed": {
+      "Value": 150
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      150401,
+      150402,
+      150403,
+      150404,
+      150405,
+      150406
+    ],
+    "SkillList": [
+      150401,
+      150402,
+      150403,
+      150404,
+      150406,
+      150407
+    ],
+    "AvatarBaseType": "Rogue",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Ashveil_00/Avatar_Ashveil_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1504.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1504.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1504.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1504.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1504B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1504.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Ashveil_00/Manikin_Avatar_Male_Ashveil_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Ashveil_00_Config.json",
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/RogueSkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1504.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1504.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1504.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1504.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1504.png",
+    "AvatarDropOffset": [
+      -26.43,
+      -2.4,
+      0.5,
+      -26.43,
+      -2.4,
+      0.5,
+      -26.43,
+      -2.4,
+      0.5
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
   "8001": {
     "AvatarID": 8001,
     "AvatarName": {
