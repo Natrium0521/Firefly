@@ -11,7 +11,7 @@ _✨使用 [electron](https://github.com/electron/electron) 开发的《崩坏�
 [![license](https://img.shields.io/github/license/Natrium0521/Firefly)](./LICENSE)
 [![downloads](https://img.shields.io/github/downloads/Natrium0521/Firefly/total)](https://github.com/Natrium0521/Firefly/releases/latest)
 [![release](https://img.shields.io/github/v/release/Natrium0521/Firefly?color=9f71d3)](https://github.com/Natrium0521/Firefly/releases/latest)
-[![game version](https://img.shields.io/badge/for_HSR-v4.1-9f71d3)](https://github.com/Natrium0521/Firefly/releases/latest)
+[![game version](https://img.shields.io/badge/for_HSR-v4.2-9f71d3)](https://github.com/Natrium0521/Firefly/releases/latest)
 
 </div>
 
@@ -63,6 +63,8 @@ npm start
 - [UIGF organization](https://uigf.org)
 
 - [IconPark](http://iconpark.oceanengine.com/official)
+
+- [TinyPNG](https://tinypng.com/)
 
 ## License
 

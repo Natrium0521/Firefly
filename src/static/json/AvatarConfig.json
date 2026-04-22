@@ -6270,6 +6270,158 @@
     "AssistBgOffset": [],
     "AvatarSelfShowOffset": []
   },
+  "1505": {
+    "AvatarID": 1505,
+    "AvatarName": {
+      "Hash": "9927439444416271873"
+    },
+    "AvatarFullName": {
+      "Hash": "6520298219838707926"
+    },
+    "AdventurePlayerID": 1505,
+    "AvatarVOTag": "evanescia",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Evanescia_00_Config.json",
+    "DamageType": "Physical",
+    "SPNeed": {
+      "Value": 480
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      150501,
+      150502,
+      150503,
+      150504,
+      150505,
+      150506
+    ],
+    "SkillList": [
+      150501,
+      150502,
+      150503,
+      150504,
+      150506,
+      150507,
+      150520
+    ],
+    "AvatarBaseType": "Elation",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Evanescia_00/Avatar_Evanescia_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1505.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1505.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1505.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1505.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1505B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1505.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Evanescia_00/Manikin_Avatar_Maid_Evanescia_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Evanescia_00_Config.json",
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/JoySkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1505.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1505.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1505.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1505.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1505.png",
+    "AvatarDropOffset": [
+      -13.5,
+      22.72,
+      0.53,
+      -13.5,
+      22.72,
+      0.53,
+      -13.5,
+      22.72,
+      0.53
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
+  "1506": {
+    "AvatarID": 1506,
+    "AvatarName": {
+      "Hash": "11557317042334401025"
+    },
+    "AvatarFullName": {
+      "Hash": "14980980692475262942"
+    },
+    "AdventurePlayerID": 1506,
+    "AvatarVOTag": "silverwolflv999",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_SilverWolf999_00_Config.json",
+    "DamageType": "Imaginary",
+    "SPNeed": {
+      "Value": 60
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      150601,
+      150602,
+      150603,
+      150604,
+      150605,
+      150606
+    ],
+    "SkillList": [
+      150601,
+      150602,
+      150603,
+      150604,
+      150606,
+      150607,
+      150608,
+      150610,
+      150612,
+      150618,
+      150620,
+      150621
+    ],
+    "AvatarBaseType": "Elation",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/SilverWolf999_00/Avatar_SilverWolf999_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1506.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1506.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1506.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1506.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1506B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1506.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/SilverWolf999_00/Manikin_Avatar_Girl_SilverWolf999_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_SilverWolf999_00_Config.json",
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/JoySkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1506.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1506.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1506.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1506.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1506.png",
+    "AvatarCutinIntroText": {
+      "Hash": "4306139519370435283"
+    },
+    "AvatarDropOffset": [
+      21.16,
+      -25.2,
+      0.53,
+      21.16,
+      -25.2,
+      0.53,
+      21.16,
+      -25.2,
+      0.53
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
   "8001": {
     "AvatarID": 8001,
     "AvatarName": {
@@ -6845,6 +6997,130 @@
     "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/8008.png",
     "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/8008.png",
     "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/8008.png",
+    "AvatarDropOffset": [],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
+  "8009": {
+    "AvatarID": 8009,
+    "AvatarName": {
+      "Hash": "7663307095624772319"
+    },
+    "AvatarFullName": {
+      "Hash": "1889615116897637623"
+    },
+    "AdventurePlayerID": 8009,
+    "AvatarVOTag": "playerboy5",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_PlayerBoy_40_Config.json",
+    "DamageType": "Thunder",
+    "SPNeed": {
+      "Value": 160
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      800901,
+      800902,
+      800903,
+      800904,
+      800905,
+      800906
+    ],
+    "SkillList": [
+      800901,
+      800902,
+      800903,
+      800904,
+      800906,
+      800907,
+      800920
+    ],
+    "AvatarBaseType": "Elation",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/PlayerBoy_40/Avatar_PlayerBoy_40.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/8009.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/8009.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/8009.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/8009.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/8009B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_8009.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/PlayerBoy_40/Manikin_Avatar_Lad_PlayerBoy_40.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_PlayerBoy_40_Config.json",
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/JoySkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/8009.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/8009.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/8009.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/8009.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/8009.png",
+    "AvatarDropOffset": [],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
+  "8010": {
+    "AvatarID": 8010,
+    "AvatarName": {
+      "Hash": "11669351296701672101"
+    },
+    "AvatarFullName": {
+      "Hash": "10220350920306746709"
+    },
+    "AdventurePlayerID": 8010,
+    "AvatarVOTag": "playergirl5",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_PlayerGirl_40_Config.json",
+    "DamageType": "Thunder",
+    "SPNeed": {
+      "Value": 160
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      801001,
+      801002,
+      801003,
+      801004,
+      801005,
+      801006
+    ],
+    "SkillList": [
+      801001,
+      801002,
+      801003,
+      801004,
+      801006,
+      801007,
+      801020
+    ],
+    "AvatarBaseType": "Elation",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/PlayerGirl_40/Avatar_PlayerGirl_40.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/8010.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/8010.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/8010.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/8010.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/8010B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_8010.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/PlayerGirl_40/Manikin_Avatar_Miss_PlayerGirl_40.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_PlayerGirl_40_Config.json",
+    "AIPath": "Config/ConfigAI/Avatar_ComplexSkilll_AutoFight_AI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/JoySkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/8010.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/8010.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/8010.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/8010.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/8010.png",
     "AvatarDropOffset": [],
     "AvatarTrialOffset": [],
     "PlayerCardOffset": [],

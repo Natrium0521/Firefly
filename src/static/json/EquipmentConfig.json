@@ -6030,5 +6030,121 @@
       0,
       1
     ]
+  },
+  "23058": {
+    "EquipmentID": 23058,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": "12250452824306430514"
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Elation",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23058,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23058.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23058.png",
+    "ItemRightPanelOffset": [
+      -4,
+      -46,
+      0.78
+    ],
+    "AvatarDetailOffset": [
+      -4,
+      -28,
+      1.17
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "23057": {
+    "EquipmentID": 23057,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": "18067789291542392699"
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Elation",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23057,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23057.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23057.png",
+    "ItemRightPanelOffset": [
+      7,
+      -132,
+      1.06
+    ],
+    "AvatarDetailOffset": [
+      10,
+      -115,
+      1.6
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "22007": {
+    "EquipmentID": 22007,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": "1470137069313109545"
+    },
+    "Rarity": "CombatPowerLightconeRarity4",
+    "AvatarBaseType": "Elation",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 2,
+    "SkillID": 22007,
+    "ExpProvide": 12000,
+    "CoinCost": 6000,
+    "RankUpCostList": [
+      121007
+    ],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/22007.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/22007.png",
+    "ItemRightPanelOffset": [
+      0,
+      7,
+      0.7
+    ],
+    "AvatarDetailOffset": [
+      0,
+      13,
+      1.07
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
   }
 }

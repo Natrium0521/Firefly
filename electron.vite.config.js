@@ -33,7 +33,7 @@ const lessenTextMap = (textMapFilePath, hashFilePath) => {
         }
     });
     textMapFiles.forEach((file) => {
-        const oldTextMap = JSON.parse(fs.readFileSync(path.join(textMapFilePath, file), 'utf-8'));
+        const oldTextMap = JSON.parse(fs.readFileSync(path.join(textMapFilePath, file), 'utf-8').replaceAll(/<(\/|)unbreak>/g,''));
         const newTextMap = {};
         hashs.forEach((hash) => {
             if (hash in oldTextMap) {
