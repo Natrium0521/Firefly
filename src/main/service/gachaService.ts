@@ -1,6 +1,6 @@
 import { app, BrowserWindow, dialog } from 'electron';
-import configService from './ConfigService';
-import settingService from './SettingService';
+import configService from './configService';
+import settingService from './settingService';
 import path from 'path';
 import fs from 'fs';
 

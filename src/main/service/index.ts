@@ -1,9 +1,9 @@
-import config from './ConfigService';
-import setting from './SettingService';
-import unlockfps from './UnlockFPSService';
-import achievement from './AchievementService';
-import gacha from './GachaService';
-import update from './UpdateService';
+import config from './configService';
+import setting from './settingService';
+import unlockfps from './unlockFPSService';
+import achievement from './achievementService';
+import gacha from './gachaService';
+import update from './updateService';
 
 export default {
     config,
