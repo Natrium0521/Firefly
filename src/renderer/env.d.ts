@@ -27,7 +27,7 @@ declare interface Window {
             exportAchievementData: (uid: string, type: string) => Promise<unknown>;
             importAchievementData: (uid: string, type: string) => Promise<unknown>;
             setAchievementStatus: (uid: string, achievementIds: string[], achievementStatus: number) => Promise<unknown>;
-            refreshAchievementFromMYS: (keepCookie: boolean) => Promise<unknown>;
+            refreshAchievementFromMYS: (keepCookie: boolean, server?: 'cn' | 'global') => Promise<unknown>;
             cancelRefreshAchievementFromMYS: () => Promise<unknown>;
         };
         gacha: {
