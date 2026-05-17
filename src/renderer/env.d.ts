@@ -37,7 +37,7 @@ declare interface Window {
             delGachaData: (uid: string) => Promise<unknown>;
             exportGachaData: (uid: string | string[], type?: string) => Promise<unknown>;
             importGachaData: (type?: string, data?: unknown) => Promise<unknown>;
-            getGachaURL: (server?: string) => Promise<unknown>;
+            getGachaURL: (server?: 'cn' | 'global') => Promise<unknown>;
         };
         update: {
             doDownload: (url: string) => Promise<void>;

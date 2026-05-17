@@ -102,8 +102,8 @@ export const useUserGacha = defineStore('usergacha', () => {
         return isExportable;
     };
 
-    const getGachaURL = async () => {
-        return await window.fireflyAPI.gacha.getGachaURL();
+    const getGachaURL = async (server: 'cn' | 'global' = 'cn') => {
+        return await window.fireflyAPI.gacha.getGachaURL(server);
     };
 
     const textMapStore = useTextMap();
