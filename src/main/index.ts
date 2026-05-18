@@ -2,7 +2,7 @@ import { app, BrowserWindow, Tray, Menu, ipcMain, shell } from 'electron';
 import path from 'path';
 import fs from 'fs';
 
-import settingService from './service/SettingService';
+import settingService from './service/settingService';
 
 // 禁用硬件加速
 app.disableHardwareAcceleration();

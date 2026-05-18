@@ -1,8 +1,19 @@
 import { app, BrowserWindow, dialog } from 'electron';
-import configService from './ConfigService';
-import settingService from './SettingService';
+import configService from './configService';
+import settingService from './settingService';
 import path from 'path';
 import fs from 'fs';
+
+const serverConfigs = {
+    cn: {
+        pageURL: 'https://act.mihoyo.com/sr/event/cultivation-tool/index.html#/tools/achievement',
+        requestURLs: ['*://*.mihoyo.com/event/rpgcultivate/achievement/list*'],
+    },
+    global: {
+        pageURL: 'https://act.hoyolab.com/sr/event/cultivation-tool/index.html?game_biz=hkrpg_global&hyl_auth_required=true#/tools/achievement',
+        requestURLs: ['*://*.hoyolab.com/event/rpgcultivate/achievement/list*', '*://*.hoyoverse.com/event/rpgcultivate/achievement/list*'],
+    },
+};
 
 class AchievementService {
     private appDataPath: string;
@@ -33,6 +44,44 @@ class AchievementService {
                 return sortedObj;
             }, {});
         fs.writeFileSync(this.achievementUidsPath, JSON.stringify(this.achievementUids, null, 4), 'utf-8');
+    }
+
+    private getAchievementUid(url: string, data: unknown) {
+        const params = new URL(url).searchParams;
+        const uid = params.get('badge_uid') ?? params.get('game_uid') ?? params.get('uid') ?? params.get('role_id') ?? data?.['data']?.['uid'] ?? data?.['data']?.['role']?.['game_uid'] ?? '';
+        return `${uid}`;
+    }
+
+    private async saveRefreshedAchievements(uid: string, achievementList: Array<{ finished: boolean; id: string }>) {
+        if (!/^\d{9}$/.test(uid)) return { msg: 'Invalid UID' };
+        if (this.achievementUids[uid] === undefined) {
+            await this.newAchievementData(uid, 'Trailblazer');
+        }
+        await settingService.setAppSettings('LastAchievementUid', uid);
+        const achievementMetaIds = new Set(Object.keys(JSON.parse(fs.readFileSync(path.join(__dirname, '../static/json/AchievementData.json'), 'utf-8'))));
+        const finishedIds = [];
+        achievementList.forEach((achievement) => {
+            if (achievement.finished && achievementMetaIds.has(achievement.id)) {
+                finishedIds.push(achievement.id);
+            }
+        });
+        const oldData = JSON.parse(fs.readFileSync(path.join(this.achievementDataPath, `./${uid}.json`), 'utf-8'));
+        const newData = {};
+        const timeNow = Math.floor(new Date().getTime() / 1000);
+        finishedIds.forEach((achievementId) => {
+            if (oldData[achievementId] === undefined) {
+                newData[achievementId] = {
+                    id: achievementId,
+                    timestamp: timeNow,
+                    current: 0,
+                    status: 2,
+                };
+            } else {
+                newData[achievementId] = oldData[achievementId];
+            }
+        });
+        fs.writeFileSync(path.join(this.achievementDataPath, `./${uid}.json`), JSON.stringify(newData, null, 4), 'utf-8');
+        return { msg: 'OK', data: uid };
     }
 
     public async getAchievementUids() {
@@ -184,8 +233,13 @@ class AchievementService {
         return { msg: 'OK', data: ret };
     }
 
-    public async refreshAchievementFromMYS(keepCookie = false) {
+    public async refreshAchievementFromMYS(keepCookie = false, server = 'cn') {
         return new Promise(async (resolve) => {
+            const serverConfig = serverConfigs[server];
+            if (serverConfig === undefined) {
+                resolve({ msg: 'Unsupport server' });
+                return;
+            }
             this.mysBrowserWindow = new BrowserWindow({
                 width: 720,
                 height: 480,
@@ -197,49 +251,31 @@ class AchievementService {
                 resolve('Canceled');
             });
             if (!keepCookie) await this.mysBrowserWindow.webContents.session.clearStorageData({ storages: ['cookies'] });
-            this.mysBrowserWindow.loadURL('https://act.mihoyo.com/sr/event/cultivation-tool/index.html#/tools/achievement');
+            this.mysBrowserWindow.loadURL(serverConfig.pageURL);
             let flag = false;
-            this.mysBrowserWindow.webContents.session.webRequest.onBeforeSendHeaders({ urls: ['*://*.mihoyo.com/event/rpgcultivate/achievement/list*'] }, (details, callback) => {
+            this.mysBrowserWindow.webContents.session.webRequest.onBeforeSendHeaders({ urls: serverConfig.requestURLs }, (details, callback) => {
                 if (details.method === 'OPTIONS') return callback({});
                 if (flag) return callback({});
                 flag = true;
-                const newURL = details.url.replace('need_all=false', 'need_all=true').replace('show_hide=false', 'show_hide=true');
+                const urlObj = new URL(details.url);
+                urlObj.searchParams.set('need_all', 'true');
+                urlObj.searchParams.set('show_hide', 'true');
+                const newURL = urlObj.href;
                 fetch(newURL, { headers: details.requestHeaders })
                     .then((response) => response.json())
                     .then(async (data) => {
                         if (data.retcode === 0) {
-                            const uid = newURL.match(/badge_uid=(\d+)/)[1];
-                            if (this.achievementUids[uid] === undefined) {
-                                await this.newAchievementData(uid, 'Trailblazer');
-                            }
-                            await settingService.setAppSettings('LastAchievementUid', uid);
-                            const achievementMetaIds = new Set(Object.keys(JSON.parse(fs.readFileSync(path.join(__dirname, '../static/json/AchievementData.json'), 'utf-8'))));
-                            const finishedIds = [];
-                            data.data.achievement_list.forEach((achievement: { finished: boolean; id: string }) => {
-                                if (achievement.finished && achievementMetaIds.has(achievement.id)) {
-                                    finishedIds.push(achievement.id);
-                                }
-                            });
-                            const oldData = JSON.parse(fs.readFileSync(path.join(this.achievementDataPath, `./${uid}.json`), 'utf-8'));
-                            const newData = {};
-                            const timeNow = Math.floor(new Date().getTime() / 1000);
-                            finishedIds.forEach((achievementId) => {
-                                if (oldData[achievementId] === undefined) {
-                                    newData[achievementId] = {
-                                        id: achievementId,
-                                        timestamp: timeNow,
-                                        current: 0,
-                                        status: 2,
-                                    };
-                                } else {
-                                    newData[achievementId] = oldData[achievementId];
-                                }
-                            });
-                            fs.writeFileSync(path.join(this.achievementDataPath, `./${uid}.json`), JSON.stringify(newData, null, 4), 'utf-8');
-                            resolve(uid);
+                            const uid = this.getAchievementUid(newURL, data);
+                            const ret = await this.saveRefreshedAchievements(uid, data.data.achievement_list ?? []);
+                            resolve(ret['msg'] === 'OK' ? ret['data'] : ret);
                         } else {
                             resolve(data);
                         }
+                        this.mysBrowserWindow?.close();
+                        this.mysBrowserWindow = null;
+                    })
+                    .catch((error) => {
+                        resolve({ msg: error.message });
                         this.mysBrowserWindow?.close();
                         this.mysBrowserWindow = null;
                     });

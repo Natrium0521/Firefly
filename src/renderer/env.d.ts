@@ -27,7 +27,7 @@ declare interface Window {
             exportAchievementData: (uid: string, type: string) => Promise<unknown>;
             importAchievementData: (uid: string, type: string) => Promise<unknown>;
             setAchievementStatus: (uid: string, achievementIds: string[], achievementStatus: number) => Promise<unknown>;
-            refreshAchievementFromMYS: (keepCookie: boolean) => Promise<unknown>;
+            refreshAchievementFromMYS: (keepCookie: boolean, server?: 'cn' | 'global') => Promise<unknown>;
             cancelRefreshAchievementFromMYS: () => Promise<unknown>;
         };
         gacha: {
@@ -37,7 +37,7 @@ declare interface Window {
             delGachaData: (uid: string) => Promise<unknown>;
             exportGachaData: (uid: string | string[], type?: string) => Promise<unknown>;
             importGachaData: (type?: string, data?: unknown) => Promise<unknown>;
-            getGachaURL: (server?: string) => Promise<unknown>;
+            getGachaURL: (server?: 'cn' | 'global') => Promise<unknown>;
         };
         update: {
             doDownload: (url: string) => Promise<void>;

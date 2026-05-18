@@ -5,6 +5,13 @@
         </div>
         <GachaHeadButton :icon-path="RefreshIcon" btn-title="刷新" btn-class="white" @click="showingAlert = 'refresh'" />
         <Alert id="alert-refresh" v-if="showingAlert === 'refresh'" @close="!isRefreshing && (showingAlert = 'none')" title="刷新记录" @vue:mounted="refreshingItems = []">
+            <div class="select-item-area">
+                <span>服务器：</span>
+                <select v-model="selectedGachaServer">
+                    <option value="cn">国服</option>
+                    <option value="global">国际服</option>
+                </select>
+            </div>
             <div class="url-area" :class="{ shrink: refreshingItems.length > 0 }">
                 <div class="label">URL:</div>
                 <div class="btn" @click="onGetUrlConfirm">自动获取</div>
@@ -142,6 +149,15 @@ const showImportDropdown = ref(false);
 
 const isRefreshing = ref(false);
 const refreshingItems = ref([]);
+const selectedGachaServer = ref<'cn' | 'global'>('cn');
+const gachaServerHosts = {
+    cn: 'mihoyo.com',
+    global: 'hoyoverse.com',
+};
+const gachaServerNames = {
+    cn: '米哈游',
+    global: 'HoYoverse',
+};
 
 const refreshWarningArea = ref<HTMLDivElement>(null);
 const refreshUrlTextarea = ref<HTMLTextAreaElement>(null);
@@ -164,12 +180,12 @@ const onRefreshConfirm = async (isIncremental: boolean) => {
         warningSpan.innerHTML = '<br>URL错误';
         return;
     }
-    if (!urlObj.hostname.endsWith('mihoyo.com') || !urlObj.pathname.match(/gacha/i)) {
-        warningSpan.innerHTML = '<br>非米哈游抽卡分析链接';
+    if (!urlObj.hostname.endsWith(gachaServerHosts[selectedGachaServer.value]) || !urlObj.pathname.match(/gacha/i)) {
+        warningSpan.innerHTML = `<br>非${gachaServerNames[selectedGachaServer.value]}抽卡分析链接`;
         return;
     }
     // 检查URL状态
-    const baseKeys = ['authkey_ver', 'authkey', 'game_biz', 'lang'];
+    const baseKeys = ['authkey_ver', 'authkey', 'sign_type', 'game_biz', 'lang'];
     const baseParams = new URLSearchParams(Array.from(urlObj.searchParams.entries()).filter(([k]) => baseKeys.includes(k)));
     urlObj.search = baseParams.toString() + '&size=20';
     let region_time_zone = 0;
@@ -294,7 +310,7 @@ const onRefreshConfirm = async (isIncremental: boolean) => {
 const onGetUrlConfirm = async () => {
     const warningSpan = refreshWarningArea.value;
     if (isRefreshing.value) return;
-    const ret = await userGachaStore.getGachaURL();
+    const ret = await userGachaStore.getGachaURL(selectedGachaServer.value);
     if (ret['msg'] === 'OK') {
         refreshUrlTextarea.value.value = ret['data']['url'];
         warningSpan.innerHTML = '<br>获取成功，正在检测是否有效';

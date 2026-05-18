@@ -1,8 +1,19 @@
 import { app, BrowserWindow, dialog } from 'electron';
-import configService from './ConfigService';
-import settingService from './SettingService';
+import configService from './configService';
+import settingService from './settingService';
 import path from 'path';
 import fs from 'fs';
+
+const serverConfigs = {
+    cn: {
+        playerLogPaths: ['../../../LocalLow/miHoYo/崩坏：星穹铁道/Player.log', '../../../LocalLow/miHoYo/崩坏：星穹铁道/Player-prev.log'],
+        urlPattern: /^http.*(?:hkrpg|api).*mihoyo\.com.*?gacha.*\?/i,
+    },
+    global: {
+        playerLogPaths: ['../../../LocalLow/Cognosphere/Star Rail/Player.log', '../../../LocalLow/Cognosphere/Star Rail/Player-prev.log'],
+        urlPattern: /^http.*(?:hkrpg|api).*hoyoverse\.com.*?gacha.*\?/i,
+    },
+};
 
 class GachaService {
     private appDataPath: string;
@@ -36,6 +47,34 @@ class GachaService {
 
     private loadJson(fName: string) {
         return JSON.parse(fs.readFileSync(path.join(__dirname, `../static/json/${fName}.json`), 'utf-8'));
+    }
+
+    private getGameDataPath(playerLogPath: string) {
+        if (!fs.existsSync(playerLogPath)) return '';
+        const playerLog = fs.readFileSync(playerLogPath, 'utf-8');
+        return playerLog.match(/Loading player data from (.*)data\.unity3d/)?.[1] ?? playerLog.match(/.:\/.+StarRail_Data/)?.[0] ?? '';
+    }
+
+    private getLatestWebCachePath(gameDataPath: string) {
+        const webCachePath = path.join(gameDataPath, './webCaches/');
+        if (!fs.existsSync(webCachePath)) return '';
+        let latestVersion = '0.0.0.0';
+        fs.readdirSync(webCachePath).forEach((fname) => {
+            if (fs.statSync(path.join(webCachePath, fname)).isDirectory() && /\d+\.\d+\.\d+\.\d/.test(fname)) {
+                const latest = latestVersion.split('.');
+                const current = fname.split('.');
+                for (let i = 0; i < 4; ++i) {
+                    if (parseInt(current[i]) > parseInt(latest[i])) {
+                        latestVersion = fname;
+                        break;
+                    } else if (parseInt(current[i]) < parseInt(latest[i])) {
+                        break;
+                    }
+                }
+            }
+        });
+        if (latestVersion === '0.0.0.0') return '';
+        return path.join(webCachePath, latestVersion, 'Cache/Cache_Data/data_2');
     }
 
     public async getGachaUids() {
@@ -312,43 +351,32 @@ class GachaService {
 
     public async getGachaURL(server = 'cn') {
         let url = '';
-        if (server === 'cn') {
-            const playerLogPath = path.join(this.appDataPath, '../../../LocalLow/miHoYo/崩坏：星穹铁道/Player.log');
-            const gameDataPath = fs.readFileSync(playerLogPath, 'utf-8').match(/Loading player data from (.*)data\.unity3d/)[1];
-            const webCachePath = path.join(gameDataPath, './webCaches/');
-            let maxVersion = '0.0.0.0';
-            fs.readdirSync(webCachePath).forEach((fname) => {
-                if (fs.statSync(path.join(webCachePath, fname)).isDirectory() && /\d+\.\d+\.\d+\.\d/.test(fname)) {
-                    const max = maxVersion.split('.');
-                    const now = fname.split('.');
-                    for (let i = 0; i < 4; ++i) {
-                        if (parseInt(now[i]) > parseInt(max[i])) {
-                            maxVersion = fname;
-                            break;
-                        } else if (parseInt(now[i]) < parseInt(max[i])) {
-                            break;
-                        }
-                    }
-                }
-            });
-            if (maxVersion === '0.0.0.0') return { msg: 'URL not found' };
-            const urlWebCachePath = path.join(gameDataPath, `./webCaches/${maxVersion}/Cache/Cache_Data/data_2`);
-            const urlLines = fs.readFileSync(urlWebCachePath, 'utf-8').split('1/0/');
-            urlLines.forEach((line) => {
-                if (line.match(/^http.*(?:hkrpg|api).*mihoyo\.com.*?gacha.*\?/i)) {
-                    url = line.match(/^.*?\x00/)[0].slice(0, -1);
-                }
-            });
-            if (url === '') return { msg: 'URL not found' };
-            const searchKeys = ['authkey_ver', 'authkey', 'game_biz', 'lang'];
-            const urlObj = new URL(url);
-            const params = urlObj.searchParams;
-            const filteredParams = new URLSearchParams(Array.from(params.entries()).filter(([k]) => searchKeys.includes(k)));
-            urlObj.search = filteredParams.toString();
-            return { msg: 'OK', data: { url: urlObj.href } };
-        } else {
+        const serverConfig = serverConfigs[server];
+        if (serverConfig === undefined) {
             return { msg: 'Unsupport server' };
         }
+        const urlWebCachePaths = [];
+        serverConfig.playerLogPaths.forEach((playerLogPath) => {
+            const gameDataPath = this.getGameDataPath(path.join(this.appDataPath, playerLogPath));
+            const urlWebCachePath = gameDataPath ? this.getLatestWebCachePath(gameDataPath) : '';
+            if (urlWebCachePath) urlWebCachePaths.push(urlWebCachePath);
+        });
+        for (const urlWebCachePath of urlWebCachePaths) {
+            const urlLines = fs.readFileSync(urlWebCachePath, 'utf-8').split('1/0/');
+            urlLines.forEach((line) => {
+                if (line.match(serverConfig.urlPattern)) {
+                    url = line.match(/^.*?\x00/)?.[0]?.slice(0, -1) ?? line.match(/^https?:\/\/\S+/)?.[0] ?? '';
+                }
+            });
+            if (url !== '') break;
+        }
+        if (url === '') return { msg: 'URL not found' };
+        const searchKeys = ['authkey_ver', 'authkey', 'sign_type', 'game_biz', 'lang'];
+        const urlObj = new URL(url);
+        const params = urlObj.searchParams;
+        const filteredParams = new URLSearchParams(Array.from(params.entries()).filter(([k]) => searchKeys.includes(k)));
+        urlObj.search = filteredParams.toString();
+        return { msg: 'OK', data: { url: urlObj.href } };
     }
 }
 

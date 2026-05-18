@@ -1,4 +1,4 @@
-import configService from './ConfigService';
+import configService from './configService';
 import fs from 'fs';
 
 class SettingService {
