@@ -123,7 +123,7 @@
                             <Alert v-if="showingAlert === 'refresh'" @close="!isMYSBrowserWindowOpen && (showingAlert = 'none')" title="从官方工具刷新/导入">
                                 <div class="select-item-area">
                                     <span>服务器：</span>
-                                    <select v-model="selectedAchievementServer">
+                                    <select v-model="selectedAchievementServer" v-on:change="onRefreshServerChange">
                                         <option value="cn">国服</option>
                                         <option value="global">国际服</option>
                                     </select>
@@ -338,7 +338,11 @@ const onNewlyAlertMounted = () => {
 };
 
 const refreshAutoLogin = ref(true);
-const selectedAchievementServer = ref<'cn' | 'global'>('cn');
+type TServer = 'cn' | 'global';
+const selectedAchievementServer = ref<TServer>((localStorage.getItem('achievement_refresh_server') as TServer) || 'cn');
+const onRefreshServerChange = () => {
+    localStorage.setItem('achievement_refresh_server', selectedAchievementServer.value);
+};
 const refreshWarningArea = ref<HTMLSpanElement>(null);
 let isMYSBrowserWindowOpen = false;
 const onRefreshConfirm = async () => {

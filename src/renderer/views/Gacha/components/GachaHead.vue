@@ -7,7 +7,7 @@
         <Alert id="alert-refresh" v-if="showingAlert === 'refresh'" @close="!isRefreshing && (showingAlert = 'none')" title="刷新记录" @vue:mounted="refreshingItems = []">
             <div class="select-item-area">
                 <span>服务器：</span>
-                <select v-model="selectedGachaServer">
+                <select v-model="selectedGachaServer" v-on:change="onRefreshServerChange">
                     <option value="cn">国服</option>
                     <option value="global">国际服</option>
                 </select>
@@ -15,7 +15,7 @@
             <div class="url-area" :class="{ shrink: refreshingItems.length > 0 }">
                 <div class="label">URL:</div>
                 <div class="btn" @click="onGetUrlConfirm">自动获取</div>
-                <textarea ref="refreshUrlTextarea" spellcheck="false" placeholder="https://public-operation-hkrpg.mihoyo.com/common/gacha_record/api/getGachaLog?"></textarea>
+                <textarea ref="refreshUrlTextarea" spellcheck="false" :placeholder="gachaURLPlaceholders[selectedGachaServer]"></textarea>
             </div>
             <div class="card-area" :class="{ show: refreshingItems.length > 0 }" ref="refreshCardArea">
                 <CardGridItem v-for="item in refreshingItems" :key="item.id" :item="item" />
@@ -147,9 +147,14 @@ function switchGachaPool() {
 
 const showImportDropdown = ref(false);
 
+type TServer = 'cn' | 'global';
 const isRefreshing = ref(false);
 const refreshingItems = ref([]);
-const selectedGachaServer = ref<'cn' | 'global'>('cn');
+const selectedGachaServer = ref<TServer>((localStorage.getItem('gacha_refresh_server') as TServer) || 'cn');
+const onRefreshServerChange = () => {
+    localStorage.setItem('gacha_refresh_server', selectedGachaServer.value);
+    refreshUrlTextarea.value.value = '';
+};
 const gachaServerHosts = {
     cn: 'mihoyo.com',
     global: 'hoyoverse.com',
@@ -157,6 +162,10 @@ const gachaServerHosts = {
 const gachaServerNames = {
     cn: '米哈游',
     global: 'HoYoverse',
+};
+const gachaURLPlaceholders = {
+    cn: 'https://public-operation-hkrpg.mihoyo.com/common/gacha_record/api/getGachaLog?',
+    global: 'https://public-operation-hkrpg.hoyoverse.com/common/gacha_record/api/getGachaLog?',
 };
 
 const refreshWarningArea = ref<HTMLDivElement>(null);
