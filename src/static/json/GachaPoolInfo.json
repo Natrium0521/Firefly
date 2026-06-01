@@ -3690,5 +3690,125 @@
             21007,
             21010
         ]
+    },
+    "2124": {
+        "GachaID": 2124,
+        "GachaType": "AvatarUp",
+        "Version": "4.3",
+        "StartTime": "2026-06-01 09:00:00",
+        "EndTime": "2026-06-24 11:59:00",
+        "UpItems5": [
+            1507
+        ],
+        "UpItems4": [
+            1108,
+            1111,
+            1202
+        ]
+    },
+    "3124": {
+        "GachaID": 3124,
+        "GachaType": "WeaponUp",
+        "Version": "4.3",
+        "StartTime": "2026-06-01 09:00:00",
+        "EndTime": "2026-06-24 11:59:00",
+        "UpItems5": [
+            23059
+        ],
+        "UpItems4": [
+            21001,
+            21002,
+            21005
+        ]
+    },
+    "2125": {
+        "GachaID": 2125,
+        "GachaType": "AvatarUp",
+        "Version": "4.3",
+        "StartTime": "2026-06-01 09:00:00",
+        "EndTime": "2026-06-24 11:59:00",
+        "UpItems5": [
+            1502
+        ],
+        "UpItems4": [
+            1108,
+            1111,
+            1202
+        ]
+    },
+    "3125": {
+        "GachaID": 3125,
+        "GachaType": "WeaponUp",
+        "Version": "4.3",
+        "StartTime": "2026-06-01 09:00:00",
+        "EndTime": "2026-06-24 11:59:00",
+        "UpItems5": [
+            23054
+        ],
+        "UpItems4": [
+            21001,
+            21002,
+            21005
+        ]
+    },
+    "2126": {
+        "GachaID": 2126,
+        "GachaType": "AvatarUp",
+        "Version": "4.3",
+        "StartTime": "2026-06-24 12:00:00",
+        "EndTime": "2026-07-14 15:00:00",
+        "UpItems5": [
+            1415
+        ],
+        "UpItems4": [
+            1001,
+            1008,
+            1207
+        ]
+    },
+    "3126": {
+        "GachaID": 3126,
+        "GachaType": "WeaponUp",
+        "Version": "4.3",
+        "StartTime": "2026-06-24 12:00:00",
+        "EndTime": "2026-07-14 15:00:00",
+        "UpItems5": [
+            23052
+        ],
+        "UpItems4": [
+            21012,
+            21017,
+            21018
+        ]
+    },
+    "2127": {
+        "GachaID": 2127,
+        "GachaType": "AvatarUp",
+        "Version": "4.3",
+        "StartTime": "2026-06-24 12:00:00",
+        "EndTime": "2026-07-14 15:00:00",
+        "UpItems5": [
+            1408
+        ],
+        "UpItems4": [
+            1001,
+            1008,
+            1207
+        ]
+    },
+    "3127": {
+        "GachaID": 3127,
+        "GachaType": "WeaponUp",
+        "Version": "4.3",
+        "StartTime": "2026-06-24 12:00:00",
+        "EndTime": "2026-07-14 15:00:00",
+        "UpItems5": [
+            23044
+        ],
+        "UpItems4": [
+            21012,
+            21017,
+            21018
+        ]
     }
 }
