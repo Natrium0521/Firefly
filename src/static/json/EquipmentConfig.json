@@ -6031,44 +6031,6 @@
       1
     ]
   },
-  "23058": {
-    "EquipmentID": 23058,
-    "Release": true,
-    "EquipmentName": {
-      "Hash": "12250452824306430514"
-    },
-    "Rarity": "CombatPowerLightconeRarity5",
-    "AvatarBaseType": "Elation",
-    "MaxPromotion": 6,
-    "MaxRank": 5,
-    "ExpType": 3,
-    "SkillID": 23058,
-    "ExpProvide": 60000,
-    "CoinCost": 30000,
-    "RankUpCostList": [],
-    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23058.png",
-    "ImagePath": "SpriteOutput/LightConeMaxFigures/23058.png",
-    "ItemRightPanelOffset": [
-      -4,
-      -46,
-      0.78
-    ],
-    "AvatarDetailOffset": [
-      -4,
-      -28,
-      1.17
-    ],
-    "BattleDialogOffset": [
-      0,
-      0,
-      1
-    ],
-    "GachaResultOffset": [
-      0,
-      0,
-      1
-    ]
-  },
   "23057": {
     "EquipmentID": 23057,
     "Release": true,
@@ -6173,6 +6135,158 @@
       4,
       -123,
       1.12
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "23061": {
+    "EquipmentID": 23061,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": "12878612287235138706"
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Mage",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23061,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23061.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23061.png",
+    "ItemRightPanelOffset": [
+      -5,
+      -99,
+      0.73
+    ],
+    "AvatarDetailOffset": [
+      0,
+      -78,
+      1.05
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "23062": {
+    "EquipmentID": 23062,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": "13693150873761509240"
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Warrior",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23062,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23062.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23062.png",
+    "ItemRightPanelOffset": [
+      18,
+      73,
+      0.73
+    ],
+    "AvatarDetailOffset": [
+      3,
+      74,
+      1.05
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "23060": {
+    "EquipmentID": 23060,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": "7768214880470327395"
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Mage",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23060,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23060.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23060.png",
+    "ItemRightPanelOffset": [
+      45,
+      -126,
+      0.83
+    ],
+    "AvatarDetailOffset": [
+      21,
+      -95,
+      1.15
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
+  },
+  "23058": {
+    "EquipmentID": 23058,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": "12250452824306430514"
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Elation",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23058,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23058.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23058.png",
+    "ItemRightPanelOffset": [
+      -4,
+      -46,
+      0.78
+    ],
+    "AvatarDetailOffset": [
+      -4,
+      -28,
+      1.17
     ],
     "BattleDialogOffset": [
       0,
