@@ -33949,7 +33949,7 @@
     "ParamList": [],
     "Priority": 8283,
     "Rarity": "Mid",
-    "ShowType": "ShowAfterFinish",
+    "ShowType": "HiddenDesc",
     "PSTrophyID": ""
   },
   "4035409": {
@@ -33969,7 +33969,7 @@
     "ParamList": [],
     "Priority": 8282,
     "Rarity": "Mid",
-    "ShowType": "ShowAfterFinish",
+    "ShowType": "HiddenDesc",
     "PSTrophyID": ""
   },
   "4035410": {
@@ -33989,7 +33989,7 @@
     "ParamList": [],
     "Priority": 8281,
     "Rarity": "Mid",
-    "ShowType": "ShowAfterFinish",
+    "ShowType": "HiddenDesc",
     "PSTrophyID": ""
   },
   "4035411": {
@@ -34009,7 +34009,7 @@
     "ParamList": [],
     "Priority": 8280,
     "Rarity": "Mid",
-    "ShowType": "ShowAfterFinish",
+    "ShowType": "HiddenDesc",
     "PSTrophyID": ""
   },
   "4035412": {
@@ -34029,7 +34029,7 @@
     "ParamList": [],
     "Priority": 8279,
     "Rarity": "Mid",
-    "ShowType": "ShowAfterFinish",
+    "ShowType": "HiddenDesc",
     "PSTrophyID": ""
   },
   "4035413": {
@@ -34049,7 +34049,7 @@
     "ParamList": [],
     "Priority": 8278,
     "Rarity": "Mid",
-    "ShowType": "ShowAfterFinish",
+    "ShowType": "HiddenDesc",
     "PSTrophyID": ""
   },
   "4045401": {
@@ -34852,6 +34852,921 @@
       }
     ],
     "Priority": 6440,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045501": {
+    "AchievementID": 4045501,
+    "SeriesID": 4,
+    "QuestID": 4045501,
+    "LinearQuestID": 4045501,
+    "AchievementTitle": {
+      "Hash": "5629198937628944240"
+    },
+    "AchievementDesc": {
+      "Hash": "16166221005156281605"
+    },
+    "ParamList": [
+      {
+        "Value": 70
+      }
+    ],
+    "Priority": 6395,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045502": {
+    "AchievementID": 4045502,
+    "SeriesID": 4,
+    "QuestID": 4045502,
+    "LinearQuestID": 4045502,
+    "AchievementTitle": {
+      "Hash": "13263987466995462958"
+    },
+    "AchievementDesc": {
+      "Hash": "8857145331871390837"
+    },
+    "ParamList": [],
+    "Priority": 6394,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045503": {
+    "AchievementID": 4045503,
+    "SeriesID": 4,
+    "QuestID": 4045503,
+    "LinearQuestID": 4045503,
+    "AchievementTitle": {
+      "Hash": "17084953574608350566"
+    },
+    "AchievementDesc": {
+      "Hash": "6303668192320607463"
+    },
+    "ParamList": [],
+    "Priority": 6393,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045504": {
+    "AchievementID": 4045504,
+    "SeriesID": 4,
+    "QuestID": 4045504,
+    "LinearQuestID": 4045504,
+    "AchievementTitle": {
+      "Hash": "16512067719796403189"
+    },
+    "AchievementDesc": {
+      "Hash": "7666050624853626932"
+    },
+    "ParamList": [],
+    "Priority": 6392,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045505": {
+    "AchievementID": 4045505,
+    "SeriesID": 4,
+    "QuestID": 4045505,
+    "LinearQuestID": 4045505,
+    "AchievementTitle": {
+      "Hash": "902674246352237262"
+    },
+    "AchievementDesc": {
+      "Hash": "14306817539797926779"
+    },
+    "ParamList": [],
+    "Priority": 6391,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045506": {
+    "AchievementID": 4045506,
+    "SeriesID": 4,
+    "QuestID": 4045506,
+    "LinearQuestID": 4045506,
+    "AchievementTitle": {
+      "Hash": "10101021119704234377"
+    },
+    "AchievementDesc": {
+      "Hash": "13344028178169687593"
+    },
+    "ParamList": [],
+    "Priority": 6390,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045507": {
+    "AchievementID": 4045507,
+    "SeriesID": 4,
+    "QuestID": 4045507,
+    "LinearQuestID": 4045507,
+    "AchievementTitle": {
+      "Hash": "16091114533436519583"
+    },
+    "AchievementDesc": {
+      "Hash": "841821558113710684"
+    },
+    "ParamList": [],
+    "Priority": 6389,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4055501": {
+    "AchievementID": 4055501,
+    "SeriesID": 5,
+    "QuestID": 4055501,
+    "LinearQuestID": 4055501,
+    "AchievementTitle": {
+      "Hash": "7995160732808883071"
+    },
+    "AchievementDesc": {
+      "Hash": "17486336834730126765"
+    },
+    "ParamList": [],
+    "Priority": 2727,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4055502": {
+    "AchievementID": 4055502,
+    "SeriesID": 5,
+    "QuestID": 4055502,
+    "LinearQuestID": 4055502,
+    "AchievementTitle": {
+      "Hash": "11862887928848689175"
+    },
+    "AchievementDesc": {
+      "Hash": "5164743723242600858"
+    },
+    "HideAchievementDesc": {
+      "Hash": "14662340421035500956"
+    },
+    "ParamList": [],
+    "Priority": 2726,
+    "Rarity": "Low",
+    "ShowType": "HiddenDesc",
+    "PSTrophyID": ""
+  },
+  "4055503": {
+    "AchievementID": 4055503,
+    "SeriesID": 5,
+    "QuestID": 4055503,
+    "LinearQuestID": 4055503,
+    "AchievementTitle": {
+      "Hash": "3764651325545062278"
+    },
+    "AchievementDesc": {
+      "Hash": "3318025426871941249"
+    },
+    "ParamList": [],
+    "Priority": 2725,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4055504": {
+    "AchievementID": 4055504,
+    "SeriesID": 5,
+    "QuestID": 4055504,
+    "LinearQuestID": 4055504,
+    "AchievementTitle": {
+      "Hash": "6879541742625632056"
+    },
+    "AchievementDesc": {
+      "Hash": "10824215075456985558"
+    },
+    "HideAchievementDesc": {
+      "Hash": "2102333336817857895"
+    },
+    "ParamList": [],
+    "Priority": 2724,
+    "Rarity": "Low",
+    "ShowType": "HiddenDesc",
+    "PSTrophyID": ""
+  },
+  "4055505": {
+    "AchievementID": 4055505,
+    "SeriesID": 5,
+    "QuestID": 4055505,
+    "LinearQuestID": 4055505,
+    "AchievementTitle": {
+      "Hash": "15837854021026043362"
+    },
+    "AchievementDesc": {
+      "Hash": "9242098310040834244"
+    },
+    "HideAchievementDesc": {
+      "Hash": "16048523042871905463"
+    },
+    "ParamList": [],
+    "Priority": 2723,
+    "Rarity": "Low",
+    "ShowType": "HiddenDesc",
+    "PSTrophyID": ""
+  },
+  "4055506": {
+    "AchievementID": 4055506,
+    "SeriesID": 5,
+    "QuestID": 4055506,
+    "LinearQuestID": 4055506,
+    "AchievementTitle": {
+      "Hash": "2265463434794027751"
+    },
+    "AchievementDesc": {
+      "Hash": "5462830008935748800"
+    },
+    "HideAchievementDesc": {
+      "Hash": "12661244448276662474"
+    },
+    "ParamList": [],
+    "Priority": 2722,
+    "Rarity": "Low",
+    "ShowType": "HiddenDesc",
+    "PSTrophyID": ""
+  },
+  "4055507": {
+    "AchievementID": 4055507,
+    "SeriesID": 5,
+    "QuestID": 4055507,
+    "LinearQuestID": 4055507,
+    "AchievementTitle": {
+      "Hash": "18153641044546801446"
+    },
+    "AchievementDesc": {
+      "Hash": "14275431676120641459"
+    },
+    "ParamList": [],
+    "Priority": 2721,
+    "Rarity": "Low",
+    "ShowType": "ShowAfterFinish",
+    "PSTrophyID": ""
+  },
+  "4055508": {
+    "AchievementID": 4055508,
+    "SeriesID": 5,
+    "QuestID": 4055508,
+    "LinearQuestID": 4055508,
+    "AchievementTitle": {
+      "Hash": "6363317804087179073"
+    },
+    "AchievementDesc": {
+      "Hash": "14898738195658501486"
+    },
+    "ParamList": [],
+    "Priority": 2720,
+    "Rarity": "Low",
+    "ShowType": "ShowAfterFinish",
+    "PSTrophyID": ""
+  },
+  "4055509": {
+    "AchievementID": 4055509,
+    "SeriesID": 5,
+    "QuestID": 4055509,
+    "LinearQuestID": 4055509,
+    "AchievementTitle": {
+      "Hash": "9339759212053142876"
+    },
+    "AchievementDesc": {
+      "Hash": "12132488366527164655"
+    },
+    "ParamList": [],
+    "Priority": 2719,
+    "Rarity": "Low",
+    "ShowType": "ShowAfterFinish",
+    "PSTrophyID": ""
+  },
+  "4055510": {
+    "AchievementID": 4055510,
+    "SeriesID": 5,
+    "QuestID": 4055510,
+    "LinearQuestID": 4055510,
+    "AchievementTitle": {
+      "Hash": "5735425683096367644"
+    },
+    "AchievementDesc": {
+      "Hash": "1059670880250807928"
+    },
+    "ParamList": [],
+    "Priority": 2718,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4055511": {
+    "AchievementID": 4055511,
+    "SeriesID": 5,
+    "QuestID": 4055511,
+    "LinearQuestID": 4055511,
+    "AchievementTitle": {
+      "Hash": "18047387958704664451"
+    },
+    "AchievementDesc": {
+      "Hash": "2814185676961645123"
+    },
+    "ParamList": [],
+    "Priority": 2717,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4055512": {
+    "AchievementID": 4055512,
+    "SeriesID": 5,
+    "QuestID": 4055512,
+    "LinearQuestID": 4055512,
+    "AchievementTitle": {
+      "Hash": "7538078520168304756"
+    },
+    "AchievementDesc": {
+      "Hash": "13364613062733584178"
+    },
+    "ParamList": [],
+    "Priority": 2716,
+    "Rarity": "Mid",
+    "PSTrophyID": ""
+  },
+  "4055513": {
+    "AchievementID": 4055513,
+    "SeriesID": 5,
+    "QuestID": 4055513,
+    "LinearQuestID": 4055513,
+    "AchievementTitle": {
+      "Hash": "5205134046638384355"
+    },
+    "AchievementDesc": {
+      "Hash": "15067222567217071061"
+    },
+    "ParamList": [],
+    "Priority": 2715,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045508": {
+    "AchievementID": 4045508,
+    "SeriesID": 4,
+    "QuestID": 4045508,
+    "LinearQuestID": 4045508,
+    "AchievementTitle": {
+      "Hash": "14896492457963265443"
+    },
+    "AchievementDesc": {
+      "Hash": "2609061481271825775"
+    },
+    "ParamList": [
+      {
+        "Value": 180
+      }
+    ],
+    "Priority": 6388,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4035501": {
+    "AchievementID": 4035501,
+    "SeriesID": 3,
+    "QuestID": 4035501,
+    "LinearQuestID": 4035501,
+    "AchievementTitle": {
+      "Hash": "18435148528784689085"
+    },
+    "AchievementDesc": {
+      "Hash": "14287871478313941840"
+    },
+    "HideAchievementDesc": {
+      "Hash": "8144334249371355608"
+    },
+    "ParamList": [],
+    "Priority": 8259,
+    "Rarity": "Low",
+    "ShowType": "HiddenDesc",
+    "PSTrophyID": ""
+  },
+  "4035502": {
+    "AchievementID": 4035502,
+    "SeriesID": 3,
+    "QuestID": 4035502,
+    "LinearQuestID": 4035502,
+    "AchievementTitle": {
+      "Hash": "12040535495022556643"
+    },
+    "AchievementDesc": {
+      "Hash": "14867195087116940791"
+    },
+    "HideAchievementDesc": {
+      "Hash": "5451376668714820364"
+    },
+    "ParamList": [],
+    "Priority": 8258,
+    "Rarity": "Low",
+    "ShowType": "HiddenDesc",
+    "PSTrophyID": ""
+  },
+  "4035503": {
+    "AchievementID": 4035503,
+    "SeriesID": 3,
+    "QuestID": 4035503,
+    "LinearQuestID": 4035503,
+    "AchievementTitle": {
+      "Hash": "4625158549637784578"
+    },
+    "AchievementDesc": {
+      "Hash": "18401916899634968760"
+    },
+    "HideAchievementDesc": {
+      "Hash": "807763388767565110"
+    },
+    "ParamList": [],
+    "Priority": 8257,
+    "Rarity": "Low",
+    "ShowType": "HiddenDesc",
+    "PSTrophyID": ""
+  },
+  "4035504": {
+    "AchievementID": 4035504,
+    "SeriesID": 3,
+    "QuestID": 4035504,
+    "LinearQuestID": 4035504,
+    "AchievementTitle": {
+      "Hash": "9512205421032281117"
+    },
+    "AchievementDesc": {
+      "Hash": "7952218927050436215"
+    },
+    "HideAchievementDesc": {
+      "Hash": "13151024432733650213"
+    },
+    "ParamList": [],
+    "Priority": 8256,
+    "Rarity": "Low",
+    "ShowType": "HiddenDesc",
+    "PSTrophyID": ""
+  },
+  "4035505": {
+    "AchievementID": 4035505,
+    "SeriesID": 3,
+    "QuestID": 4035505,
+    "LinearQuestID": 4035505,
+    "AchievementTitle": {
+      "Hash": "8450684142991500755"
+    },
+    "AchievementDesc": {
+      "Hash": "4805528606192528931"
+    },
+    "HideAchievementDesc": {
+      "Hash": "16109190344604983637"
+    },
+    "ParamList": [],
+    "Priority": 8255,
+    "Rarity": "Low",
+    "ShowType": "HiddenDesc",
+    "PSTrophyID": ""
+  },
+  "4035506": {
+    "AchievementID": 4035506,
+    "SeriesID": 3,
+    "QuestID": 4035506,
+    "LinearQuestID": 4035506,
+    "AchievementTitle": {
+      "Hash": "6885368043490710998"
+    },
+    "AchievementDesc": {
+      "Hash": "15900981994812720620"
+    },
+    "HideAchievementDesc": {
+      "Hash": "11927466117448493238"
+    },
+    "ParamList": [],
+    "Priority": 8254,
+    "Rarity": "Low",
+    "ShowType": "HiddenDesc",
+    "PSTrophyID": ""
+  },
+  "4035507": {
+    "AchievementID": 4035507,
+    "SeriesID": 3,
+    "QuestID": 4035507,
+    "LinearQuestID": 4035507,
+    "AchievementTitle": {
+      "Hash": "786764603851559439"
+    },
+    "AchievementDesc": {
+      "Hash": "18144338196287300237"
+    },
+    "HideAchievementDesc": {
+      "Hash": "6162085838194696005"
+    },
+    "ParamList": [],
+    "Priority": 8253,
+    "Rarity": "Low",
+    "ShowType": "HiddenDesc",
+    "PSTrophyID": ""
+  },
+  "4035508": {
+    "AchievementID": 4035508,
+    "SeriesID": 3,
+    "QuestID": 4035508,
+    "LinearQuestID": 4035508,
+    "AchievementTitle": {
+      "Hash": "526998370613599158"
+    },
+    "AchievementDesc": {
+      "Hash": "15666268225235484397"
+    },
+    "HideAchievementDesc": {
+      "Hash": "9372246975435120758"
+    },
+    "ParamList": [],
+    "Priority": 8252,
+    "Rarity": "Low",
+    "ShowType": "HiddenDesc",
+    "PSTrophyID": ""
+  },
+  "4035509": {
+    "AchievementID": 4035509,
+    "SeriesID": 3,
+    "QuestID": 4035509,
+    "LinearQuestID": 4035509,
+    "AchievementTitle": {
+      "Hash": "17956690879411605111"
+    },
+    "AchievementDesc": {
+      "Hash": "16898980389316498252"
+    },
+    "HideAchievementDesc": {
+      "Hash": "14424880312593460928"
+    },
+    "ParamList": [],
+    "Priority": 8251,
+    "Rarity": "Low",
+    "ShowType": "HiddenDesc",
+    "PSTrophyID": ""
+  },
+  "4075501": {
+    "AchievementID": 4075501,
+    "SeriesID": 7,
+    "QuestID": 4075501,
+    "LinearQuestID": 4075501,
+    "AchievementTitle": {
+      "Hash": "17152951131339863114"
+    },
+    "AchievementDesc": {
+      "Hash": "12310477154170316391"
+    },
+    "ParamList": [],
+    "Priority": 6433,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045509": {
+    "AchievementID": 4045509,
+    "SeriesID": 4,
+    "QuestID": 4045509,
+    "LinearQuestID": 4045509,
+    "AchievementTitle": {
+      "Hash": "11374965704322022684"
+    },
+    "AchievementDesc": {
+      "Hash": "7991777980178048368"
+    },
+    "ParamList": [],
+    "Priority": 6387,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045510": {
+    "AchievementID": 4045510,
+    "SeriesID": 4,
+    "QuestID": 4045510,
+    "LinearQuestID": 4045510,
+    "AchievementTitle": {
+      "Hash": "9202287394412143966"
+    },
+    "AchievementDesc": {
+      "Hash": "14826325685468824695"
+    },
+    "ParamList": [
+      {
+        "Value": 6
+      }
+    ],
+    "Priority": 6386,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045511": {
+    "AchievementID": 4045511,
+    "SeriesID": 4,
+    "QuestID": 4045511,
+    "LinearQuestID": 4045511,
+    "AchievementTitle": {
+      "Hash": "8390940844108018959"
+    },
+    "AchievementDesc": {
+      "Hash": "17620082308807480695"
+    },
+    "ParamList": [],
+    "Priority": 6385,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045512": {
+    "AchievementID": 4045512,
+    "SeriesID": 4,
+    "QuestID": 4045512,
+    "LinearQuestID": 4045512,
+    "AchievementTitle": {
+      "Hash": "17817416689897007814"
+    },
+    "AchievementDesc": {
+      "Hash": "13290307717908368801"
+    },
+    "ParamList": [],
+    "Priority": 6384,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045513": {
+    "AchievementID": 4045513,
+    "SeriesID": 4,
+    "QuestID": 4045513,
+    "LinearQuestID": 4045513,
+    "AchievementTitle": {
+      "Hash": "11665969290421477891"
+    },
+    "AchievementDesc": {
+      "Hash": "281146898682457351"
+    },
+    "ParamList": [],
+    "Priority": 6383,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045514": {
+    "AchievementID": 4045514,
+    "SeriesID": 4,
+    "QuestID": 4045514,
+    "LinearQuestID": 4045514,
+    "AchievementTitle": {
+      "Hash": "4155438710097914277"
+    },
+    "AchievementDesc": {
+      "Hash": "13744100895569210575"
+    },
+    "ParamList": [],
+    "Priority": 6382,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045515": {
+    "AchievementID": 4045515,
+    "SeriesID": 4,
+    "QuestID": 4045515,
+    "LinearQuestID": 4045515,
+    "AchievementTitle": {
+      "Hash": "13951212428715183436"
+    },
+    "AchievementDesc": {
+      "Hash": "15763320772285850072"
+    },
+    "ParamList": [],
+    "Priority": 6381,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045516": {
+    "AchievementID": 4045516,
+    "SeriesID": 4,
+    "QuestID": 4045516,
+    "LinearQuestID": 4045516,
+    "AchievementTitle": {
+      "Hash": "17899610718382665158"
+    },
+    "AchievementDesc": {
+      "Hash": "14258351439704189602"
+    },
+    "ParamList": [
+      {
+        "Value": 6
+      }
+    ],
+    "Priority": 6380,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045517": {
+    "AchievementID": 4045517,
+    "SeriesID": 4,
+    "QuestID": 4045517,
+    "LinearQuestID": 4045517,
+    "AchievementTitle": {
+      "Hash": "14437133584083237560"
+    },
+    "AchievementDesc": {
+      "Hash": "12093270053092082148"
+    },
+    "ParamList": [
+      {
+        "Value": 5
+      }
+    ],
+    "Priority": 6379,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045518": {
+    "AchievementID": 4045518,
+    "SeriesID": 4,
+    "QuestID": 4045518,
+    "LinearQuestID": 4045518,
+    "AchievementTitle": {
+      "Hash": "15940492520373111940"
+    },
+    "AchievementDesc": {
+      "Hash": "9199990813686465068"
+    },
+    "ParamList": [],
+    "Priority": 6378,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045519": {
+    "AchievementID": 4045519,
+    "SeriesID": 4,
+    "QuestID": 4045519,
+    "LinearQuestID": 4045519,
+    "AchievementTitle": {
+      "Hash": "11983088564717502328"
+    },
+    "AchievementDesc": {
+      "Hash": "7868516962762693092"
+    },
+    "ParamList": [],
+    "Priority": 6377,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045520": {
+    "AchievementID": 4045520,
+    "SeriesID": 4,
+    "QuestID": 4045520,
+    "LinearQuestID": 4045520,
+    "AchievementTitle": {
+      "Hash": "6226563101413344614"
+    },
+    "AchievementDesc": {
+      "Hash": "1180725746876658055"
+    },
+    "ParamList": [],
+    "Priority": 6376,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4045521": {
+    "AchievementID": 4045521,
+    "SeriesID": 4,
+    "QuestID": 4045521,
+    "LinearQuestID": 4045521,
+    "AchievementTitle": {
+      "Hash": "17968244876022059572"
+    },
+    "AchievementDesc": {
+      "Hash": "1075232303854887336"
+    },
+    "ParamList": [],
+    "Priority": 6375,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4055514": {
+    "AchievementID": 4055514,
+    "SeriesID": 5,
+    "QuestID": 4055514,
+    "LinearQuestID": 4055514,
+    "AchievementTitle": {
+      "Hash": "1502661791004839258"
+    },
+    "AchievementDesc": {
+      "Hash": "10848419265903549140"
+    },
+    "ParamList": [],
+    "Priority": 2714,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4055515": {
+    "AchievementID": 4055515,
+    "SeriesID": 5,
+    "QuestID": 4055515,
+    "LinearQuestID": 4055515,
+    "AchievementTitle": {
+      "Hash": "14166792544508449669"
+    },
+    "AchievementDesc": {
+      "Hash": "984384999705679255"
+    },
+    "ParamList": [
+      {
+        "Value": 9
+      }
+    ],
+    "Priority": 2713,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4055516": {
+    "AchievementID": 4055516,
+    "SeriesID": 5,
+    "QuestID": 4055516,
+    "LinearQuestID": 4055516,
+    "AchievementTitle": {
+      "Hash": "14834180001306809559"
+    },
+    "AchievementDesc": {
+      "Hash": "13520325877538386732"
+    },
+    "ParamList": [
+      {
+        "Value": 20
+      }
+    ],
+    "Priority": 2712,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4055517": {
+    "AchievementID": 4055517,
+    "SeriesID": 5,
+    "QuestID": 4055517,
+    "LinearQuestID": 4055517,
+    "AchievementTitle": {
+      "Hash": "13542515185077872214"
+    },
+    "AchievementDesc": {
+      "Hash": "14184973121887992023"
+    },
+    "ParamList": [],
+    "Priority": 2711,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4075502": {
+    "AchievementID": 4075502,
+    "SeriesID": 7,
+    "QuestID": 4075502,
+    "LinearQuestID": 4075502,
+    "AchievementTitle": {
+      "Hash": "13909026498437278638"
+    },
+    "AchievementDesc": {
+      "Hash": "7786615294963880569"
+    },
+    "ParamList": [],
+    "Priority": 6432,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4075503": {
+    "AchievementID": 4075503,
+    "SeriesID": 7,
+    "QuestID": 4075503,
+    "LinearQuestID": 4075503,
+    "AchievementTitle": {
+      "Hash": "12533201041165196808"
+    },
+    "AchievementDesc": {
+      "Hash": "3402862497557761604"
+    },
+    "ParamList": [],
+    "Priority": 6431,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4075504": {
+    "AchievementID": 4075504,
+    "SeriesID": 7,
+    "QuestID": 4075504,
+    "LinearQuestID": 4075504,
+    "AchievementTitle": {
+      "Hash": "15891363538324861957"
+    },
+    "AchievementDesc": {
+      "Hash": "8012702418974261889"
+    },
+    "ParamList": [],
+    "Priority": 6430,
+    "Rarity": "Low",
+    "PSTrophyID": ""
+  },
+  "4075505": {
+    "AchievementID": 4075505,
+    "SeriesID": 7,
+    "QuestID": 4075505,
+    "LinearQuestID": 4075505,
+    "AchievementTitle": {
+      "Hash": "9310338916330087942"
+    },
+    "AchievementDesc": {
+      "Hash": "6867182910535458627"
+    },
+    "ParamList": [],
+    "Priority": 6429,
     "Rarity": "Low",
     "PSTrophyID": ""
   }

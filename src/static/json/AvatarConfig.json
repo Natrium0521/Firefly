@@ -6599,6 +6599,150 @@
       5
     ]
   },
+  "1512": {
+    "AvatarID": 1512,
+    "AvatarName": {
+      "Hash": "9781128254395420869"
+    },
+    "AvatarFullName": {
+      "Hash": "149262887234429510"
+    },
+    "AdventurePlayerID": 1512,
+    "AvatarVOTag": "robinsummeretto",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_RobinS_00_Config.json",
+    "DamageType": "Wind",
+    "SPNeed": {
+      "Value": 140
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      151201,
+      151202,
+      151203,
+      151204,
+      151205,
+      151206
+    ],
+    "SkillList": [
+      151201,
+      151202,
+      151203,
+      151204,
+      151206,
+      151207
+    ],
+    "AvatarBaseType": "Memory",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/RobinS_00/Avatar_RobinS_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1512.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1512.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1512.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1512.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1512B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1512.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/RobinS_00/Manikin_Avatar_Maid_RobinS_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_RobinS_00_Config.json",
+    "AIPath": "Config/ConfigAI/ComplexSkillAIGlobalGroup/Avatar/Avatar_RobinS_00_ComplexSkillAI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/MemorySkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1512.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1512.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1512.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1512.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1512.png",
+    "AvatarDropOffset": [
+      0,
+      0,
+      0.55,
+      0,
+      0,
+      0.55,
+      0,
+      0,
+      0.55
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
+  "1513": {
+    "AvatarID": 1513,
+    "AvatarName": {
+      "Hash": "5591079138023962224"
+    },
+    "AvatarFullName": {
+      "Hash": "17001957859210573914"
+    },
+    "AdventurePlayerID": 1513,
+    "AvatarVOTag": "aventurinewaveflair",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_AventurineW_00_Config.json",
+    "DamageType": "Quantum",
+    "SPNeed": {
+      "Value": 130
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      151301,
+      151302,
+      151303,
+      151304,
+      151305,
+      151306
+    ],
+    "SkillList": [
+      151301,
+      151302,
+      151303,
+      151304,
+      151306,
+      151307,
+      151320,
+      151321
+    ],
+    "AvatarBaseType": "Elation",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/AventurineW_00/Avatar_AventurineW_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1513.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1513.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1513.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1513.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1513B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1513.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/AventurineW_00/Manikin_Avatar_Lad_AventurineW_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_AventurineW_00_Config.json",
+    "AIPath": "Config/ConfigAI/ComplexSkillAIGlobalGroup/Avatar/Avatar_AventurineW_00_ComplexSkillAI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/JoySkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1513.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1513.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1513.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1513.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1513.png",
+    "AvatarDropOffset": [
+      -70,
+      70,
+      0.48,
+      -70,
+      70,
+      0.48,
+      -70,
+      70,
+      0.48
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
   "8001": {
     "AvatarID": 8001,
     "AvatarName": {
