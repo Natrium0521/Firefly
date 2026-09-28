@@ -6452,5 +6452,43 @@
       0,
       1
     ]
+  },
+  "23055": {
+    "EquipmentID": 23055,
+    "Release": true,
+    "EquipmentName": {
+      "Hash": "5383274067590643422"
+    },
+    "Rarity": "CombatPowerLightconeRarity5",
+    "AvatarBaseType": "Elation",
+    "MaxPromotion": 6,
+    "MaxRank": 5,
+    "ExpType": 3,
+    "SkillID": 23055,
+    "ExpProvide": 60000,
+    "CoinCost": 30000,
+    "RankUpCostList": [],
+    "ThumbnailPath": "SpriteOutput/LightConeMediumIcon/23055.png",
+    "ImagePath": "SpriteOutput/LightConeMaxFigures/23055.png",
+    "ItemRightPanelOffset": [
+      13,
+      -181,
+      0.85
+    ],
+    "AvatarDetailOffset": [
+      18,
+      -150,
+      1.25
+    ],
+    "BattleDialogOffset": [
+      0,
+      0,
+      1
+    ],
+    "GachaResultOffset": [
+      0,
+      0,
+      1
+    ]
   }
 }

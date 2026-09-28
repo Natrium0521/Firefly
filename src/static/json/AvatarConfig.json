@@ -6199,6 +6199,83 @@
     "AssistBgOffset": [],
     "AvatarSelfShowOffset": []
   },
+  "1503": {
+    "AvatarID": 1503,
+    "AvatarName": {
+      "Hash": "17971979440145228372"
+    },
+    "AvatarFullName": {
+      "Hash": "99350025551155566"
+    },
+    "AdventurePlayerID": 1503,
+    "AvatarVOTag": "pearl",
+    "Rarity": "CombatPowerAvatarRarityType5",
+    "JsonPath": "Config/ConfigCharacter/Avatar/Avatar_Pearl_00_Config.json",
+    "DamageType": "Ice",
+    "SPNeed": {
+      "Value": 180
+    },
+    "ExpGroup": 1,
+    "MaxPromotion": 6,
+    "MaxRank": 6,
+    "RankIDList": [
+      150301,
+      150302,
+      150303,
+      150304,
+      150305,
+      150306
+    ],
+    "SkillList": [
+      150301,
+      150302,
+      150303,
+      150304,
+      150306,
+      150307,
+      150308,
+      150310,
+      150320
+    ],
+    "AvatarBaseType": "Elation",
+    "DefaultAvatarModelPath": "Characters/CharacterPrefabs/Avatar/Pearl_00/Avatar_Pearl_00.prefab",
+    "DefaultAvatarHeadIconPath": "SpriteOutput/AvatarIcon/Avatar/1503.png",
+    "AvatarSideIconPath": "SpriteOutput/AvatarRoundIcon/Avatar/1503.png",
+    "AvatarMiniIconPath": "SpriteOutput/AvatarMiniIcon/1503.png",
+    "AvatarGachaResultImgPath": "SpriteOutput/AvatarDrawCardResult/1503.png",
+    "ActionAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1503B.png",
+    "UltraSkillCutInPrefabPath": "UI/Battle/UltraSkillCutIn/Avatar/UltraSkillCutIn_1503.prefab",
+    "UIAvatarModelPath": "Characters/CharacterPrefabs/Manikin/Avatar/Pearl_00/Manikin_Avatar_Maid_Pearl_00.prefab",
+    "ManikinJsonPath": "Config/ConfigCharacter/Manikin/Avatar/Manikin_Avatar_Pearl_00_Config.json",
+    "AIPath": "Config/ConfigAI/ComplexSkillAIGlobalGroup/Avatar/Avatar_Pearl_00_ComplexSkillAI.json",
+    "SkilltreePrefabPath": "UI/Avatar/Widget/JoySkillTreeGroup.prefab",
+    "DamageTypeResistance": [],
+    "Release": true,
+    "SideAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1503.png",
+    "WaitingAvatarHeadIconPath": "SpriteOutput/AvatarIconTeam/1503.png",
+    "AvatarCutinImgPath": "SpriteOutput/AvatarCutinFigures/1503.png",
+    "AvatarCutinBgImgPath": "SpriteOutput/AvatarCutinBg/1503.png",
+    "AvatarCutinFrontImgPath": "SpriteOutput/AvatarDrawCard/1503.png",
+    "AvatarCutinIntroText": {
+      "Hash": "17593529551591114767"
+    },
+    "AvatarDropOffset": [
+      20,
+      35,
+      0.55,
+      20,
+      35,
+      0.55,
+      20,
+      35,
+      0.55
+    ],
+    "AvatarTrialOffset": [],
+    "PlayerCardOffset": [],
+    "AssistOffset": [],
+    "AssistBgOffset": [],
+    "AvatarSelfShowOffset": []
+  },
   "1504": {
     "AvatarID": 1504,
     "AvatarName": {
